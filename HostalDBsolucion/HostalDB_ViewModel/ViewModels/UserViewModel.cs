@@ -13,7 +13,7 @@ using GalaSoft.MvvmLight;
 using System.Collections.ObjectModel;
 using HostalDB_ViewModel.Commands;
 using HostalDB_ViewModel.ServiceReference_User;
-//using HostalDB_ViewModel.
+
 namespace HostalDB_ViewModel.ViewModels
 {
     public class UserViewModel : ViewModelBase
@@ -153,7 +153,7 @@ namespace HostalDB_ViewModel.ViewModels
         {
             try
             {
-                if (ItemUsuario.user_id == 0)
+                if (ItemUsuario.user_id == 0)//
                 {
                     ItemUsuario.accountExpired = 0;
                     ItemUsuario.accountLocked = 0;
@@ -161,13 +161,11 @@ namespace HostalDB_ViewModel.ViewModels
                     ItemUsuario.enabled = 1;
 
                     _ServicioUsuario.InsertarUsuarioAsync(ItemUsuario);
+                    //Se llama a insertar un nuevo usuario a la BD
                 }
                 else
                 {
-                    //ItemUsuario.accountExpired = 0;
-                   // ItemUsuario.accountLocked = 0;
-                  //  ItemUsuario.passwordExpired = 0;
-                  //  ItemUsuario.enabled = 1;
+                  
 
                     _ServicioUsuario.ActualizarUsuarioAsync(ItemUsuario);
                 
@@ -232,6 +230,8 @@ namespace HostalDB_ViewModel.ViewModels
 
         private void _ServicioUsuario_InsertarUsuariosCompleted(object sender, InsertarUsuarioCompletedEventArgs e)
         {
+            //Este metodo se ejecuta cuando se ACABA DE GUARDAR un nuevo usuario a la BD
+            //metodo que me devuelve el Id del usuario con el que se guardo.
             if (e.Error != null)
             {
                 MessageBox.Show(e.Error.Message + e.Error);
@@ -290,7 +290,7 @@ namespace HostalDB_ViewModel.ViewModels
         public ICommand NuevoCommand { get; set; }
         public ICommand GuardarCommand { get; set; }
         public ICommand EliminarCommand { get; set; }
-        public ICommand ActualizarCommand { get; set; }
+      //  public ICommand ActualizarCommand { get; set; }
         public ICommand BuscarCommand { get; set; }
         public ICommand ListarCommand { get; set; }
         #endregion

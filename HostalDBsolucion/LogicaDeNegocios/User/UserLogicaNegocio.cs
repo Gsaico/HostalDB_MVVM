@@ -8,7 +8,7 @@ namespace LogicaDeNegocios
 {
     public partial class HostalDB_LogicaNegocio : User.IUserLogicaNegocio 
     {
-        Dominio.Querys.User.IUserQuery  userQuerys = new Dominio.Querys.Querys();
+        Dominio.Querys.User.IUserQuery   userQuerys = new Dominio.Querys.Querys();
         public int InsertarUsuario(Dominio.Dtos.userDTO dto)
         {
             try

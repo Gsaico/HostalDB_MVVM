@@ -83,14 +83,23 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\HabitacionesDisponiblesUserControl.xaml.cs">
+      <DependentUpon>HabitacionesDisponiblesUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\HabitacionesOcupadasUserControl.xaml.cs">
+      <DependentUpon>HabitacionesOcupadasUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UsuarioUserControl.xaml.cs">
       <DependentUpon>UsuarioUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ErrorWindow.xaml.cs">
       <DependentUpon>ErrorWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\About.xaml.cs">
-      <DependentUpon>About.xaml</DependentUpon>
+    <Compile Include="Views\HabitacionesDisponibles.xaml.cs">
+      <DependentUpon>HabitacionesDisponibles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HabitacionesOcupadas.xaml.cs">
+      <DependentUpon>HabitacionesOcupadas.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
@@ -99,12 +108,31 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Usuarios.xaml.cs">
+      <DependentUpon>Usuarios.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="UserControls\HabitacionesDisponiblesUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\HabitacionesOcupadasUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HabitacionesOcupadas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Usuarios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Resource Include="Assets\Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -117,7 +145,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\About.xaml">
+    <Page Include="Views\HabitacionesDisponibles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

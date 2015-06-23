@@ -6,12 +6,27 @@
                     maxReceivedMessageSize="2147483647">
                     <security mode="None" />
                 </binding>
+                <binding name="BasicHttpBinding_IHabitacionService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IUserService1" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
             </basicHttpBinding>
         </bindings>
         <client>
             <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
                 binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IUserService"
                 contract="ServiceReference_User.IUserService" name="BasicHttpBinding_IUserService" />
+            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IHabitacionService"
+                contract="ServiceReference_Habitacion.IHabitacionService"
+                name="BasicHttpBinding_IHabitacionService" />
+            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IUserService1"
+                contract="ServiceReference_Habitacion.IUserService" name="BasicHttpBinding_IUserService1" />
         </client>
     </system.serviceModel>
 </configuration>

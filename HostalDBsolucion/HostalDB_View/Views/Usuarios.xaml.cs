@@ -8,14 +8,14 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Navigation;
 
-namespace HostalDB_View
+namespace HostalDB_View.Views
 {
-    public partial class About : Page
+    public partial class Usuarios : Page
     {
-        public About()
+        public Usuarios()
         {
             InitializeComponent();
         }
@@ -24,5 +24,6 @@ namespace HostalDB_View
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
         }
+
     }
 }

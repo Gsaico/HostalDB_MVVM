@@ -68,6 +68,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Habitacion\IHabitacionService.cs" />
+    <Compile Include="Habitacion\HabitacionService.cs" />
     <Compile Include="HostalDB_ServiceWCF.svc.cs">
       <DependentUpon>HostalDB_ServiceWCF.svc</DependentUpon>
     </Compile>

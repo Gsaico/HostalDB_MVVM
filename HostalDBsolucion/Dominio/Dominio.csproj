@@ -78,6 +78,8 @@
     <Compile Include="Dtos\userDTO.cs" />
     <Compile Include="Dtos\user_roleDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Querys\Habitacion\IHabitacionQuery.cs" />
+    <Compile Include="Querys\Habitacion\HabitacionQuery.cs" />
     <Compile Include="Querys\Querys.cs" />
     <Compile Include="Querys\User\IUserQuery.cs" />
     <Compile Include="Querys\User\UserQuery.cs" />

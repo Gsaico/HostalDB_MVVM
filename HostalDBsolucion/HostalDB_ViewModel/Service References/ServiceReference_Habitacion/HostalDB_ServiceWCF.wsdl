@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="HostalDB_ServiceWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:4015/HostalDB_ServiceWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:4015/HostalDB_ServiceWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:4015/HostalDB_ServiceWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Dominio.Dtos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IHabitacionService_InsertarHabitacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarHabitacion" />
+  </wsdl:message>
+  <wsdl:message name="IHabitacionService_InsertarHabitacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarHabitacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHabitacionService_ActualizarHabitacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarHabitacion" />
+  </wsdl:message>
+  <wsdl:message name="IHabitacionService_ActualizarHabitacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarHabitacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHabitacionService_EliminarHabitacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarHabitacion" />
+  </wsdl:message>
+  <wsdl:message name="IHabitacionService_EliminarHabitacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarHabitacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHabitacionService_BuscarHabitacionPorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarHabitacionPorID" />
+  </wsdl:message>
+  <wsdl:message name="IHabitacionService_BuscarHabitacionPorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarHabitacionPorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHabitacionService_ListarTodasLasHabitaciones_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarTodasLasHabitaciones" />
+  </wsdl:message>
+  <wsdl:message name="IHabitacionService_ListarTodasLasHabitaciones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarTodasLasHabitacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHabitacionService_ListarHabitacionesDisponibles_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarHabitacionesDisponibles" />
+  </wsdl:message>
+  <wsdl:message name="IHabitacionService_ListarHabitacionesDisponibles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarHabitacionesDisponiblesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHabitacionService_ListarHabitacionesOcupadas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarHabitacionesOcupadas" />
+  </wsdl:message>
+  <wsdl:message name="IHabitacionService_ListarHabitacionesOcupadas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarHabitacionesOcupadasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHabitacionService_ListarHabitacionesPorCategoria_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarHabitacionesPorCategoria" />
+  </wsdl:message>
+  <wsdl:message name="IHabitacionService_ListarHabitacionesPorCategoria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarHabitacionesPorCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHabitacionService_ListarHabitacionesPorTipoDehabitacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarHabitacionesPorTipoDehabitacion" />
+  </wsdl:message>
+  <wsdl:message name="IHabitacionService_ListarHabitacionesPorTipoDehabitacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarHabitacionesPorTipoDehabitacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_InsertarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_InsertarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_ActualizarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_ActualizarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_EliminarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_EliminarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_BuscarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_BuscarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_ListarUsuarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_ListarUsuarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IHabitacionService">
+    <wsdl:operation name="InsertarHabitacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHabitacionService/InsertarHabitacion" message="tns:IHabitacionService_InsertarHabitacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHabitacionService/InsertarHabitacionResponse" message="tns:IHabitacionService_InsertarHabitacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarHabitacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHabitacionService/ActualizarHabitacion" message="tns:IHabitacionService_ActualizarHabitacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHabitacionService/ActualizarHabitacionResponse" message="tns:IHabitacionService_ActualizarHabitacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarHabitacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHabitacionService/EliminarHabitacion" message="tns:IHabitacionService_EliminarHabitacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHabitacionService/EliminarHabitacionResponse" message="tns:IHabitacionService_EliminarHabitacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarHabitacionPorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHabitacionService/BuscarHabitacionPorID" message="tns:IHabitacionService_BuscarHabitacionPorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHabitacionService/BuscarHabitacionPorIDResponse" message="tns:IHabitacionService_BuscarHabitacionPorID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarTodasLasHabitaciones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHabitacionService/ListarTodasLasHabitaciones" message="tns:IHabitacionService_ListarTodasLasHabitaciones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHabitacionService/ListarTodasLasHabitacionesResponse" message="tns:IHabitacionService_ListarTodasLasHabitaciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarHabitacionesDisponibles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHabitacionService/ListarHabitacionesDisponibles" message="tns:IHabitacionService_ListarHabitacionesDisponibles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHabitacionService/ListarHabitacionesDisponiblesResponse" message="tns:IHabitacionService_ListarHabitacionesDisponibles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarHabitacionesOcupadas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHabitacionService/ListarHabitacionesOcupadas" message="tns:IHabitacionService_ListarHabitacionesOcupadas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHabitacionService/ListarHabitacionesOcupadasResponse" message="tns:IHabitacionService_ListarHabitacionesOcupadas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarHabitacionesPorCategoria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHabitacionService/ListarHabitacionesPorCategoria" message="tns:IHabitacionService_ListarHabitacionesPorCategoria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHabitacionService/ListarHabitacionesPorCategoriaResponse" message="tns:IHabitacionService_ListarHabitacionesPorCategoria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarHabitacionesPorTipoDehabitacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHabitacionService/ListarHabitacionesPorTipoDehabitacion" message="tns:IHabitacionService_ListarHabitacionesPorTipoDehabitacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHabitacionService/ListarHabitacionesPorTipoDehabitacionResponse" message="tns:IHabitacionService_ListarHabitacionesPorTipoDehabitacion_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IUserService">
+    <wsdl:operation name="InsertarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/InsertarUsuario" message="tns:IUserService_InsertarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/InsertarUsuarioResponse" message="tns:IUserService_InsertarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/ActualizarUsuario" message="tns:IUserService_ActualizarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/ActualizarUsuarioResponse" message="tns:IUserService_ActualizarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/EliminarUsuario" message="tns:IUserService_EliminarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/EliminarUsuarioResponse" message="tns:IUserService_EliminarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/BuscarUsuario" message="tns:IUserService_BuscarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/BuscarUsuarioResponse" message="tns:IUserService_BuscarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarUsuarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/ListarUsuarios" message="tns:IUserService_ListarUsuarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/ListarUsuariosResponse" message="tns:IUserService_ListarUsuarios_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IHabitacionService" type="tns:IHabitacionService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertarHabitacion">
+      <soap:operation soapAction="http://tempuri.org/IHabitacionService/InsertarHabitacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarHabitacion">
+      <soap:operation soapAction="http://tempuri.org/IHabitacionService/ActualizarHabitacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarHabitacion">
+      <soap:operation soapAction="http://tempuri.org/IHabitacionService/EliminarHabitacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarHabitacionPorID">
+      <soap:operation soapAction="http://tempuri.org/IHabitacionService/BuscarHabitacionPorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarTodasLasHabitaciones">
+      <soap:operation soapAction="http://tempuri.org/IHabitacionService/ListarTodasLasHabitaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarHabitacionesDisponibles">
+      <soap:operation soapAction="http://tempuri.org/IHabitacionService/ListarHabitacionesDisponibles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarHabitacionesOcupadas">
+      <soap:operation soapAction="http://tempuri.org/IHabitacionService/ListarHabitacionesOcupadas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarHabitacionesPorCategoria">
+      <soap:operation soapAction="http://tempuri.org/IHabitacionService/ListarHabitacionesPorCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarHabitacionesPorTipoDehabitacion">
+      <soap:operation soapAction="http://tempuri.org/IHabitacionService/ListarHabitacionesPorTipoDehabitacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IUserService" type="tns:IUserService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IUserService/InsertarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IUserService/ActualizarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IUserService/EliminarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IUserService/BuscarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarUsuarios">
+      <soap:operation soapAction="http://tempuri.org/IUserService/ListarUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HostalDB_ServiceWCF">
+    <wsdl:port name="BasicHttpBinding_IHabitacionService" binding="tns:BasicHttpBinding_IHabitacionService">
+      <soap:address location="http://localhost:4015/HostalDB_ServiceWCF.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IUserService" binding="tns:BasicHttpBinding_IUserService">
+      <soap:address location="http://localhost:4015/HostalDB_ServiceWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
