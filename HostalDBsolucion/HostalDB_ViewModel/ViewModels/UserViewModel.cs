@@ -1,0 +1,300 @@
+﻿using System;
+using System.Net;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Documents;
+using System.Windows.Ink;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Animation;
+using System.Windows.Shapes;
+//agregados
+using GalaSoft.MvvmLight;
+using System.Collections.ObjectModel;
+using HostalDB_ViewModel.Commands;
+using HostalDB_ViewModel.ServiceReference_User;
+//using HostalDB_ViewModel.
+namespace HostalDB_ViewModel.ViewModels
+{
+    public class UserViewModel : ViewModelBase
+    {
+        private  ServiceReference_User.UserServiceClient _ServicioUsuario;
+        //= new ServiceReference_User.UserServiceClient();
+
+
+        #region propiedades
+
+
+        private ObservableCollection<ServiceReference_User.userDTO> _ListarUsuarios;
+
+        public ObservableCollection<ServiceReference_User.userDTO> ListarUsuarios
+        {
+            get { return _ListarUsuarios; }
+            set
+            {
+                _ListarUsuarios = value;
+                RaisePropertyChanged("ListarUsuarios");
+
+            }
+        }
+
+        private ServiceReference_User.userDTO _ItemUsuario;
+
+        public ServiceReference_User.userDTO ItemUsuario
+        {
+            get { return _ItemUsuario; }
+            set
+            {
+                _ItemUsuario = value;
+                RaisePropertyChanged("ItemUsuario");
+            }
+        }
+
+        private string _parametroBusqueda;
+        public string ParametroBusqueda
+        {
+            get { return _parametroBusqueda; }
+            set
+            {
+                if (_parametroBusqueda == value) return;
+                _parametroBusqueda = value;
+                RaisePropertyChanged("ParametroBusqueda");
+            }
+        }
+
+        #endregion
+
+
+        
+        public UserViewModel()
+        {
+           if (IsInDesignMode) return;
+
+            _ServicioUsuario = new ServiceReference_User.UserServiceClient();
+            ListarUsuarios = new ObservableCollection<ServiceReference_User.userDTO>();
+            ItemUsuario = new ServiceReference_User.userDTO();
+
+            _ServicioUsuario.InsertarUsuarioCompleted += _ServicioUsuario_InsertarUsuariosCompleted;
+
+            _ServicioUsuario.EliminarUsuarioCompleted += _ServicioUsuario_EliminarUsuariosCompleted;
+ 
+            ListarCommand = new CommandBase(p => true, p => ListarCommandAccion()) { IsEnable = true };
+            BuscarCommand = new CommandBase(p => true, p => BuscarCommandAccion()) { IsEnable = true };
+            GuardarCommand = new CommandBase(p => true, p => GuardarCommandAccion()) { IsEnable = true };
+            EliminarCommand = new CommandBase(p => true, p => EliminarCommandAccion()) { IsEnable = true };
+            NuevoCommand = new CommandBase(p => true, p => NuevoCommandAccion()) { IsEnable = true }; 
+
+
+        }
+
+        
+
+        private void NuevoCommandAccion()
+        {
+            if (ItemUsuario != null && ItemUsuario.user_id != 0)
+            {
+                MessageBoxResult result = MessageBox.Show("Realmente desea ingresar un nuevo usuario.","Nuevo Usuario",
+                    MessageBoxButton.OKCancel);
+
+                if (result == MessageBoxResult.OK)
+                {
+                    ItemUsuario = new userDTO();
+                    ItemUsuario.enabled = 1;
+                    ItemUsuario.accountExpired = 0;
+                    ItemUsuario.accountLocked = 0;
+                    ItemUsuario.passwordExpired = 0;
+                }
+                else
+                {
+
+                    MessageBox.Show("No hay datos del usuario, para almacenar en el sistema");
+                }
+
+            }
+            else
+            {
+
+                ItemUsuario = new userDTO();
+                ItemUsuario.enabled = 1;
+                ItemUsuario.accountExpired = 0;
+                ItemUsuario.accountLocked = 0;
+                ItemUsuario.passwordExpired = 0;
+            }
+
+        }
+
+        private void EliminarCommandAccion()
+        {
+            if (ItemUsuario != null && ItemUsuario.user_id != 0)
+            {
+                MessageBoxResult result = MessageBox.Show("ESta usted seguro de eliminar el usuario: "+
+                    ItemUsuario.nombre,"Eliminar Usuario", MessageBoxButton.OKCancel);
+
+                if (result == MessageBoxResult.OK)
+                {
+                    _ServicioUsuario.EliminarUsuarioAsync(ItemUsuario.user_id );
+
+                }
+                else
+                {
+
+                    MessageBox.Show("No hay datos del usuario, para almacenar en el sistema");
+                }
+
+            }
+            else
+            {
+
+                MessageBox.Show("Seleccione Usuario");
+            }
+        }
+
+        private void GuardarCommandAccion()
+        {
+            try
+            {
+                if (ItemUsuario.user_id == 0)
+                {
+                    ItemUsuario.accountExpired = 0;
+                    ItemUsuario.accountLocked = 0;
+                    ItemUsuario.passwordExpired = 0;
+                    ItemUsuario.enabled = 1;
+
+                    _ServicioUsuario.InsertarUsuarioAsync(ItemUsuario);
+                }
+                else
+                {
+                    //ItemUsuario.accountExpired = 0;
+                   // ItemUsuario.accountLocked = 0;
+                  //  ItemUsuario.passwordExpired = 0;
+                  //  ItemUsuario.enabled = 1;
+
+                    _ServicioUsuario.ActualizarUsuarioAsync(ItemUsuario);
+                
+                }
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show(e.Message + "Error al guardar Usuario");
+            }
+        }
+
+        private void BuscarCommandAccion()
+        {
+            
+            
+            try
+            {
+                _ServicioUsuario.BuscarUsuarioAsync(ParametroBusqueda); //falta implementar
+                _ServicioUsuario.BuscarUsuarioCompleted += _ServicioUsuario_BuscarUsuarioCompleted;
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Error al devolver resultados de busqueda");
+            }
+        }
+
+        void _ServicioUsuario_BuscarUsuarioCompleted(object sender, BuscarUsuarioCompletedEventArgs e)
+        {
+            ListarUsuarios.Clear();
+
+
+            if (e.Error != null)
+            {
+                MessageBox.Show(e.Error.Message + e.Error);
+                return;
+            }
+            else
+            {
+                foreach (var userDTOx in e.Result)
+                {
+                    ListarUsuarios.Add(userDTOx);
+                }
+
+            }
+            _ServicioUsuario.BuscarUsuarioCompleted -= _ServicioUsuario_BuscarUsuarioCompleted;
+        }
+
+        private void _ServicioUsuario_EliminarUsuariosCompleted(object sender, EliminarUsuarioCompletedEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                MessageBox.Show(e.Error.Message + e.Error);
+            }
+            else 
+            {
+                MessageBox.Show(e.Result ? "Se elimino Correctamente" : "No se pudo eliminar" + "Estado usuario");
+                ListarCommandAccion();
+            }
+        }
+
+        private void _ServicioUsuario_InsertarUsuariosCompleted(object sender, InsertarUsuarioCompletedEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                MessageBox.Show(e.Error.Message + e.Error);
+            }
+            else
+            {
+                MessageBox.Show("Usuario Agregado con ID: " + e.Result.ToString() );
+                ListarCommandAccion();
+            }
+        }
+
+       
+
+        #region constructor
+        private void ListarCommandAccion()
+        {
+            try
+            {
+                _ServicioUsuario.ListarUsuariosAsync();
+                _ServicioUsuario.ListarUsuariosCompleted += _ServicioUsuario_ListarUsuariosCompleted;
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Error al devolver datos");
+            }
+        }
+
+        void _ServicioUsuario_ListarUsuariosCompleted(object sender, ServiceReference_User.ListarUsuariosCompletedEventArgs e)
+        {
+            ListarUsuarios.Clear();
+
+
+            if (e.Error != null)
+            {
+                MessageBox.Show(e.Error.Message + e.Error);
+                return;
+            }
+            else
+            {
+                foreach (var userDTOx in e.Result)
+                {
+                    ListarUsuarios.Add(userDTOx);
+                }
+
+            }
+            _ServicioUsuario.ListarUsuariosCompleted -= _ServicioUsuario_ListarUsuariosCompleted;
+
+        }
+
+
+        #endregion
+
+        #region botones
+
+        public ICommand NuevoCommand { get; set; }
+        public ICommand GuardarCommand { get; set; }
+        public ICommand EliminarCommand { get; set; }
+        public ICommand ActualizarCommand { get; set; }
+        public ICommand BuscarCommand { get; set; }
+        public ICommand ListarCommand { get; set; }
+        #endregion
+
+
+    }
+}

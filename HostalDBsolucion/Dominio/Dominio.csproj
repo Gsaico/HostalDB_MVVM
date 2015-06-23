@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{69B1779B-DE54-4EA3-B0EC-B3EF92DE3C9E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dominio</RootNamespace>
+    <AssemblyName>Dominio</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Convertidores\bebidaAssembler.cs" />
+    <Compile Include="Convertidores\categoria_habitacionAssembler.cs" />
+    <Compile Include="Convertidores\comprobanteAssembler.cs" />
+    <Compile Include="Convertidores\EmpresaAssembler.cs" />
+    <Compile Include="Convertidores\habitacionAssembler.cs" />
+    <Compile Include="Convertidores\hotelAssembler.cs" />
+    <Compile Include="Convertidores\llamadaAssembler.cs" />
+    <Compile Include="Convertidores\minibarAssembler.cs" />
+    <Compile Include="Convertidores\reservaAssembler.cs" />
+    <Compile Include="Convertidores\reserva_habitacionAssembler.cs" />
+    <Compile Include="Convertidores\roleAssembler.cs" />
+    <Compile Include="Convertidores\TipoComprobanteAssembler.cs" />
+    <Compile Include="Convertidores\tipo_habitacionAssembler.cs" />
+    <Compile Include="Convertidores\tipo_llamadaAssembler.cs" />
+    <Compile Include="Convertidores\userAssembler.cs" />
+    <Compile Include="Convertidores\user_roleAssembler.cs" />
+    <Compile Include="Dtos\bebidaDTO.cs" />
+    <Compile Include="Dtos\categoria_habitacionDTO.cs" />
+    <Compile Include="Dtos\comprobanteDTO.cs" />
+    <Compile Include="Dtos\EmpresaDTO.cs" />
+    <Compile Include="Dtos\habitacionDTO.cs" />
+    <Compile Include="Dtos\hotelDTO.cs" />
+    <Compile Include="Dtos\llamadaDTO.cs" />
+    <Compile Include="Dtos\minibarDTO.cs" />
+    <Compile Include="Dtos\reservaDTO.cs" />
+    <Compile Include="Dtos\reserva_habitacionDTO.cs" />
+    <Compile Include="Dtos\roleDTO.cs" />
+    <Compile Include="Dtos\TipoComprobanteDTO.cs" />
+    <Compile Include="Dtos\tipo_habitacionDTO.cs" />
+    <Compile Include="Dtos\tipo_llamadaDTO.cs" />
+    <Compile Include="Dtos\userDTO.cs" />
+    <Compile Include="Dtos\user_roleDTO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Querys\Querys.cs" />
+    <Compile Include="Querys\User\IUserQuery.cs" />
+    <Compile Include="Querys\User\UserQuery.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PersistenciaDatos\PersistenciaDatos.csproj">
+      <Project>{6022feb9-d289-4333-91e9-45d2189a0c08}</Project>
+      <Name>PersistenciaDatos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

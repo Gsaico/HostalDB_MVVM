@@ -1,0 +1,1124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="HostalDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="bebida">
+          <Key>
+            <PropertyRef Name="bebida_id" />
+          </Key>
+          <Property Name="bebida_id" Type="int" Nullable="false" />
+          <Property Name="precio" Type="float" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="categoria_habitacion">
+          <Key>
+            <PropertyRef Name="categoria_id" />
+          </Key>
+          <Property Name="categoria_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="20" />
+          <Property Name="porcentaje" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="comprobante">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="cliente_id" />
+            <PropertyRef Name="reserva_id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cliente_id" Type="int" Nullable="false" />
+          <Property Name="reserva_id" Type="int" Nullable="false" />
+          <Property Name="costeHabitacion" Type="float" />
+          <Property Name="costeLlamadas" Type="float" />
+          <Property Name="costeMinibar" Type="float" />
+          <Property Name="costeConsumibles" Type="float" />
+          <Property Name="RUCcliente" Type="char" MaxLength="11" />
+          <Property Name="idcomprobante" Type="int" Nullable="false" />
+          <Property Name="FechaeEmision" Type="date" />
+          <Property Name="estado" Type="smallint" />
+        </EntityType>
+        <EntityType Name="Empresa">
+          <Key>
+            <PropertyRef Name="RUC" />
+          </Key>
+          <Property Name="RUC" Type="char" MaxLength="11" Nullable="false" />
+          <Property Name="RazonSocial" Type="varchar" MaxLength="500" />
+          <Property Name="Direccion" Type="varchar" MaxLength="500" />
+          <Property Name="Telefono" Type="varchar" MaxLength="500" />
+          <Property Name="Email" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="habitacion">
+          <Key>
+            <PropertyRef Name="habitacion_id" />
+          </Key>
+          <Property Name="habitacion_id" Type="int" Nullable="false" />
+          <Property Name="hotel_id" Type="int" Nullable="false" />
+          <Property Name="categoria_id" Type="int" Nullable="false" />
+          <Property Name="tipo_habitacion_id" Type="int" Nullable="false" />
+          <Property Name="ocupada" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="hotel">
+          <Key>
+            <PropertyRef Name="hotel_id" />
+          </Key>
+          <Property Name="hotel_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="estrellas" Type="int" Nullable="false" />
+          <Property Name="direccion" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ciudad" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="telefono" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="llamada">
+          <Key>
+            <PropertyRef Name="llamada_id" />
+          </Key>
+          <Property Name="llamada_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="reserva_id" Type="int" Nullable="false" />
+          <Property Name="habitacion_id" Type="int" Nullable="false" />
+          <Property Name="tipo_llamada_id" Type="int" Nullable="false" />
+          <Property Name="minutos" Type="float" />
+        </EntityType>
+        <EntityType Name="minibar">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="reserva_id" Type="int" Nullable="false" />
+          <Property Name="habitacion_id" Type="int" Nullable="false" />
+          <Property Name="bebida_id" Type="int" Nullable="false" />
+          <Property Name="cantidad_consumida" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="reserva">
+          <Key>
+            <PropertyRef Name="reserva_id" />
+          </Key>
+          <Property Name="reserva_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cliente_id" Type="int" Nullable="false" />
+          <Property Name="fecha_inicio" Type="date" Nullable="false" />
+          <Property Name="fecha_fin" Type="date" Nullable="false" />
+          <Property Name="fecha_reserva" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="reserva_habitacion">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="reserva_id" />
+            <PropertyRef Name="habitacion_id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="reserva_id" Type="int" Nullable="false" />
+          <Property Name="habitacion_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="role">
+          <Key>
+            <PropertyRef Name="role_id" />
+          </Key>
+          <Property Name="role_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="authority" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tipo_habitacion">
+          <Key>
+            <PropertyRef Name="tipo_habitacion_id" />
+          </Key>
+          <Property Name="tipo_habitacion_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="20" />
+          <Property Name="precio" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tipo_llamada">
+          <Key>
+            <PropertyRef Name="tipo_llamada_id" />
+          </Key>
+          <Property Name="tipo_llamada_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="20" />
+          <Property Name="precio" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TipoComprobante">
+          <Key>
+            <PropertyRef Name="idcomprobante" />
+          </Key>
+          <Property Name="idcomprobante" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombrecomprobante" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="100" />
+          <Property Name="password" Type="varchar" MaxLength="100" />
+          <Property Name="email" Type="varchar" MaxLength="255" />
+          <Property Name="dni" Type="varchar" MaxLength="8" />
+          <Property Name="nombre" Type="varchar" MaxLength="255" />
+          <Property Name="apellidos" Type="varchar" MaxLength="255" />
+          <Property Name="direccion" Type="varchar" MaxLength="255" />
+          <Property Name="telefono" Type="varchar" MaxLength="255" />
+          <Property Name="enabled" Type="smallint" />
+          <Property Name="accountExpired" Type="smallint" />
+          <Property Name="accountLocked" Type="smallint" />
+          <Property Name="passwordExpired" Type="smallint" />
+          <Property Name="RUC" Type="char" MaxLength="11" />
+        </EntityType>
+        <EntityType Name="user_role">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="user_id" />
+            <PropertyRef Name="role_id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="role_id" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_comprobante_Empresa">
+          <End Role="Empresa" Type="Self.Empresa" Multiplicity="0..1" />
+          <End Role="comprobante" Type="Self.comprobante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empresa">
+              <PropertyRef Name="RUC" />
+            </Principal>
+            <Dependent Role="comprobante">
+              <PropertyRef Name="RUCcliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_comprobante_TipoComprobante">
+          <End Role="TipoComprobante" Type="Self.TipoComprobante" Multiplicity="1" />
+          <End Role="comprobante" Type="Self.comprobante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoComprobante">
+              <PropertyRef Name="idcomprobante" />
+            </Principal>
+            <Dependent Role="comprobante">
+              <PropertyRef Name="idcomprobante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_factura_reserva">
+          <End Role="reserva" Type="Self.reserva" Multiplicity="1" />
+          <End Role="comprobante" Type="Self.comprobante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="reserva">
+              <PropertyRef Name="reserva_id" />
+            </Principal>
+            <Dependent Role="comprobante">
+              <PropertyRef Name="reserva_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_factura_user">
+          <End Role="user" Type="Self.user" Multiplicity="1" />
+          <End Role="comprobante" Type="Self.comprobante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="comprobante">
+              <PropertyRef Name="cliente_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_minibar_bebida">
+          <End Role="bebida" Type="Self.bebida" Multiplicity="1" />
+          <End Role="minibar" Type="Self.minibar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bebida">
+              <PropertyRef Name="bebida_id" />
+            </Principal>
+            <Dependent Role="minibar">
+              <PropertyRef Name="bebida_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_minibar_habitacion">
+          <End Role="habitacion" Type="Self.habitacion" Multiplicity="1" />
+          <End Role="minibar" Type="Self.minibar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="habitacion">
+              <PropertyRef Name="habitacion_id" />
+            </Principal>
+            <Dependent Role="minibar">
+              <PropertyRef Name="habitacion_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_reserva_user">
+          <End Role="user" Type="Self.user" Multiplicity="1" />
+          <End Role="reserva" Type="Self.reserva" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="reserva">
+              <PropertyRef Name="cliente_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_user_role_role">
+          <End Role="role" Type="Self.role" Multiplicity="1" />
+          <End Role="user_role" Type="Self.user_role" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="role">
+              <PropertyRef Name="role_id" />
+            </Principal>
+            <Dependent Role="user_role">
+              <PropertyRef Name="role_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_user_role_user">
+          <End Role="user" Type="Self.user" Multiplicity="1" />
+          <End Role="user_role" Type="Self.user_role" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="user_role">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="habitacion_ibfk_1">
+          <End Role="hotel" Type="Self.hotel" Multiplicity="1" />
+          <End Role="habitacion" Type="Self.habitacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hotel">
+              <PropertyRef Name="hotel_id" />
+            </Principal>
+            <Dependent Role="habitacion">
+              <PropertyRef Name="hotel_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="habitacion_ibfk_2">
+          <End Role="categoria_habitacion" Type="Self.categoria_habitacion" Multiplicity="1" />
+          <End Role="habitacion" Type="Self.habitacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categoria_habitacion">
+              <PropertyRef Name="categoria_id" />
+            </Principal>
+            <Dependent Role="habitacion">
+              <PropertyRef Name="categoria_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="habitacion_ibfk_3">
+          <End Role="tipo_habitacion" Type="Self.tipo_habitacion" Multiplicity="1" />
+          <End Role="habitacion" Type="Self.habitacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipo_habitacion">
+              <PropertyRef Name="tipo_habitacion_id" />
+            </Principal>
+            <Dependent Role="habitacion">
+              <PropertyRef Name="tipo_habitacion_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="llamada_ibfk_1">
+          <End Role="tipo_llamada" Type="Self.tipo_llamada" Multiplicity="1" />
+          <End Role="llamada" Type="Self.llamada" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipo_llamada">
+              <PropertyRef Name="tipo_llamada_id" />
+            </Principal>
+            <Dependent Role="llamada">
+              <PropertyRef Name="tipo_llamada_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="llamada_ibfk_2">
+          <End Role="habitacion" Type="Self.habitacion" Multiplicity="1" />
+          <End Role="llamada" Type="Self.llamada" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="habitacion">
+              <PropertyRef Name="habitacion_id" />
+            </Principal>
+            <Dependent Role="llamada">
+              <PropertyRef Name="habitacion_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="reserva_habitacion_ibfk_1">
+          <End Role="habitacion" Type="Self.habitacion" Multiplicity="1" />
+          <End Role="reserva_habitacion" Type="Self.reserva_habitacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="habitacion">
+              <PropertyRef Name="habitacion_id" />
+            </Principal>
+            <Dependent Role="reserva_habitacion">
+              <PropertyRef Name="habitacion_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="reserva_habitacion_ibfk_2">
+          <End Role="reserva" Type="Self.reserva" Multiplicity="1" />
+          <End Role="reserva_habitacion" Type="Self.reserva_habitacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="reserva">
+              <PropertyRef Name="reserva_id" />
+            </Principal>
+            <Dependent Role="reserva_habitacion">
+              <PropertyRef Name="reserva_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="HostalDBModelStoreContainer">
+          <EntitySet Name="bebida" EntityType="Self.bebida" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="categoria_habitacion" EntityType="Self.categoria_habitacion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="comprobante" EntityType="Self.comprobante" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Empresa" EntityType="Self.Empresa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="habitacion" EntityType="Self.habitacion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hotel" EntityType="Self.hotel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="llamada" EntityType="Self.llamada" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="minibar" EntityType="Self.minibar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="reserva" EntityType="Self.reserva" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="reserva_habitacion" EntityType="Self.reserva_habitacion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="role" EntityType="Self.role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tipo_habitacion" EntityType="Self.tipo_habitacion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tipo_llamada" EntityType="Self.tipo_llamada" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TipoComprobante" EntityType="Self.TipoComprobante" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="user_role" EntityType="Self.user_role" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_comprobante_Empresa" Association="Self.FK_comprobante_Empresa">
+            <End Role="Empresa" EntitySet="Empresa" />
+            <End Role="comprobante" EntitySet="comprobante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_comprobante_TipoComprobante" Association="Self.FK_comprobante_TipoComprobante">
+            <End Role="TipoComprobante" EntitySet="TipoComprobante" />
+            <End Role="comprobante" EntitySet="comprobante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_factura_reserva" Association="Self.FK_factura_reserva">
+            <End Role="reserva" EntitySet="reserva" />
+            <End Role="comprobante" EntitySet="comprobante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_factura_user" Association="Self.FK_factura_user">
+            <End Role="user" EntitySet="user" />
+            <End Role="comprobante" EntitySet="comprobante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_minibar_bebida" Association="Self.FK_minibar_bebida">
+            <End Role="bebida" EntitySet="bebida" />
+            <End Role="minibar" EntitySet="minibar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_minibar_habitacion" Association="Self.FK_minibar_habitacion">
+            <End Role="habitacion" EntitySet="habitacion" />
+            <End Role="minibar" EntitySet="minibar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_reserva_user" Association="Self.FK_reserva_user">
+            <End Role="user" EntitySet="user" />
+            <End Role="reserva" EntitySet="reserva" />
+          </AssociationSet>
+          <AssociationSet Name="FK_user_role_role" Association="Self.FK_user_role_role">
+            <End Role="role" EntitySet="role" />
+            <End Role="user_role" EntitySet="user_role" />
+          </AssociationSet>
+          <AssociationSet Name="FK_user_role_user" Association="Self.FK_user_role_user">
+            <End Role="user" EntitySet="user" />
+            <End Role="user_role" EntitySet="user_role" />
+          </AssociationSet>
+          <AssociationSet Name="habitacion_ibfk_1" Association="Self.habitacion_ibfk_1">
+            <End Role="hotel" EntitySet="hotel" />
+            <End Role="habitacion" EntitySet="habitacion" />
+          </AssociationSet>
+          <AssociationSet Name="habitacion_ibfk_2" Association="Self.habitacion_ibfk_2">
+            <End Role="categoria_habitacion" EntitySet="categoria_habitacion" />
+            <End Role="habitacion" EntitySet="habitacion" />
+          </AssociationSet>
+          <AssociationSet Name="habitacion_ibfk_3" Association="Self.habitacion_ibfk_3">
+            <End Role="tipo_habitacion" EntitySet="tipo_habitacion" />
+            <End Role="habitacion" EntitySet="habitacion" />
+          </AssociationSet>
+          <AssociationSet Name="llamada_ibfk_1" Association="Self.llamada_ibfk_1">
+            <End Role="tipo_llamada" EntitySet="tipo_llamada" />
+            <End Role="llamada" EntitySet="llamada" />
+          </AssociationSet>
+          <AssociationSet Name="llamada_ibfk_2" Association="Self.llamada_ibfk_2">
+            <End Role="habitacion" EntitySet="habitacion" />
+            <End Role="llamada" EntitySet="llamada" />
+          </AssociationSet>
+          <AssociationSet Name="reserva_habitacion_ibfk_1" Association="Self.reserva_habitacion_ibfk_1">
+            <End Role="habitacion" EntitySet="habitacion" />
+            <End Role="reserva_habitacion" EntitySet="reserva_habitacion" />
+          </AssociationSet>
+          <AssociationSet Name="reserva_habitacion_ibfk_2" Association="Self.reserva_habitacion_ibfk_2">
+            <End Role="reserva" EntitySet="reserva" />
+            <End Role="reserva_habitacion" EntitySet="reserva_habitacion" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HostalDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="bebida">
+          <Key>
+            <PropertyRef Name="bebida_id" />
+          </Key>
+          <Property Name="bebida_id" Type="Int32" Nullable="false" />
+          <Property Name="precio" Type="Double" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="minibar" Relationship="Self.FK_minibar_bebida" FromRole="bebida" ToRole="minibar" />
+        </EntityType>
+        <EntityType Name="categoria_habitacion">
+          <Key>
+            <PropertyRef Name="categoria_id" />
+          </Key>
+          <Property Name="categoria_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="porcentaje" Type="Double" Nullable="false" />
+          <NavigationProperty Name="habitacion" Relationship="Self.habitacion_ibfk_2" FromRole="categoria_habitacion" ToRole="habitacion" />
+        </EntityType>
+        <EntityType Name="comprobante">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="cliente_id" />
+            <PropertyRef Name="reserva_id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cliente_id" Type="Int32" Nullable="false" />
+          <Property Name="reserva_id" Type="Int32" Nullable="false" />
+          <Property Name="costeHabitacion" Type="Double" />
+          <Property Name="costeLlamadas" Type="Double" />
+          <Property Name="costeMinibar" Type="Double" />
+          <Property Name="costeConsumibles" Type="Double" />
+          <Property Name="RUCcliente" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Name="idcomprobante" Type="Int32" Nullable="false" />
+          <Property Name="FechaeEmision" Type="DateTime" Precision="0" />
+          <Property Name="estado" Type="Int16" />
+          <NavigationProperty Name="Empresa" Relationship="Self.FK_comprobante_Empresa" FromRole="comprobante" ToRole="Empresa" />
+          <NavigationProperty Name="TipoComprobante" Relationship="Self.FK_comprobante_TipoComprobante" FromRole="comprobante" ToRole="TipoComprobante" />
+          <NavigationProperty Name="reserva" Relationship="Self.FK_factura_reserva" FromRole="comprobante" ToRole="reserva" />
+          <NavigationProperty Name="user" Relationship="Self.FK_factura_user" FromRole="comprobante" ToRole="user" />
+        </EntityType>
+        <EntityType Name="Empresa">
+          <Key>
+            <PropertyRef Name="RUC" />
+          </Key>
+          <Property Name="RUC" Type="String" MaxLength="11" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="RazonSocial" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Direccion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="comprobante" Relationship="Self.FK_comprobante_Empresa" FromRole="Empresa" ToRole="comprobante" />
+        </EntityType>
+        <EntityType Name="habitacion">
+          <Key>
+            <PropertyRef Name="habitacion_id" />
+          </Key>
+          <Property Name="habitacion_id" Type="Int32" Nullable="false" />
+          <Property Name="hotel_id" Type="Int32" Nullable="false" />
+          <Property Name="categoria_id" Type="Int32" Nullable="false" />
+          <Property Name="tipo_habitacion_id" Type="Int32" Nullable="false" />
+          <Property Name="ocupada" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="categoria_habitacion" Relationship="Self.habitacion_ibfk_2" FromRole="habitacion" ToRole="categoria_habitacion" />
+          <NavigationProperty Name="minibar" Relationship="Self.FK_minibar_habitacion" FromRole="habitacion" ToRole="minibar" />
+          <NavigationProperty Name="hotel" Relationship="Self.habitacion_ibfk_1" FromRole="habitacion" ToRole="hotel" />
+          <NavigationProperty Name="tipo_habitacion" Relationship="Self.habitacion_ibfk_3" FromRole="habitacion" ToRole="tipo_habitacion" />
+          <NavigationProperty Name="llamada" Relationship="Self.llamada_ibfk_2" FromRole="habitacion" ToRole="llamada" />
+          <NavigationProperty Name="reserva_habitacion" Relationship="Self.reserva_habitacion_ibfk_1" FromRole="habitacion" ToRole="reserva_habitacion" />
+        </EntityType>
+        <EntityType Name="hotel">
+          <Key>
+            <PropertyRef Name="hotel_id" />
+          </Key>
+          <Property Name="hotel_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="estrellas" Type="Int32" Nullable="false" />
+          <Property Name="direccion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ciudad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="telefono" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="habitacion" Relationship="Self.habitacion_ibfk_1" FromRole="hotel" ToRole="habitacion" />
+        </EntityType>
+        <EntityType Name="llamada">
+          <Key>
+            <PropertyRef Name="llamada_id" />
+          </Key>
+          <Property Name="llamada_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="reserva_id" Type="Int32" Nullable="false" />
+          <Property Name="habitacion_id" Type="Int32" Nullable="false" />
+          <Property Name="tipo_llamada_id" Type="Int32" Nullable="false" />
+          <Property Name="minutos" Type="Double" />
+          <NavigationProperty Name="habitacion" Relationship="Self.llamada_ibfk_2" FromRole="llamada" ToRole="habitacion" />
+          <NavigationProperty Name="tipo_llamada" Relationship="Self.llamada_ibfk_1" FromRole="llamada" ToRole="tipo_llamada" />
+        </EntityType>
+        <EntityType Name="minibar">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="reserva_id" Type="Int32" Nullable="false" />
+          <Property Name="habitacion_id" Type="Int32" Nullable="false" />
+          <Property Name="bebida_id" Type="Int32" Nullable="false" />
+          <Property Name="cantidad_consumida" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="bebida" Relationship="Self.FK_minibar_bebida" FromRole="minibar" ToRole="bebida" />
+          <NavigationProperty Name="habitacion" Relationship="Self.FK_minibar_habitacion" FromRole="minibar" ToRole="habitacion" />
+        </EntityType>
+        <EntityType Name="reserva">
+          <Key>
+            <PropertyRef Name="reserva_id" />
+          </Key>
+          <Property Name="reserva_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cliente_id" Type="Int32" Nullable="false" />
+          <Property Name="fecha_inicio" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="fecha_fin" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="fecha_reserva" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="comprobante" Relationship="Self.FK_factura_reserva" FromRole="reserva" ToRole="comprobante" />
+          <NavigationProperty Name="user" Relationship="Self.FK_reserva_user" FromRole="reserva" ToRole="user" />
+          <NavigationProperty Name="reserva_habitacion" Relationship="Self.reserva_habitacion_ibfk_2" FromRole="reserva" ToRole="reserva_habitacion" />
+        </EntityType>
+        <EntityType Name="reserva_habitacion">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="reserva_id" />
+            <PropertyRef Name="habitacion_id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="reserva_id" Type="Int32" Nullable="false" />
+          <Property Name="habitacion_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="habitacion" Relationship="Self.reserva_habitacion_ibfk_1" FromRole="reserva_habitacion" ToRole="habitacion" />
+          <NavigationProperty Name="reserva" Relationship="Self.reserva_habitacion_ibfk_2" FromRole="reserva_habitacion" ToRole="reserva" />
+        </EntityType>
+        <EntityType Name="role">
+          <Key>
+            <PropertyRef Name="role_id" />
+          </Key>
+          <Property Name="role_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="authority" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="user_role" Relationship="Self.FK_user_role_role" FromRole="role" ToRole="user_role" />
+        </EntityType>
+        <EntityType Name="tipo_habitacion">
+          <Key>
+            <PropertyRef Name="tipo_habitacion_id" />
+          </Key>
+          <Property Name="tipo_habitacion_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="precio" Type="Double" Nullable="false" />
+          <NavigationProperty Name="habitacion" Relationship="Self.habitacion_ibfk_3" FromRole="tipo_habitacion" ToRole="habitacion" />
+        </EntityType>
+        <EntityType Name="tipo_llamada">
+          <Key>
+            <PropertyRef Name="tipo_llamada_id" />
+          </Key>
+          <Property Name="tipo_llamada_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="precio" Type="Double" Nullable="false" />
+          <NavigationProperty Name="llamada" Relationship="Self.llamada_ibfk_1" FromRole="tipo_llamada" ToRole="llamada" />
+        </EntityType>
+        <EntityType Name="TipoComprobante">
+          <Key>
+            <PropertyRef Name="idcomprobante" />
+          </Key>
+          <Property Name="idcomprobante" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombrecomprobante" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="comprobante" Relationship="Self.FK_comprobante_TipoComprobante" FromRole="TipoComprobante" ToRole="comprobante" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="dni" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="nombre" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="apellidos" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="direccion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="telefono" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="enabled" Type="Int16" />
+          <Property Name="accountExpired" Type="Int16" />
+          <Property Name="accountLocked" Type="Int16" />
+          <Property Name="passwordExpired" Type="Int16" />
+          <Property Name="RUC" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="comprobante" Relationship="Self.FK_factura_user" FromRole="user" ToRole="comprobante" />
+          <NavigationProperty Name="reserva" Relationship="Self.FK_reserva_user" FromRole="user" ToRole="reserva" />
+          <NavigationProperty Name="user_role" Relationship="Self.FK_user_role_user" FromRole="user" ToRole="user_role" />
+        </EntityType>
+        <EntityType Name="user_role">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="user_id" />
+            <PropertyRef Name="role_id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="role_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="role" Relationship="Self.FK_user_role_role" FromRole="user_role" ToRole="role" />
+          <NavigationProperty Name="user" Relationship="Self.FK_user_role_user" FromRole="user_role" ToRole="user" />
+        </EntityType>
+        <Association Name="FK_minibar_bebida">
+          <End Role="bebida" Type="Self.bebida" Multiplicity="1" />
+          <End Role="minibar" Type="Self.minibar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bebida">
+              <PropertyRef Name="bebida_id" />
+            </Principal>
+            <Dependent Role="minibar">
+              <PropertyRef Name="bebida_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="habitacion_ibfk_2">
+          <End Role="categoria_habitacion" Type="Self.categoria_habitacion" Multiplicity="1" />
+          <End Role="habitacion" Type="Self.habitacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categoria_habitacion">
+              <PropertyRef Name="categoria_id" />
+            </Principal>
+            <Dependent Role="habitacion">
+              <PropertyRef Name="categoria_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_comprobante_Empresa">
+          <End Role="Empresa" Type="Self.Empresa" Multiplicity="0..1" />
+          <End Role="comprobante" Type="Self.comprobante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empresa">
+              <PropertyRef Name="RUC" />
+            </Principal>
+            <Dependent Role="comprobante">
+              <PropertyRef Name="RUCcliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_comprobante_TipoComprobante">
+          <End Role="TipoComprobante" Type="Self.TipoComprobante" Multiplicity="1" />
+          <End Role="comprobante" Type="Self.comprobante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoComprobante">
+              <PropertyRef Name="idcomprobante" />
+            </Principal>
+            <Dependent Role="comprobante">
+              <PropertyRef Name="idcomprobante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_factura_reserva">
+          <End Role="reserva" Type="Self.reserva" Multiplicity="1" />
+          <End Role="comprobante" Type="Self.comprobante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="reserva">
+              <PropertyRef Name="reserva_id" />
+            </Principal>
+            <Dependent Role="comprobante">
+              <PropertyRef Name="reserva_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_factura_user">
+          <End Role="user" Type="Self.user" Multiplicity="1" />
+          <End Role="comprobante" Type="Self.comprobante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="comprobante">
+              <PropertyRef Name="cliente_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_minibar_habitacion">
+          <End Role="habitacion" Type="Self.habitacion" Multiplicity="1" />
+          <End Role="minibar" Type="Self.minibar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="habitacion">
+              <PropertyRef Name="habitacion_id" />
+            </Principal>
+            <Dependent Role="minibar">
+              <PropertyRef Name="habitacion_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="habitacion_ibfk_1">
+          <End Role="hotel" Type="Self.hotel" Multiplicity="1" />
+          <End Role="habitacion" Type="Self.habitacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hotel">
+              <PropertyRef Name="hotel_id" />
+            </Principal>
+            <Dependent Role="habitacion">
+              <PropertyRef Name="hotel_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="habitacion_ibfk_3">
+          <End Role="tipo_habitacion" Type="Self.tipo_habitacion" Multiplicity="1" />
+          <End Role="habitacion" Type="Self.habitacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipo_habitacion">
+              <PropertyRef Name="tipo_habitacion_id" />
+            </Principal>
+            <Dependent Role="habitacion">
+              <PropertyRef Name="tipo_habitacion_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="llamada_ibfk_2">
+          <End Role="habitacion" Type="Self.habitacion" Multiplicity="1" />
+          <End Role="llamada" Type="Self.llamada" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="habitacion">
+              <PropertyRef Name="habitacion_id" />
+            </Principal>
+            <Dependent Role="llamada">
+              <PropertyRef Name="habitacion_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="reserva_habitacion_ibfk_1">
+          <End Role="habitacion" Type="Self.habitacion" Multiplicity="1" />
+          <End Role="reserva_habitacion" Type="Self.reserva_habitacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="habitacion">
+              <PropertyRef Name="habitacion_id" />
+            </Principal>
+            <Dependent Role="reserva_habitacion">
+              <PropertyRef Name="habitacion_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="llamada_ibfk_1">
+          <End Role="tipo_llamada" Type="Self.tipo_llamada" Multiplicity="1" />
+          <End Role="llamada" Type="Self.llamada" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipo_llamada">
+              <PropertyRef Name="tipo_llamada_id" />
+            </Principal>
+            <Dependent Role="llamada">
+              <PropertyRef Name="tipo_llamada_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_reserva_user">
+          <End Role="user" Type="Self.user" Multiplicity="1" />
+          <End Role="reserva" Type="Self.reserva" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="reserva">
+              <PropertyRef Name="cliente_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="reserva_habitacion_ibfk_2">
+          <End Role="reserva" Type="Self.reserva" Multiplicity="1" />
+          <End Role="reserva_habitacion" Type="Self.reserva_habitacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="reserva">
+              <PropertyRef Name="reserva_id" />
+            </Principal>
+            <Dependent Role="reserva_habitacion">
+              <PropertyRef Name="reserva_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_user_role_role">
+          <End Role="role" Type="Self.role" Multiplicity="1" />
+          <End Role="user_role" Type="Self.user_role" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="role">
+              <PropertyRef Name="role_id" />
+            </Principal>
+            <Dependent Role="user_role">
+              <PropertyRef Name="role_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_user_role_user">
+          <End Role="user" Type="Self.user" Multiplicity="1" />
+          <End Role="user_role" Type="Self.user_role" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="user_role">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="HostalDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="bebida" EntityType="Self.bebida" />
+          <EntitySet Name="categoria_habitacion" EntityType="Self.categoria_habitacion" />
+          <EntitySet Name="comprobante" EntityType="Self.comprobante" />
+          <EntitySet Name="Empresa" EntityType="Self.Empresa" />
+          <EntitySet Name="habitacion" EntityType="Self.habitacion" />
+          <EntitySet Name="hotel" EntityType="Self.hotel" />
+          <EntitySet Name="llamada" EntityType="Self.llamada" />
+          <EntitySet Name="minibar" EntityType="Self.minibar" />
+          <EntitySet Name="reserva" EntityType="Self.reserva" />
+          <EntitySet Name="reserva_habitacion" EntityType="Self.reserva_habitacion" />
+          <EntitySet Name="role" EntityType="Self.role" />
+          <EntitySet Name="tipo_habitacion" EntityType="Self.tipo_habitacion" />
+          <EntitySet Name="tipo_llamada" EntityType="Self.tipo_llamada" />
+          <EntitySet Name="TipoComprobante" EntityType="Self.TipoComprobante" />
+          <EntitySet Name="user" EntityType="Self.user" />
+          <EntitySet Name="user_role" EntityType="Self.user_role" />
+          <AssociationSet Name="FK_minibar_bebida" Association="Self.FK_minibar_bebida">
+            <End Role="bebida" EntitySet="bebida" />
+            <End Role="minibar" EntitySet="minibar" />
+          </AssociationSet>
+          <AssociationSet Name="habitacion_ibfk_2" Association="Self.habitacion_ibfk_2">
+            <End Role="categoria_habitacion" EntitySet="categoria_habitacion" />
+            <End Role="habitacion" EntitySet="habitacion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_comprobante_Empresa" Association="Self.FK_comprobante_Empresa">
+            <End Role="Empresa" EntitySet="Empresa" />
+            <End Role="comprobante" EntitySet="comprobante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_comprobante_TipoComprobante" Association="Self.FK_comprobante_TipoComprobante">
+            <End Role="TipoComprobante" EntitySet="TipoComprobante" />
+            <End Role="comprobante" EntitySet="comprobante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_factura_reserva" Association="Self.FK_factura_reserva">
+            <End Role="reserva" EntitySet="reserva" />
+            <End Role="comprobante" EntitySet="comprobante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_factura_user" Association="Self.FK_factura_user">
+            <End Role="user" EntitySet="user" />
+            <End Role="comprobante" EntitySet="comprobante" />
+          </AssociationSet>
+          <AssociationSet Name="FK_minibar_habitacion" Association="Self.FK_minibar_habitacion">
+            <End Role="habitacion" EntitySet="habitacion" />
+            <End Role="minibar" EntitySet="minibar" />
+          </AssociationSet>
+          <AssociationSet Name="habitacion_ibfk_1" Association="Self.habitacion_ibfk_1">
+            <End Role="hotel" EntitySet="hotel" />
+            <End Role="habitacion" EntitySet="habitacion" />
+          </AssociationSet>
+          <AssociationSet Name="habitacion_ibfk_3" Association="Self.habitacion_ibfk_3">
+            <End Role="tipo_habitacion" EntitySet="tipo_habitacion" />
+            <End Role="habitacion" EntitySet="habitacion" />
+          </AssociationSet>
+          <AssociationSet Name="llamada_ibfk_2" Association="Self.llamada_ibfk_2">
+            <End Role="habitacion" EntitySet="habitacion" />
+            <End Role="llamada" EntitySet="llamada" />
+          </AssociationSet>
+          <AssociationSet Name="reserva_habitacion_ibfk_1" Association="Self.reserva_habitacion_ibfk_1">
+            <End Role="habitacion" EntitySet="habitacion" />
+            <End Role="reserva_habitacion" EntitySet="reserva_habitacion" />
+          </AssociationSet>
+          <AssociationSet Name="llamada_ibfk_1" Association="Self.llamada_ibfk_1">
+            <End Role="tipo_llamada" EntitySet="tipo_llamada" />
+            <End Role="llamada" EntitySet="llamada" />
+          </AssociationSet>
+          <AssociationSet Name="FK_reserva_user" Association="Self.FK_reserva_user">
+            <End Role="user" EntitySet="user" />
+            <End Role="reserva" EntitySet="reserva" />
+          </AssociationSet>
+          <AssociationSet Name="reserva_habitacion_ibfk_2" Association="Self.reserva_habitacion_ibfk_2">
+            <End Role="reserva" EntitySet="reserva" />
+            <End Role="reserva_habitacion" EntitySet="reserva_habitacion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_user_role_role" Association="Self.FK_user_role_role">
+            <End Role="role" EntitySet="role" />
+            <End Role="user_role" EntitySet="user_role" />
+          </AssociationSet>
+          <AssociationSet Name="FK_user_role_user" Association="Self.FK_user_role_user">
+            <End Role="user" EntitySet="user" />
+            <End Role="user_role" EntitySet="user_role" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HostalDBModelStoreContainer" CdmEntityContainer="HostalDBEntities">
+          <EntitySetMapping Name="bebida">
+            <EntityTypeMapping TypeName="HostalDBModel.bebida">
+              <MappingFragment StoreEntitySet="bebida">
+                <ScalarProperty Name="bebida_id" ColumnName="bebida_id" />
+                <ScalarProperty Name="precio" ColumnName="precio" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="categoria_habitacion">
+            <EntityTypeMapping TypeName="HostalDBModel.categoria_habitacion">
+              <MappingFragment StoreEntitySet="categoria_habitacion">
+                <ScalarProperty Name="categoria_id" ColumnName="categoria_id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="porcentaje" ColumnName="porcentaje" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="comprobante">
+            <EntityTypeMapping TypeName="HostalDBModel.comprobante">
+              <MappingFragment StoreEntitySet="comprobante">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="cliente_id" ColumnName="cliente_id" />
+                <ScalarProperty Name="reserva_id" ColumnName="reserva_id" />
+                <ScalarProperty Name="costeHabitacion" ColumnName="costeHabitacion" />
+                <ScalarProperty Name="costeLlamadas" ColumnName="costeLlamadas" />
+                <ScalarProperty Name="costeMinibar" ColumnName="costeMinibar" />
+                <ScalarProperty Name="costeConsumibles" ColumnName="costeConsumibles" />
+                <ScalarProperty Name="RUCcliente" ColumnName="RUCcliente" />
+                <ScalarProperty Name="idcomprobante" ColumnName="idcomprobante" />
+                <ScalarProperty Name="FechaeEmision" ColumnName="FechaeEmision" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Empresa">
+            <EntityTypeMapping TypeName="HostalDBModel.Empresa">
+              <MappingFragment StoreEntitySet="Empresa">
+                <ScalarProperty Name="RUC" ColumnName="RUC" />
+                <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="habitacion">
+            <EntityTypeMapping TypeName="HostalDBModel.habitacion">
+              <MappingFragment StoreEntitySet="habitacion">
+                <ScalarProperty Name="habitacion_id" ColumnName="habitacion_id" />
+                <ScalarProperty Name="hotel_id" ColumnName="hotel_id" />
+                <ScalarProperty Name="categoria_id" ColumnName="categoria_id" />
+                <ScalarProperty Name="tipo_habitacion_id" ColumnName="tipo_habitacion_id" />
+                <ScalarProperty Name="ocupada" ColumnName="ocupada" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hotel">
+            <EntityTypeMapping TypeName="HostalDBModel.hotel">
+              <MappingFragment StoreEntitySet="hotel">
+                <ScalarProperty Name="hotel_id" ColumnName="hotel_id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="estrellas" ColumnName="estrellas" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="ciudad" ColumnName="ciudad" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="llamada">
+            <EntityTypeMapping TypeName="HostalDBModel.llamada">
+              <MappingFragment StoreEntitySet="llamada">
+                <ScalarProperty Name="llamada_id" ColumnName="llamada_id" />
+                <ScalarProperty Name="reserva_id" ColumnName="reserva_id" />
+                <ScalarProperty Name="habitacion_id" ColumnName="habitacion_id" />
+                <ScalarProperty Name="tipo_llamada_id" ColumnName="tipo_llamada_id" />
+                <ScalarProperty Name="minutos" ColumnName="minutos" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="minibar">
+            <EntityTypeMapping TypeName="HostalDBModel.minibar">
+              <MappingFragment StoreEntitySet="minibar">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="reserva_id" ColumnName="reserva_id" />
+                <ScalarProperty Name="habitacion_id" ColumnName="habitacion_id" />
+                <ScalarProperty Name="bebida_id" ColumnName="bebida_id" />
+                <ScalarProperty Name="cantidad_consumida" ColumnName="cantidad_consumida" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="reserva">
+            <EntityTypeMapping TypeName="HostalDBModel.reserva">
+              <MappingFragment StoreEntitySet="reserva">
+                <ScalarProperty Name="reserva_id" ColumnName="reserva_id" />
+                <ScalarProperty Name="cliente_id" ColumnName="cliente_id" />
+                <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+                <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+                <ScalarProperty Name="fecha_reserva" ColumnName="fecha_reserva" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="reserva_habitacion">
+            <EntityTypeMapping TypeName="HostalDBModel.reserva_habitacion">
+              <MappingFragment StoreEntitySet="reserva_habitacion">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="reserva_id" ColumnName="reserva_id" />
+                <ScalarProperty Name="habitacion_id" ColumnName="habitacion_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="role">
+            <EntityTypeMapping TypeName="HostalDBModel.role">
+              <MappingFragment StoreEntitySet="role">
+                <ScalarProperty Name="role_id" ColumnName="role_id" />
+                <ScalarProperty Name="authority" ColumnName="authority" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tipo_habitacion">
+            <EntityTypeMapping TypeName="HostalDBModel.tipo_habitacion">
+              <MappingFragment StoreEntitySet="tipo_habitacion">
+                <ScalarProperty Name="tipo_habitacion_id" ColumnName="tipo_habitacion_id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="precio" ColumnName="precio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tipo_llamada">
+            <EntityTypeMapping TypeName="HostalDBModel.tipo_llamada">
+              <MappingFragment StoreEntitySet="tipo_llamada">
+                <ScalarProperty Name="tipo_llamada_id" ColumnName="tipo_llamada_id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="precio" ColumnName="precio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoComprobante">
+            <EntityTypeMapping TypeName="HostalDBModel.TipoComprobante">
+              <MappingFragment StoreEntitySet="TipoComprobante">
+                <ScalarProperty Name="idcomprobante" ColumnName="idcomprobante" />
+                <ScalarProperty Name="nombrecomprobante" ColumnName="nombrecomprobante" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user">
+            <EntityTypeMapping TypeName="HostalDBModel.user">
+              <MappingFragment StoreEntitySet="user">
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="dni" ColumnName="dni" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="enabled" ColumnName="enabled" />
+                <ScalarProperty Name="accountExpired" ColumnName="accountExpired" />
+                <ScalarProperty Name="accountLocked" ColumnName="accountLocked" />
+                <ScalarProperty Name="passwordExpired" ColumnName="passwordExpired" />
+                <ScalarProperty Name="RUC" ColumnName="RUC" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user_role">
+            <EntityTypeMapping TypeName="HostalDBModel.user_role">
+              <MappingFragment StoreEntitySet="user_role">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="role_id" ColumnName="role_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
