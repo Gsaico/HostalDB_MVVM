@@ -68,5 +68,16 @@ namespace LogicaDeNegocios
                 throw new NotImplementedException();
             }
         }
+        public Dominio.Dtos.userDTO BuscarUsuarioPorID(int IDUser)
+        {
+            try
+            {
+                return userQuerys.BuscarUsuarioPorID(IDUser);
+            }
+            catch (Exception)
+            {
+                throw new NotImplementedException();
+            };
+        }
     }
 }

@@ -89,12 +89,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\ServiceReference_Reserva\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\ServiceReference_User\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\HabitacionViewModel.cs" />
+    <Compile Include="ViewModels\MaestroDetalleReservasDelCliente_VM.cs" />
+    <Compile Include="ViewModels\ReservaViewModel.cs" />
     <Compile Include="ViewModels\UserViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +124,25 @@
     <None Include="Service References\ServiceReference_Habitacion\HostalDB_ViewModel.ServiceReference_Habitacion.userDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\ServiceReference_Reserva\HostalDB_ServiceWCF.wsdl" />
+    <None Include="Service References\ServiceReference_Reserva\HostalDB_ServiceWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_Reserva\HostalDB_ServiceWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_Reserva\HostalDB_ServiceWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_Reserva\HostalDB_ViewModel.ServiceReference_Reserva.habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Reserva\HostalDB_ViewModel.ServiceReference_Reserva.reservaDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Reserva\HostalDB_ViewModel.ServiceReference_Reserva.userDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\ServiceReference_User\HostalDB_ServiceWCF.wsdl" />
     <None Include="Service References\ServiceReference_User\HostalDB_ServiceWCF.xsd">
       <SubType>Designer</SubType>
@@ -134,10 +160,18 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Service References\ServiceReference_Reserva\HostalDB_ServiceWCF.disco" />
+    <None Include="Service References\ServiceReference_Reserva\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference_Reserva\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference_Reserva\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="ServiceReferences.ClientConfig" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ServiceReference_Habitacion\" />
+    <WCFMetadataStorage Include="Service References\ServiceReference_Reserva\" />
     <WCFMetadataStorage Include="Service References\ServiceReference_User\" />
   </ItemGroup>
   <ItemGroup>
@@ -150,6 +184,12 @@
     <None Include="Service References\ServiceReference_User\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\ServiceReference_User\HostalDB_ViewModel.ServiceReference_User.habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_User\HostalDB_ViewModel.ServiceReference_User.reservaDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\ServiceReference_User\HostalDB_ViewModel.ServiceReference_User.userDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

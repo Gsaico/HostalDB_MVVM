@@ -38,7 +38,7 @@
                 <StackPanel x:Name="LinksStackPanel" Style="{StaticResource LinksStackPanelStyle}">
 
                     <HyperlinkButton x:Name="Link1" Style="{StaticResource LinkStyle}" 
-                                     NavigateUri="/Home" TargetName="ContentFrame" Content="página principal"/>
+                                     NavigateUri="/Reservas" TargetName="ContentFrame" Content="Reservas"/>
 									 
                     <Rectangle x:Name="Divider1" Style="{StaticResource DividerStyle}"/>
 					
@@ -49,6 +49,10 @@
 
                     <HyperlinkButton x:Name="Habitaciones" Style="{StaticResource LinkStyle}" 
                                      NavigateUri="/HabitacionesDisponibles" TargetName="ContentFrame" Content="Habitaciones Disponibles"/>
+                    <Rectangle x:Name="Divider3" Style="{StaticResource DividerStyle}"/>
+
+                    <HyperlinkButton x:Name="temp" Style="{StaticResource LinkStyle}" 
+                                     NavigateUri="/temporalsito" TargetName="ContentFrame" Content="temporalsito"/>
 
                 </StackPanel>
             </Border>

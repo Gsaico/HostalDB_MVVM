@@ -1,0 +1,30 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="HostalDB_View.UserControls.ReservaUserControl"
+    xmlns:vm="clr-namespace:HostalDB_ViewModel.ViewModels;assembly=HostalDB_ViewModel" 
+    mc:Ignorable="d" d:DesignWidth="1000" Height="336">
+    <UserControl.Resources>
+        <vm:ReservaViewModel x:Key="ReservaViewModel" />
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" Background="White" Margin="0,0,0,10" DataContext="{Binding Source={StaticResource ReservaViewModel}}" >
+        <TextBox x:Name ="txtParametroBusquedaReserva" Text="{Binding ParametroBusqueda_IDcliente,Mode=TwoWay}" HorizontalAlignment="Left" Height="23" Margin="10,26,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="213"/>
+        <Button  x:Name ="btnBuscarParametroBusquedaReserva" Command= "{Binding ListarReservasPorClienteCommand}" Content="Buscar" HorizontalAlignment="Left" Margin="228,26,0,0" VerticalAlignment="Top" Width="75"/>
+
+        <sdk:DataGrid  Margin="10,70,21,0" AutoGenerateColumns="False"
+                      ItemsSource="{Binding ListaReservas,Mode=TwoWay}"
+                      SelectedItem="{Binding ItemReserva,Mode=TwoWay}">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding reserva_id}"  Header="reserva_id"/>
+                <sdk:DataGridTextColumn Binding="{Binding cliente_id}"   Header="cliente_id" />
+                <sdk:DataGridTextColumn Binding="{Binding fecha_inicio}"  Header="fecha_inicio"/>
+                <sdk:DataGridTextColumn Binding="{Binding fecha_fin}"   Header="fecha_fin" />
+                <sdk:DataGridTextColumn Binding="{Binding fecha_reserva}"   Header="fecha_reserva" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button x:Name ="btnListarTodos" Command= "{Binding ListarTodasLasReservasCommand}" Content="Listar Todo" HorizontalAlignment="Left" Margin="332,27,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</UserControl>

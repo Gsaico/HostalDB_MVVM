@@ -104,6 +104,23 @@ namespace Dominio.Querys
             }
         }
 
+        public Dtos.userDTO BuscarUsuarioPorID(int IDUser)
+        {
+            try
+            {
+                using (var modelo = new PersistenciaDatos.HostalDBEntities())
+                {
+                    var entity = modelo.user.Where(q => q.user_id == IDUser).Select(q => q).FirstOrDefault();
 
+                    if (entity == null) return null;
+                    return Dominio.Convertidores.userAssembler.ToDTO(entity);
+
+                }
+            }
+            catch (Exception)
+            {
+                throw new NotImplementedException();
+            };
+        }
     }
 }

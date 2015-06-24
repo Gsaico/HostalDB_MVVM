@@ -22,7 +22,7 @@ namespace HostalDB_ViewModel.ViewModels
         //= new ServiceReference_User.UserServiceClient();
 
 
-        #region propiedades
+        #region propiedades Usuario
 
 
         private ObservableCollection<ServiceReference_User.userDTO> _ListarUsuarios;

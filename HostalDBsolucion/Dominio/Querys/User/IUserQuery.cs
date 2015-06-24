@@ -14,5 +14,7 @@ namespace Dominio.Querys.User
         bool EliminarUsuario(int id);
         List<Dtos.userDTO> BuscarUsuario(string parametro);
         List<Dtos.userDTO> ListarUsuarios();
+
+        Dtos.userDTO BuscarUsuarioPorID(int IDUser);
     }
 }

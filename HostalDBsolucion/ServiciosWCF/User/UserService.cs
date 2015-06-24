@@ -69,5 +69,16 @@ namespace ServiciosWCF
                 throw new NotImplementedException();
             }
         }
+        public Dominio.Dtos.userDTO BuscarUsuarioPorID(int IDUser)
+        {
+            try
+            {
+                return UserLogicaNegocio.BuscarUsuarioPorID(IDUser);
+            }
+            catch (Exception)
+            {
+                throw new NotImplementedException();
+            };
+        }
     }
 }

@@ -89,6 +89,12 @@
     <Compile Include="UserControls\HabitacionesOcupadasUserControl.xaml.cs">
       <DependentUpon>HabitacionesOcupadasUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\MaestroDetalleReservasDelCliente_UserControl.xaml.cs">
+      <DependentUpon>MaestroDetalleReservasDelCliente_UserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ReservaUserControl.xaml.cs">
+      <DependentUpon>ReservaUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\SilverlightControl1.xaml.cs">
       <DependentUpon>SilverlightControl1.xaml</DependentUpon>
     </Compile>
@@ -104,13 +110,16 @@
     <Compile Include="Views\HabitacionesOcupadas.xaml.cs">
       <DependentUpon>HabitacionesOcupadas.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Home.xaml.cs">
-      <DependentUpon>Home.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Reservas.xaml.cs">
+      <DependentUpon>Reservas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\temporalsito.xaml.cs">
+      <DependentUpon>temporalsito.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Usuarios.xaml.cs">
       <DependentUpon>Usuarios.xaml</DependentUpon>
     </Compile>
@@ -128,11 +137,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\MaestroDetalleReservasDelCliente_UserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ReservaUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\SilverlightControl1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\HabitacionesOcupadas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Reservas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\temporalsito.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -153,10 +178,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\HabitacionesDisponibles.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Home.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

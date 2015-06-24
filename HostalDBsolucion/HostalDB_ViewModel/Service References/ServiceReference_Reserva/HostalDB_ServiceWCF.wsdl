@@ -127,12 +127,6 @@
   <wsdl:message name="IUserService_ListarUsuarios_OutputMessage">
     <wsdl:part name="parameters" element="tns:ListarUsuariosResponse" />
   </wsdl:message>
-  <wsdl:message name="IUserService_BuscarUsuarioPorID_InputMessage">
-    <wsdl:part name="parameters" element="tns:BuscarUsuarioPorID" />
-  </wsdl:message>
-  <wsdl:message name="IUserService_BuscarUsuarioPorID_OutputMessage">
-    <wsdl:part name="parameters" element="tns:BuscarUsuarioPorIDResponse" />
-  </wsdl:message>
   <wsdl:portType name="IHabitacionService">
     <wsdl:operation name="InsertarHabitacion">
       <wsdl:input wsaw:Action="http://tempuri.org/IHabitacionService/InsertarHabitacion" message="tns:IHabitacionService_InsertarHabitacion_InputMessage" />
@@ -217,10 +211,6 @@
     <wsdl:operation name="ListarUsuarios">
       <wsdl:input wsaw:Action="http://tempuri.org/IUserService/ListarUsuarios" message="tns:IUserService_ListarUsuarios_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IUserService/ListarUsuariosResponse" message="tns:IUserService_ListarUsuarios_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="BuscarUsuarioPorID">
-      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/BuscarUsuarioPorID" message="tns:IUserService_BuscarUsuarioPorID_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/BuscarUsuarioPorIDResponse" message="tns:IUserService_BuscarUsuarioPorID_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IHabitacionService" type="tns:IHabitacionService">
@@ -404,15 +394,6 @@
     </wsdl:operation>
     <wsdl:operation name="ListarUsuarios">
       <soap:operation soapAction="http://tempuri.org/IUserService/ListarUsuarios" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="BuscarUsuarioPorID">
-      <soap:operation soapAction="http://tempuri.org/IUserService/BuscarUsuarioPorID" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

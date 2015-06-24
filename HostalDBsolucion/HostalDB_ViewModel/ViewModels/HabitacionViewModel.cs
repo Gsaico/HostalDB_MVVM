@@ -197,9 +197,7 @@ namespace HostalDB_ViewModel.ViewModels
         }
         #endregion
 
-        #region acciones Complete
-        #endregion
-
+       
         #region botones
 
         public ICommand NuevoHabitacionCommand { get; set; }
