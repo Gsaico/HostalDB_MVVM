@@ -11,16 +11,27 @@
         <vm:MaestroDetalleReservasDelCliente_VM x:Key="MaestroDetalleReservasDelCliente_VM" />
     </UserControl.Resources>
     <Grid x:Name="LayoutRoot" Background="White" DataContext="{Binding Source={StaticResource MaestroDetalleReservasDelCliente_VM}}">
-        <TextBox x:Name="txtParametroIDuser" Text="{Binding ParametroBusquedaIDUsuario,Mode=TwoWay}" HorizontalAlignment="Left" Height="23" Margin="88,31,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="97"/>
+        <TextBox x:Name="txtParametroIDuser" Text="{Binding ParametroBusquedaIDUsuario,Mode=TwoWay}" HorizontalAlignment="Left" Height="23" Margin="96,32,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="97"/>
 
-        <sdk:Label  Content="ID User:" HorizontalAlignment="Left" Height="23" Margin="24,31,0,0" VerticalAlignment="Top" Width="59"/>
-        <Button x:Name="btnBuscarReservasDelCliente" Command= "{Binding BuscarUsuarioPorIDCommand}" Content="Buscar" HorizontalAlignment="Left" Margin="190,31,0,0" VerticalAlignment="Top" Width="75"/>
-        <sdk:Label Content="DNI :" HorizontalAlignment="Left" Height="18" Margin="47,80,0,0" VerticalAlignment="Top" Width="36"/>
-        <sdk:Label Content="Nombres :" HorizontalAlignment="Left" Height="18" Margin="24,107,0,0" VerticalAlignment="Top" Width="59"/>
-        <sdk:Label Content="Apellidos :" HorizontalAlignment="Left" Height="18" Margin="24,131,0,0" VerticalAlignment="Top" Width="59"/>
-        <TextBox x:Name="txtDNI" Text="{Binding ItemUsuario.dni, Mode=TwoWay}" HorizontalAlignment="Left" Height="23" Margin="88,75,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="263"/>
-        <TextBox x:Name="txtNombres" Text="{Binding ItemUsuario.nombre, Mode=TwoWay}" HorizontalAlignment="Left" Height="23" Margin="88,103,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="263"/>
-        <TextBox x:Name="txtApellidos" Text="{Binding ItemUsuario.apellidos, Mode=TwoWay}" HorizontalAlignment="Left" Height="23" Margin="88,131,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="263"/>
+        <sdk:Label  Content="ID User:" HorizontalAlignment="Left" Height="23" Margin="32,32,0,0" VerticalAlignment="Top" Width="59"/>
+        <Button x:Name="btnBuscarReservasDelCliente" Command= "{Binding BuscarUsuarioPorIDCommand}" Content="Buscar" HorizontalAlignment="Left" Margin="198,32,0,0" VerticalAlignment="Top" Width="75"/>
+        <sdk:Label Content="DNI :" HorizontalAlignment="Left" Height="18" Margin="55,81,0,0" VerticalAlignment="Top" Width="36"/>
+        <sdk:Label Content="Nombres :" HorizontalAlignment="Left" Height="18" Margin="32,108,0,0" VerticalAlignment="Top" Width="59"/>
+        <sdk:Label Content="Apellidos :" HorizontalAlignment="Left" Height="18" Margin="32,132,0,0" VerticalAlignment="Top" Width="59"/>
+        <TextBox x:Name="txtDNI" Text="{Binding ItemUsuario.dni, Mode=TwoWay}" HorizontalAlignment="Left" Height="23" Margin="96,76,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="263"/>
+        <TextBox x:Name="txtNombres" Text="{Binding ItemUsuario.nombre, Mode=TwoWay}" HorizontalAlignment="Left" Height="23" Margin="96,104,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="263"/>
+        <TextBox x:Name="txtApellidos" Text="{Binding ItemUsuario.apellidos, Mode=TwoWay}" HorizontalAlignment="Left" Height="23" Margin="96,132,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="263"/>
+        <sdk:DataGrid  Margin="26,192,0,0" AutoGenerateColumns="False"
+                      ItemsSource="{Binding ListaReservas,Mode=TwoWay}"
+                      SelectedItem="{Binding ItemReserva,Mode=TwoWay}" HorizontalAlignment="Left" Width="422" Height="515" VerticalAlignment="Top">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding reserva_id}"  Header="reserva_id"/>
+                <sdk:DataGridTextColumn Binding="{Binding cliente_id}"   Header="cliente_id" />
+                <sdk:DataGridTextColumn Binding="{Binding fecha_inicio}"  Header="fecha_inicio"/>
+                <sdk:DataGridTextColumn Binding="{Binding fecha_fin}"   Header="fecha_fin" />
+                <sdk:DataGridTextColumn Binding="{Binding fecha_reserva}"   Header="fecha_reserva" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
 
     </Grid>
 </UserControl>

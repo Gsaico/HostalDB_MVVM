@@ -1,0 +1,17 @@
+﻿<navigation:Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="HostalDB_View.Home" mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="768" Title="Página principal" Style="{StaticResource PageStyle}">
+
+    <Grid x:Name="LayoutRoot">
+        <ScrollViewer x:Name="PageScrollViewer" Style="{StaticResource PageScrollViewerStyle}">
+
+            <StackPanel x:Name="ContentStackPanel">
+
+                <TextBlock x:Name="HeaderText" Style="{StaticResource HeaderTextStyle}" Text="Página principal"/>
+                <TextBlock x:Name="ContentText" Style="{StaticResource ContentTextStyle}" Text="Contenido de la página principal"/>
+                <sdk:Label Content="Hola mundo" Height="28" Width="120"/>
+
+            </StackPanel>
+
+        </ScrollViewer>
+    </Grid>
+
+</navigation:Page>

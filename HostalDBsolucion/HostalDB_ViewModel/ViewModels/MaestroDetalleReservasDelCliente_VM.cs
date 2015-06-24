@@ -105,6 +105,7 @@ namespace HostalDB_ViewModel.ViewModels
 
         #endregion
 
+        #region Constructor
         public MaestroDetalleReservasDelCliente_VM()
         {
             if (IsInDesignMode) return;
@@ -120,12 +121,17 @@ namespace HostalDB_ViewModel.ViewModels
 
 
             BuscarUsuarioPorIDCommand = new CommandBase(p => true, p => BuscarUsuarioPorIDCommandAccion()) { IsEnable = true };
-          
 
+        
 
 
         }
 
+
+        #endregion
+
+
+        #region Eventos Asincrono y Sincrono
         private void BuscarUsuarioPorIDCommandAccion()
         {
            
@@ -135,12 +141,36 @@ namespace HostalDB_ViewModel.ViewModels
                 _ServicioUsuario.BuscarUsuarioPorIDAsync(ParametroBusquedaIDUsuario);
 
                 _ServicioUsuario.BuscarUsuarioPorIDCompleted += _ServicioUsuario_BuscarUsuarioPorIDCompleted;
+
+                _ServicioReserva.ListarReservasPorClienteAsync(ParametroBusquedaIDUsuario);
+                _ServicioReserva.ListarReservasPorClienteCompleted += _ServicioReserva_ListarReservasPorClienteCompleted;
             }
             catch (Exception)
             {
 
                 MessageBox.Show("Error al enviar parametros de busqueda");
             }
+        }
+
+        void _ServicioReserva_ListarReservasPorClienteCompleted(object sender, ServiceReference_Reserva.ListarReservasPorClienteCompletedEventArgs e)
+        {
+            ListaReservas.Clear();
+
+
+            if (e.Error != null)
+            {
+                MessageBox.Show(e.Error.Message + e.Error);
+                return;
+            }
+            else
+            {
+                foreach (var reservaDTOx in e.Result)
+                {
+                    ListaReservas.Add(reservaDTOx);
+                }
+
+            }
+            _ServicioReserva.ListarReservasPorClienteCompleted -= _ServicioReserva_ListarReservasPorClienteCompleted;
         }
 
         private void _ServicioUsuario_BuscarUsuarioPorIDCompleted(object sender, BuscarUsuarioPorIDCompletedEventArgs e)
@@ -159,14 +189,14 @@ namespace HostalDB_ViewModel.ViewModels
 
         }
 
-       
+        #endregion
 
         #region botones
 
 
         public ICommand BuscarUsuarioPorIDCommand { get; set; }
-      
 
+ 
 
         #endregion
     }
