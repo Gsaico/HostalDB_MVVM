@@ -43,6 +43,8 @@
     <Compile Include="Habitacion\HabitacionLogicaNegocio.cs" />
     <Compile Include="HostalDB_LogicaNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reserva\ReservaLogicaNegocio.cs" />
+    <Compile Include="Reserva\IReservaLogicaNegocio.cs" />
     <Compile Include="User\IUserLogicaNegocio.cs" />
     <Compile Include="User\UserLogicaNegocio.cs" />
   </ItemGroup>

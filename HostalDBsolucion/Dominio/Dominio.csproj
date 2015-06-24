@@ -81,6 +81,8 @@
     <Compile Include="Querys\Habitacion\IHabitacionQuery.cs" />
     <Compile Include="Querys\Habitacion\HabitacionQuery.cs" />
     <Compile Include="Querys\Querys.cs" />
+    <Compile Include="Querys\Reserva\IReservaQuery.cs" />
+    <Compile Include="Querys\Reserva\ReservaQuery.cs" />
     <Compile Include="Querys\User\IUserQuery.cs" />
     <Compile Include="Querys\User\UserQuery.cs" />
   </ItemGroup>
@@ -89,6 +91,9 @@
       <Project>{6022feb9-d289-4333-91e9-45d2189a0c08}</Project>
       <Name>PersistenciaDatos</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Querys\ReservaHabitacion\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

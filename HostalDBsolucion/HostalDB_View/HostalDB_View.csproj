@@ -89,6 +89,9 @@
     <Compile Include="UserControls\HabitacionesOcupadasUserControl.xaml.cs">
       <DependentUpon>HabitacionesOcupadasUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\SilverlightControl1.xaml.cs">
+      <DependentUpon>SilverlightControl1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UsuarioUserControl.xaml.cs">
       <DependentUpon>UsuarioUserControl.xaml</DependentUpon>
     </Compile>
@@ -122,6 +125,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\HabitacionesOcupadasUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SilverlightControl1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
