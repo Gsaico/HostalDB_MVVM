@@ -78,11 +78,25 @@
     <Compile Include="Dtos\userDTO.cs" />
     <Compile Include="Dtos\user_roleDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Querys\Categoria_Habitacion\ICategoria_HabitacionQuery.cs" />
+    <Compile Include="Querys\Categoria_Habitacion\Categoria_HabitacionQuery.cs" />
+    <Compile Include="Querys\Comprobante\IComprobanteQuery.cs" />
+    <Compile Include="Querys\Comprobante\ComprobanteQuery.cs" />
+    <Compile Include="Querys\Empresa\IEmpresaQuery.cs" />
+    <Compile Include="Querys\Empresa\EmpresaQuery.cs" />
     <Compile Include="Querys\Habitacion\IHabitacionQuery.cs" />
     <Compile Include="Querys\Habitacion\HabitacionQuery.cs" />
+    <Compile Include="Querys\Hotel\IHotelQuery.cs" />
+    <Compile Include="Querys\Hotel\HotelQuery.cs" />
     <Compile Include="Querys\Querys.cs" />
+    <Compile Include="Querys\Reserva_Habitacion\IReserva_HabitacionQuery.cs" />
+    <Compile Include="Querys\Reserva_Habitacion\Reserva_HabitacionQuery.cs" />
     <Compile Include="Querys\Reserva\IReservaQuery.cs" />
     <Compile Include="Querys\Reserva\ReservaQuery.cs" />
+    <Compile Include="Querys\Tipo_Comprobante\ITipoComprobanteQuery.cs" />
+    <Compile Include="Querys\Tipo_Comprobante\TipoComprobanteQuery.cs" />
+    <Compile Include="Querys\Tipo_Habitacion\ITipo_HabitacionQuery.cs" />
+    <Compile Include="Querys\Tipo_Habitacion\Tipo_HabitacionQuery.cs" />
     <Compile Include="Querys\User\IUserQuery.cs" />
     <Compile Include="Querys\User\UserQuery.cs" />
   </ItemGroup>
@@ -92,9 +106,7 @@
       <Name>PersistenciaDatos</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Querys\ReservaHabitacion\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
