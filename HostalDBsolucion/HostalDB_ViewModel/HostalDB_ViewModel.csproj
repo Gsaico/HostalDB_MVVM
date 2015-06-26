@@ -84,12 +84,47 @@
     <Compile Include="Commands\FilterAsyncBehavior.cs" />
     <Compile Include="Commands\FilterAsyncParameters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ServiceReference_CategoriaHabitacion\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReference_Comprobante\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReference_Empresa\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\ServiceReference_Habitacion\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\ServiceReference_Hotel\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReference_ReservaHabitacion\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\ServiceReference_Reserva\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReference_TipoComprobante\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReference_TipoHabitacion\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -108,6 +143,117 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\ServiceReference_CategoriaHabitacion\HostalDB_ServiceWCF.wsdl" />
+    <None Include="Service References\ServiceReference_CategoriaHabitacion\HostalDB_ServiceWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_CategoriaHabitacion\HostalDB_ServiceWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_CategoriaHabitacion\HostalDB_ServiceWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_CategoriaHabitacion\HostalDB_ViewModel.ServiceReference_CategoriaHabitacion.categoria_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_CategoriaHabitacion\HostalDB_ViewModel.ServiceReference_CategoriaHabitacion.comprobanteDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_CategoriaHabitacion\HostalDB_ViewModel.ServiceReference_CategoriaHabitacion.EmpresaDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_CategoriaHabitacion\HostalDB_ViewModel.ServiceReference_CategoriaHabitacion.habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_CategoriaHabitacion\HostalDB_ViewModel.ServiceReference_CategoriaHabitacion.reservaDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_CategoriaHabitacion\HostalDB_ViewModel.ServiceReference_CategoriaHabitacion.reserva_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_CategoriaHabitacion\HostalDB_ViewModel.ServiceReference_CategoriaHabitacion.TipoComprobanteDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_CategoriaHabitacion\HostalDB_ViewModel.ServiceReference_CategoriaHabitacion.tipo_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_CategoriaHabitacion\HostalDB_ViewModel.ServiceReference_CategoriaHabitacion.userDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Comprobante\HostalDB_ServiceWCF.wsdl" />
+    <None Include="Service References\ServiceReference_Comprobante\HostalDB_ServiceWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_Comprobante\HostalDB_ServiceWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_Comprobante\HostalDB_ServiceWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_Comprobante\HostalDB_ViewModel.ServiceReference_Comprobante.categoria_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Comprobante\HostalDB_ViewModel.ServiceReference_Comprobante.comprobanteDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Comprobante\HostalDB_ViewModel.ServiceReference_Comprobante.EmpresaDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Comprobante\HostalDB_ViewModel.ServiceReference_Comprobante.habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Comprobante\HostalDB_ViewModel.ServiceReference_Comprobante.reservaDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Comprobante\HostalDB_ViewModel.ServiceReference_Comprobante.reserva_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Comprobante\HostalDB_ViewModel.ServiceReference_Comprobante.TipoComprobanteDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Comprobante\HostalDB_ViewModel.ServiceReference_Comprobante.tipo_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Comprobante\HostalDB_ViewModel.ServiceReference_Comprobante.userDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Empresa\HostalDB_ServiceWCF.wsdl" />
+    <None Include="Service References\ServiceReference_Empresa\HostalDB_ServiceWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_Empresa\HostalDB_ServiceWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_Empresa\HostalDB_ServiceWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_Empresa\HostalDB_ViewModel.ServiceReference_Empresa.categoria_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Empresa\HostalDB_ViewModel.ServiceReference_Empresa.comprobanteDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Empresa\HostalDB_ViewModel.ServiceReference_Empresa.EmpresaDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Empresa\HostalDB_ViewModel.ServiceReference_Empresa.habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Empresa\HostalDB_ViewModel.ServiceReference_Empresa.reservaDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Empresa\HostalDB_ViewModel.ServiceReference_Empresa.reserva_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Empresa\HostalDB_ViewModel.ServiceReference_Empresa.TipoComprobanteDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Empresa\HostalDB_ViewModel.ServiceReference_Empresa.tipo_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Empresa\HostalDB_ViewModel.ServiceReference_Empresa.userDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\ServiceReference_Habitacion\HostalDB_ServiceWCF.wsdl" />
     <None Include="Service References\ServiceReference_Habitacion\HostalDB_ServiceWCF.xsd">
       <SubType>Designer</SubType>
@@ -122,6 +268,83 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ServiceReference_Habitacion\HostalDB_ViewModel.ServiceReference_Habitacion.userDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Hotel\HostalDB_ServiceWCF.wsdl" />
+    <None Include="Service References\ServiceReference_Hotel\HostalDB_ServiceWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_Hotel\HostalDB_ServiceWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_Hotel\HostalDB_ServiceWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_Hotel\HostalDB_ViewModel.ServiceReference_Hotel.categoria_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Hotel\HostalDB_ViewModel.ServiceReference_Hotel.comprobanteDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Hotel\HostalDB_ViewModel.ServiceReference_Hotel.EmpresaDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Hotel\HostalDB_ViewModel.ServiceReference_Hotel.habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Hotel\HostalDB_ViewModel.ServiceReference_Hotel.hotelDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Hotel\HostalDB_ViewModel.ServiceReference_Hotel.reservaDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Hotel\HostalDB_ViewModel.ServiceReference_Hotel.reserva_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Hotel\HostalDB_ViewModel.ServiceReference_Hotel.TipoComprobanteDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Hotel\HostalDB_ViewModel.ServiceReference_Hotel.tipo_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Hotel\HostalDB_ViewModel.ServiceReference_Hotel.userDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_ReservaHabitacion\HostalDB_ServiceWCF.wsdl" />
+    <None Include="Service References\ServiceReference_ReservaHabitacion\HostalDB_ServiceWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_ReservaHabitacion\HostalDB_ServiceWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_ReservaHabitacion\HostalDB_ServiceWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_ReservaHabitacion\HostalDB_ViewModel.ServiceReference_ReservaHabitacion.categoria_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_ReservaHabitacion\HostalDB_ViewModel.ServiceReference_ReservaHabitacion.comprobanteDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_ReservaHabitacion\HostalDB_ViewModel.ServiceReference_ReservaHabitacion.EmpresaDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_ReservaHabitacion\HostalDB_ViewModel.ServiceReference_ReservaHabitacion.habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_ReservaHabitacion\HostalDB_ViewModel.ServiceReference_ReservaHabitacion.reservaDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_ReservaHabitacion\HostalDB_ViewModel.ServiceReference_ReservaHabitacion.reserva_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_ReservaHabitacion\HostalDB_ViewModel.ServiceReference_ReservaHabitacion.TipoComprobanteDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_ReservaHabitacion\HostalDB_ViewModel.ServiceReference_ReservaHabitacion.tipo_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_ReservaHabitacion\HostalDB_ViewModel.ServiceReference_ReservaHabitacion.userDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ServiceReference_Reserva\HostalDB_ServiceWCF.wsdl" />
@@ -141,6 +364,80 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ServiceReference_Reserva\HostalDB_ViewModel.ServiceReference_Reserva.userDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_TipoComprobante\HostalDB_ServiceWCF.wsdl" />
+    <None Include="Service References\ServiceReference_TipoComprobante\HostalDB_ServiceWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_TipoComprobante\HostalDB_ServiceWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_TipoComprobante\HostalDB_ServiceWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_TipoComprobante\HostalDB_ViewModel.ServiceReference_TipoComprobante.categoria_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_TipoComprobante\HostalDB_ViewModel.ServiceReference_TipoComprobante.comprobanteDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_TipoComprobante\HostalDB_ViewModel.ServiceReference_TipoComprobante.EmpresaDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_TipoComprobante\HostalDB_ViewModel.ServiceReference_TipoComprobante.habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_TipoComprobante\HostalDB_ViewModel.ServiceReference_TipoComprobante.reservaDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_TipoComprobante\HostalDB_ViewModel.ServiceReference_TipoComprobante.reserva_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_TipoComprobante\HostalDB_ViewModel.ServiceReference_TipoComprobante.TipoComprobanteDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_TipoComprobante\HostalDB_ViewModel.ServiceReference_TipoComprobante.tipo_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_TipoComprobante\HostalDB_ViewModel.ServiceReference_TipoComprobante.userDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_TipoHabitacion\HostalDB_ServiceWCF.wsdl" />
+    <None Include="Service References\ServiceReference_TipoHabitacion\HostalDB_ServiceWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_TipoHabitacion\HostalDB_ServiceWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_TipoHabitacion\HostalDB_ServiceWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_TipoHabitacion\HostalDB_ViewModel.ServiceReference_TipoHabitacion.categoria_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_TipoHabitacion\HostalDB_ViewModel.ServiceReference_TipoHabitacion.comprobanteDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_TipoHabitacion\HostalDB_ViewModel.ServiceReference_TipoHabitacion.EmpresaDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_TipoHabitacion\HostalDB_ViewModel.ServiceReference_TipoHabitacion.habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_TipoHabitacion\HostalDB_ViewModel.ServiceReference_TipoHabitacion.reservaDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_TipoHabitacion\HostalDB_ViewModel.ServiceReference_TipoHabitacion.reserva_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_TipoHabitacion\HostalDB_ViewModel.ServiceReference_TipoHabitacion.TipoComprobanteDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_TipoHabitacion\HostalDB_ViewModel.ServiceReference_TipoHabitacion.tipo_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_TipoHabitacion\HostalDB_ViewModel.ServiceReference_TipoHabitacion.userDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ServiceReference_User\HostalDB_ServiceWCF.wsdl" />
@@ -167,11 +464,67 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Service References\ServiceReference_CategoriaHabitacion\HostalDB_ServiceWCF.disco" />
+    <None Include="Service References\ServiceReference_CategoriaHabitacion\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference_CategoriaHabitacion\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference_CategoriaHabitacion\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceReference_Comprobante\HostalDB_ServiceWCF.disco" />
+    <None Include="Service References\ServiceReference_Comprobante\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference_Comprobante\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference_Comprobante\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceReference_Empresa\HostalDB_ServiceWCF.disco" />
+    <None Include="Service References\ServiceReference_Empresa\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference_Empresa\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference_Empresa\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceReference_ReservaHabitacion\HostalDB_ServiceWCF.disco" />
+    <None Include="Service References\ServiceReference_ReservaHabitacion\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference_ReservaHabitacion\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference_ReservaHabitacion\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceReference_TipoComprobante\HostalDB_ServiceWCF.disco" />
+    <None Include="Service References\ServiceReference_TipoComprobante\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference_TipoComprobante\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference_TipoComprobante\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceReference_TipoHabitacion\HostalDB_ServiceWCF.disco" />
+    <None Include="Service References\ServiceReference_TipoHabitacion\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference_TipoHabitacion\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference_TipoHabitacion\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceReference_Hotel\HostalDB_ServiceWCF.disco" />
+    <None Include="Service References\ServiceReference_Hotel\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference_Hotel\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference_Hotel\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="ServiceReferences.ClientConfig" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference_CategoriaHabitacion\" />
+    <WCFMetadataStorage Include="Service References\ServiceReference_Comprobante\" />
+    <WCFMetadataStorage Include="Service References\ServiceReference_Empresa\" />
     <WCFMetadataStorage Include="Service References\ServiceReference_Habitacion\" />
+    <WCFMetadataStorage Include="Service References\ServiceReference_Hotel\" />
+    <WCFMetadataStorage Include="Service References\ServiceReference_ReservaHabitacion\" />
     <WCFMetadataStorage Include="Service References\ServiceReference_Reserva\" />
+    <WCFMetadataStorage Include="Service References\ServiceReference_TipoComprobante\" />
+    <WCFMetadataStorage Include="Service References\ServiceReference_TipoHabitacion\" />
     <WCFMetadataStorage Include="Service References\ServiceReference_User\" />
   </ItemGroup>
   <ItemGroup>

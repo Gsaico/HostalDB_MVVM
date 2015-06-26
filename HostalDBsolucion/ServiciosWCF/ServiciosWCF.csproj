@@ -70,14 +70,26 @@
   <ItemGroup>
     <Compile Include="Categoria_Habitacion\ICategoria_HabitacionService.cs" />
     <Compile Include="Categoria_Habitacion\Categoria_HabitacionService.cs" />
+    <Compile Include="Comprobante\IComprobanteService.cs" />
+    <Compile Include="Comprobante\ComprobanteService.cs" />
+    <Compile Include="Empresa\IEmpresaService.cs" />
+    <Compile Include="Empresa\EmpresaService.cs" />
     <Compile Include="Habitacion\IHabitacionService.cs" />
     <Compile Include="Habitacion\HabitacionService.cs" />
     <Compile Include="HostalDB_ServiceWCF.svc.cs">
       <DependentUpon>HostalDB_ServiceWCF.svc</DependentUpon>
     </Compile>
+    <Compile Include="Hotel\IHotelService.cs" />
+    <Compile Include="Hotel\HotelService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reserva\ReservaService.cs" />
     <Compile Include="Reserva\IReservaService.cs" />
+    <Compile Include="Reserva_Habitacion\IReservaHabitacionService.cs" />
+    <Compile Include="Reserva_Habitacion\ReservaHabitacionService.cs" />
+    <Compile Include="Tipo_Comprobante\ITipoComprobanteService.cs" />
+    <Compile Include="Tipo_Comprobante\TipoComprobanteService.cs" />
+    <Compile Include="Tipo_Habitacion\ITipoHabitacionService.cs" />
+    <Compile Include="Tipo_Habitacion\TipoHabitacionService.cs" />
     <Compile Include="User\IUserService.cs" />
     <Compile Include="User\UserService.cs" />
   </ItemGroup>

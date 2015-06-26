@@ -55,7 +55,7 @@ namespace Dominio.Querys
             {
                 using (var modelo = new PersistenciaDatos.HostalDBEntities())
                 {
-                    PersistenciaDatos.hotel x = modelo.hotel.Where(q => q.hotel_id  == id).Select(q => q).FirstOrDefault();
+                    PersistenciaDatos.hotel x = modelo.hotel.Where(q => q.hotel_id == IDHotel).Select(q => q).FirstOrDefault();
                     if (x == null) return false;
                     modelo.hotel.Remove(x);
                     modelo.SaveChanges();
