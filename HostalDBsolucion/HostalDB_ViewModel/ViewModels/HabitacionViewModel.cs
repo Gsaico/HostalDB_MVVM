@@ -16,11 +16,25 @@ using HostalDB_ViewModel.ServiceReference_Habitacion;
 
 namespace HostalDB_ViewModel.ViewModels
 {
+
+   
     public class HabitacionViewModel : ViewModelBase
     {
         private ServiceReference_Habitacion.HabitacionServiceClient _Serviciohabitacion;
 
         #region propiedades
+        private ObservableCollection<ServiceReference_Habitacion.ListarHabitacionesDisponiblesClass> _ListarHabitacionesDisponibles;
+
+        public ObservableCollection<ServiceReference_Habitacion.ListarHabitacionesDisponiblesClass> ListarHabitacionesDisponiblesx
+        {
+            get { return _ListarHabitacionesDisponibles; }
+            set
+            {
+                _ListarHabitacionesDisponibles = value;
+                RaisePropertyChanged("ListarHabitacionesDisponiblesx");
+
+            }
+        }
 
         private ObservableCollection<ServiceReference_Habitacion.habitacionDTO> _Listarhabitaciones;
 
@@ -152,7 +166,7 @@ namespace HostalDB_ViewModel.ViewModels
 
         private void _Serviciohabitacion_ListarHabitacionesDisponiblesCompleted(object sender, ListarHabitacionesDisponiblesCompletedEventArgs e)
         {
-            ListarHabitaciones.Clear();
+    //        ListarHabitacionesDisponiblesx.Clear();
 
 
             if (e.Error != null)
@@ -162,9 +176,12 @@ namespace HostalDB_ViewModel.ViewModels
             }
             else
             {
-                foreach (var habitacionesDTOx in e.Result)
+
+            
+ 
+                foreach (var habitacionesx in e.Result)
                 {
-                    ListarHabitaciones.Add(habitacionesDTOx);
+                    ListarHabitacionesDisponiblesx.Add(habitacionesx);
                 }
 
             }

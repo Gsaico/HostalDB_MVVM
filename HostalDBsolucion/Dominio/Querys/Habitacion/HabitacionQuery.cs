@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 using Dominio.Convertidores;
 using System.Data.Entity;
+using Dominio.Querys.Habitacion;
+using System.Collections;
 
 namespace Dominio.Querys
 {
-   public partial class Querys: Habitacion.IHabitacionQuery 
+    public partial class Querys : Habitacion.IHabitacionQuery
     {
         public int InsertarHabitacion(Dtos.habitacionDTO dto)
         {
@@ -20,7 +22,7 @@ namespace Dominio.Querys
                     var entity = dto.ToEntity();
                     modelo.habitacion.Add(entity);
                     modelo.SaveChanges();
-                    return entity.habitacion_id ;
+                    return entity.habitacion_id;
                 }
             }
             catch (Exception)
@@ -104,16 +106,29 @@ namespace Dominio.Querys
             }
         }
 
-        public List<Dtos.habitacionDTO> ListarHabitacionesDisponibles()
+        public List<ListarHabitacionesDisponiblesClass> ListarHabitacionesDisponibles()
         {
             try
             {
                 using (var modelo = new PersistenciaDatos.HostalDBEntities())
                 {
-                    var entity = modelo.habitacion.Where(q => q.ocupada == 0).ToList(); //0 = indica  habitacion Disponible
 
-                    if (entity == null) return null;
-                    return Dominio.Convertidores.habitacionAssembler.ToDTOs(entity);
+                    var query = from h in modelo.habitacion
+                                join c in modelo.categoria_habitacion on h.categoria_id equals c.categoria_id
+                                join t in modelo.tipo_habitacion on h.tipo_habitacion_id equals t.tipo_habitacion_id
+                                where h.ocupada == 0
+                                select new ListarHabitacionesDisponiblesClass()
+                                {
+
+                                    IDHabitacion = h.habitacion_id,
+                                    IDnombrecategoria = c.categoria_id,
+                                    Nombrecategoria = c.nombre,
+                                    IDtipohabitacion = t.tipo_habitacion_id,
+                                    TipoHabitacion = t.nombre
+                                };
+
+                    return query.ToList();
+
                 }
             }
             catch (Exception)
@@ -146,7 +161,7 @@ namespace Dominio.Querys
             {
                 using (var modelo = new PersistenciaDatos.HostalDBEntities())
                 {
-                    var entity = modelo.habitacion.Where(q => q.categoria_id == idCategoria).ToList(); 
+                    var entity = modelo.habitacion.Where(q => q.categoria_id == idCategoria).ToList();
 
                     if (entity == null) return null;
                     return Dominio.Convertidores.habitacionAssembler.ToDTOs(entity);
@@ -175,5 +190,15 @@ namespace Dominio.Querys
                 throw new NotImplementedException();
             }
         }
+
+    }
+    public class ListarHabitacionesDisponiblesClass
+    {
+
+        public int IDHabitacion { get; set; }
+        public int IDnombrecategoria { get; set; }
+        public int IDtipohabitacion { get; set; }
+        public String Nombrecategoria { get; set; }
+        public String TipoHabitacion { get; set; }
     }
 }

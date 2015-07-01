@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 //using System.Runtime.Serialization;
@@ -24,7 +25,7 @@ namespace ServiciosWCF.Habitacion
         [OperationContract]
         List<Dominio.Dtos.habitacionDTO> ListarTodasLasHabitaciones();
         [OperationContract]
-        List<Dominio.Dtos.habitacionDTO> ListarHabitacionesDisponibles();
+        List<Dominio.Querys.ListarHabitacionesDisponiblesClass> ListarHabitacionesDisponibles();
         [OperationContract]
         List<Dominio.Dtos.habitacionDTO> ListarHabitacionesOcupadas();
         [OperationContract]

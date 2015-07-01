@@ -17,6 +17,81 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="categoria_habitacionDTO", Namespace="http://schemas.datacontract.org/2004/07/Dominio.Dtos")]
+    public partial class categoria_habitacionDTO : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int categoria_idField;
+        
+        private System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> habitacionField;
+        
+        private string nombreField;
+        
+        private double porcentajeField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int categoria_id {
+            get {
+                return this.categoria_idField;
+            }
+            set {
+                if ((this.categoria_idField.Equals(value) != true)) {
+                    this.categoria_idField = value;
+                    this.RaisePropertyChanged("categoria_id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> habitacion {
+            get {
+                return this.habitacionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.habitacionField, value) != true)) {
+                    this.habitacionField = value;
+                    this.RaisePropertyChanged("habitacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nombreField, value) != true)) {
+                    this.nombreField = value;
+                    this.RaisePropertyChanged("nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double porcentaje {
+            get {
+                return this.porcentajeField;
+            }
+            set {
+                if ((this.porcentajeField.Equals(value) != true)) {
+                    this.porcentajeField = value;
+                    this.RaisePropertyChanged("porcentaje");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="habitacionDTO", Namespace="http://schemas.datacontract.org/2004/07/Dominio.Dtos")]
     public partial class habitacionDTO : object, System.ComponentModel.INotifyPropertyChanged {
         
@@ -30,13 +105,13 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         
         private int hotel_idField;
         
-        private System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.llamadaDTO> llamadaField;
+        private System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.llamadaDTO> llamadaField;
         
-        private System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.minibarDTO> minibarField;
+        private System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.minibarDTO> minibarField;
         
         private short ocupadaField;
         
-        private System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO> reserva_habitacionField;
+        private System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO> reserva_habitacionField;
         
         private HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO tipo_habitacionField;
         
@@ -108,7 +183,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.llamadaDTO> llamada {
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.llamadaDTO> llamada {
             get {
                 return this.llamadaField;
             }
@@ -121,7 +196,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.minibarDTO> minibar {
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.minibarDTO> minibar {
             get {
                 return this.minibarField;
             }
@@ -147,7 +222,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO> reserva_habitacion {
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO> reserva_habitacion {
             get {
                 return this.reserva_habitacionField;
             }
@@ -197,81 +272,6 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="categoria_habitacionDTO", Namespace="http://schemas.datacontract.org/2004/07/Dominio.Dtos")]
-    public partial class categoria_habitacionDTO : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int categoria_idField;
-        
-        private System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> habitacionField;
-        
-        private string nombreField;
-        
-        private double porcentajeField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int categoria_id {
-            get {
-                return this.categoria_idField;
-            }
-            set {
-                if ((this.categoria_idField.Equals(value) != true)) {
-                    this.categoria_idField = value;
-                    this.RaisePropertyChanged("categoria_id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> habitacion {
-            get {
-                return this.habitacionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.habitacionField, value) != true)) {
-                    this.habitacionField = value;
-                    this.RaisePropertyChanged("habitacion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.nombreField, value) != true)) {
-                    this.nombreField = value;
-                    this.RaisePropertyChanged("nombre");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public double porcentaje {
-            get {
-                return this.porcentajeField;
-            }
-            set {
-                if ((this.porcentajeField.Equals(value) != true)) {
-                    this.porcentajeField = value;
-                    this.RaisePropertyChanged("porcentaje");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="hotelDTO", Namespace="http://schemas.datacontract.org/2004/07/Dominio.Dtos")]
     public partial class hotelDTO : object, System.ComponentModel.INotifyPropertyChanged {
         
@@ -281,7 +281,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         
         private int estrellasField;
         
-        private System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> habitacionField;
+        private System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> habitacionField;
         
         private int hotel_idField;
         
@@ -329,7 +329,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> habitacion {
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> habitacion {
             get {
                 return this.habitacionField;
             }
@@ -395,7 +395,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
     [System.Runtime.Serialization.DataContractAttribute(Name="tipo_habitacionDTO", Namespace="http://schemas.datacontract.org/2004/07/Dominio.Dtos")]
     public partial class tipo_habitacionDTO : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> habitacionField;
+        private System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> habitacionField;
         
         private string nombreField;
         
@@ -404,7 +404,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         private int tipo_habitacion_idField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> habitacion {
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> habitacion {
             get {
                 return this.habitacionField;
             }
@@ -800,7 +800,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
     [System.Runtime.Serialization.DataContractAttribute(Name="tipo_llamadaDTO", Namespace="http://schemas.datacontract.org/2004/07/Dominio.Dtos")]
     public partial class tipo_llamadaDTO : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.llamadaDTO> llamadaField;
+        private System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.llamadaDTO> llamadaField;
         
         private string nombreField;
         
@@ -809,7 +809,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         private int tipo_llamada_idField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.llamadaDTO> llamada {
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.llamadaDTO> llamada {
             get {
                 return this.llamadaField;
             }
@@ -877,7 +877,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         
         private int bebida_idField;
         
-        private System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.minibarDTO> minibarField;
+        private System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.minibarDTO> minibarField;
         
         private string nombreField;
         
@@ -897,7 +897,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.minibarDTO> minibar {
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.minibarDTO> minibar {
             get {
                 return this.minibarField;
             }
@@ -952,7 +952,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         
         private int cliente_idField;
         
-        private System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> comprobanteField;
+        private System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> comprobanteField;
         
         private System.DateTime fecha_finField;
         
@@ -960,7 +960,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         
         private System.DateTime fecha_reservaField;
         
-        private System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO> reserva_habitacionField;
+        private System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO> reserva_habitacionField;
         
         private int reserva_idField;
         
@@ -980,7 +980,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> comprobante {
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> comprobante {
             get {
                 return this.comprobanteField;
             }
@@ -1032,7 +1032,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO> reserva_habitacion {
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO> reserva_habitacion {
             get {
                 return this.reserva_habitacionField;
             }
@@ -1093,7 +1093,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         
         private string apellidosField;
         
-        private System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> comprobanteField;
+        private System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> comprobanteField;
         
         private string direccionField;
         
@@ -1109,13 +1109,13 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         
         private System.Nullable<short> passwordExpiredField;
         
-        private System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO> reservaField;
+        private System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO> reservaField;
         
         private string telefonoField;
         
         private int user_idField;
         
-        private System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.user_roleDTO> user_roleField;
+        private System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.user_roleDTO> user_roleField;
         
         private string usernameField;
         
@@ -1172,7 +1172,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> comprobante {
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> comprobante {
             get {
                 return this.comprobanteField;
             }
@@ -1276,7 +1276,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO> reserva {
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO> reserva {
             get {
                 return this.reservaField;
             }
@@ -1315,7 +1315,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.user_roleDTO> user_role {
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.user_roleDTO> user_role {
             get {
                 return this.user_roleField;
             }
@@ -1605,7 +1605,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         
         private string TelefonoField;
         
-        private System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> comprobanteField;
+        private System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> comprobanteField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Direccion {
@@ -1673,7 +1673,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> comprobante {
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> comprobante {
             get {
                 return this.comprobanteField;
             }
@@ -1700,14 +1700,14 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
     [System.Runtime.Serialization.DataContractAttribute(Name="TipoComprobanteDTO", Namespace="http://schemas.datacontract.org/2004/07/Dominio.Dtos")]
     public partial class TipoComprobanteDTO : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> comprobanteField;
+        private System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> comprobanteField;
         
         private int idcomprobanteField;
         
         private string nombrecomprobanteField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> comprobante {
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> comprobante {
             get {
                 return this.comprobanteField;
             }
@@ -1854,7 +1854,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         
         private int role_idField;
         
-        private System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.user_roleDTO> user_roleField;
+        private System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.user_roleDTO> user_roleField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string authority {
@@ -1883,7 +1883,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.user_roleDTO> user_role {
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.user_roleDTO> user_role {
             get {
                 return this.user_roleField;
             }
@@ -1901,6 +1901,2360 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
             if ((propertyChanged != null)) {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ListarHabitacionesDisponiblesClass", Namespace="http://schemas.datacontract.org/2004/07/Dominio.Querys")]
+    public partial class ListarHabitacionesDisponiblesClass : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int IDHabitacionField;
+        
+        private int IDnombrecategoriaField;
+        
+        private int IDtipohabitacionField;
+        
+        private string NombrecategoriaField;
+        
+        private string TipoHabitacionField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IDHabitacion {
+            get {
+                return this.IDHabitacionField;
+            }
+            set {
+                if ((this.IDHabitacionField.Equals(value) != true)) {
+                    this.IDHabitacionField = value;
+                    this.RaisePropertyChanged("IDHabitacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IDnombrecategoria {
+            get {
+                return this.IDnombrecategoriaField;
+            }
+            set {
+                if ((this.IDnombrecategoriaField.Equals(value) != true)) {
+                    this.IDnombrecategoriaField = value;
+                    this.RaisePropertyChanged("IDnombrecategoria");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IDtipohabitacion {
+            get {
+                return this.IDtipohabitacionField;
+            }
+            set {
+                if ((this.IDtipohabitacionField.Equals(value) != true)) {
+                    this.IDtipohabitacionField = value;
+                    this.RaisePropertyChanged("IDtipohabitacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nombrecategoria {
+            get {
+                return this.NombrecategoriaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombrecategoriaField, value) != true)) {
+                    this.NombrecategoriaField = value;
+                    this.RaisePropertyChanged("Nombrecategoria");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TipoHabitacion {
+            get {
+                return this.TipoHabitacionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TipoHabitacionField, value) != true)) {
+                    this.TipoHabitacionField = value;
+                    this.RaisePropertyChanged("TipoHabitacion");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference_Habitacion.ICategoria_HabitacionService")]
+    public interface ICategoria_HabitacionService {
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/ICategoria_HabitacionService/InsertarCategoriaHabitacion", ReplyAction="http://tempuri.org/ICategoria_HabitacionService/InsertarCategoriaHabitacionRespon" +
+            "se")]
+        System.IAsyncResult BeginInsertarCategoriaHabitacion(HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO dto, System.AsyncCallback callback, object asyncState);
+        
+        int EndInsertarCategoriaHabitacion(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/ICategoria_HabitacionService/ActualizarCategoriaHabitacion", ReplyAction="http://tempuri.org/ICategoria_HabitacionService/ActualizarCategoriaHabitacionResp" +
+            "onse")]
+        System.IAsyncResult BeginActualizarCategoriaHabitacion(HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO dto, System.AsyncCallback callback, object asyncState);
+        
+        bool EndActualizarCategoriaHabitacion(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/ICategoria_HabitacionService/EliminarCategoriaHabitacion", ReplyAction="http://tempuri.org/ICategoria_HabitacionService/EliminarCategoriaHabitacionRespon" +
+            "se")]
+        System.IAsyncResult BeginEliminarCategoriaHabitacion(int id_categoria_habitacion, System.AsyncCallback callback, object asyncState);
+        
+        bool EndEliminarCategoriaHabitacion(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/ICategoria_HabitacionService/BuscarCategoriaHabitacionPorID", ReplyAction="http://tempuri.org/ICategoria_HabitacionService/BuscarCategoriaHabitacionPorIDRes" +
+            "ponse")]
+        System.IAsyncResult BeginBuscarCategoriaHabitacionPorID(int id_categoria_habitacion, System.AsyncCallback callback, object asyncState);
+        
+        HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO EndBuscarCategoriaHabitacionPorID(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/ICategoria_HabitacionService/BuscarCategoriaHabitacionPorNombr" +
+            "e", ReplyAction="http://tempuri.org/ICategoria_HabitacionService/BuscarCategoriaHabitacionPorNombr" +
+            "eResponse")]
+        System.IAsyncResult BeginBuscarCategoriaHabitacionPorNombre(string ParamentroNombreCategoriaHabitacion, System.AsyncCallback callback, object asyncState);
+        
+        HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO EndBuscarCategoriaHabitacionPorNombre(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/ICategoria_HabitacionService/ListarTodosLas_CategoriaHabitacio" +
+            "n", ReplyAction="http://tempuri.org/ICategoria_HabitacionService/ListarTodosLas_CategoriaHabitacio" +
+            "nResponse")]
+        System.IAsyncResult BeginListarTodosLas_CategoriaHabitacion(System.AsyncCallback callback, object asyncState);
+        
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO> EndListarTodosLas_CategoriaHabitacion(System.IAsyncResult result);
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface ICategoria_HabitacionServiceChannel : HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class InsertarCategoriaHabitacionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public InsertarCategoriaHabitacionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public int Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ActualizarCategoriaHabitacionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public ActualizarCategoriaHabitacionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class EliminarCategoriaHabitacionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public EliminarCategoriaHabitacionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class BuscarCategoriaHabitacionPorIDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public BuscarCategoriaHabitacionPorIDCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class BuscarCategoriaHabitacionPorNombreCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public BuscarCategoriaHabitacionPorNombreCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ListarTodosLas_CategoriaHabitacionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public ListarTodosLas_CategoriaHabitacionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO> Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO>)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class Categoria_HabitacionServiceClient : System.ServiceModel.ClientBase<HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService>, HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService {
+        
+        private BeginOperationDelegate onBeginInsertarCategoriaHabitacionDelegate;
+        
+        private EndOperationDelegate onEndInsertarCategoriaHabitacionDelegate;
+        
+        private System.Threading.SendOrPostCallback onInsertarCategoriaHabitacionCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginActualizarCategoriaHabitacionDelegate;
+        
+        private EndOperationDelegate onEndActualizarCategoriaHabitacionDelegate;
+        
+        private System.Threading.SendOrPostCallback onActualizarCategoriaHabitacionCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginEliminarCategoriaHabitacionDelegate;
+        
+        private EndOperationDelegate onEndEliminarCategoriaHabitacionDelegate;
+        
+        private System.Threading.SendOrPostCallback onEliminarCategoriaHabitacionCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginBuscarCategoriaHabitacionPorIDDelegate;
+        
+        private EndOperationDelegate onEndBuscarCategoriaHabitacionPorIDDelegate;
+        
+        private System.Threading.SendOrPostCallback onBuscarCategoriaHabitacionPorIDCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginBuscarCategoriaHabitacionPorNombreDelegate;
+        
+        private EndOperationDelegate onEndBuscarCategoriaHabitacionPorNombreDelegate;
+        
+        private System.Threading.SendOrPostCallback onBuscarCategoriaHabitacionPorNombreCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginListarTodosLas_CategoriaHabitacionDelegate;
+        
+        private EndOperationDelegate onEndListarTodosLas_CategoriaHabitacionDelegate;
+        
+        private System.Threading.SendOrPostCallback onListarTodosLas_CategoriaHabitacionCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginOpenDelegate;
+        
+        private EndOperationDelegate onEndOpenDelegate;
+        
+        private System.Threading.SendOrPostCallback onOpenCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginCloseDelegate;
+        
+        private EndOperationDelegate onEndCloseDelegate;
+        
+        private System.Threading.SendOrPostCallback onCloseCompletedDelegate;
+        
+        public Categoria_HabitacionServiceClient() {
+        }
+        
+        public Categoria_HabitacionServiceClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public Categoria_HabitacionServiceClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public Categoria_HabitacionServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public Categoria_HabitacionServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        public System.Net.CookieContainer CookieContainer {
+            get {
+                System.ServiceModel.Channels.IHttpCookieContainerManager httpCookieContainerManager = this.InnerChannel.GetProperty<System.ServiceModel.Channels.IHttpCookieContainerManager>();
+                if ((httpCookieContainerManager != null)) {
+                    return httpCookieContainerManager.CookieContainer;
+                }
+                else {
+                    return null;
+                }
+            }
+            set {
+                System.ServiceModel.Channels.IHttpCookieContainerManager httpCookieContainerManager = this.InnerChannel.GetProperty<System.ServiceModel.Channels.IHttpCookieContainerManager>();
+                if ((httpCookieContainerManager != null)) {
+                    httpCookieContainerManager.CookieContainer = value;
+                }
+                else {
+                    throw new System.InvalidOperationException("No se puede establecer el objeto CookieContainer. Asegúrese de que el enlace cont" +
+                            "iene un objeto HttpCookieContainerBindingElement.");
+                }
+            }
+        }
+        
+        public event System.EventHandler<InsertarCategoriaHabitacionCompletedEventArgs> InsertarCategoriaHabitacionCompleted;
+        
+        public event System.EventHandler<ActualizarCategoriaHabitacionCompletedEventArgs> ActualizarCategoriaHabitacionCompleted;
+        
+        public event System.EventHandler<EliminarCategoriaHabitacionCompletedEventArgs> EliminarCategoriaHabitacionCompleted;
+        
+        public event System.EventHandler<BuscarCategoriaHabitacionPorIDCompletedEventArgs> BuscarCategoriaHabitacionPorIDCompleted;
+        
+        public event System.EventHandler<BuscarCategoriaHabitacionPorNombreCompletedEventArgs> BuscarCategoriaHabitacionPorNombreCompleted;
+        
+        public event System.EventHandler<ListarTodosLas_CategoriaHabitacionCompletedEventArgs> ListarTodosLas_CategoriaHabitacionCompleted;
+        
+        public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> OpenCompleted;
+        
+        public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> CloseCompleted;
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService.BeginInsertarCategoriaHabitacion(HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO dto, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginInsertarCategoriaHabitacion(dto, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        int HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService.EndInsertarCategoriaHabitacion(System.IAsyncResult result) {
+            return base.Channel.EndInsertarCategoriaHabitacion(result);
+        }
+        
+        private System.IAsyncResult OnBeginInsertarCategoriaHabitacion(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO dto = ((HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService)(this)).BeginInsertarCategoriaHabitacion(dto, callback, asyncState);
+        }
+        
+        private object[] OnEndInsertarCategoriaHabitacion(System.IAsyncResult result) {
+            int retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService)(this)).EndInsertarCategoriaHabitacion(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnInsertarCategoriaHabitacionCompleted(object state) {
+            if ((this.InsertarCategoriaHabitacionCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.InsertarCategoriaHabitacionCompleted(this, new InsertarCategoriaHabitacionCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void InsertarCategoriaHabitacionAsync(HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO dto) {
+            this.InsertarCategoriaHabitacionAsync(dto, null);
+        }
+        
+        public void InsertarCategoriaHabitacionAsync(HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO dto, object userState) {
+            if ((this.onBeginInsertarCategoriaHabitacionDelegate == null)) {
+                this.onBeginInsertarCategoriaHabitacionDelegate = new BeginOperationDelegate(this.OnBeginInsertarCategoriaHabitacion);
+            }
+            if ((this.onEndInsertarCategoriaHabitacionDelegate == null)) {
+                this.onEndInsertarCategoriaHabitacionDelegate = new EndOperationDelegate(this.OnEndInsertarCategoriaHabitacion);
+            }
+            if ((this.onInsertarCategoriaHabitacionCompletedDelegate == null)) {
+                this.onInsertarCategoriaHabitacionCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnInsertarCategoriaHabitacionCompleted);
+            }
+            base.InvokeAsync(this.onBeginInsertarCategoriaHabitacionDelegate, new object[] {
+                        dto}, this.onEndInsertarCategoriaHabitacionDelegate, this.onInsertarCategoriaHabitacionCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService.BeginActualizarCategoriaHabitacion(HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO dto, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginActualizarCategoriaHabitacion(dto, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        bool HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService.EndActualizarCategoriaHabitacion(System.IAsyncResult result) {
+            return base.Channel.EndActualizarCategoriaHabitacion(result);
+        }
+        
+        private System.IAsyncResult OnBeginActualizarCategoriaHabitacion(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO dto = ((HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService)(this)).BeginActualizarCategoriaHabitacion(dto, callback, asyncState);
+        }
+        
+        private object[] OnEndActualizarCategoriaHabitacion(System.IAsyncResult result) {
+            bool retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService)(this)).EndActualizarCategoriaHabitacion(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnActualizarCategoriaHabitacionCompleted(object state) {
+            if ((this.ActualizarCategoriaHabitacionCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.ActualizarCategoriaHabitacionCompleted(this, new ActualizarCategoriaHabitacionCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void ActualizarCategoriaHabitacionAsync(HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO dto) {
+            this.ActualizarCategoriaHabitacionAsync(dto, null);
+        }
+        
+        public void ActualizarCategoriaHabitacionAsync(HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO dto, object userState) {
+            if ((this.onBeginActualizarCategoriaHabitacionDelegate == null)) {
+                this.onBeginActualizarCategoriaHabitacionDelegate = new BeginOperationDelegate(this.OnBeginActualizarCategoriaHabitacion);
+            }
+            if ((this.onEndActualizarCategoriaHabitacionDelegate == null)) {
+                this.onEndActualizarCategoriaHabitacionDelegate = new EndOperationDelegate(this.OnEndActualizarCategoriaHabitacion);
+            }
+            if ((this.onActualizarCategoriaHabitacionCompletedDelegate == null)) {
+                this.onActualizarCategoriaHabitacionCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnActualizarCategoriaHabitacionCompleted);
+            }
+            base.InvokeAsync(this.onBeginActualizarCategoriaHabitacionDelegate, new object[] {
+                        dto}, this.onEndActualizarCategoriaHabitacionDelegate, this.onActualizarCategoriaHabitacionCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService.BeginEliminarCategoriaHabitacion(int id_categoria_habitacion, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginEliminarCategoriaHabitacion(id_categoria_habitacion, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        bool HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService.EndEliminarCategoriaHabitacion(System.IAsyncResult result) {
+            return base.Channel.EndEliminarCategoriaHabitacion(result);
+        }
+        
+        private System.IAsyncResult OnBeginEliminarCategoriaHabitacion(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int id_categoria_habitacion = ((int)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService)(this)).BeginEliminarCategoriaHabitacion(id_categoria_habitacion, callback, asyncState);
+        }
+        
+        private object[] OnEndEliminarCategoriaHabitacion(System.IAsyncResult result) {
+            bool retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService)(this)).EndEliminarCategoriaHabitacion(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnEliminarCategoriaHabitacionCompleted(object state) {
+            if ((this.EliminarCategoriaHabitacionCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.EliminarCategoriaHabitacionCompleted(this, new EliminarCategoriaHabitacionCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void EliminarCategoriaHabitacionAsync(int id_categoria_habitacion) {
+            this.EliminarCategoriaHabitacionAsync(id_categoria_habitacion, null);
+        }
+        
+        public void EliminarCategoriaHabitacionAsync(int id_categoria_habitacion, object userState) {
+            if ((this.onBeginEliminarCategoriaHabitacionDelegate == null)) {
+                this.onBeginEliminarCategoriaHabitacionDelegate = new BeginOperationDelegate(this.OnBeginEliminarCategoriaHabitacion);
+            }
+            if ((this.onEndEliminarCategoriaHabitacionDelegate == null)) {
+                this.onEndEliminarCategoriaHabitacionDelegate = new EndOperationDelegate(this.OnEndEliminarCategoriaHabitacion);
+            }
+            if ((this.onEliminarCategoriaHabitacionCompletedDelegate == null)) {
+                this.onEliminarCategoriaHabitacionCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnEliminarCategoriaHabitacionCompleted);
+            }
+            base.InvokeAsync(this.onBeginEliminarCategoriaHabitacionDelegate, new object[] {
+                        id_categoria_habitacion}, this.onEndEliminarCategoriaHabitacionDelegate, this.onEliminarCategoriaHabitacionCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService.BeginBuscarCategoriaHabitacionPorID(int id_categoria_habitacion, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginBuscarCategoriaHabitacionPorID(id_categoria_habitacion, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService.EndBuscarCategoriaHabitacionPorID(System.IAsyncResult result) {
+            return base.Channel.EndBuscarCategoriaHabitacionPorID(result);
+        }
+        
+        private System.IAsyncResult OnBeginBuscarCategoriaHabitacionPorID(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int id_categoria_habitacion = ((int)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService)(this)).BeginBuscarCategoriaHabitacionPorID(id_categoria_habitacion, callback, asyncState);
+        }
+        
+        private object[] OnEndBuscarCategoriaHabitacionPorID(System.IAsyncResult result) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService)(this)).EndBuscarCategoriaHabitacionPorID(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnBuscarCategoriaHabitacionPorIDCompleted(object state) {
+            if ((this.BuscarCategoriaHabitacionPorIDCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.BuscarCategoriaHabitacionPorIDCompleted(this, new BuscarCategoriaHabitacionPorIDCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void BuscarCategoriaHabitacionPorIDAsync(int id_categoria_habitacion) {
+            this.BuscarCategoriaHabitacionPorIDAsync(id_categoria_habitacion, null);
+        }
+        
+        public void BuscarCategoriaHabitacionPorIDAsync(int id_categoria_habitacion, object userState) {
+            if ((this.onBeginBuscarCategoriaHabitacionPorIDDelegate == null)) {
+                this.onBeginBuscarCategoriaHabitacionPorIDDelegate = new BeginOperationDelegate(this.OnBeginBuscarCategoriaHabitacionPorID);
+            }
+            if ((this.onEndBuscarCategoriaHabitacionPorIDDelegate == null)) {
+                this.onEndBuscarCategoriaHabitacionPorIDDelegate = new EndOperationDelegate(this.OnEndBuscarCategoriaHabitacionPorID);
+            }
+            if ((this.onBuscarCategoriaHabitacionPorIDCompletedDelegate == null)) {
+                this.onBuscarCategoriaHabitacionPorIDCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnBuscarCategoriaHabitacionPorIDCompleted);
+            }
+            base.InvokeAsync(this.onBeginBuscarCategoriaHabitacionPorIDDelegate, new object[] {
+                        id_categoria_habitacion}, this.onEndBuscarCategoriaHabitacionPorIDDelegate, this.onBuscarCategoriaHabitacionPorIDCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService.BeginBuscarCategoriaHabitacionPorNombre(string ParamentroNombreCategoriaHabitacion, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginBuscarCategoriaHabitacionPorNombre(ParamentroNombreCategoriaHabitacion, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService.EndBuscarCategoriaHabitacionPorNombre(System.IAsyncResult result) {
+            return base.Channel.EndBuscarCategoriaHabitacionPorNombre(result);
+        }
+        
+        private System.IAsyncResult OnBeginBuscarCategoriaHabitacionPorNombre(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string ParamentroNombreCategoriaHabitacion = ((string)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService)(this)).BeginBuscarCategoriaHabitacionPorNombre(ParamentroNombreCategoriaHabitacion, callback, asyncState);
+        }
+        
+        private object[] OnEndBuscarCategoriaHabitacionPorNombre(System.IAsyncResult result) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService)(this)).EndBuscarCategoriaHabitacionPorNombre(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnBuscarCategoriaHabitacionPorNombreCompleted(object state) {
+            if ((this.BuscarCategoriaHabitacionPorNombreCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.BuscarCategoriaHabitacionPorNombreCompleted(this, new BuscarCategoriaHabitacionPorNombreCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void BuscarCategoriaHabitacionPorNombreAsync(string ParamentroNombreCategoriaHabitacion) {
+            this.BuscarCategoriaHabitacionPorNombreAsync(ParamentroNombreCategoriaHabitacion, null);
+        }
+        
+        public void BuscarCategoriaHabitacionPorNombreAsync(string ParamentroNombreCategoriaHabitacion, object userState) {
+            if ((this.onBeginBuscarCategoriaHabitacionPorNombreDelegate == null)) {
+                this.onBeginBuscarCategoriaHabitacionPorNombreDelegate = new BeginOperationDelegate(this.OnBeginBuscarCategoriaHabitacionPorNombre);
+            }
+            if ((this.onEndBuscarCategoriaHabitacionPorNombreDelegate == null)) {
+                this.onEndBuscarCategoriaHabitacionPorNombreDelegate = new EndOperationDelegate(this.OnEndBuscarCategoriaHabitacionPorNombre);
+            }
+            if ((this.onBuscarCategoriaHabitacionPorNombreCompletedDelegate == null)) {
+                this.onBuscarCategoriaHabitacionPorNombreCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnBuscarCategoriaHabitacionPorNombreCompleted);
+            }
+            base.InvokeAsync(this.onBeginBuscarCategoriaHabitacionPorNombreDelegate, new object[] {
+                        ParamentroNombreCategoriaHabitacion}, this.onEndBuscarCategoriaHabitacionPorNombreDelegate, this.onBuscarCategoriaHabitacionPorNombreCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService.BeginListarTodosLas_CategoriaHabitacion(System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginListarTodosLas_CategoriaHabitacion(callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO> HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService.EndListarTodosLas_CategoriaHabitacion(System.IAsyncResult result) {
+            return base.Channel.EndListarTodosLas_CategoriaHabitacion(result);
+        }
+        
+        private System.IAsyncResult OnBeginListarTodosLas_CategoriaHabitacion(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService)(this)).BeginListarTodosLas_CategoriaHabitacion(callback, asyncState);
+        }
+        
+        private object[] OnEndListarTodosLas_CategoriaHabitacion(System.IAsyncResult result) {
+            System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO> retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService)(this)).EndListarTodosLas_CategoriaHabitacion(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnListarTodosLas_CategoriaHabitacionCompleted(object state) {
+            if ((this.ListarTodosLas_CategoriaHabitacionCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.ListarTodosLas_CategoriaHabitacionCompleted(this, new ListarTodosLas_CategoriaHabitacionCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void ListarTodosLas_CategoriaHabitacionAsync() {
+            this.ListarTodosLas_CategoriaHabitacionAsync(null);
+        }
+        
+        public void ListarTodosLas_CategoriaHabitacionAsync(object userState) {
+            if ((this.onBeginListarTodosLas_CategoriaHabitacionDelegate == null)) {
+                this.onBeginListarTodosLas_CategoriaHabitacionDelegate = new BeginOperationDelegate(this.OnBeginListarTodosLas_CategoriaHabitacion);
+            }
+            if ((this.onEndListarTodosLas_CategoriaHabitacionDelegate == null)) {
+                this.onEndListarTodosLas_CategoriaHabitacionDelegate = new EndOperationDelegate(this.OnEndListarTodosLas_CategoriaHabitacion);
+            }
+            if ((this.onListarTodosLas_CategoriaHabitacionCompletedDelegate == null)) {
+                this.onListarTodosLas_CategoriaHabitacionCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnListarTodosLas_CategoriaHabitacionCompleted);
+            }
+            base.InvokeAsync(this.onBeginListarTodosLas_CategoriaHabitacionDelegate, null, this.onEndListarTodosLas_CategoriaHabitacionDelegate, this.onListarTodosLas_CategoriaHabitacionCompletedDelegate, userState);
+        }
+        
+        private System.IAsyncResult OnBeginOpen(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return ((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(callback, asyncState);
+        }
+        
+        private object[] OnEndOpen(System.IAsyncResult result) {
+            ((System.ServiceModel.ICommunicationObject)(this)).EndOpen(result);
+            return null;
+        }
+        
+        private void OnOpenCompleted(object state) {
+            if ((this.OpenCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.OpenCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void OpenAsync() {
+            this.OpenAsync(null);
+        }
+        
+        public void OpenAsync(object userState) {
+            if ((this.onBeginOpenDelegate == null)) {
+                this.onBeginOpenDelegate = new BeginOperationDelegate(this.OnBeginOpen);
+            }
+            if ((this.onEndOpenDelegate == null)) {
+                this.onEndOpenDelegate = new EndOperationDelegate(this.OnEndOpen);
+            }
+            if ((this.onOpenCompletedDelegate == null)) {
+                this.onOpenCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnOpenCompleted);
+            }
+            base.InvokeAsync(this.onBeginOpenDelegate, null, this.onEndOpenDelegate, this.onOpenCompletedDelegate, userState);
+        }
+        
+        private System.IAsyncResult OnBeginClose(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return ((System.ServiceModel.ICommunicationObject)(this)).BeginClose(callback, asyncState);
+        }
+        
+        private object[] OnEndClose(System.IAsyncResult result) {
+            ((System.ServiceModel.ICommunicationObject)(this)).EndClose(result);
+            return null;
+        }
+        
+        private void OnCloseCompleted(object state) {
+            if ((this.CloseCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.CloseCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void CloseAsync() {
+            this.CloseAsync(null);
+        }
+        
+        public void CloseAsync(object userState) {
+            if ((this.onBeginCloseDelegate == null)) {
+                this.onBeginCloseDelegate = new BeginOperationDelegate(this.OnBeginClose);
+            }
+            if ((this.onEndCloseDelegate == null)) {
+                this.onEndCloseDelegate = new EndOperationDelegate(this.OnEndClose);
+            }
+            if ((this.onCloseCompletedDelegate == null)) {
+                this.onCloseCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnCloseCompleted);
+            }
+            base.InvokeAsync(this.onBeginCloseDelegate, null, this.onEndCloseDelegate, this.onCloseCompletedDelegate, userState);
+        }
+        
+        protected override HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService CreateChannel() {
+            return new Categoria_HabitacionServiceClientChannel(this);
+        }
+        
+        private class Categoria_HabitacionServiceClientChannel : ChannelBase<HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService>, HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService {
+            
+            public Categoria_HabitacionServiceClientChannel(System.ServiceModel.ClientBase<HostalDB_ViewModel.ServiceReference_Habitacion.ICategoria_HabitacionService> client) : 
+                    base(client) {
+            }
+            
+            public System.IAsyncResult BeginInsertarCategoriaHabitacion(HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO dto, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = dto;
+                System.IAsyncResult _result = base.BeginInvoke("InsertarCategoriaHabitacion", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public int EndInsertarCategoriaHabitacion(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                int _result = ((int)(base.EndInvoke("InsertarCategoriaHabitacion", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginActualizarCategoriaHabitacion(HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO dto, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = dto;
+                System.IAsyncResult _result = base.BeginInvoke("ActualizarCategoriaHabitacion", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public bool EndActualizarCategoriaHabitacion(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                bool _result = ((bool)(base.EndInvoke("ActualizarCategoriaHabitacion", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginEliminarCategoriaHabitacion(int id_categoria_habitacion, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = id_categoria_habitacion;
+                System.IAsyncResult _result = base.BeginInvoke("EliminarCategoriaHabitacion", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public bool EndEliminarCategoriaHabitacion(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                bool _result = ((bool)(base.EndInvoke("EliminarCategoriaHabitacion", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginBuscarCategoriaHabitacionPorID(int id_categoria_habitacion, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = id_categoria_habitacion;
+                System.IAsyncResult _result = base.BeginInvoke("BuscarCategoriaHabitacionPorID", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO EndBuscarCategoriaHabitacionPorID(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO _result = ((HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO)(base.EndInvoke("BuscarCategoriaHabitacionPorID", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginBuscarCategoriaHabitacionPorNombre(string ParamentroNombreCategoriaHabitacion, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = ParamentroNombreCategoriaHabitacion;
+                System.IAsyncResult _result = base.BeginInvoke("BuscarCategoriaHabitacionPorNombre", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO EndBuscarCategoriaHabitacionPorNombre(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO _result = ((HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO)(base.EndInvoke("BuscarCategoriaHabitacionPorNombre", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginListarTodosLas_CategoriaHabitacion(System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[0];
+                System.IAsyncResult _result = base.BeginInvoke("ListarTodosLas_CategoriaHabitacion", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO> EndListarTodosLas_CategoriaHabitacion(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO> _result = ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO>)(base.EndInvoke("ListarTodosLas_CategoriaHabitacion", _args, result)));
+                return _result;
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference_Habitacion.IComprobanteService")]
+    public interface IComprobanteService {
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IComprobanteService/InsertarComprobante", ReplyAction="http://tempuri.org/IComprobanteService/InsertarComprobanteResponse")]
+        System.IAsyncResult BeginInsertarComprobante(HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO dto, System.AsyncCallback callback, object asyncState);
+        
+        bool EndInsertarComprobante(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IComprobanteService/ActualizarComprobante", ReplyAction="http://tempuri.org/IComprobanteService/ActualizarComprobanteResponse")]
+        System.IAsyncResult BeginActualizarComprobante(HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO dto, System.AsyncCallback callback, object asyncState);
+        
+        bool EndActualizarComprobante(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IComprobanteService/EliminarComprobante", ReplyAction="http://tempuri.org/IComprobanteService/EliminarComprobanteResponse")]
+        System.IAsyncResult BeginEliminarComprobante(int id, System.AsyncCallback callback, object asyncState);
+        
+        bool EndEliminarComprobante(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IComprobanteService/BuscarComprobantePorID", ReplyAction="http://tempuri.org/IComprobanteService/BuscarComprobantePorIDResponse")]
+        System.IAsyncResult BeginBuscarComprobantePorID(int id, System.AsyncCallback callback, object asyncState);
+        
+        HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO EndBuscarComprobantePorID(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IComprobanteService/ListarComprobantesPorIDCLIENTE", ReplyAction="http://tempuri.org/IComprobanteService/ListarComprobantesPorIDCLIENTEResponse")]
+        System.IAsyncResult BeginListarComprobantesPorIDCLIENTE(int idcliente, System.AsyncCallback callback, object asyncState);
+        
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> EndListarComprobantesPorIDCLIENTE(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IComprobanteService/BuscarComprobantePorIDRESERVA", ReplyAction="http://tempuri.org/IComprobanteService/BuscarComprobantePorIDRESERVAResponse")]
+        System.IAsyncResult BeginBuscarComprobantePorIDRESERVA(int idreserva, System.AsyncCallback callback, object asyncState);
+        
+        HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO EndBuscarComprobantePorIDRESERVA(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IComprobanteService/ListarTodosLosComprobantes", ReplyAction="http://tempuri.org/IComprobanteService/ListarTodosLosComprobantesResponse")]
+        System.IAsyncResult BeginListarTodosLosComprobantes(System.AsyncCallback callback, object asyncState);
+        
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> EndListarTodosLosComprobantes(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IComprobanteService/ListarComprobantesPorTIPOCOMPROBANTE", ReplyAction="http://tempuri.org/IComprobanteService/ListarComprobantesPorTIPOCOMPROBANTERespon" +
+            "se")]
+        System.IAsyncResult BeginListarComprobantesPorTIPOCOMPROBANTE(int idcomprobante, System.AsyncCallback callback, object asyncState);
+        
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> EndListarComprobantesPorTIPOCOMPROBANTE(System.IAsyncResult result);
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface IComprobanteServiceChannel : HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class InsertarComprobanteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public InsertarComprobanteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ActualizarComprobanteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public ActualizarComprobanteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class EliminarComprobanteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public EliminarComprobanteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class BuscarComprobantePorIDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public BuscarComprobantePorIDCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ListarComprobantesPorIDCLIENTECompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public ListarComprobantesPorIDCLIENTECompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO>)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class BuscarComprobantePorIDRESERVACompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public BuscarComprobantePorIDRESERVACompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ListarTodosLosComprobantesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public ListarTodosLosComprobantesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO>)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ListarComprobantesPorTIPOCOMPROBANTECompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public ListarComprobantesPorTIPOCOMPROBANTECompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO>)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ComprobanteServiceClient : System.ServiceModel.ClientBase<HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService>, HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService {
+        
+        private BeginOperationDelegate onBeginInsertarComprobanteDelegate;
+        
+        private EndOperationDelegate onEndInsertarComprobanteDelegate;
+        
+        private System.Threading.SendOrPostCallback onInsertarComprobanteCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginActualizarComprobanteDelegate;
+        
+        private EndOperationDelegate onEndActualizarComprobanteDelegate;
+        
+        private System.Threading.SendOrPostCallback onActualizarComprobanteCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginEliminarComprobanteDelegate;
+        
+        private EndOperationDelegate onEndEliminarComprobanteDelegate;
+        
+        private System.Threading.SendOrPostCallback onEliminarComprobanteCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginBuscarComprobantePorIDDelegate;
+        
+        private EndOperationDelegate onEndBuscarComprobantePorIDDelegate;
+        
+        private System.Threading.SendOrPostCallback onBuscarComprobantePorIDCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginListarComprobantesPorIDCLIENTEDelegate;
+        
+        private EndOperationDelegate onEndListarComprobantesPorIDCLIENTEDelegate;
+        
+        private System.Threading.SendOrPostCallback onListarComprobantesPorIDCLIENTECompletedDelegate;
+        
+        private BeginOperationDelegate onBeginBuscarComprobantePorIDRESERVADelegate;
+        
+        private EndOperationDelegate onEndBuscarComprobantePorIDRESERVADelegate;
+        
+        private System.Threading.SendOrPostCallback onBuscarComprobantePorIDRESERVACompletedDelegate;
+        
+        private BeginOperationDelegate onBeginListarTodosLosComprobantesDelegate;
+        
+        private EndOperationDelegate onEndListarTodosLosComprobantesDelegate;
+        
+        private System.Threading.SendOrPostCallback onListarTodosLosComprobantesCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginListarComprobantesPorTIPOCOMPROBANTEDelegate;
+        
+        private EndOperationDelegate onEndListarComprobantesPorTIPOCOMPROBANTEDelegate;
+        
+        private System.Threading.SendOrPostCallback onListarComprobantesPorTIPOCOMPROBANTECompletedDelegate;
+        
+        private BeginOperationDelegate onBeginOpenDelegate;
+        
+        private EndOperationDelegate onEndOpenDelegate;
+        
+        private System.Threading.SendOrPostCallback onOpenCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginCloseDelegate;
+        
+        private EndOperationDelegate onEndCloseDelegate;
+        
+        private System.Threading.SendOrPostCallback onCloseCompletedDelegate;
+        
+        public ComprobanteServiceClient() {
+        }
+        
+        public ComprobanteServiceClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public ComprobanteServiceClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public ComprobanteServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public ComprobanteServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        public System.Net.CookieContainer CookieContainer {
+            get {
+                System.ServiceModel.Channels.IHttpCookieContainerManager httpCookieContainerManager = this.InnerChannel.GetProperty<System.ServiceModel.Channels.IHttpCookieContainerManager>();
+                if ((httpCookieContainerManager != null)) {
+                    return httpCookieContainerManager.CookieContainer;
+                }
+                else {
+                    return null;
+                }
+            }
+            set {
+                System.ServiceModel.Channels.IHttpCookieContainerManager httpCookieContainerManager = this.InnerChannel.GetProperty<System.ServiceModel.Channels.IHttpCookieContainerManager>();
+                if ((httpCookieContainerManager != null)) {
+                    httpCookieContainerManager.CookieContainer = value;
+                }
+                else {
+                    throw new System.InvalidOperationException("No se puede establecer el objeto CookieContainer. Asegúrese de que el enlace cont" +
+                            "iene un objeto HttpCookieContainerBindingElement.");
+                }
+            }
+        }
+        
+        public event System.EventHandler<InsertarComprobanteCompletedEventArgs> InsertarComprobanteCompleted;
+        
+        public event System.EventHandler<ActualizarComprobanteCompletedEventArgs> ActualizarComprobanteCompleted;
+        
+        public event System.EventHandler<EliminarComprobanteCompletedEventArgs> EliminarComprobanteCompleted;
+        
+        public event System.EventHandler<BuscarComprobantePorIDCompletedEventArgs> BuscarComprobantePorIDCompleted;
+        
+        public event System.EventHandler<ListarComprobantesPorIDCLIENTECompletedEventArgs> ListarComprobantesPorIDCLIENTECompleted;
+        
+        public event System.EventHandler<BuscarComprobantePorIDRESERVACompletedEventArgs> BuscarComprobantePorIDRESERVACompleted;
+        
+        public event System.EventHandler<ListarTodosLosComprobantesCompletedEventArgs> ListarTodosLosComprobantesCompleted;
+        
+        public event System.EventHandler<ListarComprobantesPorTIPOCOMPROBANTECompletedEventArgs> ListarComprobantesPorTIPOCOMPROBANTECompleted;
+        
+        public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> OpenCompleted;
+        
+        public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> CloseCompleted;
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService.BeginInsertarComprobante(HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO dto, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginInsertarComprobante(dto, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        bool HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService.EndInsertarComprobante(System.IAsyncResult result) {
+            return base.Channel.EndInsertarComprobante(result);
+        }
+        
+        private System.IAsyncResult OnBeginInsertarComprobante(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO dto = ((HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService)(this)).BeginInsertarComprobante(dto, callback, asyncState);
+        }
+        
+        private object[] OnEndInsertarComprobante(System.IAsyncResult result) {
+            bool retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService)(this)).EndInsertarComprobante(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnInsertarComprobanteCompleted(object state) {
+            if ((this.InsertarComprobanteCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.InsertarComprobanteCompleted(this, new InsertarComprobanteCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void InsertarComprobanteAsync(HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO dto) {
+            this.InsertarComprobanteAsync(dto, null);
+        }
+        
+        public void InsertarComprobanteAsync(HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO dto, object userState) {
+            if ((this.onBeginInsertarComprobanteDelegate == null)) {
+                this.onBeginInsertarComprobanteDelegate = new BeginOperationDelegate(this.OnBeginInsertarComprobante);
+            }
+            if ((this.onEndInsertarComprobanteDelegate == null)) {
+                this.onEndInsertarComprobanteDelegate = new EndOperationDelegate(this.OnEndInsertarComprobante);
+            }
+            if ((this.onInsertarComprobanteCompletedDelegate == null)) {
+                this.onInsertarComprobanteCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnInsertarComprobanteCompleted);
+            }
+            base.InvokeAsync(this.onBeginInsertarComprobanteDelegate, new object[] {
+                        dto}, this.onEndInsertarComprobanteDelegate, this.onInsertarComprobanteCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService.BeginActualizarComprobante(HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO dto, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginActualizarComprobante(dto, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        bool HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService.EndActualizarComprobante(System.IAsyncResult result) {
+            return base.Channel.EndActualizarComprobante(result);
+        }
+        
+        private System.IAsyncResult OnBeginActualizarComprobante(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO dto = ((HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService)(this)).BeginActualizarComprobante(dto, callback, asyncState);
+        }
+        
+        private object[] OnEndActualizarComprobante(System.IAsyncResult result) {
+            bool retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService)(this)).EndActualizarComprobante(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnActualizarComprobanteCompleted(object state) {
+            if ((this.ActualizarComprobanteCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.ActualizarComprobanteCompleted(this, new ActualizarComprobanteCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void ActualizarComprobanteAsync(HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO dto) {
+            this.ActualizarComprobanteAsync(dto, null);
+        }
+        
+        public void ActualizarComprobanteAsync(HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO dto, object userState) {
+            if ((this.onBeginActualizarComprobanteDelegate == null)) {
+                this.onBeginActualizarComprobanteDelegate = new BeginOperationDelegate(this.OnBeginActualizarComprobante);
+            }
+            if ((this.onEndActualizarComprobanteDelegate == null)) {
+                this.onEndActualizarComprobanteDelegate = new EndOperationDelegate(this.OnEndActualizarComprobante);
+            }
+            if ((this.onActualizarComprobanteCompletedDelegate == null)) {
+                this.onActualizarComprobanteCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnActualizarComprobanteCompleted);
+            }
+            base.InvokeAsync(this.onBeginActualizarComprobanteDelegate, new object[] {
+                        dto}, this.onEndActualizarComprobanteDelegate, this.onActualizarComprobanteCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService.BeginEliminarComprobante(int id, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginEliminarComprobante(id, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        bool HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService.EndEliminarComprobante(System.IAsyncResult result) {
+            return base.Channel.EndEliminarComprobante(result);
+        }
+        
+        private System.IAsyncResult OnBeginEliminarComprobante(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int id = ((int)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService)(this)).BeginEliminarComprobante(id, callback, asyncState);
+        }
+        
+        private object[] OnEndEliminarComprobante(System.IAsyncResult result) {
+            bool retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService)(this)).EndEliminarComprobante(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnEliminarComprobanteCompleted(object state) {
+            if ((this.EliminarComprobanteCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.EliminarComprobanteCompleted(this, new EliminarComprobanteCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void EliminarComprobanteAsync(int id) {
+            this.EliminarComprobanteAsync(id, null);
+        }
+        
+        public void EliminarComprobanteAsync(int id, object userState) {
+            if ((this.onBeginEliminarComprobanteDelegate == null)) {
+                this.onBeginEliminarComprobanteDelegate = new BeginOperationDelegate(this.OnBeginEliminarComprobante);
+            }
+            if ((this.onEndEliminarComprobanteDelegate == null)) {
+                this.onEndEliminarComprobanteDelegate = new EndOperationDelegate(this.OnEndEliminarComprobante);
+            }
+            if ((this.onEliminarComprobanteCompletedDelegate == null)) {
+                this.onEliminarComprobanteCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnEliminarComprobanteCompleted);
+            }
+            base.InvokeAsync(this.onBeginEliminarComprobanteDelegate, new object[] {
+                        id}, this.onEndEliminarComprobanteDelegate, this.onEliminarComprobanteCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService.BeginBuscarComprobantePorID(int id, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginBuscarComprobantePorID(id, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService.EndBuscarComprobantePorID(System.IAsyncResult result) {
+            return base.Channel.EndBuscarComprobantePorID(result);
+        }
+        
+        private System.IAsyncResult OnBeginBuscarComprobantePorID(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int id = ((int)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService)(this)).BeginBuscarComprobantePorID(id, callback, asyncState);
+        }
+        
+        private object[] OnEndBuscarComprobantePorID(System.IAsyncResult result) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService)(this)).EndBuscarComprobantePorID(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnBuscarComprobantePorIDCompleted(object state) {
+            if ((this.BuscarComprobantePorIDCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.BuscarComprobantePorIDCompleted(this, new BuscarComprobantePorIDCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void BuscarComprobantePorIDAsync(int id) {
+            this.BuscarComprobantePorIDAsync(id, null);
+        }
+        
+        public void BuscarComprobantePorIDAsync(int id, object userState) {
+            if ((this.onBeginBuscarComprobantePorIDDelegate == null)) {
+                this.onBeginBuscarComprobantePorIDDelegate = new BeginOperationDelegate(this.OnBeginBuscarComprobantePorID);
+            }
+            if ((this.onEndBuscarComprobantePorIDDelegate == null)) {
+                this.onEndBuscarComprobantePorIDDelegate = new EndOperationDelegate(this.OnEndBuscarComprobantePorID);
+            }
+            if ((this.onBuscarComprobantePorIDCompletedDelegate == null)) {
+                this.onBuscarComprobantePorIDCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnBuscarComprobantePorIDCompleted);
+            }
+            base.InvokeAsync(this.onBeginBuscarComprobantePorIDDelegate, new object[] {
+                        id}, this.onEndBuscarComprobantePorIDDelegate, this.onBuscarComprobantePorIDCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService.BeginListarComprobantesPorIDCLIENTE(int idcliente, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginListarComprobantesPorIDCLIENTE(idcliente, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService.EndListarComprobantesPorIDCLIENTE(System.IAsyncResult result) {
+            return base.Channel.EndListarComprobantesPorIDCLIENTE(result);
+        }
+        
+        private System.IAsyncResult OnBeginListarComprobantesPorIDCLIENTE(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int idcliente = ((int)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService)(this)).BeginListarComprobantesPorIDCLIENTE(idcliente, callback, asyncState);
+        }
+        
+        private object[] OnEndListarComprobantesPorIDCLIENTE(System.IAsyncResult result) {
+            System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService)(this)).EndListarComprobantesPorIDCLIENTE(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnListarComprobantesPorIDCLIENTECompleted(object state) {
+            if ((this.ListarComprobantesPorIDCLIENTECompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.ListarComprobantesPorIDCLIENTECompleted(this, new ListarComprobantesPorIDCLIENTECompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void ListarComprobantesPorIDCLIENTEAsync(int idcliente) {
+            this.ListarComprobantesPorIDCLIENTEAsync(idcliente, null);
+        }
+        
+        public void ListarComprobantesPorIDCLIENTEAsync(int idcliente, object userState) {
+            if ((this.onBeginListarComprobantesPorIDCLIENTEDelegate == null)) {
+                this.onBeginListarComprobantesPorIDCLIENTEDelegate = new BeginOperationDelegate(this.OnBeginListarComprobantesPorIDCLIENTE);
+            }
+            if ((this.onEndListarComprobantesPorIDCLIENTEDelegate == null)) {
+                this.onEndListarComprobantesPorIDCLIENTEDelegate = new EndOperationDelegate(this.OnEndListarComprobantesPorIDCLIENTE);
+            }
+            if ((this.onListarComprobantesPorIDCLIENTECompletedDelegate == null)) {
+                this.onListarComprobantesPorIDCLIENTECompletedDelegate = new System.Threading.SendOrPostCallback(this.OnListarComprobantesPorIDCLIENTECompleted);
+            }
+            base.InvokeAsync(this.onBeginListarComprobantesPorIDCLIENTEDelegate, new object[] {
+                        idcliente}, this.onEndListarComprobantesPorIDCLIENTEDelegate, this.onListarComprobantesPorIDCLIENTECompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService.BeginBuscarComprobantePorIDRESERVA(int idreserva, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginBuscarComprobantePorIDRESERVA(idreserva, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService.EndBuscarComprobantePorIDRESERVA(System.IAsyncResult result) {
+            return base.Channel.EndBuscarComprobantePorIDRESERVA(result);
+        }
+        
+        private System.IAsyncResult OnBeginBuscarComprobantePorIDRESERVA(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int idreserva = ((int)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService)(this)).BeginBuscarComprobantePorIDRESERVA(idreserva, callback, asyncState);
+        }
+        
+        private object[] OnEndBuscarComprobantePorIDRESERVA(System.IAsyncResult result) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService)(this)).EndBuscarComprobantePorIDRESERVA(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnBuscarComprobantePorIDRESERVACompleted(object state) {
+            if ((this.BuscarComprobantePorIDRESERVACompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.BuscarComprobantePorIDRESERVACompleted(this, new BuscarComprobantePorIDRESERVACompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void BuscarComprobantePorIDRESERVAAsync(int idreserva) {
+            this.BuscarComprobantePorIDRESERVAAsync(idreserva, null);
+        }
+        
+        public void BuscarComprobantePorIDRESERVAAsync(int idreserva, object userState) {
+            if ((this.onBeginBuscarComprobantePorIDRESERVADelegate == null)) {
+                this.onBeginBuscarComprobantePorIDRESERVADelegate = new BeginOperationDelegate(this.OnBeginBuscarComprobantePorIDRESERVA);
+            }
+            if ((this.onEndBuscarComprobantePorIDRESERVADelegate == null)) {
+                this.onEndBuscarComprobantePorIDRESERVADelegate = new EndOperationDelegate(this.OnEndBuscarComprobantePorIDRESERVA);
+            }
+            if ((this.onBuscarComprobantePorIDRESERVACompletedDelegate == null)) {
+                this.onBuscarComprobantePorIDRESERVACompletedDelegate = new System.Threading.SendOrPostCallback(this.OnBuscarComprobantePorIDRESERVACompleted);
+            }
+            base.InvokeAsync(this.onBeginBuscarComprobantePorIDRESERVADelegate, new object[] {
+                        idreserva}, this.onEndBuscarComprobantePorIDRESERVADelegate, this.onBuscarComprobantePorIDRESERVACompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService.BeginListarTodosLosComprobantes(System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginListarTodosLosComprobantes(callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService.EndListarTodosLosComprobantes(System.IAsyncResult result) {
+            return base.Channel.EndListarTodosLosComprobantes(result);
+        }
+        
+        private System.IAsyncResult OnBeginListarTodosLosComprobantes(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService)(this)).BeginListarTodosLosComprobantes(callback, asyncState);
+        }
+        
+        private object[] OnEndListarTodosLosComprobantes(System.IAsyncResult result) {
+            System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService)(this)).EndListarTodosLosComprobantes(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnListarTodosLosComprobantesCompleted(object state) {
+            if ((this.ListarTodosLosComprobantesCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.ListarTodosLosComprobantesCompleted(this, new ListarTodosLosComprobantesCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void ListarTodosLosComprobantesAsync() {
+            this.ListarTodosLosComprobantesAsync(null);
+        }
+        
+        public void ListarTodosLosComprobantesAsync(object userState) {
+            if ((this.onBeginListarTodosLosComprobantesDelegate == null)) {
+                this.onBeginListarTodosLosComprobantesDelegate = new BeginOperationDelegate(this.OnBeginListarTodosLosComprobantes);
+            }
+            if ((this.onEndListarTodosLosComprobantesDelegate == null)) {
+                this.onEndListarTodosLosComprobantesDelegate = new EndOperationDelegate(this.OnEndListarTodosLosComprobantes);
+            }
+            if ((this.onListarTodosLosComprobantesCompletedDelegate == null)) {
+                this.onListarTodosLosComprobantesCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnListarTodosLosComprobantesCompleted);
+            }
+            base.InvokeAsync(this.onBeginListarTodosLosComprobantesDelegate, null, this.onEndListarTodosLosComprobantesDelegate, this.onListarTodosLosComprobantesCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService.BeginListarComprobantesPorTIPOCOMPROBANTE(int idcomprobante, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginListarComprobantesPorTIPOCOMPROBANTE(idcomprobante, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService.EndListarComprobantesPorTIPOCOMPROBANTE(System.IAsyncResult result) {
+            return base.Channel.EndListarComprobantesPorTIPOCOMPROBANTE(result);
+        }
+        
+        private System.IAsyncResult OnBeginListarComprobantesPorTIPOCOMPROBANTE(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int idcomprobante = ((int)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService)(this)).BeginListarComprobantesPorTIPOCOMPROBANTE(idcomprobante, callback, asyncState);
+        }
+        
+        private object[] OnEndListarComprobantesPorTIPOCOMPROBANTE(System.IAsyncResult result) {
+            System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService)(this)).EndListarComprobantesPorTIPOCOMPROBANTE(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnListarComprobantesPorTIPOCOMPROBANTECompleted(object state) {
+            if ((this.ListarComprobantesPorTIPOCOMPROBANTECompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.ListarComprobantesPorTIPOCOMPROBANTECompleted(this, new ListarComprobantesPorTIPOCOMPROBANTECompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void ListarComprobantesPorTIPOCOMPROBANTEAsync(int idcomprobante) {
+            this.ListarComprobantesPorTIPOCOMPROBANTEAsync(idcomprobante, null);
+        }
+        
+        public void ListarComprobantesPorTIPOCOMPROBANTEAsync(int idcomprobante, object userState) {
+            if ((this.onBeginListarComprobantesPorTIPOCOMPROBANTEDelegate == null)) {
+                this.onBeginListarComprobantesPorTIPOCOMPROBANTEDelegate = new BeginOperationDelegate(this.OnBeginListarComprobantesPorTIPOCOMPROBANTE);
+            }
+            if ((this.onEndListarComprobantesPorTIPOCOMPROBANTEDelegate == null)) {
+                this.onEndListarComprobantesPorTIPOCOMPROBANTEDelegate = new EndOperationDelegate(this.OnEndListarComprobantesPorTIPOCOMPROBANTE);
+            }
+            if ((this.onListarComprobantesPorTIPOCOMPROBANTECompletedDelegate == null)) {
+                this.onListarComprobantesPorTIPOCOMPROBANTECompletedDelegate = new System.Threading.SendOrPostCallback(this.OnListarComprobantesPorTIPOCOMPROBANTECompleted);
+            }
+            base.InvokeAsync(this.onBeginListarComprobantesPorTIPOCOMPROBANTEDelegate, new object[] {
+                        idcomprobante}, this.onEndListarComprobantesPorTIPOCOMPROBANTEDelegate, this.onListarComprobantesPorTIPOCOMPROBANTECompletedDelegate, userState);
+        }
+        
+        private System.IAsyncResult OnBeginOpen(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return ((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(callback, asyncState);
+        }
+        
+        private object[] OnEndOpen(System.IAsyncResult result) {
+            ((System.ServiceModel.ICommunicationObject)(this)).EndOpen(result);
+            return null;
+        }
+        
+        private void OnOpenCompleted(object state) {
+            if ((this.OpenCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.OpenCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void OpenAsync() {
+            this.OpenAsync(null);
+        }
+        
+        public void OpenAsync(object userState) {
+            if ((this.onBeginOpenDelegate == null)) {
+                this.onBeginOpenDelegate = new BeginOperationDelegate(this.OnBeginOpen);
+            }
+            if ((this.onEndOpenDelegate == null)) {
+                this.onEndOpenDelegate = new EndOperationDelegate(this.OnEndOpen);
+            }
+            if ((this.onOpenCompletedDelegate == null)) {
+                this.onOpenCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnOpenCompleted);
+            }
+            base.InvokeAsync(this.onBeginOpenDelegate, null, this.onEndOpenDelegate, this.onOpenCompletedDelegate, userState);
+        }
+        
+        private System.IAsyncResult OnBeginClose(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return ((System.ServiceModel.ICommunicationObject)(this)).BeginClose(callback, asyncState);
+        }
+        
+        private object[] OnEndClose(System.IAsyncResult result) {
+            ((System.ServiceModel.ICommunicationObject)(this)).EndClose(result);
+            return null;
+        }
+        
+        private void OnCloseCompleted(object state) {
+            if ((this.CloseCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.CloseCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void CloseAsync() {
+            this.CloseAsync(null);
+        }
+        
+        public void CloseAsync(object userState) {
+            if ((this.onBeginCloseDelegate == null)) {
+                this.onBeginCloseDelegate = new BeginOperationDelegate(this.OnBeginClose);
+            }
+            if ((this.onEndCloseDelegate == null)) {
+                this.onEndCloseDelegate = new EndOperationDelegate(this.OnEndClose);
+            }
+            if ((this.onCloseCompletedDelegate == null)) {
+                this.onCloseCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnCloseCompleted);
+            }
+            base.InvokeAsync(this.onBeginCloseDelegate, null, this.onEndCloseDelegate, this.onCloseCompletedDelegate, userState);
+        }
+        
+        protected override HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService CreateChannel() {
+            return new ComprobanteServiceClientChannel(this);
+        }
+        
+        private class ComprobanteServiceClientChannel : ChannelBase<HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService>, HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService {
+            
+            public ComprobanteServiceClientChannel(System.ServiceModel.ClientBase<HostalDB_ViewModel.ServiceReference_Habitacion.IComprobanteService> client) : 
+                    base(client) {
+            }
+            
+            public System.IAsyncResult BeginInsertarComprobante(HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO dto, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = dto;
+                System.IAsyncResult _result = base.BeginInvoke("InsertarComprobante", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public bool EndInsertarComprobante(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                bool _result = ((bool)(base.EndInvoke("InsertarComprobante", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginActualizarComprobante(HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO dto, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = dto;
+                System.IAsyncResult _result = base.BeginInvoke("ActualizarComprobante", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public bool EndActualizarComprobante(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                bool _result = ((bool)(base.EndInvoke("ActualizarComprobante", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginEliminarComprobante(int id, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = id;
+                System.IAsyncResult _result = base.BeginInvoke("EliminarComprobante", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public bool EndEliminarComprobante(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                bool _result = ((bool)(base.EndInvoke("EliminarComprobante", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginBuscarComprobantePorID(int id, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = id;
+                System.IAsyncResult _result = base.BeginInvoke("BuscarComprobantePorID", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO EndBuscarComprobantePorID(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO _result = ((HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO)(base.EndInvoke("BuscarComprobantePorID", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginListarComprobantesPorIDCLIENTE(int idcliente, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = idcliente;
+                System.IAsyncResult _result = base.BeginInvoke("ListarComprobantesPorIDCLIENTE", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> EndListarComprobantesPorIDCLIENTE(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> _result = ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO>)(base.EndInvoke("ListarComprobantesPorIDCLIENTE", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginBuscarComprobantePorIDRESERVA(int idreserva, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = idreserva;
+                System.IAsyncResult _result = base.BeginInvoke("BuscarComprobantePorIDRESERVA", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO EndBuscarComprobantePorIDRESERVA(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO _result = ((HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO)(base.EndInvoke("BuscarComprobantePorIDRESERVA", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginListarTodosLosComprobantes(System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[0];
+                System.IAsyncResult _result = base.BeginInvoke("ListarTodosLosComprobantes", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> EndListarTodosLosComprobantes(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> _result = ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO>)(base.EndInvoke("ListarTodosLosComprobantes", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginListarComprobantesPorTIPOCOMPROBANTE(int idcomprobante, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = idcomprobante;
+                System.IAsyncResult _result = base.BeginInvoke("ListarComprobantesPorTIPOCOMPROBANTE", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> EndListarComprobantesPorTIPOCOMPROBANTE(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO> _result = ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO>)(base.EndInvoke("ListarComprobantesPorTIPOCOMPROBANTE", _args, result)));
+                return _result;
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference_Habitacion.IEmpresaService")]
+    public interface IEmpresaService {
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IEmpresaService/InsertarEmpresa", ReplyAction="http://tempuri.org/IEmpresaService/InsertarEmpresaResponse")]
+        System.IAsyncResult BeginInsertarEmpresa(HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO dto, System.AsyncCallback callback, object asyncState);
+        
+        bool EndInsertarEmpresa(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IEmpresaService/ActualizarEmpresa", ReplyAction="http://tempuri.org/IEmpresaService/ActualizarEmpresaResponse")]
+        System.IAsyncResult BeginActualizarEmpresa(HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO dto, System.AsyncCallback callback, object asyncState);
+        
+        bool EndActualizarEmpresa(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IEmpresaService/EliminarEmpresa", ReplyAction="http://tempuri.org/IEmpresaService/EliminarEmpresaResponse")]
+        System.IAsyncResult BeginEliminarEmpresa(string RUC, System.AsyncCallback callback, object asyncState);
+        
+        bool EndEliminarEmpresa(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IEmpresaService/BuscarEmpresasPorRazonSocial", ReplyAction="http://tempuri.org/IEmpresaService/BuscarEmpresasPorRazonSocialResponse")]
+        System.IAsyncResult BeginBuscarEmpresasPorRazonSocial(string parametroRazonSocial, System.AsyncCallback callback, object asyncState);
+        
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO> EndBuscarEmpresasPorRazonSocial(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IEmpresaService/BuscarEmpresaPorRUC", ReplyAction="http://tempuri.org/IEmpresaService/BuscarEmpresaPorRUCResponse")]
+        System.IAsyncResult BeginBuscarEmpresaPorRUC(string RUC, System.AsyncCallback callback, object asyncState);
+        
+        HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO EndBuscarEmpresaPorRUC(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IEmpresaService/ListarTodasLasEmpresas", ReplyAction="http://tempuri.org/IEmpresaService/ListarTodasLasEmpresasResponse")]
+        System.IAsyncResult BeginListarTodasLasEmpresas(System.AsyncCallback callback, object asyncState);
+        
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO> EndListarTodasLasEmpresas(System.IAsyncResult result);
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface IEmpresaServiceChannel : HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class InsertarEmpresaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public InsertarEmpresaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ActualizarEmpresaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public ActualizarEmpresaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class EliminarEmpresaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public EliminarEmpresaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class BuscarEmpresasPorRazonSocialCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public BuscarEmpresasPorRazonSocialCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO> Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO>)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class BuscarEmpresaPorRUCCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public BuscarEmpresaPorRUCCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ListarTodasLasEmpresasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public ListarTodasLasEmpresasCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO> Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO>)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class EmpresaServiceClient : System.ServiceModel.ClientBase<HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService>, HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService {
+        
+        private BeginOperationDelegate onBeginInsertarEmpresaDelegate;
+        
+        private EndOperationDelegate onEndInsertarEmpresaDelegate;
+        
+        private System.Threading.SendOrPostCallback onInsertarEmpresaCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginActualizarEmpresaDelegate;
+        
+        private EndOperationDelegate onEndActualizarEmpresaDelegate;
+        
+        private System.Threading.SendOrPostCallback onActualizarEmpresaCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginEliminarEmpresaDelegate;
+        
+        private EndOperationDelegate onEndEliminarEmpresaDelegate;
+        
+        private System.Threading.SendOrPostCallback onEliminarEmpresaCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginBuscarEmpresasPorRazonSocialDelegate;
+        
+        private EndOperationDelegate onEndBuscarEmpresasPorRazonSocialDelegate;
+        
+        private System.Threading.SendOrPostCallback onBuscarEmpresasPorRazonSocialCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginBuscarEmpresaPorRUCDelegate;
+        
+        private EndOperationDelegate onEndBuscarEmpresaPorRUCDelegate;
+        
+        private System.Threading.SendOrPostCallback onBuscarEmpresaPorRUCCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginListarTodasLasEmpresasDelegate;
+        
+        private EndOperationDelegate onEndListarTodasLasEmpresasDelegate;
+        
+        private System.Threading.SendOrPostCallback onListarTodasLasEmpresasCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginOpenDelegate;
+        
+        private EndOperationDelegate onEndOpenDelegate;
+        
+        private System.Threading.SendOrPostCallback onOpenCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginCloseDelegate;
+        
+        private EndOperationDelegate onEndCloseDelegate;
+        
+        private System.Threading.SendOrPostCallback onCloseCompletedDelegate;
+        
+        public EmpresaServiceClient() {
+        }
+        
+        public EmpresaServiceClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public EmpresaServiceClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public EmpresaServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public EmpresaServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        public System.Net.CookieContainer CookieContainer {
+            get {
+                System.ServiceModel.Channels.IHttpCookieContainerManager httpCookieContainerManager = this.InnerChannel.GetProperty<System.ServiceModel.Channels.IHttpCookieContainerManager>();
+                if ((httpCookieContainerManager != null)) {
+                    return httpCookieContainerManager.CookieContainer;
+                }
+                else {
+                    return null;
+                }
+            }
+            set {
+                System.ServiceModel.Channels.IHttpCookieContainerManager httpCookieContainerManager = this.InnerChannel.GetProperty<System.ServiceModel.Channels.IHttpCookieContainerManager>();
+                if ((httpCookieContainerManager != null)) {
+                    httpCookieContainerManager.CookieContainer = value;
+                }
+                else {
+                    throw new System.InvalidOperationException("No se puede establecer el objeto CookieContainer. Asegúrese de que el enlace cont" +
+                            "iene un objeto HttpCookieContainerBindingElement.");
+                }
+            }
+        }
+        
+        public event System.EventHandler<InsertarEmpresaCompletedEventArgs> InsertarEmpresaCompleted;
+        
+        public event System.EventHandler<ActualizarEmpresaCompletedEventArgs> ActualizarEmpresaCompleted;
+        
+        public event System.EventHandler<EliminarEmpresaCompletedEventArgs> EliminarEmpresaCompleted;
+        
+        public event System.EventHandler<BuscarEmpresasPorRazonSocialCompletedEventArgs> BuscarEmpresasPorRazonSocialCompleted;
+        
+        public event System.EventHandler<BuscarEmpresaPorRUCCompletedEventArgs> BuscarEmpresaPorRUCCompleted;
+        
+        public event System.EventHandler<ListarTodasLasEmpresasCompletedEventArgs> ListarTodasLasEmpresasCompleted;
+        
+        public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> OpenCompleted;
+        
+        public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> CloseCompleted;
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService.BeginInsertarEmpresa(HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO dto, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginInsertarEmpresa(dto, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        bool HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService.EndInsertarEmpresa(System.IAsyncResult result) {
+            return base.Channel.EndInsertarEmpresa(result);
+        }
+        
+        private System.IAsyncResult OnBeginInsertarEmpresa(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO dto = ((HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService)(this)).BeginInsertarEmpresa(dto, callback, asyncState);
+        }
+        
+        private object[] OnEndInsertarEmpresa(System.IAsyncResult result) {
+            bool retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService)(this)).EndInsertarEmpresa(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnInsertarEmpresaCompleted(object state) {
+            if ((this.InsertarEmpresaCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.InsertarEmpresaCompleted(this, new InsertarEmpresaCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void InsertarEmpresaAsync(HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO dto) {
+            this.InsertarEmpresaAsync(dto, null);
+        }
+        
+        public void InsertarEmpresaAsync(HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO dto, object userState) {
+            if ((this.onBeginInsertarEmpresaDelegate == null)) {
+                this.onBeginInsertarEmpresaDelegate = new BeginOperationDelegate(this.OnBeginInsertarEmpresa);
+            }
+            if ((this.onEndInsertarEmpresaDelegate == null)) {
+                this.onEndInsertarEmpresaDelegate = new EndOperationDelegate(this.OnEndInsertarEmpresa);
+            }
+            if ((this.onInsertarEmpresaCompletedDelegate == null)) {
+                this.onInsertarEmpresaCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnInsertarEmpresaCompleted);
+            }
+            base.InvokeAsync(this.onBeginInsertarEmpresaDelegate, new object[] {
+                        dto}, this.onEndInsertarEmpresaDelegate, this.onInsertarEmpresaCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService.BeginActualizarEmpresa(HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO dto, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginActualizarEmpresa(dto, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        bool HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService.EndActualizarEmpresa(System.IAsyncResult result) {
+            return base.Channel.EndActualizarEmpresa(result);
+        }
+        
+        private System.IAsyncResult OnBeginActualizarEmpresa(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO dto = ((HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService)(this)).BeginActualizarEmpresa(dto, callback, asyncState);
+        }
+        
+        private object[] OnEndActualizarEmpresa(System.IAsyncResult result) {
+            bool retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService)(this)).EndActualizarEmpresa(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnActualizarEmpresaCompleted(object state) {
+            if ((this.ActualizarEmpresaCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.ActualizarEmpresaCompleted(this, new ActualizarEmpresaCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void ActualizarEmpresaAsync(HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO dto) {
+            this.ActualizarEmpresaAsync(dto, null);
+        }
+        
+        public void ActualizarEmpresaAsync(HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO dto, object userState) {
+            if ((this.onBeginActualizarEmpresaDelegate == null)) {
+                this.onBeginActualizarEmpresaDelegate = new BeginOperationDelegate(this.OnBeginActualizarEmpresa);
+            }
+            if ((this.onEndActualizarEmpresaDelegate == null)) {
+                this.onEndActualizarEmpresaDelegate = new EndOperationDelegate(this.OnEndActualizarEmpresa);
+            }
+            if ((this.onActualizarEmpresaCompletedDelegate == null)) {
+                this.onActualizarEmpresaCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnActualizarEmpresaCompleted);
+            }
+            base.InvokeAsync(this.onBeginActualizarEmpresaDelegate, new object[] {
+                        dto}, this.onEndActualizarEmpresaDelegate, this.onActualizarEmpresaCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService.BeginEliminarEmpresa(string RUC, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginEliminarEmpresa(RUC, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        bool HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService.EndEliminarEmpresa(System.IAsyncResult result) {
+            return base.Channel.EndEliminarEmpresa(result);
+        }
+        
+        private System.IAsyncResult OnBeginEliminarEmpresa(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string RUC = ((string)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService)(this)).BeginEliminarEmpresa(RUC, callback, asyncState);
+        }
+        
+        private object[] OnEndEliminarEmpresa(System.IAsyncResult result) {
+            bool retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService)(this)).EndEliminarEmpresa(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnEliminarEmpresaCompleted(object state) {
+            if ((this.EliminarEmpresaCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.EliminarEmpresaCompleted(this, new EliminarEmpresaCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void EliminarEmpresaAsync(string RUC) {
+            this.EliminarEmpresaAsync(RUC, null);
+        }
+        
+        public void EliminarEmpresaAsync(string RUC, object userState) {
+            if ((this.onBeginEliminarEmpresaDelegate == null)) {
+                this.onBeginEliminarEmpresaDelegate = new BeginOperationDelegate(this.OnBeginEliminarEmpresa);
+            }
+            if ((this.onEndEliminarEmpresaDelegate == null)) {
+                this.onEndEliminarEmpresaDelegate = new EndOperationDelegate(this.OnEndEliminarEmpresa);
+            }
+            if ((this.onEliminarEmpresaCompletedDelegate == null)) {
+                this.onEliminarEmpresaCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnEliminarEmpresaCompleted);
+            }
+            base.InvokeAsync(this.onBeginEliminarEmpresaDelegate, new object[] {
+                        RUC}, this.onEndEliminarEmpresaDelegate, this.onEliminarEmpresaCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService.BeginBuscarEmpresasPorRazonSocial(string parametroRazonSocial, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginBuscarEmpresasPorRazonSocial(parametroRazonSocial, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO> HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService.EndBuscarEmpresasPorRazonSocial(System.IAsyncResult result) {
+            return base.Channel.EndBuscarEmpresasPorRazonSocial(result);
+        }
+        
+        private System.IAsyncResult OnBeginBuscarEmpresasPorRazonSocial(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string parametroRazonSocial = ((string)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService)(this)).BeginBuscarEmpresasPorRazonSocial(parametroRazonSocial, callback, asyncState);
+        }
+        
+        private object[] OnEndBuscarEmpresasPorRazonSocial(System.IAsyncResult result) {
+            System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO> retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService)(this)).EndBuscarEmpresasPorRazonSocial(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnBuscarEmpresasPorRazonSocialCompleted(object state) {
+            if ((this.BuscarEmpresasPorRazonSocialCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.BuscarEmpresasPorRazonSocialCompleted(this, new BuscarEmpresasPorRazonSocialCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void BuscarEmpresasPorRazonSocialAsync(string parametroRazonSocial) {
+            this.BuscarEmpresasPorRazonSocialAsync(parametroRazonSocial, null);
+        }
+        
+        public void BuscarEmpresasPorRazonSocialAsync(string parametroRazonSocial, object userState) {
+            if ((this.onBeginBuscarEmpresasPorRazonSocialDelegate == null)) {
+                this.onBeginBuscarEmpresasPorRazonSocialDelegate = new BeginOperationDelegate(this.OnBeginBuscarEmpresasPorRazonSocial);
+            }
+            if ((this.onEndBuscarEmpresasPorRazonSocialDelegate == null)) {
+                this.onEndBuscarEmpresasPorRazonSocialDelegate = new EndOperationDelegate(this.OnEndBuscarEmpresasPorRazonSocial);
+            }
+            if ((this.onBuscarEmpresasPorRazonSocialCompletedDelegate == null)) {
+                this.onBuscarEmpresasPorRazonSocialCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnBuscarEmpresasPorRazonSocialCompleted);
+            }
+            base.InvokeAsync(this.onBeginBuscarEmpresasPorRazonSocialDelegate, new object[] {
+                        parametroRazonSocial}, this.onEndBuscarEmpresasPorRazonSocialDelegate, this.onBuscarEmpresasPorRazonSocialCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService.BeginBuscarEmpresaPorRUC(string RUC, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginBuscarEmpresaPorRUC(RUC, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService.EndBuscarEmpresaPorRUC(System.IAsyncResult result) {
+            return base.Channel.EndBuscarEmpresaPorRUC(result);
+        }
+        
+        private System.IAsyncResult OnBeginBuscarEmpresaPorRUC(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string RUC = ((string)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService)(this)).BeginBuscarEmpresaPorRUC(RUC, callback, asyncState);
+        }
+        
+        private object[] OnEndBuscarEmpresaPorRUC(System.IAsyncResult result) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService)(this)).EndBuscarEmpresaPorRUC(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnBuscarEmpresaPorRUCCompleted(object state) {
+            if ((this.BuscarEmpresaPorRUCCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.BuscarEmpresaPorRUCCompleted(this, new BuscarEmpresaPorRUCCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void BuscarEmpresaPorRUCAsync(string RUC) {
+            this.BuscarEmpresaPorRUCAsync(RUC, null);
+        }
+        
+        public void BuscarEmpresaPorRUCAsync(string RUC, object userState) {
+            if ((this.onBeginBuscarEmpresaPorRUCDelegate == null)) {
+                this.onBeginBuscarEmpresaPorRUCDelegate = new BeginOperationDelegate(this.OnBeginBuscarEmpresaPorRUC);
+            }
+            if ((this.onEndBuscarEmpresaPorRUCDelegate == null)) {
+                this.onEndBuscarEmpresaPorRUCDelegate = new EndOperationDelegate(this.OnEndBuscarEmpresaPorRUC);
+            }
+            if ((this.onBuscarEmpresaPorRUCCompletedDelegate == null)) {
+                this.onBuscarEmpresaPorRUCCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnBuscarEmpresaPorRUCCompleted);
+            }
+            base.InvokeAsync(this.onBeginBuscarEmpresaPorRUCDelegate, new object[] {
+                        RUC}, this.onEndBuscarEmpresaPorRUCDelegate, this.onBuscarEmpresaPorRUCCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService.BeginListarTodasLasEmpresas(System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginListarTodasLasEmpresas(callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO> HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService.EndListarTodasLasEmpresas(System.IAsyncResult result) {
+            return base.Channel.EndListarTodasLasEmpresas(result);
+        }
+        
+        private System.IAsyncResult OnBeginListarTodasLasEmpresas(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService)(this)).BeginListarTodasLasEmpresas(callback, asyncState);
+        }
+        
+        private object[] OnEndListarTodasLasEmpresas(System.IAsyncResult result) {
+            System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO> retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService)(this)).EndListarTodasLasEmpresas(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnListarTodasLasEmpresasCompleted(object state) {
+            if ((this.ListarTodasLasEmpresasCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.ListarTodasLasEmpresasCompleted(this, new ListarTodasLasEmpresasCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void ListarTodasLasEmpresasAsync() {
+            this.ListarTodasLasEmpresasAsync(null);
+        }
+        
+        public void ListarTodasLasEmpresasAsync(object userState) {
+            if ((this.onBeginListarTodasLasEmpresasDelegate == null)) {
+                this.onBeginListarTodasLasEmpresasDelegate = new BeginOperationDelegate(this.OnBeginListarTodasLasEmpresas);
+            }
+            if ((this.onEndListarTodasLasEmpresasDelegate == null)) {
+                this.onEndListarTodasLasEmpresasDelegate = new EndOperationDelegate(this.OnEndListarTodasLasEmpresas);
+            }
+            if ((this.onListarTodasLasEmpresasCompletedDelegate == null)) {
+                this.onListarTodasLasEmpresasCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnListarTodasLasEmpresasCompleted);
+            }
+            base.InvokeAsync(this.onBeginListarTodasLasEmpresasDelegate, null, this.onEndListarTodasLasEmpresasDelegate, this.onListarTodasLasEmpresasCompletedDelegate, userState);
+        }
+        
+        private System.IAsyncResult OnBeginOpen(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return ((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(callback, asyncState);
+        }
+        
+        private object[] OnEndOpen(System.IAsyncResult result) {
+            ((System.ServiceModel.ICommunicationObject)(this)).EndOpen(result);
+            return null;
+        }
+        
+        private void OnOpenCompleted(object state) {
+            if ((this.OpenCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.OpenCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void OpenAsync() {
+            this.OpenAsync(null);
+        }
+        
+        public void OpenAsync(object userState) {
+            if ((this.onBeginOpenDelegate == null)) {
+                this.onBeginOpenDelegate = new BeginOperationDelegate(this.OnBeginOpen);
+            }
+            if ((this.onEndOpenDelegate == null)) {
+                this.onEndOpenDelegate = new EndOperationDelegate(this.OnEndOpen);
+            }
+            if ((this.onOpenCompletedDelegate == null)) {
+                this.onOpenCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnOpenCompleted);
+            }
+            base.InvokeAsync(this.onBeginOpenDelegate, null, this.onEndOpenDelegate, this.onOpenCompletedDelegate, userState);
+        }
+        
+        private System.IAsyncResult OnBeginClose(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return ((System.ServiceModel.ICommunicationObject)(this)).BeginClose(callback, asyncState);
+        }
+        
+        private object[] OnEndClose(System.IAsyncResult result) {
+            ((System.ServiceModel.ICommunicationObject)(this)).EndClose(result);
+            return null;
+        }
+        
+        private void OnCloseCompleted(object state) {
+            if ((this.CloseCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.CloseCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void CloseAsync() {
+            this.CloseAsync(null);
+        }
+        
+        public void CloseAsync(object userState) {
+            if ((this.onBeginCloseDelegate == null)) {
+                this.onBeginCloseDelegate = new BeginOperationDelegate(this.OnBeginClose);
+            }
+            if ((this.onEndCloseDelegate == null)) {
+                this.onEndCloseDelegate = new EndOperationDelegate(this.OnEndClose);
+            }
+            if ((this.onCloseCompletedDelegate == null)) {
+                this.onCloseCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnCloseCompleted);
+            }
+            base.InvokeAsync(this.onBeginCloseDelegate, null, this.onEndCloseDelegate, this.onCloseCompletedDelegate, userState);
+        }
+        
+        protected override HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService CreateChannel() {
+            return new EmpresaServiceClientChannel(this);
+        }
+        
+        private class EmpresaServiceClientChannel : ChannelBase<HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService>, HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService {
+            
+            public EmpresaServiceClientChannel(System.ServiceModel.ClientBase<HostalDB_ViewModel.ServiceReference_Habitacion.IEmpresaService> client) : 
+                    base(client) {
+            }
+            
+            public System.IAsyncResult BeginInsertarEmpresa(HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO dto, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = dto;
+                System.IAsyncResult _result = base.BeginInvoke("InsertarEmpresa", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public bool EndInsertarEmpresa(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                bool _result = ((bool)(base.EndInvoke("InsertarEmpresa", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginActualizarEmpresa(HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO dto, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = dto;
+                System.IAsyncResult _result = base.BeginInvoke("ActualizarEmpresa", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public bool EndActualizarEmpresa(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                bool _result = ((bool)(base.EndInvoke("ActualizarEmpresa", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginEliminarEmpresa(string RUC, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = RUC;
+                System.IAsyncResult _result = base.BeginInvoke("EliminarEmpresa", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public bool EndEliminarEmpresa(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                bool _result = ((bool)(base.EndInvoke("EliminarEmpresa", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginBuscarEmpresasPorRazonSocial(string parametroRazonSocial, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = parametroRazonSocial;
+                System.IAsyncResult _result = base.BeginInvoke("BuscarEmpresasPorRazonSocial", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO> EndBuscarEmpresasPorRazonSocial(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO> _result = ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO>)(base.EndInvoke("BuscarEmpresasPorRazonSocial", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginBuscarEmpresaPorRUC(string RUC, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = RUC;
+                System.IAsyncResult _result = base.BeginInvoke("BuscarEmpresaPorRUC", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO EndBuscarEmpresaPorRUC(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO _result = ((HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO)(base.EndInvoke("BuscarEmpresaPorRUC", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginListarTodasLasEmpresas(System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[0];
+                System.IAsyncResult _result = base.BeginInvoke("ListarTodasLasEmpresas", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO> EndListarTodasLasEmpresas(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO> _result = ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO>)(base.EndInvoke("ListarTodasLasEmpresas", _args, result)));
+                return _result;
             }
         }
     }
@@ -1932,28 +4286,28 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IHabitacionService/ListarTodasLasHabitaciones", ReplyAction="http://tempuri.org/IHabitacionService/ListarTodasLasHabitacionesResponse")]
         System.IAsyncResult BeginListarTodasLasHabitaciones(System.AsyncCallback callback, object asyncState);
         
-        System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> EndListarTodasLasHabitaciones(System.IAsyncResult result);
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> EndListarTodasLasHabitaciones(System.IAsyncResult result);
         
         [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IHabitacionService/ListarHabitacionesDisponibles", ReplyAction="http://tempuri.org/IHabitacionService/ListarHabitacionesDisponiblesResponse")]
         System.IAsyncResult BeginListarHabitacionesDisponibles(System.AsyncCallback callback, object asyncState);
         
-        System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> EndListarHabitacionesDisponibles(System.IAsyncResult result);
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.ListarHabitacionesDisponiblesClass> EndListarHabitacionesDisponibles(System.IAsyncResult result);
         
         [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IHabitacionService/ListarHabitacionesOcupadas", ReplyAction="http://tempuri.org/IHabitacionService/ListarHabitacionesOcupadasResponse")]
         System.IAsyncResult BeginListarHabitacionesOcupadas(System.AsyncCallback callback, object asyncState);
         
-        System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> EndListarHabitacionesOcupadas(System.IAsyncResult result);
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> EndListarHabitacionesOcupadas(System.IAsyncResult result);
         
         [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IHabitacionService/ListarHabitacionesPorCategoria", ReplyAction="http://tempuri.org/IHabitacionService/ListarHabitacionesPorCategoriaResponse")]
         System.IAsyncResult BeginListarHabitacionesPorCategoria(int idCategoria, System.AsyncCallback callback, object asyncState);
         
-        System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> EndListarHabitacionesPorCategoria(System.IAsyncResult result);
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> EndListarHabitacionesPorCategoria(System.IAsyncResult result);
         
         [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IHabitacionService/ListarHabitacionesPorTipoDehabitacion", ReplyAction="http://tempuri.org/IHabitacionService/ListarHabitacionesPorTipoDehabitacionRespon" +
             "se")]
         System.IAsyncResult BeginListarHabitacionesPorTipoDehabitacion(int idTipohabitacion, System.AsyncCallback callback, object asyncState);
         
-        System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> EndListarHabitacionesPorTipoDehabitacion(System.IAsyncResult result);
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> EndListarHabitacionesPorTipoDehabitacion(System.IAsyncResult result);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2047,10 +4401,10 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
             this.results = results;
         }
         
-        public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> Result {
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> Result {
             get {
                 base.RaiseExceptionIfNecessary();
-                return ((System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO>)(this.results[0]));
+                return ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO>)(this.results[0]));
             }
         }
     }
@@ -2066,10 +4420,10 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
             this.results = results;
         }
         
-        public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> Result {
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.ListarHabitacionesDisponiblesClass> Result {
             get {
                 base.RaiseExceptionIfNecessary();
-                return ((System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO>)(this.results[0]));
+                return ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.ListarHabitacionesDisponiblesClass>)(this.results[0]));
             }
         }
     }
@@ -2085,10 +4439,10 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
             this.results = results;
         }
         
-        public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> Result {
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> Result {
             get {
                 base.RaiseExceptionIfNecessary();
-                return ((System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO>)(this.results[0]));
+                return ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO>)(this.results[0]));
             }
         }
     }
@@ -2104,10 +4458,10 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
             this.results = results;
         }
         
-        public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> Result {
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> Result {
             get {
                 base.RaiseExceptionIfNecessary();
-                return ((System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO>)(this.results[0]));
+                return ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO>)(this.results[0]));
             }
         }
     }
@@ -2123,10 +4477,10 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
             this.results = results;
         }
         
-        public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> Result {
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> Result {
             get {
                 base.RaiseExceptionIfNecessary();
-                return ((System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO>)(this.results[0]));
+                return ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO>)(this.results[0]));
             }
         }
     }
@@ -2454,7 +4808,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> HostalDB_ViewModel.ServiceReference_Habitacion.IHabitacionService.EndListarTodasLasHabitaciones(System.IAsyncResult result) {
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> HostalDB_ViewModel.ServiceReference_Habitacion.IHabitacionService.EndListarTodasLasHabitaciones(System.IAsyncResult result) {
             return base.Channel.EndListarTodasLasHabitaciones(result);
         }
         
@@ -2463,7 +4817,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         }
         
         private object[] OnEndListarTodasLasHabitaciones(System.IAsyncResult result) {
-            System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IHabitacionService)(this)).EndListarTodasLasHabitaciones(result);
+            System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IHabitacionService)(this)).EndListarTodasLasHabitaciones(result);
             return new object[] {
                     retVal};
         }
@@ -2498,7 +4852,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> HostalDB_ViewModel.ServiceReference_Habitacion.IHabitacionService.EndListarHabitacionesDisponibles(System.IAsyncResult result) {
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.ListarHabitacionesDisponiblesClass> HostalDB_ViewModel.ServiceReference_Habitacion.IHabitacionService.EndListarHabitacionesDisponibles(System.IAsyncResult result) {
             return base.Channel.EndListarHabitacionesDisponibles(result);
         }
         
@@ -2507,7 +4861,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         }
         
         private object[] OnEndListarHabitacionesDisponibles(System.IAsyncResult result) {
-            System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IHabitacionService)(this)).EndListarHabitacionesDisponibles(result);
+            System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.ListarHabitacionesDisponiblesClass> retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IHabitacionService)(this)).EndListarHabitacionesDisponibles(result);
             return new object[] {
                     retVal};
         }
@@ -2542,7 +4896,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> HostalDB_ViewModel.ServiceReference_Habitacion.IHabitacionService.EndListarHabitacionesOcupadas(System.IAsyncResult result) {
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> HostalDB_ViewModel.ServiceReference_Habitacion.IHabitacionService.EndListarHabitacionesOcupadas(System.IAsyncResult result) {
             return base.Channel.EndListarHabitacionesOcupadas(result);
         }
         
@@ -2551,7 +4905,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         }
         
         private object[] OnEndListarHabitacionesOcupadas(System.IAsyncResult result) {
-            System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IHabitacionService)(this)).EndListarHabitacionesOcupadas(result);
+            System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IHabitacionService)(this)).EndListarHabitacionesOcupadas(result);
             return new object[] {
                     retVal};
         }
@@ -2586,7 +4940,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> HostalDB_ViewModel.ServiceReference_Habitacion.IHabitacionService.EndListarHabitacionesPorCategoria(System.IAsyncResult result) {
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> HostalDB_ViewModel.ServiceReference_Habitacion.IHabitacionService.EndListarHabitacionesPorCategoria(System.IAsyncResult result) {
             return base.Channel.EndListarHabitacionesPorCategoria(result);
         }
         
@@ -2596,7 +4950,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         }
         
         private object[] OnEndListarHabitacionesPorCategoria(System.IAsyncResult result) {
-            System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IHabitacionService)(this)).EndListarHabitacionesPorCategoria(result);
+            System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IHabitacionService)(this)).EndListarHabitacionesPorCategoria(result);
             return new object[] {
                     retVal};
         }
@@ -2632,7 +4986,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> HostalDB_ViewModel.ServiceReference_Habitacion.IHabitacionService.EndListarHabitacionesPorTipoDehabitacion(System.IAsyncResult result) {
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> HostalDB_ViewModel.ServiceReference_Habitacion.IHabitacionService.EndListarHabitacionesPorTipoDehabitacion(System.IAsyncResult result) {
             return base.Channel.EndListarHabitacionesPorTipoDehabitacion(result);
         }
         
@@ -2642,7 +4996,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         }
         
         private object[] OnEndListarHabitacionesPorTipoDehabitacion(System.IAsyncResult result) {
-            System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IHabitacionService)(this)).EndListarHabitacionesPorTipoDehabitacion(result);
+            System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IHabitacionService)(this)).EndListarHabitacionesPorTipoDehabitacion(result);
             return new object[] {
                     retVal};
         }
@@ -2806,9 +5160,9 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
                 return _result;
             }
             
-            public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> EndListarTodasLasHabitaciones(System.IAsyncResult result) {
+            public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> EndListarTodasLasHabitaciones(System.IAsyncResult result) {
                 object[] _args = new object[0];
-                System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> _result = ((System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO>)(base.EndInvoke("ListarTodasLasHabitaciones", _args, result)));
+                System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> _result = ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO>)(base.EndInvoke("ListarTodasLasHabitaciones", _args, result)));
                 return _result;
             }
             
@@ -2818,9 +5172,9 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
                 return _result;
             }
             
-            public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> EndListarHabitacionesDisponibles(System.IAsyncResult result) {
+            public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.ListarHabitacionesDisponiblesClass> EndListarHabitacionesDisponibles(System.IAsyncResult result) {
                 object[] _args = new object[0];
-                System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> _result = ((System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO>)(base.EndInvoke("ListarHabitacionesDisponibles", _args, result)));
+                System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.ListarHabitacionesDisponiblesClass> _result = ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.ListarHabitacionesDisponiblesClass>)(base.EndInvoke("ListarHabitacionesDisponibles", _args, result)));
                 return _result;
             }
             
@@ -2830,9 +5184,9 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
                 return _result;
             }
             
-            public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> EndListarHabitacionesOcupadas(System.IAsyncResult result) {
+            public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> EndListarHabitacionesOcupadas(System.IAsyncResult result) {
                 object[] _args = new object[0];
-                System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> _result = ((System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO>)(base.EndInvoke("ListarHabitacionesOcupadas", _args, result)));
+                System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> _result = ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO>)(base.EndInvoke("ListarHabitacionesOcupadas", _args, result)));
                 return _result;
             }
             
@@ -2843,9 +5197,9 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
                 return _result;
             }
             
-            public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> EndListarHabitacionesPorCategoria(System.IAsyncResult result) {
+            public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> EndListarHabitacionesPorCategoria(System.IAsyncResult result) {
                 object[] _args = new object[0];
-                System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> _result = ((System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO>)(base.EndInvoke("ListarHabitacionesPorCategoria", _args, result)));
+                System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> _result = ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO>)(base.EndInvoke("ListarHabitacionesPorCategoria", _args, result)));
                 return _result;
             }
             
@@ -2856,9 +5210,3473 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
                 return _result;
             }
             
-            public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> EndListarHabitacionesPorTipoDehabitacion(System.IAsyncResult result) {
+            public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> EndListarHabitacionesPorTipoDehabitacion(System.IAsyncResult result) {
                 object[] _args = new object[0];
-                System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> _result = ((System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO>)(base.EndInvoke("ListarHabitacionesPorTipoDehabitacion", _args, result)));
+                System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO> _result = ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO>)(base.EndInvoke("ListarHabitacionesPorTipoDehabitacion", _args, result)));
+                return _result;
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference_Habitacion.IHotelService")]
+    public interface IHotelService {
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IHotelService/InsertarHotel", ReplyAction="http://tempuri.org/IHotelService/InsertarHotelResponse")]
+        System.IAsyncResult BeginInsertarHotel(HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO dto, System.AsyncCallback callback, object asyncState);
+        
+        int EndInsertarHotel(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IHotelService/ActualizarHotel", ReplyAction="http://tempuri.org/IHotelService/ActualizarHotelResponse")]
+        System.IAsyncResult BeginActualizarHotel(HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO dto, System.AsyncCallback callback, object asyncState);
+        
+        bool EndActualizarHotel(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IHotelService/EliminarHotel", ReplyAction="http://tempuri.org/IHotelService/EliminarHotelResponse")]
+        System.IAsyncResult BeginEliminarHotel(int IDHotel, System.AsyncCallback callback, object asyncState);
+        
+        bool EndEliminarHotel(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IHotelService/BuscarHotelPorID", ReplyAction="http://tempuri.org/IHotelService/BuscarHotelPorIDResponse")]
+        System.IAsyncResult BeginBuscarHotelPorID(int IDHotel, System.AsyncCallback callback, object asyncState);
+        
+        HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO EndBuscarHotelPorID(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IHotelService/BuscarHotelPorNombre", ReplyAction="http://tempuri.org/IHotelService/BuscarHotelPorNombreResponse")]
+        System.IAsyncResult BeginBuscarHotelPorNombre(string parametro, System.AsyncCallback callback, object asyncState);
+        
+        HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO EndBuscarHotelPorNombre(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IHotelService/ListarTodosLosHoteles", ReplyAction="http://tempuri.org/IHotelService/ListarTodosLosHotelesResponse")]
+        System.IAsyncResult BeginListarTodosLosHoteles(System.AsyncCallback callback, object asyncState);
+        
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO> EndListarTodosLosHoteles(System.IAsyncResult result);
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface IHotelServiceChannel : HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class InsertarHotelCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public InsertarHotelCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public int Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ActualizarHotelCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public ActualizarHotelCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class EliminarHotelCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public EliminarHotelCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class BuscarHotelPorIDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public BuscarHotelPorIDCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class BuscarHotelPorNombreCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public BuscarHotelPorNombreCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ListarTodosLosHotelesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public ListarTodosLosHotelesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO> Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO>)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class HotelServiceClient : System.ServiceModel.ClientBase<HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService>, HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService {
+        
+        private BeginOperationDelegate onBeginInsertarHotelDelegate;
+        
+        private EndOperationDelegate onEndInsertarHotelDelegate;
+        
+        private System.Threading.SendOrPostCallback onInsertarHotelCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginActualizarHotelDelegate;
+        
+        private EndOperationDelegate onEndActualizarHotelDelegate;
+        
+        private System.Threading.SendOrPostCallback onActualizarHotelCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginEliminarHotelDelegate;
+        
+        private EndOperationDelegate onEndEliminarHotelDelegate;
+        
+        private System.Threading.SendOrPostCallback onEliminarHotelCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginBuscarHotelPorIDDelegate;
+        
+        private EndOperationDelegate onEndBuscarHotelPorIDDelegate;
+        
+        private System.Threading.SendOrPostCallback onBuscarHotelPorIDCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginBuscarHotelPorNombreDelegate;
+        
+        private EndOperationDelegate onEndBuscarHotelPorNombreDelegate;
+        
+        private System.Threading.SendOrPostCallback onBuscarHotelPorNombreCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginListarTodosLosHotelesDelegate;
+        
+        private EndOperationDelegate onEndListarTodosLosHotelesDelegate;
+        
+        private System.Threading.SendOrPostCallback onListarTodosLosHotelesCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginOpenDelegate;
+        
+        private EndOperationDelegate onEndOpenDelegate;
+        
+        private System.Threading.SendOrPostCallback onOpenCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginCloseDelegate;
+        
+        private EndOperationDelegate onEndCloseDelegate;
+        
+        private System.Threading.SendOrPostCallback onCloseCompletedDelegate;
+        
+        public HotelServiceClient() {
+        }
+        
+        public HotelServiceClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public HotelServiceClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public HotelServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public HotelServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        public System.Net.CookieContainer CookieContainer {
+            get {
+                System.ServiceModel.Channels.IHttpCookieContainerManager httpCookieContainerManager = this.InnerChannel.GetProperty<System.ServiceModel.Channels.IHttpCookieContainerManager>();
+                if ((httpCookieContainerManager != null)) {
+                    return httpCookieContainerManager.CookieContainer;
+                }
+                else {
+                    return null;
+                }
+            }
+            set {
+                System.ServiceModel.Channels.IHttpCookieContainerManager httpCookieContainerManager = this.InnerChannel.GetProperty<System.ServiceModel.Channels.IHttpCookieContainerManager>();
+                if ((httpCookieContainerManager != null)) {
+                    httpCookieContainerManager.CookieContainer = value;
+                }
+                else {
+                    throw new System.InvalidOperationException("No se puede establecer el objeto CookieContainer. Asegúrese de que el enlace cont" +
+                            "iene un objeto HttpCookieContainerBindingElement.");
+                }
+            }
+        }
+        
+        public event System.EventHandler<InsertarHotelCompletedEventArgs> InsertarHotelCompleted;
+        
+        public event System.EventHandler<ActualizarHotelCompletedEventArgs> ActualizarHotelCompleted;
+        
+        public event System.EventHandler<EliminarHotelCompletedEventArgs> EliminarHotelCompleted;
+        
+        public event System.EventHandler<BuscarHotelPorIDCompletedEventArgs> BuscarHotelPorIDCompleted;
+        
+        public event System.EventHandler<BuscarHotelPorNombreCompletedEventArgs> BuscarHotelPorNombreCompleted;
+        
+        public event System.EventHandler<ListarTodosLosHotelesCompletedEventArgs> ListarTodosLosHotelesCompleted;
+        
+        public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> OpenCompleted;
+        
+        public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> CloseCompleted;
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService.BeginInsertarHotel(HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO dto, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginInsertarHotel(dto, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        int HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService.EndInsertarHotel(System.IAsyncResult result) {
+            return base.Channel.EndInsertarHotel(result);
+        }
+        
+        private System.IAsyncResult OnBeginInsertarHotel(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO dto = ((HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService)(this)).BeginInsertarHotel(dto, callback, asyncState);
+        }
+        
+        private object[] OnEndInsertarHotel(System.IAsyncResult result) {
+            int retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService)(this)).EndInsertarHotel(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnInsertarHotelCompleted(object state) {
+            if ((this.InsertarHotelCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.InsertarHotelCompleted(this, new InsertarHotelCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void InsertarHotelAsync(HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO dto) {
+            this.InsertarHotelAsync(dto, null);
+        }
+        
+        public void InsertarHotelAsync(HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO dto, object userState) {
+            if ((this.onBeginInsertarHotelDelegate == null)) {
+                this.onBeginInsertarHotelDelegate = new BeginOperationDelegate(this.OnBeginInsertarHotel);
+            }
+            if ((this.onEndInsertarHotelDelegate == null)) {
+                this.onEndInsertarHotelDelegate = new EndOperationDelegate(this.OnEndInsertarHotel);
+            }
+            if ((this.onInsertarHotelCompletedDelegate == null)) {
+                this.onInsertarHotelCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnInsertarHotelCompleted);
+            }
+            base.InvokeAsync(this.onBeginInsertarHotelDelegate, new object[] {
+                        dto}, this.onEndInsertarHotelDelegate, this.onInsertarHotelCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService.BeginActualizarHotel(HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO dto, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginActualizarHotel(dto, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        bool HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService.EndActualizarHotel(System.IAsyncResult result) {
+            return base.Channel.EndActualizarHotel(result);
+        }
+        
+        private System.IAsyncResult OnBeginActualizarHotel(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO dto = ((HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService)(this)).BeginActualizarHotel(dto, callback, asyncState);
+        }
+        
+        private object[] OnEndActualizarHotel(System.IAsyncResult result) {
+            bool retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService)(this)).EndActualizarHotel(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnActualizarHotelCompleted(object state) {
+            if ((this.ActualizarHotelCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.ActualizarHotelCompleted(this, new ActualizarHotelCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void ActualizarHotelAsync(HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO dto) {
+            this.ActualizarHotelAsync(dto, null);
+        }
+        
+        public void ActualizarHotelAsync(HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO dto, object userState) {
+            if ((this.onBeginActualizarHotelDelegate == null)) {
+                this.onBeginActualizarHotelDelegate = new BeginOperationDelegate(this.OnBeginActualizarHotel);
+            }
+            if ((this.onEndActualizarHotelDelegate == null)) {
+                this.onEndActualizarHotelDelegate = new EndOperationDelegate(this.OnEndActualizarHotel);
+            }
+            if ((this.onActualizarHotelCompletedDelegate == null)) {
+                this.onActualizarHotelCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnActualizarHotelCompleted);
+            }
+            base.InvokeAsync(this.onBeginActualizarHotelDelegate, new object[] {
+                        dto}, this.onEndActualizarHotelDelegate, this.onActualizarHotelCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService.BeginEliminarHotel(int IDHotel, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginEliminarHotel(IDHotel, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        bool HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService.EndEliminarHotel(System.IAsyncResult result) {
+            return base.Channel.EndEliminarHotel(result);
+        }
+        
+        private System.IAsyncResult OnBeginEliminarHotel(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int IDHotel = ((int)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService)(this)).BeginEliminarHotel(IDHotel, callback, asyncState);
+        }
+        
+        private object[] OnEndEliminarHotel(System.IAsyncResult result) {
+            bool retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService)(this)).EndEliminarHotel(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnEliminarHotelCompleted(object state) {
+            if ((this.EliminarHotelCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.EliminarHotelCompleted(this, new EliminarHotelCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void EliminarHotelAsync(int IDHotel) {
+            this.EliminarHotelAsync(IDHotel, null);
+        }
+        
+        public void EliminarHotelAsync(int IDHotel, object userState) {
+            if ((this.onBeginEliminarHotelDelegate == null)) {
+                this.onBeginEliminarHotelDelegate = new BeginOperationDelegate(this.OnBeginEliminarHotel);
+            }
+            if ((this.onEndEliminarHotelDelegate == null)) {
+                this.onEndEliminarHotelDelegate = new EndOperationDelegate(this.OnEndEliminarHotel);
+            }
+            if ((this.onEliminarHotelCompletedDelegate == null)) {
+                this.onEliminarHotelCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnEliminarHotelCompleted);
+            }
+            base.InvokeAsync(this.onBeginEliminarHotelDelegate, new object[] {
+                        IDHotel}, this.onEndEliminarHotelDelegate, this.onEliminarHotelCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService.BeginBuscarHotelPorID(int IDHotel, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginBuscarHotelPorID(IDHotel, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService.EndBuscarHotelPorID(System.IAsyncResult result) {
+            return base.Channel.EndBuscarHotelPorID(result);
+        }
+        
+        private System.IAsyncResult OnBeginBuscarHotelPorID(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int IDHotel = ((int)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService)(this)).BeginBuscarHotelPorID(IDHotel, callback, asyncState);
+        }
+        
+        private object[] OnEndBuscarHotelPorID(System.IAsyncResult result) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService)(this)).EndBuscarHotelPorID(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnBuscarHotelPorIDCompleted(object state) {
+            if ((this.BuscarHotelPorIDCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.BuscarHotelPorIDCompleted(this, new BuscarHotelPorIDCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void BuscarHotelPorIDAsync(int IDHotel) {
+            this.BuscarHotelPorIDAsync(IDHotel, null);
+        }
+        
+        public void BuscarHotelPorIDAsync(int IDHotel, object userState) {
+            if ((this.onBeginBuscarHotelPorIDDelegate == null)) {
+                this.onBeginBuscarHotelPorIDDelegate = new BeginOperationDelegate(this.OnBeginBuscarHotelPorID);
+            }
+            if ((this.onEndBuscarHotelPorIDDelegate == null)) {
+                this.onEndBuscarHotelPorIDDelegate = new EndOperationDelegate(this.OnEndBuscarHotelPorID);
+            }
+            if ((this.onBuscarHotelPorIDCompletedDelegate == null)) {
+                this.onBuscarHotelPorIDCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnBuscarHotelPorIDCompleted);
+            }
+            base.InvokeAsync(this.onBeginBuscarHotelPorIDDelegate, new object[] {
+                        IDHotel}, this.onEndBuscarHotelPorIDDelegate, this.onBuscarHotelPorIDCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService.BeginBuscarHotelPorNombre(string parametro, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginBuscarHotelPorNombre(parametro, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService.EndBuscarHotelPorNombre(System.IAsyncResult result) {
+            return base.Channel.EndBuscarHotelPorNombre(result);
+        }
+        
+        private System.IAsyncResult OnBeginBuscarHotelPorNombre(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string parametro = ((string)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService)(this)).BeginBuscarHotelPorNombre(parametro, callback, asyncState);
+        }
+        
+        private object[] OnEndBuscarHotelPorNombre(System.IAsyncResult result) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService)(this)).EndBuscarHotelPorNombre(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnBuscarHotelPorNombreCompleted(object state) {
+            if ((this.BuscarHotelPorNombreCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.BuscarHotelPorNombreCompleted(this, new BuscarHotelPorNombreCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void BuscarHotelPorNombreAsync(string parametro) {
+            this.BuscarHotelPorNombreAsync(parametro, null);
+        }
+        
+        public void BuscarHotelPorNombreAsync(string parametro, object userState) {
+            if ((this.onBeginBuscarHotelPorNombreDelegate == null)) {
+                this.onBeginBuscarHotelPorNombreDelegate = new BeginOperationDelegate(this.OnBeginBuscarHotelPorNombre);
+            }
+            if ((this.onEndBuscarHotelPorNombreDelegate == null)) {
+                this.onEndBuscarHotelPorNombreDelegate = new EndOperationDelegate(this.OnEndBuscarHotelPorNombre);
+            }
+            if ((this.onBuscarHotelPorNombreCompletedDelegate == null)) {
+                this.onBuscarHotelPorNombreCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnBuscarHotelPorNombreCompleted);
+            }
+            base.InvokeAsync(this.onBeginBuscarHotelPorNombreDelegate, new object[] {
+                        parametro}, this.onEndBuscarHotelPorNombreDelegate, this.onBuscarHotelPorNombreCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService.BeginListarTodosLosHoteles(System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginListarTodosLosHoteles(callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO> HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService.EndListarTodosLosHoteles(System.IAsyncResult result) {
+            return base.Channel.EndListarTodosLosHoteles(result);
+        }
+        
+        private System.IAsyncResult OnBeginListarTodosLosHoteles(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService)(this)).BeginListarTodosLosHoteles(callback, asyncState);
+        }
+        
+        private object[] OnEndListarTodosLosHoteles(System.IAsyncResult result) {
+            System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO> retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService)(this)).EndListarTodosLosHoteles(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnListarTodosLosHotelesCompleted(object state) {
+            if ((this.ListarTodosLosHotelesCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.ListarTodosLosHotelesCompleted(this, new ListarTodosLosHotelesCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void ListarTodosLosHotelesAsync() {
+            this.ListarTodosLosHotelesAsync(null);
+        }
+        
+        public void ListarTodosLosHotelesAsync(object userState) {
+            if ((this.onBeginListarTodosLosHotelesDelegate == null)) {
+                this.onBeginListarTodosLosHotelesDelegate = new BeginOperationDelegate(this.OnBeginListarTodosLosHoteles);
+            }
+            if ((this.onEndListarTodosLosHotelesDelegate == null)) {
+                this.onEndListarTodosLosHotelesDelegate = new EndOperationDelegate(this.OnEndListarTodosLosHoteles);
+            }
+            if ((this.onListarTodosLosHotelesCompletedDelegate == null)) {
+                this.onListarTodosLosHotelesCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnListarTodosLosHotelesCompleted);
+            }
+            base.InvokeAsync(this.onBeginListarTodosLosHotelesDelegate, null, this.onEndListarTodosLosHotelesDelegate, this.onListarTodosLosHotelesCompletedDelegate, userState);
+        }
+        
+        private System.IAsyncResult OnBeginOpen(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return ((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(callback, asyncState);
+        }
+        
+        private object[] OnEndOpen(System.IAsyncResult result) {
+            ((System.ServiceModel.ICommunicationObject)(this)).EndOpen(result);
+            return null;
+        }
+        
+        private void OnOpenCompleted(object state) {
+            if ((this.OpenCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.OpenCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void OpenAsync() {
+            this.OpenAsync(null);
+        }
+        
+        public void OpenAsync(object userState) {
+            if ((this.onBeginOpenDelegate == null)) {
+                this.onBeginOpenDelegate = new BeginOperationDelegate(this.OnBeginOpen);
+            }
+            if ((this.onEndOpenDelegate == null)) {
+                this.onEndOpenDelegate = new EndOperationDelegate(this.OnEndOpen);
+            }
+            if ((this.onOpenCompletedDelegate == null)) {
+                this.onOpenCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnOpenCompleted);
+            }
+            base.InvokeAsync(this.onBeginOpenDelegate, null, this.onEndOpenDelegate, this.onOpenCompletedDelegate, userState);
+        }
+        
+        private System.IAsyncResult OnBeginClose(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return ((System.ServiceModel.ICommunicationObject)(this)).BeginClose(callback, asyncState);
+        }
+        
+        private object[] OnEndClose(System.IAsyncResult result) {
+            ((System.ServiceModel.ICommunicationObject)(this)).EndClose(result);
+            return null;
+        }
+        
+        private void OnCloseCompleted(object state) {
+            if ((this.CloseCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.CloseCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void CloseAsync() {
+            this.CloseAsync(null);
+        }
+        
+        public void CloseAsync(object userState) {
+            if ((this.onBeginCloseDelegate == null)) {
+                this.onBeginCloseDelegate = new BeginOperationDelegate(this.OnBeginClose);
+            }
+            if ((this.onEndCloseDelegate == null)) {
+                this.onEndCloseDelegate = new EndOperationDelegate(this.OnEndClose);
+            }
+            if ((this.onCloseCompletedDelegate == null)) {
+                this.onCloseCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnCloseCompleted);
+            }
+            base.InvokeAsync(this.onBeginCloseDelegate, null, this.onEndCloseDelegate, this.onCloseCompletedDelegate, userState);
+        }
+        
+        protected override HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService CreateChannel() {
+            return new HotelServiceClientChannel(this);
+        }
+        
+        private class HotelServiceClientChannel : ChannelBase<HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService>, HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService {
+            
+            public HotelServiceClientChannel(System.ServiceModel.ClientBase<HostalDB_ViewModel.ServiceReference_Habitacion.IHotelService> client) : 
+                    base(client) {
+            }
+            
+            public System.IAsyncResult BeginInsertarHotel(HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO dto, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = dto;
+                System.IAsyncResult _result = base.BeginInvoke("InsertarHotel", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public int EndInsertarHotel(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                int _result = ((int)(base.EndInvoke("InsertarHotel", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginActualizarHotel(HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO dto, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = dto;
+                System.IAsyncResult _result = base.BeginInvoke("ActualizarHotel", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public bool EndActualizarHotel(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                bool _result = ((bool)(base.EndInvoke("ActualizarHotel", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginEliminarHotel(int IDHotel, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = IDHotel;
+                System.IAsyncResult _result = base.BeginInvoke("EliminarHotel", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public bool EndEliminarHotel(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                bool _result = ((bool)(base.EndInvoke("EliminarHotel", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginBuscarHotelPorID(int IDHotel, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = IDHotel;
+                System.IAsyncResult _result = base.BeginInvoke("BuscarHotelPorID", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO EndBuscarHotelPorID(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO _result = ((HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO)(base.EndInvoke("BuscarHotelPorID", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginBuscarHotelPorNombre(string parametro, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = parametro;
+                System.IAsyncResult _result = base.BeginInvoke("BuscarHotelPorNombre", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO EndBuscarHotelPorNombre(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO _result = ((HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO)(base.EndInvoke("BuscarHotelPorNombre", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginListarTodosLosHoteles(System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[0];
+                System.IAsyncResult _result = base.BeginInvoke("ListarTodosLosHoteles", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO> EndListarTodosLosHoteles(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO> _result = ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO>)(base.EndInvoke("ListarTodosLosHoteles", _args, result)));
+                return _result;
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference_Habitacion.IReservaService")]
+    public interface IReservaService {
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IReservaService/InsertarReserva", ReplyAction="http://tempuri.org/IReservaService/InsertarReservaResponse")]
+        System.IAsyncResult BeginInsertarReserva(HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO dto, System.AsyncCallback callback, object asyncState);
+        
+        int EndInsertarReserva(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IReservaService/ActualizarReserva", ReplyAction="http://tempuri.org/IReservaService/ActualizarReservaResponse")]
+        System.IAsyncResult BeginActualizarReserva(HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO dto, System.AsyncCallback callback, object asyncState);
+        
+        bool EndActualizarReserva(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IReservaService/EliminarReserva", ReplyAction="http://tempuri.org/IReservaService/EliminarReservaResponse")]
+        System.IAsyncResult BeginEliminarReserva(int idHabitacion, System.AsyncCallback callback, object asyncState);
+        
+        bool EndEliminarReserva(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IReservaService/BuscarReservaPorID", ReplyAction="http://tempuri.org/IReservaService/BuscarReservaPorIDResponse")]
+        System.IAsyncResult BeginBuscarReservaPorID(int idReserva, System.AsyncCallback callback, object asyncState);
+        
+        HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO EndBuscarReservaPorID(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IReservaService/ListarTodasLasReservas", ReplyAction="http://tempuri.org/IReservaService/ListarTodasLasReservasResponse")]
+        System.IAsyncResult BeginListarTodasLasReservas(System.AsyncCallback callback, object asyncState);
+        
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO> EndListarTodasLasReservas(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IReservaService/ListarReservasPorCliente", ReplyAction="http://tempuri.org/IReservaService/ListarReservasPorClienteResponse")]
+        System.IAsyncResult BeginListarReservasPorCliente(int idCliente, System.AsyncCallback callback, object asyncState);
+        
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO> EndListarReservasPorCliente(System.IAsyncResult result);
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface IReservaServiceChannel : HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class InsertarReservaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public InsertarReservaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public int Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ActualizarReservaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public ActualizarReservaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class EliminarReservaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public EliminarReservaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class BuscarReservaPorIDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public BuscarReservaPorIDCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ListarTodasLasReservasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public ListarTodasLasReservasCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO> Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO>)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ListarReservasPorClienteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public ListarReservasPorClienteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO> Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO>)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ReservaServiceClient : System.ServiceModel.ClientBase<HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService>, HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService {
+        
+        private BeginOperationDelegate onBeginInsertarReservaDelegate;
+        
+        private EndOperationDelegate onEndInsertarReservaDelegate;
+        
+        private System.Threading.SendOrPostCallback onInsertarReservaCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginActualizarReservaDelegate;
+        
+        private EndOperationDelegate onEndActualizarReservaDelegate;
+        
+        private System.Threading.SendOrPostCallback onActualizarReservaCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginEliminarReservaDelegate;
+        
+        private EndOperationDelegate onEndEliminarReservaDelegate;
+        
+        private System.Threading.SendOrPostCallback onEliminarReservaCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginBuscarReservaPorIDDelegate;
+        
+        private EndOperationDelegate onEndBuscarReservaPorIDDelegate;
+        
+        private System.Threading.SendOrPostCallback onBuscarReservaPorIDCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginListarTodasLasReservasDelegate;
+        
+        private EndOperationDelegate onEndListarTodasLasReservasDelegate;
+        
+        private System.Threading.SendOrPostCallback onListarTodasLasReservasCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginListarReservasPorClienteDelegate;
+        
+        private EndOperationDelegate onEndListarReservasPorClienteDelegate;
+        
+        private System.Threading.SendOrPostCallback onListarReservasPorClienteCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginOpenDelegate;
+        
+        private EndOperationDelegate onEndOpenDelegate;
+        
+        private System.Threading.SendOrPostCallback onOpenCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginCloseDelegate;
+        
+        private EndOperationDelegate onEndCloseDelegate;
+        
+        private System.Threading.SendOrPostCallback onCloseCompletedDelegate;
+        
+        public ReservaServiceClient() {
+        }
+        
+        public ReservaServiceClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public ReservaServiceClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public ReservaServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public ReservaServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        public System.Net.CookieContainer CookieContainer {
+            get {
+                System.ServiceModel.Channels.IHttpCookieContainerManager httpCookieContainerManager = this.InnerChannel.GetProperty<System.ServiceModel.Channels.IHttpCookieContainerManager>();
+                if ((httpCookieContainerManager != null)) {
+                    return httpCookieContainerManager.CookieContainer;
+                }
+                else {
+                    return null;
+                }
+            }
+            set {
+                System.ServiceModel.Channels.IHttpCookieContainerManager httpCookieContainerManager = this.InnerChannel.GetProperty<System.ServiceModel.Channels.IHttpCookieContainerManager>();
+                if ((httpCookieContainerManager != null)) {
+                    httpCookieContainerManager.CookieContainer = value;
+                }
+                else {
+                    throw new System.InvalidOperationException("No se puede establecer el objeto CookieContainer. Asegúrese de que el enlace cont" +
+                            "iene un objeto HttpCookieContainerBindingElement.");
+                }
+            }
+        }
+        
+        public event System.EventHandler<InsertarReservaCompletedEventArgs> InsertarReservaCompleted;
+        
+        public event System.EventHandler<ActualizarReservaCompletedEventArgs> ActualizarReservaCompleted;
+        
+        public event System.EventHandler<EliminarReservaCompletedEventArgs> EliminarReservaCompleted;
+        
+        public event System.EventHandler<BuscarReservaPorIDCompletedEventArgs> BuscarReservaPorIDCompleted;
+        
+        public event System.EventHandler<ListarTodasLasReservasCompletedEventArgs> ListarTodasLasReservasCompleted;
+        
+        public event System.EventHandler<ListarReservasPorClienteCompletedEventArgs> ListarReservasPorClienteCompleted;
+        
+        public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> OpenCompleted;
+        
+        public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> CloseCompleted;
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService.BeginInsertarReserva(HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO dto, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginInsertarReserva(dto, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        int HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService.EndInsertarReserva(System.IAsyncResult result) {
+            return base.Channel.EndInsertarReserva(result);
+        }
+        
+        private System.IAsyncResult OnBeginInsertarReserva(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO dto = ((HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService)(this)).BeginInsertarReserva(dto, callback, asyncState);
+        }
+        
+        private object[] OnEndInsertarReserva(System.IAsyncResult result) {
+            int retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService)(this)).EndInsertarReserva(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnInsertarReservaCompleted(object state) {
+            if ((this.InsertarReservaCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.InsertarReservaCompleted(this, new InsertarReservaCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void InsertarReservaAsync(HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO dto) {
+            this.InsertarReservaAsync(dto, null);
+        }
+        
+        public void InsertarReservaAsync(HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO dto, object userState) {
+            if ((this.onBeginInsertarReservaDelegate == null)) {
+                this.onBeginInsertarReservaDelegate = new BeginOperationDelegate(this.OnBeginInsertarReserva);
+            }
+            if ((this.onEndInsertarReservaDelegate == null)) {
+                this.onEndInsertarReservaDelegate = new EndOperationDelegate(this.OnEndInsertarReserva);
+            }
+            if ((this.onInsertarReservaCompletedDelegate == null)) {
+                this.onInsertarReservaCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnInsertarReservaCompleted);
+            }
+            base.InvokeAsync(this.onBeginInsertarReservaDelegate, new object[] {
+                        dto}, this.onEndInsertarReservaDelegate, this.onInsertarReservaCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService.BeginActualizarReserva(HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO dto, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginActualizarReserva(dto, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        bool HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService.EndActualizarReserva(System.IAsyncResult result) {
+            return base.Channel.EndActualizarReserva(result);
+        }
+        
+        private System.IAsyncResult OnBeginActualizarReserva(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO dto = ((HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService)(this)).BeginActualizarReserva(dto, callback, asyncState);
+        }
+        
+        private object[] OnEndActualizarReserva(System.IAsyncResult result) {
+            bool retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService)(this)).EndActualizarReserva(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnActualizarReservaCompleted(object state) {
+            if ((this.ActualizarReservaCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.ActualizarReservaCompleted(this, new ActualizarReservaCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void ActualizarReservaAsync(HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO dto) {
+            this.ActualizarReservaAsync(dto, null);
+        }
+        
+        public void ActualizarReservaAsync(HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO dto, object userState) {
+            if ((this.onBeginActualizarReservaDelegate == null)) {
+                this.onBeginActualizarReservaDelegate = new BeginOperationDelegate(this.OnBeginActualizarReserva);
+            }
+            if ((this.onEndActualizarReservaDelegate == null)) {
+                this.onEndActualizarReservaDelegate = new EndOperationDelegate(this.OnEndActualizarReserva);
+            }
+            if ((this.onActualizarReservaCompletedDelegate == null)) {
+                this.onActualizarReservaCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnActualizarReservaCompleted);
+            }
+            base.InvokeAsync(this.onBeginActualizarReservaDelegate, new object[] {
+                        dto}, this.onEndActualizarReservaDelegate, this.onActualizarReservaCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService.BeginEliminarReserva(int idHabitacion, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginEliminarReserva(idHabitacion, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        bool HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService.EndEliminarReserva(System.IAsyncResult result) {
+            return base.Channel.EndEliminarReserva(result);
+        }
+        
+        private System.IAsyncResult OnBeginEliminarReserva(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int idHabitacion = ((int)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService)(this)).BeginEliminarReserva(idHabitacion, callback, asyncState);
+        }
+        
+        private object[] OnEndEliminarReserva(System.IAsyncResult result) {
+            bool retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService)(this)).EndEliminarReserva(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnEliminarReservaCompleted(object state) {
+            if ((this.EliminarReservaCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.EliminarReservaCompleted(this, new EliminarReservaCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void EliminarReservaAsync(int idHabitacion) {
+            this.EliminarReservaAsync(idHabitacion, null);
+        }
+        
+        public void EliminarReservaAsync(int idHabitacion, object userState) {
+            if ((this.onBeginEliminarReservaDelegate == null)) {
+                this.onBeginEliminarReservaDelegate = new BeginOperationDelegate(this.OnBeginEliminarReserva);
+            }
+            if ((this.onEndEliminarReservaDelegate == null)) {
+                this.onEndEliminarReservaDelegate = new EndOperationDelegate(this.OnEndEliminarReserva);
+            }
+            if ((this.onEliminarReservaCompletedDelegate == null)) {
+                this.onEliminarReservaCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnEliminarReservaCompleted);
+            }
+            base.InvokeAsync(this.onBeginEliminarReservaDelegate, new object[] {
+                        idHabitacion}, this.onEndEliminarReservaDelegate, this.onEliminarReservaCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService.BeginBuscarReservaPorID(int idReserva, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginBuscarReservaPorID(idReserva, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService.EndBuscarReservaPorID(System.IAsyncResult result) {
+            return base.Channel.EndBuscarReservaPorID(result);
+        }
+        
+        private System.IAsyncResult OnBeginBuscarReservaPorID(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int idReserva = ((int)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService)(this)).BeginBuscarReservaPorID(idReserva, callback, asyncState);
+        }
+        
+        private object[] OnEndBuscarReservaPorID(System.IAsyncResult result) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService)(this)).EndBuscarReservaPorID(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnBuscarReservaPorIDCompleted(object state) {
+            if ((this.BuscarReservaPorIDCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.BuscarReservaPorIDCompleted(this, new BuscarReservaPorIDCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void BuscarReservaPorIDAsync(int idReserva) {
+            this.BuscarReservaPorIDAsync(idReserva, null);
+        }
+        
+        public void BuscarReservaPorIDAsync(int idReserva, object userState) {
+            if ((this.onBeginBuscarReservaPorIDDelegate == null)) {
+                this.onBeginBuscarReservaPorIDDelegate = new BeginOperationDelegate(this.OnBeginBuscarReservaPorID);
+            }
+            if ((this.onEndBuscarReservaPorIDDelegate == null)) {
+                this.onEndBuscarReservaPorIDDelegate = new EndOperationDelegate(this.OnEndBuscarReservaPorID);
+            }
+            if ((this.onBuscarReservaPorIDCompletedDelegate == null)) {
+                this.onBuscarReservaPorIDCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnBuscarReservaPorIDCompleted);
+            }
+            base.InvokeAsync(this.onBeginBuscarReservaPorIDDelegate, new object[] {
+                        idReserva}, this.onEndBuscarReservaPorIDDelegate, this.onBuscarReservaPorIDCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService.BeginListarTodasLasReservas(System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginListarTodasLasReservas(callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO> HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService.EndListarTodasLasReservas(System.IAsyncResult result) {
+            return base.Channel.EndListarTodasLasReservas(result);
+        }
+        
+        private System.IAsyncResult OnBeginListarTodasLasReservas(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService)(this)).BeginListarTodasLasReservas(callback, asyncState);
+        }
+        
+        private object[] OnEndListarTodasLasReservas(System.IAsyncResult result) {
+            System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO> retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService)(this)).EndListarTodasLasReservas(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnListarTodasLasReservasCompleted(object state) {
+            if ((this.ListarTodasLasReservasCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.ListarTodasLasReservasCompleted(this, new ListarTodasLasReservasCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void ListarTodasLasReservasAsync() {
+            this.ListarTodasLasReservasAsync(null);
+        }
+        
+        public void ListarTodasLasReservasAsync(object userState) {
+            if ((this.onBeginListarTodasLasReservasDelegate == null)) {
+                this.onBeginListarTodasLasReservasDelegate = new BeginOperationDelegate(this.OnBeginListarTodasLasReservas);
+            }
+            if ((this.onEndListarTodasLasReservasDelegate == null)) {
+                this.onEndListarTodasLasReservasDelegate = new EndOperationDelegate(this.OnEndListarTodasLasReservas);
+            }
+            if ((this.onListarTodasLasReservasCompletedDelegate == null)) {
+                this.onListarTodasLasReservasCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnListarTodasLasReservasCompleted);
+            }
+            base.InvokeAsync(this.onBeginListarTodasLasReservasDelegate, null, this.onEndListarTodasLasReservasDelegate, this.onListarTodasLasReservasCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService.BeginListarReservasPorCliente(int idCliente, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginListarReservasPorCliente(idCliente, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO> HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService.EndListarReservasPorCliente(System.IAsyncResult result) {
+            return base.Channel.EndListarReservasPorCliente(result);
+        }
+        
+        private System.IAsyncResult OnBeginListarReservasPorCliente(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int idCliente = ((int)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService)(this)).BeginListarReservasPorCliente(idCliente, callback, asyncState);
+        }
+        
+        private object[] OnEndListarReservasPorCliente(System.IAsyncResult result) {
+            System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO> retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService)(this)).EndListarReservasPorCliente(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnListarReservasPorClienteCompleted(object state) {
+            if ((this.ListarReservasPorClienteCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.ListarReservasPorClienteCompleted(this, new ListarReservasPorClienteCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void ListarReservasPorClienteAsync(int idCliente) {
+            this.ListarReservasPorClienteAsync(idCliente, null);
+        }
+        
+        public void ListarReservasPorClienteAsync(int idCliente, object userState) {
+            if ((this.onBeginListarReservasPorClienteDelegate == null)) {
+                this.onBeginListarReservasPorClienteDelegate = new BeginOperationDelegate(this.OnBeginListarReservasPorCliente);
+            }
+            if ((this.onEndListarReservasPorClienteDelegate == null)) {
+                this.onEndListarReservasPorClienteDelegate = new EndOperationDelegate(this.OnEndListarReservasPorCliente);
+            }
+            if ((this.onListarReservasPorClienteCompletedDelegate == null)) {
+                this.onListarReservasPorClienteCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnListarReservasPorClienteCompleted);
+            }
+            base.InvokeAsync(this.onBeginListarReservasPorClienteDelegate, new object[] {
+                        idCliente}, this.onEndListarReservasPorClienteDelegate, this.onListarReservasPorClienteCompletedDelegate, userState);
+        }
+        
+        private System.IAsyncResult OnBeginOpen(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return ((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(callback, asyncState);
+        }
+        
+        private object[] OnEndOpen(System.IAsyncResult result) {
+            ((System.ServiceModel.ICommunicationObject)(this)).EndOpen(result);
+            return null;
+        }
+        
+        private void OnOpenCompleted(object state) {
+            if ((this.OpenCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.OpenCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void OpenAsync() {
+            this.OpenAsync(null);
+        }
+        
+        public void OpenAsync(object userState) {
+            if ((this.onBeginOpenDelegate == null)) {
+                this.onBeginOpenDelegate = new BeginOperationDelegate(this.OnBeginOpen);
+            }
+            if ((this.onEndOpenDelegate == null)) {
+                this.onEndOpenDelegate = new EndOperationDelegate(this.OnEndOpen);
+            }
+            if ((this.onOpenCompletedDelegate == null)) {
+                this.onOpenCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnOpenCompleted);
+            }
+            base.InvokeAsync(this.onBeginOpenDelegate, null, this.onEndOpenDelegate, this.onOpenCompletedDelegate, userState);
+        }
+        
+        private System.IAsyncResult OnBeginClose(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return ((System.ServiceModel.ICommunicationObject)(this)).BeginClose(callback, asyncState);
+        }
+        
+        private object[] OnEndClose(System.IAsyncResult result) {
+            ((System.ServiceModel.ICommunicationObject)(this)).EndClose(result);
+            return null;
+        }
+        
+        private void OnCloseCompleted(object state) {
+            if ((this.CloseCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.CloseCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void CloseAsync() {
+            this.CloseAsync(null);
+        }
+        
+        public void CloseAsync(object userState) {
+            if ((this.onBeginCloseDelegate == null)) {
+                this.onBeginCloseDelegate = new BeginOperationDelegate(this.OnBeginClose);
+            }
+            if ((this.onEndCloseDelegate == null)) {
+                this.onEndCloseDelegate = new EndOperationDelegate(this.OnEndClose);
+            }
+            if ((this.onCloseCompletedDelegate == null)) {
+                this.onCloseCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnCloseCompleted);
+            }
+            base.InvokeAsync(this.onBeginCloseDelegate, null, this.onEndCloseDelegate, this.onCloseCompletedDelegate, userState);
+        }
+        
+        protected override HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService CreateChannel() {
+            return new ReservaServiceClientChannel(this);
+        }
+        
+        private class ReservaServiceClientChannel : ChannelBase<HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService>, HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService {
+            
+            public ReservaServiceClientChannel(System.ServiceModel.ClientBase<HostalDB_ViewModel.ServiceReference_Habitacion.IReservaService> client) : 
+                    base(client) {
+            }
+            
+            public System.IAsyncResult BeginInsertarReserva(HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO dto, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = dto;
+                System.IAsyncResult _result = base.BeginInvoke("InsertarReserva", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public int EndInsertarReserva(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                int _result = ((int)(base.EndInvoke("InsertarReserva", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginActualizarReserva(HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO dto, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = dto;
+                System.IAsyncResult _result = base.BeginInvoke("ActualizarReserva", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public bool EndActualizarReserva(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                bool _result = ((bool)(base.EndInvoke("ActualizarReserva", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginEliminarReserva(int idHabitacion, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = idHabitacion;
+                System.IAsyncResult _result = base.BeginInvoke("EliminarReserva", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public bool EndEliminarReserva(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                bool _result = ((bool)(base.EndInvoke("EliminarReserva", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginBuscarReservaPorID(int idReserva, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = idReserva;
+                System.IAsyncResult _result = base.BeginInvoke("BuscarReservaPorID", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO EndBuscarReservaPorID(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO _result = ((HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO)(base.EndInvoke("BuscarReservaPorID", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginListarTodasLasReservas(System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[0];
+                System.IAsyncResult _result = base.BeginInvoke("ListarTodasLasReservas", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO> EndListarTodasLasReservas(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO> _result = ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO>)(base.EndInvoke("ListarTodasLasReservas", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginListarReservasPorCliente(int idCliente, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = idCliente;
+                System.IAsyncResult _result = base.BeginInvoke("ListarReservasPorCliente", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO> EndListarReservasPorCliente(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO> _result = ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO>)(base.EndInvoke("ListarReservasPorCliente", _args, result)));
+                return _result;
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference_Habitacion.IReservaHabitacionService")]
+    public interface IReservaHabitacionService {
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IReservaHabitacionService/InsertarReservaHabitacion", ReplyAction="http://tempuri.org/IReservaHabitacionService/InsertarReservaHabitacionResponse")]
+        System.IAsyncResult BeginInsertarReservaHabitacion(HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO dto, System.AsyncCallback callback, object asyncState);
+        
+        int EndInsertarReservaHabitacion(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IReservaHabitacionService/ActualizarReservaHabitacion", ReplyAction="http://tempuri.org/IReservaHabitacionService/ActualizarReservaHabitacionResponse")]
+        System.IAsyncResult BeginActualizarReservaHabitacion(HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO dto, System.AsyncCallback callback, object asyncState);
+        
+        bool EndActualizarReservaHabitacion(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IReservaHabitacionService/EliminarReservaHabitacion", ReplyAction="http://tempuri.org/IReservaHabitacionService/EliminarReservaHabitacionResponse")]
+        System.IAsyncResult BeginEliminarReservaHabitacion(int idReservaHabitacion, System.AsyncCallback callback, object asyncState);
+        
+        bool EndEliminarReservaHabitacion(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IReservaHabitacionService/BuscarReservaHabitacionPorID", ReplyAction="http://tempuri.org/IReservaHabitacionService/BuscarReservaHabitacionPorIDResponse" +
+            "")]
+        System.IAsyncResult BeginBuscarReservaHabitacionPorID(int idReservaHabitacion, System.AsyncCallback callback, object asyncState);
+        
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO> EndBuscarReservaHabitacionPorID(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IReservaHabitacionService/ListarReservaHabitacionPorReservaID", ReplyAction="http://tempuri.org/IReservaHabitacionService/ListarReservaHabitacionPorReservaIDR" +
+            "esponse")]
+        System.IAsyncResult BeginListarReservaHabitacionPorReservaID(int Reserva_id, System.AsyncCallback callback, object asyncState);
+        
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO> EndListarReservaHabitacionPorReservaID(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IReservaHabitacionService/ListarReservasHabitacionPorHabitacio" +
+            "nID", ReplyAction="http://tempuri.org/IReservaHabitacionService/ListarReservasHabitacionPorHabitacio" +
+            "nIDResponse")]
+        System.IAsyncResult BeginListarReservasHabitacionPorHabitacionID(int Habitacion_id, System.AsyncCallback callback, object asyncState);
+        
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO> EndListarReservasHabitacionPorHabitacionID(System.IAsyncResult result);
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface IReservaHabitacionServiceChannel : HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class InsertarReservaHabitacionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public InsertarReservaHabitacionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public int Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ActualizarReservaHabitacionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public ActualizarReservaHabitacionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class EliminarReservaHabitacionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public EliminarReservaHabitacionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class BuscarReservaHabitacionPorIDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public BuscarReservaHabitacionPorIDCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO> Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO>)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ListarReservaHabitacionPorReservaIDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public ListarReservaHabitacionPorReservaIDCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO> Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO>)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ListarReservasHabitacionPorHabitacionIDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public ListarReservasHabitacionPorHabitacionIDCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO> Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO>)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ReservaHabitacionServiceClient : System.ServiceModel.ClientBase<HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService>, HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService {
+        
+        private BeginOperationDelegate onBeginInsertarReservaHabitacionDelegate;
+        
+        private EndOperationDelegate onEndInsertarReservaHabitacionDelegate;
+        
+        private System.Threading.SendOrPostCallback onInsertarReservaHabitacionCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginActualizarReservaHabitacionDelegate;
+        
+        private EndOperationDelegate onEndActualizarReservaHabitacionDelegate;
+        
+        private System.Threading.SendOrPostCallback onActualizarReservaHabitacionCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginEliminarReservaHabitacionDelegate;
+        
+        private EndOperationDelegate onEndEliminarReservaHabitacionDelegate;
+        
+        private System.Threading.SendOrPostCallback onEliminarReservaHabitacionCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginBuscarReservaHabitacionPorIDDelegate;
+        
+        private EndOperationDelegate onEndBuscarReservaHabitacionPorIDDelegate;
+        
+        private System.Threading.SendOrPostCallback onBuscarReservaHabitacionPorIDCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginListarReservaHabitacionPorReservaIDDelegate;
+        
+        private EndOperationDelegate onEndListarReservaHabitacionPorReservaIDDelegate;
+        
+        private System.Threading.SendOrPostCallback onListarReservaHabitacionPorReservaIDCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginListarReservasHabitacionPorHabitacionIDDelegate;
+        
+        private EndOperationDelegate onEndListarReservasHabitacionPorHabitacionIDDelegate;
+        
+        private System.Threading.SendOrPostCallback onListarReservasHabitacionPorHabitacionIDCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginOpenDelegate;
+        
+        private EndOperationDelegate onEndOpenDelegate;
+        
+        private System.Threading.SendOrPostCallback onOpenCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginCloseDelegate;
+        
+        private EndOperationDelegate onEndCloseDelegate;
+        
+        private System.Threading.SendOrPostCallback onCloseCompletedDelegate;
+        
+        public ReservaHabitacionServiceClient() {
+        }
+        
+        public ReservaHabitacionServiceClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public ReservaHabitacionServiceClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public ReservaHabitacionServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public ReservaHabitacionServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        public System.Net.CookieContainer CookieContainer {
+            get {
+                System.ServiceModel.Channels.IHttpCookieContainerManager httpCookieContainerManager = this.InnerChannel.GetProperty<System.ServiceModel.Channels.IHttpCookieContainerManager>();
+                if ((httpCookieContainerManager != null)) {
+                    return httpCookieContainerManager.CookieContainer;
+                }
+                else {
+                    return null;
+                }
+            }
+            set {
+                System.ServiceModel.Channels.IHttpCookieContainerManager httpCookieContainerManager = this.InnerChannel.GetProperty<System.ServiceModel.Channels.IHttpCookieContainerManager>();
+                if ((httpCookieContainerManager != null)) {
+                    httpCookieContainerManager.CookieContainer = value;
+                }
+                else {
+                    throw new System.InvalidOperationException("No se puede establecer el objeto CookieContainer. Asegúrese de que el enlace cont" +
+                            "iene un objeto HttpCookieContainerBindingElement.");
+                }
+            }
+        }
+        
+        public event System.EventHandler<InsertarReservaHabitacionCompletedEventArgs> InsertarReservaHabitacionCompleted;
+        
+        public event System.EventHandler<ActualizarReservaHabitacionCompletedEventArgs> ActualizarReservaHabitacionCompleted;
+        
+        public event System.EventHandler<EliminarReservaHabitacionCompletedEventArgs> EliminarReservaHabitacionCompleted;
+        
+        public event System.EventHandler<BuscarReservaHabitacionPorIDCompletedEventArgs> BuscarReservaHabitacionPorIDCompleted;
+        
+        public event System.EventHandler<ListarReservaHabitacionPorReservaIDCompletedEventArgs> ListarReservaHabitacionPorReservaIDCompleted;
+        
+        public event System.EventHandler<ListarReservasHabitacionPorHabitacionIDCompletedEventArgs> ListarReservasHabitacionPorHabitacionIDCompleted;
+        
+        public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> OpenCompleted;
+        
+        public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> CloseCompleted;
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService.BeginInsertarReservaHabitacion(HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO dto, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginInsertarReservaHabitacion(dto, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        int HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService.EndInsertarReservaHabitacion(System.IAsyncResult result) {
+            return base.Channel.EndInsertarReservaHabitacion(result);
+        }
+        
+        private System.IAsyncResult OnBeginInsertarReservaHabitacion(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO dto = ((HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService)(this)).BeginInsertarReservaHabitacion(dto, callback, asyncState);
+        }
+        
+        private object[] OnEndInsertarReservaHabitacion(System.IAsyncResult result) {
+            int retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService)(this)).EndInsertarReservaHabitacion(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnInsertarReservaHabitacionCompleted(object state) {
+            if ((this.InsertarReservaHabitacionCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.InsertarReservaHabitacionCompleted(this, new InsertarReservaHabitacionCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void InsertarReservaHabitacionAsync(HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO dto) {
+            this.InsertarReservaHabitacionAsync(dto, null);
+        }
+        
+        public void InsertarReservaHabitacionAsync(HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO dto, object userState) {
+            if ((this.onBeginInsertarReservaHabitacionDelegate == null)) {
+                this.onBeginInsertarReservaHabitacionDelegate = new BeginOperationDelegate(this.OnBeginInsertarReservaHabitacion);
+            }
+            if ((this.onEndInsertarReservaHabitacionDelegate == null)) {
+                this.onEndInsertarReservaHabitacionDelegate = new EndOperationDelegate(this.OnEndInsertarReservaHabitacion);
+            }
+            if ((this.onInsertarReservaHabitacionCompletedDelegate == null)) {
+                this.onInsertarReservaHabitacionCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnInsertarReservaHabitacionCompleted);
+            }
+            base.InvokeAsync(this.onBeginInsertarReservaHabitacionDelegate, new object[] {
+                        dto}, this.onEndInsertarReservaHabitacionDelegate, this.onInsertarReservaHabitacionCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService.BeginActualizarReservaHabitacion(HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO dto, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginActualizarReservaHabitacion(dto, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        bool HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService.EndActualizarReservaHabitacion(System.IAsyncResult result) {
+            return base.Channel.EndActualizarReservaHabitacion(result);
+        }
+        
+        private System.IAsyncResult OnBeginActualizarReservaHabitacion(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO dto = ((HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService)(this)).BeginActualizarReservaHabitacion(dto, callback, asyncState);
+        }
+        
+        private object[] OnEndActualizarReservaHabitacion(System.IAsyncResult result) {
+            bool retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService)(this)).EndActualizarReservaHabitacion(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnActualizarReservaHabitacionCompleted(object state) {
+            if ((this.ActualizarReservaHabitacionCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.ActualizarReservaHabitacionCompleted(this, new ActualizarReservaHabitacionCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void ActualizarReservaHabitacionAsync(HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO dto) {
+            this.ActualizarReservaHabitacionAsync(dto, null);
+        }
+        
+        public void ActualizarReservaHabitacionAsync(HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO dto, object userState) {
+            if ((this.onBeginActualizarReservaHabitacionDelegate == null)) {
+                this.onBeginActualizarReservaHabitacionDelegate = new BeginOperationDelegate(this.OnBeginActualizarReservaHabitacion);
+            }
+            if ((this.onEndActualizarReservaHabitacionDelegate == null)) {
+                this.onEndActualizarReservaHabitacionDelegate = new EndOperationDelegate(this.OnEndActualizarReservaHabitacion);
+            }
+            if ((this.onActualizarReservaHabitacionCompletedDelegate == null)) {
+                this.onActualizarReservaHabitacionCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnActualizarReservaHabitacionCompleted);
+            }
+            base.InvokeAsync(this.onBeginActualizarReservaHabitacionDelegate, new object[] {
+                        dto}, this.onEndActualizarReservaHabitacionDelegate, this.onActualizarReservaHabitacionCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService.BeginEliminarReservaHabitacion(int idReservaHabitacion, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginEliminarReservaHabitacion(idReservaHabitacion, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        bool HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService.EndEliminarReservaHabitacion(System.IAsyncResult result) {
+            return base.Channel.EndEliminarReservaHabitacion(result);
+        }
+        
+        private System.IAsyncResult OnBeginEliminarReservaHabitacion(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int idReservaHabitacion = ((int)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService)(this)).BeginEliminarReservaHabitacion(idReservaHabitacion, callback, asyncState);
+        }
+        
+        private object[] OnEndEliminarReservaHabitacion(System.IAsyncResult result) {
+            bool retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService)(this)).EndEliminarReservaHabitacion(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnEliminarReservaHabitacionCompleted(object state) {
+            if ((this.EliminarReservaHabitacionCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.EliminarReservaHabitacionCompleted(this, new EliminarReservaHabitacionCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void EliminarReservaHabitacionAsync(int idReservaHabitacion) {
+            this.EliminarReservaHabitacionAsync(idReservaHabitacion, null);
+        }
+        
+        public void EliminarReservaHabitacionAsync(int idReservaHabitacion, object userState) {
+            if ((this.onBeginEliminarReservaHabitacionDelegate == null)) {
+                this.onBeginEliminarReservaHabitacionDelegate = new BeginOperationDelegate(this.OnBeginEliminarReservaHabitacion);
+            }
+            if ((this.onEndEliminarReservaHabitacionDelegate == null)) {
+                this.onEndEliminarReservaHabitacionDelegate = new EndOperationDelegate(this.OnEndEliminarReservaHabitacion);
+            }
+            if ((this.onEliminarReservaHabitacionCompletedDelegate == null)) {
+                this.onEliminarReservaHabitacionCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnEliminarReservaHabitacionCompleted);
+            }
+            base.InvokeAsync(this.onBeginEliminarReservaHabitacionDelegate, new object[] {
+                        idReservaHabitacion}, this.onEndEliminarReservaHabitacionDelegate, this.onEliminarReservaHabitacionCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService.BeginBuscarReservaHabitacionPorID(int idReservaHabitacion, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginBuscarReservaHabitacionPorID(idReservaHabitacion, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO> HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService.EndBuscarReservaHabitacionPorID(System.IAsyncResult result) {
+            return base.Channel.EndBuscarReservaHabitacionPorID(result);
+        }
+        
+        private System.IAsyncResult OnBeginBuscarReservaHabitacionPorID(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int idReservaHabitacion = ((int)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService)(this)).BeginBuscarReservaHabitacionPorID(idReservaHabitacion, callback, asyncState);
+        }
+        
+        private object[] OnEndBuscarReservaHabitacionPorID(System.IAsyncResult result) {
+            System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO> retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService)(this)).EndBuscarReservaHabitacionPorID(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnBuscarReservaHabitacionPorIDCompleted(object state) {
+            if ((this.BuscarReservaHabitacionPorIDCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.BuscarReservaHabitacionPorIDCompleted(this, new BuscarReservaHabitacionPorIDCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void BuscarReservaHabitacionPorIDAsync(int idReservaHabitacion) {
+            this.BuscarReservaHabitacionPorIDAsync(idReservaHabitacion, null);
+        }
+        
+        public void BuscarReservaHabitacionPorIDAsync(int idReservaHabitacion, object userState) {
+            if ((this.onBeginBuscarReservaHabitacionPorIDDelegate == null)) {
+                this.onBeginBuscarReservaHabitacionPorIDDelegate = new BeginOperationDelegate(this.OnBeginBuscarReservaHabitacionPorID);
+            }
+            if ((this.onEndBuscarReservaHabitacionPorIDDelegate == null)) {
+                this.onEndBuscarReservaHabitacionPorIDDelegate = new EndOperationDelegate(this.OnEndBuscarReservaHabitacionPorID);
+            }
+            if ((this.onBuscarReservaHabitacionPorIDCompletedDelegate == null)) {
+                this.onBuscarReservaHabitacionPorIDCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnBuscarReservaHabitacionPorIDCompleted);
+            }
+            base.InvokeAsync(this.onBeginBuscarReservaHabitacionPorIDDelegate, new object[] {
+                        idReservaHabitacion}, this.onEndBuscarReservaHabitacionPorIDDelegate, this.onBuscarReservaHabitacionPorIDCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService.BeginListarReservaHabitacionPorReservaID(int Reserva_id, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginListarReservaHabitacionPorReservaID(Reserva_id, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO> HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService.EndListarReservaHabitacionPorReservaID(System.IAsyncResult result) {
+            return base.Channel.EndListarReservaHabitacionPorReservaID(result);
+        }
+        
+        private System.IAsyncResult OnBeginListarReservaHabitacionPorReservaID(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int Reserva_id = ((int)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService)(this)).BeginListarReservaHabitacionPorReservaID(Reserva_id, callback, asyncState);
+        }
+        
+        private object[] OnEndListarReservaHabitacionPorReservaID(System.IAsyncResult result) {
+            System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO> retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService)(this)).EndListarReservaHabitacionPorReservaID(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnListarReservaHabitacionPorReservaIDCompleted(object state) {
+            if ((this.ListarReservaHabitacionPorReservaIDCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.ListarReservaHabitacionPorReservaIDCompleted(this, new ListarReservaHabitacionPorReservaIDCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void ListarReservaHabitacionPorReservaIDAsync(int Reserva_id) {
+            this.ListarReservaHabitacionPorReservaIDAsync(Reserva_id, null);
+        }
+        
+        public void ListarReservaHabitacionPorReservaIDAsync(int Reserva_id, object userState) {
+            if ((this.onBeginListarReservaHabitacionPorReservaIDDelegate == null)) {
+                this.onBeginListarReservaHabitacionPorReservaIDDelegate = new BeginOperationDelegate(this.OnBeginListarReservaHabitacionPorReservaID);
+            }
+            if ((this.onEndListarReservaHabitacionPorReservaIDDelegate == null)) {
+                this.onEndListarReservaHabitacionPorReservaIDDelegate = new EndOperationDelegate(this.OnEndListarReservaHabitacionPorReservaID);
+            }
+            if ((this.onListarReservaHabitacionPorReservaIDCompletedDelegate == null)) {
+                this.onListarReservaHabitacionPorReservaIDCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnListarReservaHabitacionPorReservaIDCompleted);
+            }
+            base.InvokeAsync(this.onBeginListarReservaHabitacionPorReservaIDDelegate, new object[] {
+                        Reserva_id}, this.onEndListarReservaHabitacionPorReservaIDDelegate, this.onListarReservaHabitacionPorReservaIDCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService.BeginListarReservasHabitacionPorHabitacionID(int Habitacion_id, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginListarReservasHabitacionPorHabitacionID(Habitacion_id, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO> HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService.EndListarReservasHabitacionPorHabitacionID(System.IAsyncResult result) {
+            return base.Channel.EndListarReservasHabitacionPorHabitacionID(result);
+        }
+        
+        private System.IAsyncResult OnBeginListarReservasHabitacionPorHabitacionID(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int Habitacion_id = ((int)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService)(this)).BeginListarReservasHabitacionPorHabitacionID(Habitacion_id, callback, asyncState);
+        }
+        
+        private object[] OnEndListarReservasHabitacionPorHabitacionID(System.IAsyncResult result) {
+            System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO> retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService)(this)).EndListarReservasHabitacionPorHabitacionID(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnListarReservasHabitacionPorHabitacionIDCompleted(object state) {
+            if ((this.ListarReservasHabitacionPorHabitacionIDCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.ListarReservasHabitacionPorHabitacionIDCompleted(this, new ListarReservasHabitacionPorHabitacionIDCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void ListarReservasHabitacionPorHabitacionIDAsync(int Habitacion_id) {
+            this.ListarReservasHabitacionPorHabitacionIDAsync(Habitacion_id, null);
+        }
+        
+        public void ListarReservasHabitacionPorHabitacionIDAsync(int Habitacion_id, object userState) {
+            if ((this.onBeginListarReservasHabitacionPorHabitacionIDDelegate == null)) {
+                this.onBeginListarReservasHabitacionPorHabitacionIDDelegate = new BeginOperationDelegate(this.OnBeginListarReservasHabitacionPorHabitacionID);
+            }
+            if ((this.onEndListarReservasHabitacionPorHabitacionIDDelegate == null)) {
+                this.onEndListarReservasHabitacionPorHabitacionIDDelegate = new EndOperationDelegate(this.OnEndListarReservasHabitacionPorHabitacionID);
+            }
+            if ((this.onListarReservasHabitacionPorHabitacionIDCompletedDelegate == null)) {
+                this.onListarReservasHabitacionPorHabitacionIDCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnListarReservasHabitacionPorHabitacionIDCompleted);
+            }
+            base.InvokeAsync(this.onBeginListarReservasHabitacionPorHabitacionIDDelegate, new object[] {
+                        Habitacion_id}, this.onEndListarReservasHabitacionPorHabitacionIDDelegate, this.onListarReservasHabitacionPorHabitacionIDCompletedDelegate, userState);
+        }
+        
+        private System.IAsyncResult OnBeginOpen(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return ((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(callback, asyncState);
+        }
+        
+        private object[] OnEndOpen(System.IAsyncResult result) {
+            ((System.ServiceModel.ICommunicationObject)(this)).EndOpen(result);
+            return null;
+        }
+        
+        private void OnOpenCompleted(object state) {
+            if ((this.OpenCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.OpenCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void OpenAsync() {
+            this.OpenAsync(null);
+        }
+        
+        public void OpenAsync(object userState) {
+            if ((this.onBeginOpenDelegate == null)) {
+                this.onBeginOpenDelegate = new BeginOperationDelegate(this.OnBeginOpen);
+            }
+            if ((this.onEndOpenDelegate == null)) {
+                this.onEndOpenDelegate = new EndOperationDelegate(this.OnEndOpen);
+            }
+            if ((this.onOpenCompletedDelegate == null)) {
+                this.onOpenCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnOpenCompleted);
+            }
+            base.InvokeAsync(this.onBeginOpenDelegate, null, this.onEndOpenDelegate, this.onOpenCompletedDelegate, userState);
+        }
+        
+        private System.IAsyncResult OnBeginClose(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return ((System.ServiceModel.ICommunicationObject)(this)).BeginClose(callback, asyncState);
+        }
+        
+        private object[] OnEndClose(System.IAsyncResult result) {
+            ((System.ServiceModel.ICommunicationObject)(this)).EndClose(result);
+            return null;
+        }
+        
+        private void OnCloseCompleted(object state) {
+            if ((this.CloseCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.CloseCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void CloseAsync() {
+            this.CloseAsync(null);
+        }
+        
+        public void CloseAsync(object userState) {
+            if ((this.onBeginCloseDelegate == null)) {
+                this.onBeginCloseDelegate = new BeginOperationDelegate(this.OnBeginClose);
+            }
+            if ((this.onEndCloseDelegate == null)) {
+                this.onEndCloseDelegate = new EndOperationDelegate(this.OnEndClose);
+            }
+            if ((this.onCloseCompletedDelegate == null)) {
+                this.onCloseCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnCloseCompleted);
+            }
+            base.InvokeAsync(this.onBeginCloseDelegate, null, this.onEndCloseDelegate, this.onCloseCompletedDelegate, userState);
+        }
+        
+        protected override HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService CreateChannel() {
+            return new ReservaHabitacionServiceClientChannel(this);
+        }
+        
+        private class ReservaHabitacionServiceClientChannel : ChannelBase<HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService>, HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService {
+            
+            public ReservaHabitacionServiceClientChannel(System.ServiceModel.ClientBase<HostalDB_ViewModel.ServiceReference_Habitacion.IReservaHabitacionService> client) : 
+                    base(client) {
+            }
+            
+            public System.IAsyncResult BeginInsertarReservaHabitacion(HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO dto, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = dto;
+                System.IAsyncResult _result = base.BeginInvoke("InsertarReservaHabitacion", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public int EndInsertarReservaHabitacion(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                int _result = ((int)(base.EndInvoke("InsertarReservaHabitacion", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginActualizarReservaHabitacion(HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO dto, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = dto;
+                System.IAsyncResult _result = base.BeginInvoke("ActualizarReservaHabitacion", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public bool EndActualizarReservaHabitacion(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                bool _result = ((bool)(base.EndInvoke("ActualizarReservaHabitacion", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginEliminarReservaHabitacion(int idReservaHabitacion, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = idReservaHabitacion;
+                System.IAsyncResult _result = base.BeginInvoke("EliminarReservaHabitacion", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public bool EndEliminarReservaHabitacion(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                bool _result = ((bool)(base.EndInvoke("EliminarReservaHabitacion", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginBuscarReservaHabitacionPorID(int idReservaHabitacion, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = idReservaHabitacion;
+                System.IAsyncResult _result = base.BeginInvoke("BuscarReservaHabitacionPorID", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO> EndBuscarReservaHabitacionPorID(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO> _result = ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO>)(base.EndInvoke("BuscarReservaHabitacionPorID", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginListarReservaHabitacionPorReservaID(int Reserva_id, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = Reserva_id;
+                System.IAsyncResult _result = base.BeginInvoke("ListarReservaHabitacionPorReservaID", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO> EndListarReservaHabitacionPorReservaID(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO> _result = ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO>)(base.EndInvoke("ListarReservaHabitacionPorReservaID", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginListarReservasHabitacionPorHabitacionID(int Habitacion_id, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = Habitacion_id;
+                System.IAsyncResult _result = base.BeginInvoke("ListarReservasHabitacionPorHabitacionID", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO> EndListarReservasHabitacionPorHabitacionID(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO> _result = ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO>)(base.EndInvoke("ListarReservasHabitacionPorHabitacionID", _args, result)));
+                return _result;
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference_Habitacion.ITipoComprobanteService")]
+    public interface ITipoComprobanteService {
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/ITipoComprobanteService/InsertarTipoComprobante", ReplyAction="http://tempuri.org/ITipoComprobanteService/InsertarTipoComprobanteResponse")]
+        System.IAsyncResult BeginInsertarTipoComprobante(HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO dto, System.AsyncCallback callback, object asyncState);
+        
+        int EndInsertarTipoComprobante(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/ITipoComprobanteService/ActualizarTipoComprobante", ReplyAction="http://tempuri.org/ITipoComprobanteService/ActualizarTipoComprobanteResponse")]
+        System.IAsyncResult BeginActualizarTipoComprobante(HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO dto, System.AsyncCallback callback, object asyncState);
+        
+        bool EndActualizarTipoComprobante(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/ITipoComprobanteService/EliminarTipoComprobante", ReplyAction="http://tempuri.org/ITipoComprobanteService/EliminarTipoComprobanteResponse")]
+        System.IAsyncResult BeginEliminarTipoComprobante(int IDTipoComprobante, System.AsyncCallback callback, object asyncState);
+        
+        bool EndEliminarTipoComprobante(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/ITipoComprobanteService/BuscarTipoComprobantePorNombre", ReplyAction="http://tempuri.org/ITipoComprobanteService/BuscarTipoComprobantePorNombreResponse" +
+            "")]
+        System.IAsyncResult BeginBuscarTipoComprobantePorNombre(string NombreComprobante, System.AsyncCallback callback, object asyncState);
+        
+        HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO EndBuscarTipoComprobantePorNombre(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/ITipoComprobanteService/BuscarTipoComprobantePorID", ReplyAction="http://tempuri.org/ITipoComprobanteService/BuscarTipoComprobantePorIDResponse")]
+        System.IAsyncResult BeginBuscarTipoComprobantePorID(int IDTipoComprobante, System.AsyncCallback callback, object asyncState);
+        
+        HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO EndBuscarTipoComprobantePorID(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/ITipoComprobanteService/ListarTodosLosTiposDeComprobante", ReplyAction="http://tempuri.org/ITipoComprobanteService/ListarTodosLosTiposDeComprobanteRespon" +
+            "se")]
+        System.IAsyncResult BeginListarTodosLosTiposDeComprobante(System.AsyncCallback callback, object asyncState);
+        
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO> EndListarTodosLosTiposDeComprobante(System.IAsyncResult result);
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface ITipoComprobanteServiceChannel : HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class InsertarTipoComprobanteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public InsertarTipoComprobanteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public int Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ActualizarTipoComprobanteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public ActualizarTipoComprobanteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class EliminarTipoComprobanteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public EliminarTipoComprobanteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class BuscarTipoComprobantePorNombreCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public BuscarTipoComprobantePorNombreCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class BuscarTipoComprobantePorIDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public BuscarTipoComprobantePorIDCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ListarTodosLosTiposDeComprobanteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public ListarTodosLosTiposDeComprobanteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO> Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO>)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class TipoComprobanteServiceClient : System.ServiceModel.ClientBase<HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService>, HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService {
+        
+        private BeginOperationDelegate onBeginInsertarTipoComprobanteDelegate;
+        
+        private EndOperationDelegate onEndInsertarTipoComprobanteDelegate;
+        
+        private System.Threading.SendOrPostCallback onInsertarTipoComprobanteCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginActualizarTipoComprobanteDelegate;
+        
+        private EndOperationDelegate onEndActualizarTipoComprobanteDelegate;
+        
+        private System.Threading.SendOrPostCallback onActualizarTipoComprobanteCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginEliminarTipoComprobanteDelegate;
+        
+        private EndOperationDelegate onEndEliminarTipoComprobanteDelegate;
+        
+        private System.Threading.SendOrPostCallback onEliminarTipoComprobanteCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginBuscarTipoComprobantePorNombreDelegate;
+        
+        private EndOperationDelegate onEndBuscarTipoComprobantePorNombreDelegate;
+        
+        private System.Threading.SendOrPostCallback onBuscarTipoComprobantePorNombreCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginBuscarTipoComprobantePorIDDelegate;
+        
+        private EndOperationDelegate onEndBuscarTipoComprobantePorIDDelegate;
+        
+        private System.Threading.SendOrPostCallback onBuscarTipoComprobantePorIDCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginListarTodosLosTiposDeComprobanteDelegate;
+        
+        private EndOperationDelegate onEndListarTodosLosTiposDeComprobanteDelegate;
+        
+        private System.Threading.SendOrPostCallback onListarTodosLosTiposDeComprobanteCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginOpenDelegate;
+        
+        private EndOperationDelegate onEndOpenDelegate;
+        
+        private System.Threading.SendOrPostCallback onOpenCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginCloseDelegate;
+        
+        private EndOperationDelegate onEndCloseDelegate;
+        
+        private System.Threading.SendOrPostCallback onCloseCompletedDelegate;
+        
+        public TipoComprobanteServiceClient() {
+        }
+        
+        public TipoComprobanteServiceClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public TipoComprobanteServiceClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public TipoComprobanteServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public TipoComprobanteServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        public System.Net.CookieContainer CookieContainer {
+            get {
+                System.ServiceModel.Channels.IHttpCookieContainerManager httpCookieContainerManager = this.InnerChannel.GetProperty<System.ServiceModel.Channels.IHttpCookieContainerManager>();
+                if ((httpCookieContainerManager != null)) {
+                    return httpCookieContainerManager.CookieContainer;
+                }
+                else {
+                    return null;
+                }
+            }
+            set {
+                System.ServiceModel.Channels.IHttpCookieContainerManager httpCookieContainerManager = this.InnerChannel.GetProperty<System.ServiceModel.Channels.IHttpCookieContainerManager>();
+                if ((httpCookieContainerManager != null)) {
+                    httpCookieContainerManager.CookieContainer = value;
+                }
+                else {
+                    throw new System.InvalidOperationException("No se puede establecer el objeto CookieContainer. Asegúrese de que el enlace cont" +
+                            "iene un objeto HttpCookieContainerBindingElement.");
+                }
+            }
+        }
+        
+        public event System.EventHandler<InsertarTipoComprobanteCompletedEventArgs> InsertarTipoComprobanteCompleted;
+        
+        public event System.EventHandler<ActualizarTipoComprobanteCompletedEventArgs> ActualizarTipoComprobanteCompleted;
+        
+        public event System.EventHandler<EliminarTipoComprobanteCompletedEventArgs> EliminarTipoComprobanteCompleted;
+        
+        public event System.EventHandler<BuscarTipoComprobantePorNombreCompletedEventArgs> BuscarTipoComprobantePorNombreCompleted;
+        
+        public event System.EventHandler<BuscarTipoComprobantePorIDCompletedEventArgs> BuscarTipoComprobantePorIDCompleted;
+        
+        public event System.EventHandler<ListarTodosLosTiposDeComprobanteCompletedEventArgs> ListarTodosLosTiposDeComprobanteCompleted;
+        
+        public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> OpenCompleted;
+        
+        public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> CloseCompleted;
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService.BeginInsertarTipoComprobante(HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO dto, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginInsertarTipoComprobante(dto, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        int HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService.EndInsertarTipoComprobante(System.IAsyncResult result) {
+            return base.Channel.EndInsertarTipoComprobante(result);
+        }
+        
+        private System.IAsyncResult OnBeginInsertarTipoComprobante(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO dto = ((HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService)(this)).BeginInsertarTipoComprobante(dto, callback, asyncState);
+        }
+        
+        private object[] OnEndInsertarTipoComprobante(System.IAsyncResult result) {
+            int retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService)(this)).EndInsertarTipoComprobante(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnInsertarTipoComprobanteCompleted(object state) {
+            if ((this.InsertarTipoComprobanteCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.InsertarTipoComprobanteCompleted(this, new InsertarTipoComprobanteCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void InsertarTipoComprobanteAsync(HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO dto) {
+            this.InsertarTipoComprobanteAsync(dto, null);
+        }
+        
+        public void InsertarTipoComprobanteAsync(HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO dto, object userState) {
+            if ((this.onBeginInsertarTipoComprobanteDelegate == null)) {
+                this.onBeginInsertarTipoComprobanteDelegate = new BeginOperationDelegate(this.OnBeginInsertarTipoComprobante);
+            }
+            if ((this.onEndInsertarTipoComprobanteDelegate == null)) {
+                this.onEndInsertarTipoComprobanteDelegate = new EndOperationDelegate(this.OnEndInsertarTipoComprobante);
+            }
+            if ((this.onInsertarTipoComprobanteCompletedDelegate == null)) {
+                this.onInsertarTipoComprobanteCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnInsertarTipoComprobanteCompleted);
+            }
+            base.InvokeAsync(this.onBeginInsertarTipoComprobanteDelegate, new object[] {
+                        dto}, this.onEndInsertarTipoComprobanteDelegate, this.onInsertarTipoComprobanteCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService.BeginActualizarTipoComprobante(HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO dto, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginActualizarTipoComprobante(dto, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        bool HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService.EndActualizarTipoComprobante(System.IAsyncResult result) {
+            return base.Channel.EndActualizarTipoComprobante(result);
+        }
+        
+        private System.IAsyncResult OnBeginActualizarTipoComprobante(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO dto = ((HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService)(this)).BeginActualizarTipoComprobante(dto, callback, asyncState);
+        }
+        
+        private object[] OnEndActualizarTipoComprobante(System.IAsyncResult result) {
+            bool retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService)(this)).EndActualizarTipoComprobante(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnActualizarTipoComprobanteCompleted(object state) {
+            if ((this.ActualizarTipoComprobanteCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.ActualizarTipoComprobanteCompleted(this, new ActualizarTipoComprobanteCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void ActualizarTipoComprobanteAsync(HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO dto) {
+            this.ActualizarTipoComprobanteAsync(dto, null);
+        }
+        
+        public void ActualizarTipoComprobanteAsync(HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO dto, object userState) {
+            if ((this.onBeginActualizarTipoComprobanteDelegate == null)) {
+                this.onBeginActualizarTipoComprobanteDelegate = new BeginOperationDelegate(this.OnBeginActualizarTipoComprobante);
+            }
+            if ((this.onEndActualizarTipoComprobanteDelegate == null)) {
+                this.onEndActualizarTipoComprobanteDelegate = new EndOperationDelegate(this.OnEndActualizarTipoComprobante);
+            }
+            if ((this.onActualizarTipoComprobanteCompletedDelegate == null)) {
+                this.onActualizarTipoComprobanteCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnActualizarTipoComprobanteCompleted);
+            }
+            base.InvokeAsync(this.onBeginActualizarTipoComprobanteDelegate, new object[] {
+                        dto}, this.onEndActualizarTipoComprobanteDelegate, this.onActualizarTipoComprobanteCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService.BeginEliminarTipoComprobante(int IDTipoComprobante, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginEliminarTipoComprobante(IDTipoComprobante, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        bool HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService.EndEliminarTipoComprobante(System.IAsyncResult result) {
+            return base.Channel.EndEliminarTipoComprobante(result);
+        }
+        
+        private System.IAsyncResult OnBeginEliminarTipoComprobante(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int IDTipoComprobante = ((int)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService)(this)).BeginEliminarTipoComprobante(IDTipoComprobante, callback, asyncState);
+        }
+        
+        private object[] OnEndEliminarTipoComprobante(System.IAsyncResult result) {
+            bool retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService)(this)).EndEliminarTipoComprobante(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnEliminarTipoComprobanteCompleted(object state) {
+            if ((this.EliminarTipoComprobanteCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.EliminarTipoComprobanteCompleted(this, new EliminarTipoComprobanteCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void EliminarTipoComprobanteAsync(int IDTipoComprobante) {
+            this.EliminarTipoComprobanteAsync(IDTipoComprobante, null);
+        }
+        
+        public void EliminarTipoComprobanteAsync(int IDTipoComprobante, object userState) {
+            if ((this.onBeginEliminarTipoComprobanteDelegate == null)) {
+                this.onBeginEliminarTipoComprobanteDelegate = new BeginOperationDelegate(this.OnBeginEliminarTipoComprobante);
+            }
+            if ((this.onEndEliminarTipoComprobanteDelegate == null)) {
+                this.onEndEliminarTipoComprobanteDelegate = new EndOperationDelegate(this.OnEndEliminarTipoComprobante);
+            }
+            if ((this.onEliminarTipoComprobanteCompletedDelegate == null)) {
+                this.onEliminarTipoComprobanteCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnEliminarTipoComprobanteCompleted);
+            }
+            base.InvokeAsync(this.onBeginEliminarTipoComprobanteDelegate, new object[] {
+                        IDTipoComprobante}, this.onEndEliminarTipoComprobanteDelegate, this.onEliminarTipoComprobanteCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService.BeginBuscarTipoComprobantePorNombre(string NombreComprobante, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginBuscarTipoComprobantePorNombre(NombreComprobante, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService.EndBuscarTipoComprobantePorNombre(System.IAsyncResult result) {
+            return base.Channel.EndBuscarTipoComprobantePorNombre(result);
+        }
+        
+        private System.IAsyncResult OnBeginBuscarTipoComprobantePorNombre(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string NombreComprobante = ((string)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService)(this)).BeginBuscarTipoComprobantePorNombre(NombreComprobante, callback, asyncState);
+        }
+        
+        private object[] OnEndBuscarTipoComprobantePorNombre(System.IAsyncResult result) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService)(this)).EndBuscarTipoComprobantePorNombre(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnBuscarTipoComprobantePorNombreCompleted(object state) {
+            if ((this.BuscarTipoComprobantePorNombreCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.BuscarTipoComprobantePorNombreCompleted(this, new BuscarTipoComprobantePorNombreCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void BuscarTipoComprobantePorNombreAsync(string NombreComprobante) {
+            this.BuscarTipoComprobantePorNombreAsync(NombreComprobante, null);
+        }
+        
+        public void BuscarTipoComprobantePorNombreAsync(string NombreComprobante, object userState) {
+            if ((this.onBeginBuscarTipoComprobantePorNombreDelegate == null)) {
+                this.onBeginBuscarTipoComprobantePorNombreDelegate = new BeginOperationDelegate(this.OnBeginBuscarTipoComprobantePorNombre);
+            }
+            if ((this.onEndBuscarTipoComprobantePorNombreDelegate == null)) {
+                this.onEndBuscarTipoComprobantePorNombreDelegate = new EndOperationDelegate(this.OnEndBuscarTipoComprobantePorNombre);
+            }
+            if ((this.onBuscarTipoComprobantePorNombreCompletedDelegate == null)) {
+                this.onBuscarTipoComprobantePorNombreCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnBuscarTipoComprobantePorNombreCompleted);
+            }
+            base.InvokeAsync(this.onBeginBuscarTipoComprobantePorNombreDelegate, new object[] {
+                        NombreComprobante}, this.onEndBuscarTipoComprobantePorNombreDelegate, this.onBuscarTipoComprobantePorNombreCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService.BeginBuscarTipoComprobantePorID(int IDTipoComprobante, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginBuscarTipoComprobantePorID(IDTipoComprobante, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService.EndBuscarTipoComprobantePorID(System.IAsyncResult result) {
+            return base.Channel.EndBuscarTipoComprobantePorID(result);
+        }
+        
+        private System.IAsyncResult OnBeginBuscarTipoComprobantePorID(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int IDTipoComprobante = ((int)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService)(this)).BeginBuscarTipoComprobantePorID(IDTipoComprobante, callback, asyncState);
+        }
+        
+        private object[] OnEndBuscarTipoComprobantePorID(System.IAsyncResult result) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService)(this)).EndBuscarTipoComprobantePorID(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnBuscarTipoComprobantePorIDCompleted(object state) {
+            if ((this.BuscarTipoComprobantePorIDCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.BuscarTipoComprobantePorIDCompleted(this, new BuscarTipoComprobantePorIDCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void BuscarTipoComprobantePorIDAsync(int IDTipoComprobante) {
+            this.BuscarTipoComprobantePorIDAsync(IDTipoComprobante, null);
+        }
+        
+        public void BuscarTipoComprobantePorIDAsync(int IDTipoComprobante, object userState) {
+            if ((this.onBeginBuscarTipoComprobantePorIDDelegate == null)) {
+                this.onBeginBuscarTipoComprobantePorIDDelegate = new BeginOperationDelegate(this.OnBeginBuscarTipoComprobantePorID);
+            }
+            if ((this.onEndBuscarTipoComprobantePorIDDelegate == null)) {
+                this.onEndBuscarTipoComprobantePorIDDelegate = new EndOperationDelegate(this.OnEndBuscarTipoComprobantePorID);
+            }
+            if ((this.onBuscarTipoComprobantePorIDCompletedDelegate == null)) {
+                this.onBuscarTipoComprobantePorIDCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnBuscarTipoComprobantePorIDCompleted);
+            }
+            base.InvokeAsync(this.onBeginBuscarTipoComprobantePorIDDelegate, new object[] {
+                        IDTipoComprobante}, this.onEndBuscarTipoComprobantePorIDDelegate, this.onBuscarTipoComprobantePorIDCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService.BeginListarTodosLosTiposDeComprobante(System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginListarTodosLosTiposDeComprobante(callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO> HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService.EndListarTodosLosTiposDeComprobante(System.IAsyncResult result) {
+            return base.Channel.EndListarTodosLosTiposDeComprobante(result);
+        }
+        
+        private System.IAsyncResult OnBeginListarTodosLosTiposDeComprobante(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService)(this)).BeginListarTodosLosTiposDeComprobante(callback, asyncState);
+        }
+        
+        private object[] OnEndListarTodosLosTiposDeComprobante(System.IAsyncResult result) {
+            System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO> retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService)(this)).EndListarTodosLosTiposDeComprobante(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnListarTodosLosTiposDeComprobanteCompleted(object state) {
+            if ((this.ListarTodosLosTiposDeComprobanteCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.ListarTodosLosTiposDeComprobanteCompleted(this, new ListarTodosLosTiposDeComprobanteCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void ListarTodosLosTiposDeComprobanteAsync() {
+            this.ListarTodosLosTiposDeComprobanteAsync(null);
+        }
+        
+        public void ListarTodosLosTiposDeComprobanteAsync(object userState) {
+            if ((this.onBeginListarTodosLosTiposDeComprobanteDelegate == null)) {
+                this.onBeginListarTodosLosTiposDeComprobanteDelegate = new BeginOperationDelegate(this.OnBeginListarTodosLosTiposDeComprobante);
+            }
+            if ((this.onEndListarTodosLosTiposDeComprobanteDelegate == null)) {
+                this.onEndListarTodosLosTiposDeComprobanteDelegate = new EndOperationDelegate(this.OnEndListarTodosLosTiposDeComprobante);
+            }
+            if ((this.onListarTodosLosTiposDeComprobanteCompletedDelegate == null)) {
+                this.onListarTodosLosTiposDeComprobanteCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnListarTodosLosTiposDeComprobanteCompleted);
+            }
+            base.InvokeAsync(this.onBeginListarTodosLosTiposDeComprobanteDelegate, null, this.onEndListarTodosLosTiposDeComprobanteDelegate, this.onListarTodosLosTiposDeComprobanteCompletedDelegate, userState);
+        }
+        
+        private System.IAsyncResult OnBeginOpen(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return ((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(callback, asyncState);
+        }
+        
+        private object[] OnEndOpen(System.IAsyncResult result) {
+            ((System.ServiceModel.ICommunicationObject)(this)).EndOpen(result);
+            return null;
+        }
+        
+        private void OnOpenCompleted(object state) {
+            if ((this.OpenCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.OpenCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void OpenAsync() {
+            this.OpenAsync(null);
+        }
+        
+        public void OpenAsync(object userState) {
+            if ((this.onBeginOpenDelegate == null)) {
+                this.onBeginOpenDelegate = new BeginOperationDelegate(this.OnBeginOpen);
+            }
+            if ((this.onEndOpenDelegate == null)) {
+                this.onEndOpenDelegate = new EndOperationDelegate(this.OnEndOpen);
+            }
+            if ((this.onOpenCompletedDelegate == null)) {
+                this.onOpenCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnOpenCompleted);
+            }
+            base.InvokeAsync(this.onBeginOpenDelegate, null, this.onEndOpenDelegate, this.onOpenCompletedDelegate, userState);
+        }
+        
+        private System.IAsyncResult OnBeginClose(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return ((System.ServiceModel.ICommunicationObject)(this)).BeginClose(callback, asyncState);
+        }
+        
+        private object[] OnEndClose(System.IAsyncResult result) {
+            ((System.ServiceModel.ICommunicationObject)(this)).EndClose(result);
+            return null;
+        }
+        
+        private void OnCloseCompleted(object state) {
+            if ((this.CloseCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.CloseCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void CloseAsync() {
+            this.CloseAsync(null);
+        }
+        
+        public void CloseAsync(object userState) {
+            if ((this.onBeginCloseDelegate == null)) {
+                this.onBeginCloseDelegate = new BeginOperationDelegate(this.OnBeginClose);
+            }
+            if ((this.onEndCloseDelegate == null)) {
+                this.onEndCloseDelegate = new EndOperationDelegate(this.OnEndClose);
+            }
+            if ((this.onCloseCompletedDelegate == null)) {
+                this.onCloseCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnCloseCompleted);
+            }
+            base.InvokeAsync(this.onBeginCloseDelegate, null, this.onEndCloseDelegate, this.onCloseCompletedDelegate, userState);
+        }
+        
+        protected override HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService CreateChannel() {
+            return new TipoComprobanteServiceClientChannel(this);
+        }
+        
+        private class TipoComprobanteServiceClientChannel : ChannelBase<HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService>, HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService {
+            
+            public TipoComprobanteServiceClientChannel(System.ServiceModel.ClientBase<HostalDB_ViewModel.ServiceReference_Habitacion.ITipoComprobanteService> client) : 
+                    base(client) {
+            }
+            
+            public System.IAsyncResult BeginInsertarTipoComprobante(HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO dto, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = dto;
+                System.IAsyncResult _result = base.BeginInvoke("InsertarTipoComprobante", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public int EndInsertarTipoComprobante(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                int _result = ((int)(base.EndInvoke("InsertarTipoComprobante", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginActualizarTipoComprobante(HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO dto, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = dto;
+                System.IAsyncResult _result = base.BeginInvoke("ActualizarTipoComprobante", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public bool EndActualizarTipoComprobante(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                bool _result = ((bool)(base.EndInvoke("ActualizarTipoComprobante", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginEliminarTipoComprobante(int IDTipoComprobante, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = IDTipoComprobante;
+                System.IAsyncResult _result = base.BeginInvoke("EliminarTipoComprobante", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public bool EndEliminarTipoComprobante(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                bool _result = ((bool)(base.EndInvoke("EliminarTipoComprobante", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginBuscarTipoComprobantePorNombre(string NombreComprobante, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = NombreComprobante;
+                System.IAsyncResult _result = base.BeginInvoke("BuscarTipoComprobantePorNombre", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO EndBuscarTipoComprobantePorNombre(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO _result = ((HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO)(base.EndInvoke("BuscarTipoComprobantePorNombre", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginBuscarTipoComprobantePorID(int IDTipoComprobante, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = IDTipoComprobante;
+                System.IAsyncResult _result = base.BeginInvoke("BuscarTipoComprobantePorID", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO EndBuscarTipoComprobantePorID(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO _result = ((HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO)(base.EndInvoke("BuscarTipoComprobantePorID", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginListarTodosLosTiposDeComprobante(System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[0];
+                System.IAsyncResult _result = base.BeginInvoke("ListarTodosLosTiposDeComprobante", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO> EndListarTodosLosTiposDeComprobante(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO> _result = ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO>)(base.EndInvoke("ListarTodosLosTiposDeComprobante", _args, result)));
+                return _result;
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference_Habitacion.ITipoHabitacionService")]
+    public interface ITipoHabitacionService {
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/ITipoHabitacionService/InsertarTipoHabitacion", ReplyAction="http://tempuri.org/ITipoHabitacionService/InsertarTipoHabitacionResponse")]
+        System.IAsyncResult BeginInsertarTipoHabitacion(HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO dto, System.AsyncCallback callback, object asyncState);
+        
+        int EndInsertarTipoHabitacion(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/ITipoHabitacionService/ActualizarTipoHabitacion", ReplyAction="http://tempuri.org/ITipoHabitacionService/ActualizarTipoHabitacionResponse")]
+        System.IAsyncResult BeginActualizarTipoHabitacion(HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO dto, System.AsyncCallback callback, object asyncState);
+        
+        bool EndActualizarTipoHabitacion(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/ITipoHabitacionService/EliminarTipoHabitacion", ReplyAction="http://tempuri.org/ITipoHabitacionService/EliminarTipoHabitacionResponse")]
+        System.IAsyncResult BeginEliminarTipoHabitacion(int id_tipo_habitacion, System.AsyncCallback callback, object asyncState);
+        
+        bool EndEliminarTipoHabitacion(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/ITipoHabitacionService/BuscarTipoHabitacionPorID", ReplyAction="http://tempuri.org/ITipoHabitacionService/BuscarTipoHabitacionPorIDResponse")]
+        System.IAsyncResult BeginBuscarTipoHabitacionPorID(int id_tipo_habitacion, System.AsyncCallback callback, object asyncState);
+        
+        HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO EndBuscarTipoHabitacionPorID(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/ITipoHabitacionService/BuscarTipoHabitacionPorNombre", ReplyAction="http://tempuri.org/ITipoHabitacionService/BuscarTipoHabitacionPorNombreResponse")]
+        System.IAsyncResult BeginBuscarTipoHabitacionPorNombre(string ParamentroNombreHabitacion, System.AsyncCallback callback, object asyncState);
+        
+        HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO EndBuscarTipoHabitacionPorNombre(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/ITipoHabitacionService/ListarTodosLos_TiposHabitacion", ReplyAction="http://tempuri.org/ITipoHabitacionService/ListarTodosLos_TiposHabitacionResponse")]
+        System.IAsyncResult BeginListarTodosLos_TiposHabitacion(System.AsyncCallback callback, object asyncState);
+        
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO> EndListarTodosLos_TiposHabitacion(System.IAsyncResult result);
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface ITipoHabitacionServiceChannel : HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class InsertarTipoHabitacionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public InsertarTipoHabitacionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public int Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ActualizarTipoHabitacionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public ActualizarTipoHabitacionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class EliminarTipoHabitacionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public EliminarTipoHabitacionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class BuscarTipoHabitacionPorIDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public BuscarTipoHabitacionPorIDCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class BuscarTipoHabitacionPorNombreCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public BuscarTipoHabitacionPorNombreCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ListarTodosLos_TiposHabitacionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public ListarTodosLos_TiposHabitacionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO> Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO>)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class TipoHabitacionServiceClient : System.ServiceModel.ClientBase<HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService>, HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService {
+        
+        private BeginOperationDelegate onBeginInsertarTipoHabitacionDelegate;
+        
+        private EndOperationDelegate onEndInsertarTipoHabitacionDelegate;
+        
+        private System.Threading.SendOrPostCallback onInsertarTipoHabitacionCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginActualizarTipoHabitacionDelegate;
+        
+        private EndOperationDelegate onEndActualizarTipoHabitacionDelegate;
+        
+        private System.Threading.SendOrPostCallback onActualizarTipoHabitacionCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginEliminarTipoHabitacionDelegate;
+        
+        private EndOperationDelegate onEndEliminarTipoHabitacionDelegate;
+        
+        private System.Threading.SendOrPostCallback onEliminarTipoHabitacionCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginBuscarTipoHabitacionPorIDDelegate;
+        
+        private EndOperationDelegate onEndBuscarTipoHabitacionPorIDDelegate;
+        
+        private System.Threading.SendOrPostCallback onBuscarTipoHabitacionPorIDCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginBuscarTipoHabitacionPorNombreDelegate;
+        
+        private EndOperationDelegate onEndBuscarTipoHabitacionPorNombreDelegate;
+        
+        private System.Threading.SendOrPostCallback onBuscarTipoHabitacionPorNombreCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginListarTodosLos_TiposHabitacionDelegate;
+        
+        private EndOperationDelegate onEndListarTodosLos_TiposHabitacionDelegate;
+        
+        private System.Threading.SendOrPostCallback onListarTodosLos_TiposHabitacionCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginOpenDelegate;
+        
+        private EndOperationDelegate onEndOpenDelegate;
+        
+        private System.Threading.SendOrPostCallback onOpenCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginCloseDelegate;
+        
+        private EndOperationDelegate onEndCloseDelegate;
+        
+        private System.Threading.SendOrPostCallback onCloseCompletedDelegate;
+        
+        public TipoHabitacionServiceClient() {
+        }
+        
+        public TipoHabitacionServiceClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public TipoHabitacionServiceClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public TipoHabitacionServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public TipoHabitacionServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        public System.Net.CookieContainer CookieContainer {
+            get {
+                System.ServiceModel.Channels.IHttpCookieContainerManager httpCookieContainerManager = this.InnerChannel.GetProperty<System.ServiceModel.Channels.IHttpCookieContainerManager>();
+                if ((httpCookieContainerManager != null)) {
+                    return httpCookieContainerManager.CookieContainer;
+                }
+                else {
+                    return null;
+                }
+            }
+            set {
+                System.ServiceModel.Channels.IHttpCookieContainerManager httpCookieContainerManager = this.InnerChannel.GetProperty<System.ServiceModel.Channels.IHttpCookieContainerManager>();
+                if ((httpCookieContainerManager != null)) {
+                    httpCookieContainerManager.CookieContainer = value;
+                }
+                else {
+                    throw new System.InvalidOperationException("No se puede establecer el objeto CookieContainer. Asegúrese de que el enlace cont" +
+                            "iene un objeto HttpCookieContainerBindingElement.");
+                }
+            }
+        }
+        
+        public event System.EventHandler<InsertarTipoHabitacionCompletedEventArgs> InsertarTipoHabitacionCompleted;
+        
+        public event System.EventHandler<ActualizarTipoHabitacionCompletedEventArgs> ActualizarTipoHabitacionCompleted;
+        
+        public event System.EventHandler<EliminarTipoHabitacionCompletedEventArgs> EliminarTipoHabitacionCompleted;
+        
+        public event System.EventHandler<BuscarTipoHabitacionPorIDCompletedEventArgs> BuscarTipoHabitacionPorIDCompleted;
+        
+        public event System.EventHandler<BuscarTipoHabitacionPorNombreCompletedEventArgs> BuscarTipoHabitacionPorNombreCompleted;
+        
+        public event System.EventHandler<ListarTodosLos_TiposHabitacionCompletedEventArgs> ListarTodosLos_TiposHabitacionCompleted;
+        
+        public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> OpenCompleted;
+        
+        public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> CloseCompleted;
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService.BeginInsertarTipoHabitacion(HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO dto, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginInsertarTipoHabitacion(dto, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        int HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService.EndInsertarTipoHabitacion(System.IAsyncResult result) {
+            return base.Channel.EndInsertarTipoHabitacion(result);
+        }
+        
+        private System.IAsyncResult OnBeginInsertarTipoHabitacion(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO dto = ((HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService)(this)).BeginInsertarTipoHabitacion(dto, callback, asyncState);
+        }
+        
+        private object[] OnEndInsertarTipoHabitacion(System.IAsyncResult result) {
+            int retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService)(this)).EndInsertarTipoHabitacion(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnInsertarTipoHabitacionCompleted(object state) {
+            if ((this.InsertarTipoHabitacionCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.InsertarTipoHabitacionCompleted(this, new InsertarTipoHabitacionCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void InsertarTipoHabitacionAsync(HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO dto) {
+            this.InsertarTipoHabitacionAsync(dto, null);
+        }
+        
+        public void InsertarTipoHabitacionAsync(HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO dto, object userState) {
+            if ((this.onBeginInsertarTipoHabitacionDelegate == null)) {
+                this.onBeginInsertarTipoHabitacionDelegate = new BeginOperationDelegate(this.OnBeginInsertarTipoHabitacion);
+            }
+            if ((this.onEndInsertarTipoHabitacionDelegate == null)) {
+                this.onEndInsertarTipoHabitacionDelegate = new EndOperationDelegate(this.OnEndInsertarTipoHabitacion);
+            }
+            if ((this.onInsertarTipoHabitacionCompletedDelegate == null)) {
+                this.onInsertarTipoHabitacionCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnInsertarTipoHabitacionCompleted);
+            }
+            base.InvokeAsync(this.onBeginInsertarTipoHabitacionDelegate, new object[] {
+                        dto}, this.onEndInsertarTipoHabitacionDelegate, this.onInsertarTipoHabitacionCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService.BeginActualizarTipoHabitacion(HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO dto, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginActualizarTipoHabitacion(dto, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        bool HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService.EndActualizarTipoHabitacion(System.IAsyncResult result) {
+            return base.Channel.EndActualizarTipoHabitacion(result);
+        }
+        
+        private System.IAsyncResult OnBeginActualizarTipoHabitacion(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO dto = ((HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService)(this)).BeginActualizarTipoHabitacion(dto, callback, asyncState);
+        }
+        
+        private object[] OnEndActualizarTipoHabitacion(System.IAsyncResult result) {
+            bool retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService)(this)).EndActualizarTipoHabitacion(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnActualizarTipoHabitacionCompleted(object state) {
+            if ((this.ActualizarTipoHabitacionCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.ActualizarTipoHabitacionCompleted(this, new ActualizarTipoHabitacionCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void ActualizarTipoHabitacionAsync(HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO dto) {
+            this.ActualizarTipoHabitacionAsync(dto, null);
+        }
+        
+        public void ActualizarTipoHabitacionAsync(HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO dto, object userState) {
+            if ((this.onBeginActualizarTipoHabitacionDelegate == null)) {
+                this.onBeginActualizarTipoHabitacionDelegate = new BeginOperationDelegate(this.OnBeginActualizarTipoHabitacion);
+            }
+            if ((this.onEndActualizarTipoHabitacionDelegate == null)) {
+                this.onEndActualizarTipoHabitacionDelegate = new EndOperationDelegate(this.OnEndActualizarTipoHabitacion);
+            }
+            if ((this.onActualizarTipoHabitacionCompletedDelegate == null)) {
+                this.onActualizarTipoHabitacionCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnActualizarTipoHabitacionCompleted);
+            }
+            base.InvokeAsync(this.onBeginActualizarTipoHabitacionDelegate, new object[] {
+                        dto}, this.onEndActualizarTipoHabitacionDelegate, this.onActualizarTipoHabitacionCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService.BeginEliminarTipoHabitacion(int id_tipo_habitacion, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginEliminarTipoHabitacion(id_tipo_habitacion, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        bool HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService.EndEliminarTipoHabitacion(System.IAsyncResult result) {
+            return base.Channel.EndEliminarTipoHabitacion(result);
+        }
+        
+        private System.IAsyncResult OnBeginEliminarTipoHabitacion(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int id_tipo_habitacion = ((int)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService)(this)).BeginEliminarTipoHabitacion(id_tipo_habitacion, callback, asyncState);
+        }
+        
+        private object[] OnEndEliminarTipoHabitacion(System.IAsyncResult result) {
+            bool retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService)(this)).EndEliminarTipoHabitacion(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnEliminarTipoHabitacionCompleted(object state) {
+            if ((this.EliminarTipoHabitacionCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.EliminarTipoHabitacionCompleted(this, new EliminarTipoHabitacionCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void EliminarTipoHabitacionAsync(int id_tipo_habitacion) {
+            this.EliminarTipoHabitacionAsync(id_tipo_habitacion, null);
+        }
+        
+        public void EliminarTipoHabitacionAsync(int id_tipo_habitacion, object userState) {
+            if ((this.onBeginEliminarTipoHabitacionDelegate == null)) {
+                this.onBeginEliminarTipoHabitacionDelegate = new BeginOperationDelegate(this.OnBeginEliminarTipoHabitacion);
+            }
+            if ((this.onEndEliminarTipoHabitacionDelegate == null)) {
+                this.onEndEliminarTipoHabitacionDelegate = new EndOperationDelegate(this.OnEndEliminarTipoHabitacion);
+            }
+            if ((this.onEliminarTipoHabitacionCompletedDelegate == null)) {
+                this.onEliminarTipoHabitacionCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnEliminarTipoHabitacionCompleted);
+            }
+            base.InvokeAsync(this.onBeginEliminarTipoHabitacionDelegate, new object[] {
+                        id_tipo_habitacion}, this.onEndEliminarTipoHabitacionDelegate, this.onEliminarTipoHabitacionCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService.BeginBuscarTipoHabitacionPorID(int id_tipo_habitacion, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginBuscarTipoHabitacionPorID(id_tipo_habitacion, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService.EndBuscarTipoHabitacionPorID(System.IAsyncResult result) {
+            return base.Channel.EndBuscarTipoHabitacionPorID(result);
+        }
+        
+        private System.IAsyncResult OnBeginBuscarTipoHabitacionPorID(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int id_tipo_habitacion = ((int)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService)(this)).BeginBuscarTipoHabitacionPorID(id_tipo_habitacion, callback, asyncState);
+        }
+        
+        private object[] OnEndBuscarTipoHabitacionPorID(System.IAsyncResult result) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService)(this)).EndBuscarTipoHabitacionPorID(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnBuscarTipoHabitacionPorIDCompleted(object state) {
+            if ((this.BuscarTipoHabitacionPorIDCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.BuscarTipoHabitacionPorIDCompleted(this, new BuscarTipoHabitacionPorIDCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void BuscarTipoHabitacionPorIDAsync(int id_tipo_habitacion) {
+            this.BuscarTipoHabitacionPorIDAsync(id_tipo_habitacion, null);
+        }
+        
+        public void BuscarTipoHabitacionPorIDAsync(int id_tipo_habitacion, object userState) {
+            if ((this.onBeginBuscarTipoHabitacionPorIDDelegate == null)) {
+                this.onBeginBuscarTipoHabitacionPorIDDelegate = new BeginOperationDelegate(this.OnBeginBuscarTipoHabitacionPorID);
+            }
+            if ((this.onEndBuscarTipoHabitacionPorIDDelegate == null)) {
+                this.onEndBuscarTipoHabitacionPorIDDelegate = new EndOperationDelegate(this.OnEndBuscarTipoHabitacionPorID);
+            }
+            if ((this.onBuscarTipoHabitacionPorIDCompletedDelegate == null)) {
+                this.onBuscarTipoHabitacionPorIDCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnBuscarTipoHabitacionPorIDCompleted);
+            }
+            base.InvokeAsync(this.onBeginBuscarTipoHabitacionPorIDDelegate, new object[] {
+                        id_tipo_habitacion}, this.onEndBuscarTipoHabitacionPorIDDelegate, this.onBuscarTipoHabitacionPorIDCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService.BeginBuscarTipoHabitacionPorNombre(string ParamentroNombreHabitacion, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginBuscarTipoHabitacionPorNombre(ParamentroNombreHabitacion, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService.EndBuscarTipoHabitacionPorNombre(System.IAsyncResult result) {
+            return base.Channel.EndBuscarTipoHabitacionPorNombre(result);
+        }
+        
+        private System.IAsyncResult OnBeginBuscarTipoHabitacionPorNombre(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string ParamentroNombreHabitacion = ((string)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService)(this)).BeginBuscarTipoHabitacionPorNombre(ParamentroNombreHabitacion, callback, asyncState);
+        }
+        
+        private object[] OnEndBuscarTipoHabitacionPorNombre(System.IAsyncResult result) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService)(this)).EndBuscarTipoHabitacionPorNombre(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnBuscarTipoHabitacionPorNombreCompleted(object state) {
+            if ((this.BuscarTipoHabitacionPorNombreCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.BuscarTipoHabitacionPorNombreCompleted(this, new BuscarTipoHabitacionPorNombreCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void BuscarTipoHabitacionPorNombreAsync(string ParamentroNombreHabitacion) {
+            this.BuscarTipoHabitacionPorNombreAsync(ParamentroNombreHabitacion, null);
+        }
+        
+        public void BuscarTipoHabitacionPorNombreAsync(string ParamentroNombreHabitacion, object userState) {
+            if ((this.onBeginBuscarTipoHabitacionPorNombreDelegate == null)) {
+                this.onBeginBuscarTipoHabitacionPorNombreDelegate = new BeginOperationDelegate(this.OnBeginBuscarTipoHabitacionPorNombre);
+            }
+            if ((this.onEndBuscarTipoHabitacionPorNombreDelegate == null)) {
+                this.onEndBuscarTipoHabitacionPorNombreDelegate = new EndOperationDelegate(this.OnEndBuscarTipoHabitacionPorNombre);
+            }
+            if ((this.onBuscarTipoHabitacionPorNombreCompletedDelegate == null)) {
+                this.onBuscarTipoHabitacionPorNombreCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnBuscarTipoHabitacionPorNombreCompleted);
+            }
+            base.InvokeAsync(this.onBeginBuscarTipoHabitacionPorNombreDelegate, new object[] {
+                        ParamentroNombreHabitacion}, this.onEndBuscarTipoHabitacionPorNombreDelegate, this.onBuscarTipoHabitacionPorNombreCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService.BeginListarTodosLos_TiposHabitacion(System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginListarTodosLos_TiposHabitacion(callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO> HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService.EndListarTodosLos_TiposHabitacion(System.IAsyncResult result) {
+            return base.Channel.EndListarTodosLos_TiposHabitacion(result);
+        }
+        
+        private System.IAsyncResult OnBeginListarTodosLos_TiposHabitacion(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService)(this)).BeginListarTodosLos_TiposHabitacion(callback, asyncState);
+        }
+        
+        private object[] OnEndListarTodosLos_TiposHabitacion(System.IAsyncResult result) {
+            System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO> retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService)(this)).EndListarTodosLos_TiposHabitacion(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnListarTodosLos_TiposHabitacionCompleted(object state) {
+            if ((this.ListarTodosLos_TiposHabitacionCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.ListarTodosLos_TiposHabitacionCompleted(this, new ListarTodosLos_TiposHabitacionCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void ListarTodosLos_TiposHabitacionAsync() {
+            this.ListarTodosLos_TiposHabitacionAsync(null);
+        }
+        
+        public void ListarTodosLos_TiposHabitacionAsync(object userState) {
+            if ((this.onBeginListarTodosLos_TiposHabitacionDelegate == null)) {
+                this.onBeginListarTodosLos_TiposHabitacionDelegate = new BeginOperationDelegate(this.OnBeginListarTodosLos_TiposHabitacion);
+            }
+            if ((this.onEndListarTodosLos_TiposHabitacionDelegate == null)) {
+                this.onEndListarTodosLos_TiposHabitacionDelegate = new EndOperationDelegate(this.OnEndListarTodosLos_TiposHabitacion);
+            }
+            if ((this.onListarTodosLos_TiposHabitacionCompletedDelegate == null)) {
+                this.onListarTodosLos_TiposHabitacionCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnListarTodosLos_TiposHabitacionCompleted);
+            }
+            base.InvokeAsync(this.onBeginListarTodosLos_TiposHabitacionDelegate, null, this.onEndListarTodosLos_TiposHabitacionDelegate, this.onListarTodosLos_TiposHabitacionCompletedDelegate, userState);
+        }
+        
+        private System.IAsyncResult OnBeginOpen(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return ((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(callback, asyncState);
+        }
+        
+        private object[] OnEndOpen(System.IAsyncResult result) {
+            ((System.ServiceModel.ICommunicationObject)(this)).EndOpen(result);
+            return null;
+        }
+        
+        private void OnOpenCompleted(object state) {
+            if ((this.OpenCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.OpenCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void OpenAsync() {
+            this.OpenAsync(null);
+        }
+        
+        public void OpenAsync(object userState) {
+            if ((this.onBeginOpenDelegate == null)) {
+                this.onBeginOpenDelegate = new BeginOperationDelegate(this.OnBeginOpen);
+            }
+            if ((this.onEndOpenDelegate == null)) {
+                this.onEndOpenDelegate = new EndOperationDelegate(this.OnEndOpen);
+            }
+            if ((this.onOpenCompletedDelegate == null)) {
+                this.onOpenCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnOpenCompleted);
+            }
+            base.InvokeAsync(this.onBeginOpenDelegate, null, this.onEndOpenDelegate, this.onOpenCompletedDelegate, userState);
+        }
+        
+        private System.IAsyncResult OnBeginClose(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return ((System.ServiceModel.ICommunicationObject)(this)).BeginClose(callback, asyncState);
+        }
+        
+        private object[] OnEndClose(System.IAsyncResult result) {
+            ((System.ServiceModel.ICommunicationObject)(this)).EndClose(result);
+            return null;
+        }
+        
+        private void OnCloseCompleted(object state) {
+            if ((this.CloseCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.CloseCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void CloseAsync() {
+            this.CloseAsync(null);
+        }
+        
+        public void CloseAsync(object userState) {
+            if ((this.onBeginCloseDelegate == null)) {
+                this.onBeginCloseDelegate = new BeginOperationDelegate(this.OnBeginClose);
+            }
+            if ((this.onEndCloseDelegate == null)) {
+                this.onEndCloseDelegate = new EndOperationDelegate(this.OnEndClose);
+            }
+            if ((this.onCloseCompletedDelegate == null)) {
+                this.onCloseCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnCloseCompleted);
+            }
+            base.InvokeAsync(this.onBeginCloseDelegate, null, this.onEndCloseDelegate, this.onCloseCompletedDelegate, userState);
+        }
+        
+        protected override HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService CreateChannel() {
+            return new TipoHabitacionServiceClientChannel(this);
+        }
+        
+        private class TipoHabitacionServiceClientChannel : ChannelBase<HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService>, HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService {
+            
+            public TipoHabitacionServiceClientChannel(System.ServiceModel.ClientBase<HostalDB_ViewModel.ServiceReference_Habitacion.ITipoHabitacionService> client) : 
+                    base(client) {
+            }
+            
+            public System.IAsyncResult BeginInsertarTipoHabitacion(HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO dto, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = dto;
+                System.IAsyncResult _result = base.BeginInvoke("InsertarTipoHabitacion", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public int EndInsertarTipoHabitacion(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                int _result = ((int)(base.EndInvoke("InsertarTipoHabitacion", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginActualizarTipoHabitacion(HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO dto, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = dto;
+                System.IAsyncResult _result = base.BeginInvoke("ActualizarTipoHabitacion", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public bool EndActualizarTipoHabitacion(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                bool _result = ((bool)(base.EndInvoke("ActualizarTipoHabitacion", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginEliminarTipoHabitacion(int id_tipo_habitacion, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = id_tipo_habitacion;
+                System.IAsyncResult _result = base.BeginInvoke("EliminarTipoHabitacion", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public bool EndEliminarTipoHabitacion(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                bool _result = ((bool)(base.EndInvoke("EliminarTipoHabitacion", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginBuscarTipoHabitacionPorID(int id_tipo_habitacion, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = id_tipo_habitacion;
+                System.IAsyncResult _result = base.BeginInvoke("BuscarTipoHabitacionPorID", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO EndBuscarTipoHabitacionPorID(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO _result = ((HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO)(base.EndInvoke("BuscarTipoHabitacionPorID", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginBuscarTipoHabitacionPorNombre(string ParamentroNombreHabitacion, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = ParamentroNombreHabitacion;
+                System.IAsyncResult _result = base.BeginInvoke("BuscarTipoHabitacionPorNombre", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO EndBuscarTipoHabitacionPorNombre(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO _result = ((HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO)(base.EndInvoke("BuscarTipoHabitacionPorNombre", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginListarTodosLos_TiposHabitacion(System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[0];
+                System.IAsyncResult _result = base.BeginInvoke("ListarTodosLos_TiposHabitacion", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO> EndListarTodosLos_TiposHabitacion(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO> _result = ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO>)(base.EndInvoke("ListarTodosLos_TiposHabitacion", _args, result)));
                 return _result;
             }
         }
@@ -2886,12 +8704,17 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IUserService/BuscarUsuario", ReplyAction="http://tempuri.org/IUserService/BuscarUsuarioResponse")]
         System.IAsyncResult BeginBuscarUsuario(string parametro, System.AsyncCallback callback, object asyncState);
         
-        System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO> EndBuscarUsuario(System.IAsyncResult result);
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO> EndBuscarUsuario(System.IAsyncResult result);
         
         [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IUserService/ListarUsuarios", ReplyAction="http://tempuri.org/IUserService/ListarUsuariosResponse")]
         System.IAsyncResult BeginListarUsuarios(System.AsyncCallback callback, object asyncState);
         
-        System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO> EndListarUsuarios(System.IAsyncResult result);
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO> EndListarUsuarios(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IUserService/BuscarUsuarioPorID", ReplyAction="http://tempuri.org/IUserService/BuscarUsuarioPorIDResponse")]
+        System.IAsyncResult BeginBuscarUsuarioPorID(int IDUser, System.AsyncCallback callback, object asyncState);
+        
+        HostalDB_ViewModel.ServiceReference_Habitacion.userDTO EndBuscarUsuarioPorID(System.IAsyncResult result);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2966,10 +8789,10 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
             this.results = results;
         }
         
-        public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO> Result {
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO> Result {
             get {
                 base.RaiseExceptionIfNecessary();
-                return ((System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO>)(this.results[0]));
+                return ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO>)(this.results[0]));
             }
         }
     }
@@ -2985,10 +8808,29 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
             this.results = results;
         }
         
-        public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO> Result {
+        public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO> Result {
             get {
                 base.RaiseExceptionIfNecessary();
-                return ((System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO>)(this.results[0]));
+                return ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO>)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class BuscarUsuarioPorIDCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public BuscarUsuarioPorIDCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public HostalDB_ViewModel.ServiceReference_Habitacion.userDTO Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((HostalDB_ViewModel.ServiceReference_Habitacion.userDTO)(this.results[0]));
             }
         }
     }
@@ -3026,6 +8868,12 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         private EndOperationDelegate onEndListarUsuariosDelegate;
         
         private System.Threading.SendOrPostCallback onListarUsuariosCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginBuscarUsuarioPorIDDelegate;
+        
+        private EndOperationDelegate onEndBuscarUsuarioPorIDDelegate;
+        
+        private System.Threading.SendOrPostCallback onBuscarUsuarioPorIDCompletedDelegate;
         
         private BeginOperationDelegate onBeginOpenDelegate;
         
@@ -3089,6 +8937,8 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         public event System.EventHandler<BuscarUsuarioCompletedEventArgs> BuscarUsuarioCompleted;
         
         public event System.EventHandler<ListarUsuariosCompletedEventArgs> ListarUsuariosCompleted;
+        
+        public event System.EventHandler<BuscarUsuarioPorIDCompletedEventArgs> BuscarUsuarioPorIDCompleted;
         
         public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> OpenCompleted;
         
@@ -3238,7 +9088,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO> HostalDB_ViewModel.ServiceReference_Habitacion.IUserService.EndBuscarUsuario(System.IAsyncResult result) {
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO> HostalDB_ViewModel.ServiceReference_Habitacion.IUserService.EndBuscarUsuario(System.IAsyncResult result) {
             return base.Channel.EndBuscarUsuario(result);
         }
         
@@ -3248,7 +9098,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         }
         
         private object[] OnEndBuscarUsuario(System.IAsyncResult result) {
-            System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO> retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IUserService)(this)).EndBuscarUsuario(result);
+            System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO> retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IUserService)(this)).EndBuscarUsuario(result);
             return new object[] {
                     retVal};
         }
@@ -3284,7 +9134,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO> HostalDB_ViewModel.ServiceReference_Habitacion.IUserService.EndListarUsuarios(System.IAsyncResult result) {
+        System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO> HostalDB_ViewModel.ServiceReference_Habitacion.IUserService.EndListarUsuarios(System.IAsyncResult result) {
             return base.Channel.EndListarUsuarios(result);
         }
         
@@ -3293,7 +9143,7 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
         }
         
         private object[] OnEndListarUsuarios(System.IAsyncResult result) {
-            System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO> retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IUserService)(this)).EndListarUsuarios(result);
+            System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO> retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IUserService)(this)).EndListarUsuarios(result);
             return new object[] {
                     retVal};
         }
@@ -3320,6 +9170,52 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
                 this.onListarUsuariosCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnListarUsuariosCompleted);
             }
             base.InvokeAsync(this.onBeginListarUsuariosDelegate, null, this.onEndListarUsuariosDelegate, this.onListarUsuariosCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HostalDB_ViewModel.ServiceReference_Habitacion.IUserService.BeginBuscarUsuarioPorID(int IDUser, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginBuscarUsuarioPorID(IDUser, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        HostalDB_ViewModel.ServiceReference_Habitacion.userDTO HostalDB_ViewModel.ServiceReference_Habitacion.IUserService.EndBuscarUsuarioPorID(System.IAsyncResult result) {
+            return base.Channel.EndBuscarUsuarioPorID(result);
+        }
+        
+        private System.IAsyncResult OnBeginBuscarUsuarioPorID(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int IDUser = ((int)(inValues[0]));
+            return ((HostalDB_ViewModel.ServiceReference_Habitacion.IUserService)(this)).BeginBuscarUsuarioPorID(IDUser, callback, asyncState);
+        }
+        
+        private object[] OnEndBuscarUsuarioPorID(System.IAsyncResult result) {
+            HostalDB_ViewModel.ServiceReference_Habitacion.userDTO retVal = ((HostalDB_ViewModel.ServiceReference_Habitacion.IUserService)(this)).EndBuscarUsuarioPorID(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnBuscarUsuarioPorIDCompleted(object state) {
+            if ((this.BuscarUsuarioPorIDCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.BuscarUsuarioPorIDCompleted(this, new BuscarUsuarioPorIDCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void BuscarUsuarioPorIDAsync(int IDUser) {
+            this.BuscarUsuarioPorIDAsync(IDUser, null);
+        }
+        
+        public void BuscarUsuarioPorIDAsync(int IDUser, object userState) {
+            if ((this.onBeginBuscarUsuarioPorIDDelegate == null)) {
+                this.onBeginBuscarUsuarioPorIDDelegate = new BeginOperationDelegate(this.OnBeginBuscarUsuarioPorID);
+            }
+            if ((this.onEndBuscarUsuarioPorIDDelegate == null)) {
+                this.onEndBuscarUsuarioPorIDDelegate = new EndOperationDelegate(this.OnEndBuscarUsuarioPorID);
+            }
+            if ((this.onBuscarUsuarioPorIDCompletedDelegate == null)) {
+                this.onBuscarUsuarioPorIDCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnBuscarUsuarioPorIDCompleted);
+            }
+            base.InvokeAsync(this.onBeginBuscarUsuarioPorIDDelegate, new object[] {
+                        IDUser}, this.onEndBuscarUsuarioPorIDDelegate, this.onBuscarUsuarioPorIDCompletedDelegate, userState);
         }
         
         private System.IAsyncResult OnBeginOpen(object[] inValues, System.AsyncCallback callback, object asyncState) {
@@ -3444,9 +9340,9 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
                 return _result;
             }
             
-            public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO> EndBuscarUsuario(System.IAsyncResult result) {
+            public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO> EndBuscarUsuario(System.IAsyncResult result) {
                 object[] _args = new object[0];
-                System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO> _result = ((System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO>)(base.EndInvoke("BuscarUsuario", _args, result)));
+                System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO> _result = ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO>)(base.EndInvoke("BuscarUsuario", _args, result)));
                 return _result;
             }
             
@@ -3456,9 +9352,22 @@ namespace HostalDB_ViewModel.ServiceReference_Habitacion {
                 return _result;
             }
             
-            public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO> EndListarUsuarios(System.IAsyncResult result) {
+            public System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO> EndListarUsuarios(System.IAsyncResult result) {
                 object[] _args = new object[0];
-                System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO> _result = ((System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO>)(base.EndInvoke("ListarUsuarios", _args, result)));
+                System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO> _result = ((System.Collections.Generic.List<HostalDB_ViewModel.ServiceReference_Habitacion.userDTO>)(base.EndInvoke("ListarUsuarios", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginBuscarUsuarioPorID(int IDUser, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = IDUser;
+                System.IAsyncResult _result = base.BeginInvoke("BuscarUsuarioPorID", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public HostalDB_ViewModel.ServiceReference_Habitacion.userDTO EndBuscarUsuarioPorID(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                HostalDB_ViewModel.ServiceReference_Habitacion.userDTO _result = ((HostalDB_ViewModel.ServiceReference_Habitacion.userDTO)(base.EndInvoke("BuscarUsuarioPorID", _args, result)));
                 return _result;
             }
         }

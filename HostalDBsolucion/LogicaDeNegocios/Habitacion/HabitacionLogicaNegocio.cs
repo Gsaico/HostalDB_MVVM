@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -71,7 +72,7 @@ namespace LogicaDeNegocios
             }
         }
 
-        public List<Dominio.Dtos.habitacionDTO> ListarHabitacionesDisponibles()
+        public List<Dominio.Querys.ListarHabitacionesDisponiblesClass> ListarHabitacionesDisponibles()
         {
             try
             {

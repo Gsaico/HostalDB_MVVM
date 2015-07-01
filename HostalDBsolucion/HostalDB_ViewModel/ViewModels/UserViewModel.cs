@@ -84,7 +84,7 @@ namespace HostalDB_ViewModel.ViewModels
             EliminarCommand = new CommandBase(p => true, p => EliminarCommandAccion()) { IsEnable = true };
             NuevoCommand = new CommandBase(p => true, p => NuevoCommandAccion()) { IsEnable = true }; 
 
-
+            
         }
 
         
@@ -161,6 +161,8 @@ namespace HostalDB_ViewModel.ViewModels
                     ItemUsuario.enabled = 1;
 
                     _ServicioUsuario.InsertarUsuarioAsync(ItemUsuario);
+        
+
                     //Se llama a insertar un nuevo usuario a la BD
                 }
                 else
@@ -168,7 +170,7 @@ namespace HostalDB_ViewModel.ViewModels
                   
 
                     _ServicioUsuario.ActualizarUsuarioAsync(ItemUsuario);
-                
+                    _ServicioUsuario.ActualizarUsuarioCompleted += _ServicioUsuario_ActualizarUsuarioCompleted;
                 }
             }
             catch (Exception e)
@@ -178,6 +180,34 @@ namespace HostalDB_ViewModel.ViewModels
             }
         }
 
+        void _ServicioUsuario_ActualizarUsuarioCompleted(object sender, ActualizarUsuarioCompletedEventArgs e)
+        {
+            if (e.Result == true)
+            {
+                MessageBox.Show("El  Usuario se actualizo correctamente" );
+                ListarCommandAccion();
+            }
+            else
+            {
+                MessageBox.Show(e.Error.Message + e.Error);
+            }
+        }
+        private void _ServicioUsuario_InsertarUsuariosCompleted(object sender, InsertarUsuarioCompletedEventArgs e)
+        {
+            //Este metodo se ejecuta cuando se ACABA DE GUARDAR un nuevo usuario a la BD
+            //metodo que me devuelve el Id del usuario con el que se guardo.
+            if (e.Error != null)
+            {
+                MessageBox.Show(e.Error.Message + e.Error);
+            }
+            else
+            {
+                MessageBox.Show("Usuario Agregado con ID: " + e.Result.ToString());
+                ListarCommandAccion();
+            }
+        }
+
+       
         private void BuscarCommandAccion()
         {
             
@@ -224,21 +254,6 @@ namespace HostalDB_ViewModel.ViewModels
             else 
             {
                 MessageBox.Show(e.Result ? "Se elimino Correctamente" : "No se pudo eliminar" + "Estado usuario");
-                ListarCommandAccion();
-            }
-        }
-
-        private void _ServicioUsuario_InsertarUsuariosCompleted(object sender, InsertarUsuarioCompletedEventArgs e)
-        {
-            //Este metodo se ejecuta cuando se ACABA DE GUARDAR un nuevo usuario a la BD
-            //metodo que me devuelve el Id del usuario con el que se guardo.
-            if (e.Error != null)
-            {
-                MessageBox.Show(e.Error.Message + e.Error);
-            }
-            else
-            {
-                MessageBox.Show("Usuario Agregado con ID: " + e.Result.ToString() );
                 ListarCommandAccion();
             }
         }

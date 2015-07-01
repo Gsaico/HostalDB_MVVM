@@ -113,6 +113,10 @@
       <Project>{ada46970-d0e3-4606-a5dd-d8fa670cdcd9}</Project>
       <Name>LogicaDeNegocios</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PersistenciaDatos\PersistenciaDatos.csproj">
+      <Project>{6022feb9-d289-4333-91e9-45d2189a0c08}</Project>
+      <Name>PersistenciaDatos</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

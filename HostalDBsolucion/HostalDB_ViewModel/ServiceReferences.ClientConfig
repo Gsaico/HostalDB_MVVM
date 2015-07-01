@@ -6,14 +6,6 @@
                     maxReceivedMessageSize="2147483647">
                     <security mode="None" />
                 </binding>
-                <binding name="BasicHttpBinding_IHabitacionService" maxBufferSize="2147483647"
-                    maxReceivedMessageSize="2147483647">
-                    <security mode="None" />
-                </binding>
-                <binding name="BasicHttpBinding_IUserService1" maxBufferSize="2147483647"
-                    maxReceivedMessageSize="2147483647">
-                    <security mode="None" />
-                </binding>
                 <binding name="BasicHttpBinding_IHabitacionService1" maxBufferSize="2147483647"
                     maxReceivedMessageSize="2147483647">
                     <security mode="None" />
@@ -290,16 +282,49 @@
                     maxReceivedMessageSize="2147483647">
                     <security mode="None" />
                 </binding>
+                <binding name="BasicHttpBinding_ICategoria_HabitacionService7"
+                    maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IComprobanteService7" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IEmpresaService7" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IHabitacionService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IHotelService1" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IReservaService9" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IReservaHabitacionService7" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_ITipoComprobanteService7" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_ITipoHabitacionService7" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_IUserService1" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
             </basicHttpBinding>
         </bindings>
         <client>
-            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
-                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IHabitacionService"
-                contract="ServiceReference_Habitacion.IHabitacionService"
-                name="BasicHttpBinding_IHabitacionService" />
-            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
-                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IUserService1"
-                contract="ServiceReference_Habitacion.IUserService" name="BasicHttpBinding_IUserService1" />
             <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
                 binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IHabitacionService1"
                 contract="ServiceReference_Reserva.IHabitacionService" name="BasicHttpBinding_IHabitacionService1" />
@@ -318,42 +343,6 @@
             <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
                 binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IUserService"
                 contract="ServiceReference_User.IUserService" name="BasicHttpBinding_IUserService" />
-            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
-                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ICategoria_HabitacionService"
-                contract="ServiceReference_CategoriaHabitacion.ICategoria_HabitacionService"
-                name="BasicHttpBinding_ICategoria_HabitacionService" />
-            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
-                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IComprobanteService"
-                contract="ServiceReference_CategoriaHabitacion.IComprobanteService"
-                name="BasicHttpBinding_IComprobanteService" />
-            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
-                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IEmpresaService"
-                contract="ServiceReference_CategoriaHabitacion.IEmpresaService"
-                name="BasicHttpBinding_IEmpresaService" />
-            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
-                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IHabitacionService3"
-                contract="ServiceReference_CategoriaHabitacion.IHabitacionService"
-                name="BasicHttpBinding_IHabitacionService3" />
-            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
-                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IReservaService2"
-                contract="ServiceReference_CategoriaHabitacion.IReservaService"
-                name="BasicHttpBinding_IReservaService2" />
-            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
-                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IReservaHabitacionService"
-                contract="ServiceReference_CategoriaHabitacion.IReservaHabitacionService"
-                name="BasicHttpBinding_IReservaHabitacionService" />
-            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
-                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ITipoComprobanteService"
-                contract="ServiceReference_CategoriaHabitacion.ITipoComprobanteService"
-                name="BasicHttpBinding_ITipoComprobanteService" />
-            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
-                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ITipoHabitacionService"
-                contract="ServiceReference_CategoriaHabitacion.ITipoHabitacionService"
-                name="BasicHttpBinding_ITipoHabitacionService" />
-            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
-                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IUserService3"
-                contract="ServiceReference_CategoriaHabitacion.IUserService"
-                name="BasicHttpBinding_IUserService3" />
             <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
                 binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ICategoria_HabitacionService1"
                 contract="ServiceReference_Comprobante.ICategoria_HabitacionService"
@@ -557,6 +546,78 @@
             <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
                 binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IUserService9"
                 contract="ServiceReference_Hotel.IUserService" name="BasicHttpBinding_IUserService9" />
+            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ICategoria_HabitacionService"
+                contract="ServiceReference_CategoriaHabitacion.ICategoria_HabitacionService"
+                name="BasicHttpBinding_ICategoria_HabitacionService" />
+            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IComprobanteService"
+                contract="ServiceReference_CategoriaHabitacion.IComprobanteService"
+                name="BasicHttpBinding_IComprobanteService" />
+            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IEmpresaService"
+                contract="ServiceReference_CategoriaHabitacion.IEmpresaService"
+                name="BasicHttpBinding_IEmpresaService" />
+            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IHabitacionService3"
+                contract="ServiceReference_CategoriaHabitacion.IHabitacionService"
+                name="BasicHttpBinding_IHabitacionService3" />
+            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IReservaService2"
+                contract="ServiceReference_CategoriaHabitacion.IReservaService"
+                name="BasicHttpBinding_IReservaService2" />
+            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IReservaHabitacionService"
+                contract="ServiceReference_CategoriaHabitacion.IReservaHabitacionService"
+                name="BasicHttpBinding_IReservaHabitacionService" />
+            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ITipoComprobanteService"
+                contract="ServiceReference_CategoriaHabitacion.ITipoComprobanteService"
+                name="BasicHttpBinding_ITipoComprobanteService" />
+            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ITipoHabitacionService"
+                contract="ServiceReference_CategoriaHabitacion.ITipoHabitacionService"
+                name="BasicHttpBinding_ITipoHabitacionService" />
+            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IUserService3"
+                contract="ServiceReference_CategoriaHabitacion.IUserService"
+                name="BasicHttpBinding_IUserService3" />
+            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ICategoria_HabitacionService7"
+                contract="ServiceReference_Habitacion.ICategoria_HabitacionService"
+                name="BasicHttpBinding_ICategoria_HabitacionService7" />
+            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IComprobanteService7"
+                contract="ServiceReference_Habitacion.IComprobanteService"
+                name="BasicHttpBinding_IComprobanteService7" />
+            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IEmpresaService7"
+                contract="ServiceReference_Habitacion.IEmpresaService" name="BasicHttpBinding_IEmpresaService7" />
+            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IHabitacionService"
+                contract="ServiceReference_Habitacion.IHabitacionService"
+                name="BasicHttpBinding_IHabitacionService" />
+            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IHotelService1"
+                contract="ServiceReference_Habitacion.IHotelService" name="BasicHttpBinding_IHotelService1" />
+            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IReservaService9"
+                contract="ServiceReference_Habitacion.IReservaService" name="BasicHttpBinding_IReservaService9" />
+            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IReservaHabitacionService7"
+                contract="ServiceReference_Habitacion.IReservaHabitacionService"
+                name="BasicHttpBinding_IReservaHabitacionService7" />
+            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ITipoComprobanteService7"
+                contract="ServiceReference_Habitacion.ITipoComprobanteService"
+                name="BasicHttpBinding_ITipoComprobanteService7" />
+            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ITipoHabitacionService7"
+                contract="ServiceReference_Habitacion.ITipoHabitacionService"
+                name="BasicHttpBinding_ITipoHabitacionService7" />
+            <endpoint address="http://localhost:4015/HostalDB_ServiceWCF.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IUserService1"
+                contract="ServiceReference_Habitacion.IUserService" name="BasicHttpBinding_IUserService1" />
         </client>
     </system.serviceModel>
 </configuration>

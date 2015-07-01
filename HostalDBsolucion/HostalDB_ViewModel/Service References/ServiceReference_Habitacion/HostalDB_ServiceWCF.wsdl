@@ -5,8 +5,129 @@
       <xsd:import schemaLocation="http://localhost:4015/HostalDB_ServiceWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:4015/HostalDB_ServiceWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:4015/HostalDB_ServiceWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Dominio.Dtos" />
+      <xsd:import schemaLocation="http://localhost:4015/HostalDB_ServiceWCF.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Dominio.Querys" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="ICategoria_HabitacionService_InsertarCategoriaHabitacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarCategoriaHabitacion" />
+  </wsdl:message>
+  <wsdl:message name="ICategoria_HabitacionService_InsertarCategoriaHabitacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarCategoriaHabitacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICategoria_HabitacionService_ActualizarCategoriaHabitacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarCategoriaHabitacion" />
+  </wsdl:message>
+  <wsdl:message name="ICategoria_HabitacionService_ActualizarCategoriaHabitacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarCategoriaHabitacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICategoria_HabitacionService_EliminarCategoriaHabitacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarCategoriaHabitacion" />
+  </wsdl:message>
+  <wsdl:message name="ICategoria_HabitacionService_EliminarCategoriaHabitacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarCategoriaHabitacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICategoria_HabitacionService_BuscarCategoriaHabitacionPorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarCategoriaHabitacionPorID" />
+  </wsdl:message>
+  <wsdl:message name="ICategoria_HabitacionService_BuscarCategoriaHabitacionPorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarCategoriaHabitacionPorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICategoria_HabitacionService_BuscarCategoriaHabitacionPorNombre_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarCategoriaHabitacionPorNombre" />
+  </wsdl:message>
+  <wsdl:message name="ICategoria_HabitacionService_BuscarCategoriaHabitacionPorNombre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarCategoriaHabitacionPorNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICategoria_HabitacionService_ListarTodosLas_CategoriaHabitacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarTodosLas_CategoriaHabitacion" />
+  </wsdl:message>
+  <wsdl:message name="ICategoria_HabitacionService_ListarTodosLas_CategoriaHabitacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarTodosLas_CategoriaHabitacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComprobanteService_InsertarComprobante_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarComprobante" />
+  </wsdl:message>
+  <wsdl:message name="IComprobanteService_InsertarComprobante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarComprobanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComprobanteService_ActualizarComprobante_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarComprobante" />
+  </wsdl:message>
+  <wsdl:message name="IComprobanteService_ActualizarComprobante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarComprobanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComprobanteService_EliminarComprobante_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarComprobante" />
+  </wsdl:message>
+  <wsdl:message name="IComprobanteService_EliminarComprobante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarComprobanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComprobanteService_BuscarComprobantePorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarComprobantePorID" />
+  </wsdl:message>
+  <wsdl:message name="IComprobanteService_BuscarComprobantePorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarComprobantePorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComprobanteService_ListarComprobantesPorIDCLIENTE_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarComprobantesPorIDCLIENTE" />
+  </wsdl:message>
+  <wsdl:message name="IComprobanteService_ListarComprobantesPorIDCLIENTE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarComprobantesPorIDCLIENTEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComprobanteService_BuscarComprobantePorIDRESERVA_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarComprobantePorIDRESERVA" />
+  </wsdl:message>
+  <wsdl:message name="IComprobanteService_BuscarComprobantePorIDRESERVA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarComprobantePorIDRESERVAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComprobanteService_ListarTodosLosComprobantes_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarTodosLosComprobantes" />
+  </wsdl:message>
+  <wsdl:message name="IComprobanteService_ListarTodosLosComprobantes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarTodosLosComprobantesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IComprobanteService_ListarComprobantesPorTIPOCOMPROBANTE_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarComprobantesPorTIPOCOMPROBANTE" />
+  </wsdl:message>
+  <wsdl:message name="IComprobanteService_ListarComprobantesPorTIPOCOMPROBANTE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarComprobantesPorTIPOCOMPROBANTEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmpresaService_InsertarEmpresa_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="IEmpresaService_InsertarEmpresa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmpresaService_ActualizarEmpresa_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="IEmpresaService_ActualizarEmpresa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmpresaService_EliminarEmpresa_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="IEmpresaService_EliminarEmpresa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmpresaService_BuscarEmpresasPorRazonSocial_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarEmpresasPorRazonSocial" />
+  </wsdl:message>
+  <wsdl:message name="IEmpresaService_BuscarEmpresasPorRazonSocial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarEmpresasPorRazonSocialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmpresaService_BuscarEmpresaPorRUC_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarEmpresaPorRUC" />
+  </wsdl:message>
+  <wsdl:message name="IEmpresaService_BuscarEmpresaPorRUC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarEmpresaPorRUCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmpresaService_ListarTodasLasEmpresas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarTodasLasEmpresas" />
+  </wsdl:message>
+  <wsdl:message name="IEmpresaService_ListarTodasLasEmpresas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarTodasLasEmpresasResponse" />
+  </wsdl:message>
   <wsdl:message name="IHabitacionService_InsertarHabitacion_InputMessage">
     <wsdl:part name="parameters" element="tns:InsertarHabitacion" />
   </wsdl:message>
@@ -61,6 +182,186 @@
   <wsdl:message name="IHabitacionService_ListarHabitacionesPorTipoDehabitacion_OutputMessage">
     <wsdl:part name="parameters" element="tns:ListarHabitacionesPorTipoDehabitacionResponse" />
   </wsdl:message>
+  <wsdl:message name="IHotelService_InsertarHotel_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarHotel" />
+  </wsdl:message>
+  <wsdl:message name="IHotelService_InsertarHotel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarHotelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHotelService_ActualizarHotel_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarHotel" />
+  </wsdl:message>
+  <wsdl:message name="IHotelService_ActualizarHotel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarHotelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHotelService_EliminarHotel_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarHotel" />
+  </wsdl:message>
+  <wsdl:message name="IHotelService_EliminarHotel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarHotelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHotelService_BuscarHotelPorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarHotelPorID" />
+  </wsdl:message>
+  <wsdl:message name="IHotelService_BuscarHotelPorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarHotelPorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHotelService_BuscarHotelPorNombre_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarHotelPorNombre" />
+  </wsdl:message>
+  <wsdl:message name="IHotelService_BuscarHotelPorNombre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarHotelPorNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHotelService_ListarTodosLosHoteles_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarTodosLosHoteles" />
+  </wsdl:message>
+  <wsdl:message name="IHotelService_ListarTodosLosHoteles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarTodosLosHotelesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReservaService_InsertarReserva_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarReserva" />
+  </wsdl:message>
+  <wsdl:message name="IReservaService_InsertarReserva_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarReservaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReservaService_ActualizarReserva_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarReserva" />
+  </wsdl:message>
+  <wsdl:message name="IReservaService_ActualizarReserva_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarReservaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReservaService_EliminarReserva_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarReserva" />
+  </wsdl:message>
+  <wsdl:message name="IReservaService_EliminarReserva_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarReservaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReservaService_BuscarReservaPorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarReservaPorID" />
+  </wsdl:message>
+  <wsdl:message name="IReservaService_BuscarReservaPorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarReservaPorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReservaService_ListarTodasLasReservas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarTodasLasReservas" />
+  </wsdl:message>
+  <wsdl:message name="IReservaService_ListarTodasLasReservas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarTodasLasReservasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReservaService_ListarReservasPorCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarReservasPorCliente" />
+  </wsdl:message>
+  <wsdl:message name="IReservaService_ListarReservasPorCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarReservasPorClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReservaHabitacionService_InsertarReservaHabitacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarReservaHabitacion" />
+  </wsdl:message>
+  <wsdl:message name="IReservaHabitacionService_InsertarReservaHabitacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarReservaHabitacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReservaHabitacionService_ActualizarReservaHabitacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarReservaHabitacion" />
+  </wsdl:message>
+  <wsdl:message name="IReservaHabitacionService_ActualizarReservaHabitacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarReservaHabitacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReservaHabitacionService_EliminarReservaHabitacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarReservaHabitacion" />
+  </wsdl:message>
+  <wsdl:message name="IReservaHabitacionService_EliminarReservaHabitacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarReservaHabitacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReservaHabitacionService_BuscarReservaHabitacionPorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarReservaHabitacionPorID" />
+  </wsdl:message>
+  <wsdl:message name="IReservaHabitacionService_BuscarReservaHabitacionPorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarReservaHabitacionPorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReservaHabitacionService_ListarReservaHabitacionPorReservaID_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarReservaHabitacionPorReservaID" />
+  </wsdl:message>
+  <wsdl:message name="IReservaHabitacionService_ListarReservaHabitacionPorReservaID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarReservaHabitacionPorReservaIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReservaHabitacionService_ListarReservasHabitacionPorHabitacionID_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarReservasHabitacionPorHabitacionID" />
+  </wsdl:message>
+  <wsdl:message name="IReservaHabitacionService_ListarReservasHabitacionPorHabitacionID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarReservasHabitacionPorHabitacionIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITipoComprobanteService_InsertarTipoComprobante_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarTipoComprobante" />
+  </wsdl:message>
+  <wsdl:message name="ITipoComprobanteService_InsertarTipoComprobante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarTipoComprobanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITipoComprobanteService_ActualizarTipoComprobante_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarTipoComprobante" />
+  </wsdl:message>
+  <wsdl:message name="ITipoComprobanteService_ActualizarTipoComprobante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarTipoComprobanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITipoComprobanteService_EliminarTipoComprobante_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarTipoComprobante" />
+  </wsdl:message>
+  <wsdl:message name="ITipoComprobanteService_EliminarTipoComprobante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarTipoComprobanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITipoComprobanteService_BuscarTipoComprobantePorNombre_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarTipoComprobantePorNombre" />
+  </wsdl:message>
+  <wsdl:message name="ITipoComprobanteService_BuscarTipoComprobantePorNombre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarTipoComprobantePorNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITipoComprobanteService_BuscarTipoComprobantePorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarTipoComprobantePorID" />
+  </wsdl:message>
+  <wsdl:message name="ITipoComprobanteService_BuscarTipoComprobantePorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarTipoComprobantePorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITipoComprobanteService_ListarTodosLosTiposDeComprobante_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarTodosLosTiposDeComprobante" />
+  </wsdl:message>
+  <wsdl:message name="ITipoComprobanteService_ListarTodosLosTiposDeComprobante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarTodosLosTiposDeComprobanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITipoHabitacionService_InsertarTipoHabitacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarTipoHabitacion" />
+  </wsdl:message>
+  <wsdl:message name="ITipoHabitacionService_InsertarTipoHabitacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarTipoHabitacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITipoHabitacionService_ActualizarTipoHabitacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarTipoHabitacion" />
+  </wsdl:message>
+  <wsdl:message name="ITipoHabitacionService_ActualizarTipoHabitacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarTipoHabitacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITipoHabitacionService_EliminarTipoHabitacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarTipoHabitacion" />
+  </wsdl:message>
+  <wsdl:message name="ITipoHabitacionService_EliminarTipoHabitacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarTipoHabitacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITipoHabitacionService_BuscarTipoHabitacionPorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarTipoHabitacionPorID" />
+  </wsdl:message>
+  <wsdl:message name="ITipoHabitacionService_BuscarTipoHabitacionPorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarTipoHabitacionPorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITipoHabitacionService_BuscarTipoHabitacionPorNombre_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarTipoHabitacionPorNombre" />
+  </wsdl:message>
+  <wsdl:message name="ITipoHabitacionService_BuscarTipoHabitacionPorNombre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarTipoHabitacionPorNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITipoHabitacionService_ListarTodosLos_TiposHabitacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarTodosLos_TiposHabitacion" />
+  </wsdl:message>
+  <wsdl:message name="ITipoHabitacionService_ListarTodosLos_TiposHabitacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarTodosLos_TiposHabitacionResponse" />
+  </wsdl:message>
   <wsdl:message name="IUserService_InsertarUsuario_InputMessage">
     <wsdl:part name="parameters" element="tns:InsertarUsuario" />
   </wsdl:message>
@@ -91,6 +392,98 @@
   <wsdl:message name="IUserService_ListarUsuarios_OutputMessage">
     <wsdl:part name="parameters" element="tns:ListarUsuariosResponse" />
   </wsdl:message>
+  <wsdl:message name="IUserService_BuscarUsuarioPorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarUsuarioPorID" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_BuscarUsuarioPorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarUsuarioPorIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICategoria_HabitacionService">
+    <wsdl:operation name="InsertarCategoriaHabitacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICategoria_HabitacionService/InsertarCategoriaHabitacion" message="tns:ICategoria_HabitacionService_InsertarCategoriaHabitacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICategoria_HabitacionService/InsertarCategoriaHabitacionResponse" message="tns:ICategoria_HabitacionService_InsertarCategoriaHabitacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCategoriaHabitacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICategoria_HabitacionService/ActualizarCategoriaHabitacion" message="tns:ICategoria_HabitacionService_ActualizarCategoriaHabitacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICategoria_HabitacionService/ActualizarCategoriaHabitacionResponse" message="tns:ICategoria_HabitacionService_ActualizarCategoriaHabitacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCategoriaHabitacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICategoria_HabitacionService/EliminarCategoriaHabitacion" message="tns:ICategoria_HabitacionService_EliminarCategoriaHabitacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICategoria_HabitacionService/EliminarCategoriaHabitacionResponse" message="tns:ICategoria_HabitacionService_EliminarCategoriaHabitacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarCategoriaHabitacionPorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICategoria_HabitacionService/BuscarCategoriaHabitacionPorID" message="tns:ICategoria_HabitacionService_BuscarCategoriaHabitacionPorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICategoria_HabitacionService/BuscarCategoriaHabitacionPorIDResponse" message="tns:ICategoria_HabitacionService_BuscarCategoriaHabitacionPorID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarCategoriaHabitacionPorNombre">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICategoria_HabitacionService/BuscarCategoriaHabitacionPorNombre" message="tns:ICategoria_HabitacionService_BuscarCategoriaHabitacionPorNombre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICategoria_HabitacionService/BuscarCategoriaHabitacionPorNombreResponse" message="tns:ICategoria_HabitacionService_BuscarCategoriaHabitacionPorNombre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarTodosLas_CategoriaHabitacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICategoria_HabitacionService/ListarTodosLas_CategoriaHabitacion" message="tns:ICategoria_HabitacionService_ListarTodosLas_CategoriaHabitacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICategoria_HabitacionService/ListarTodosLas_CategoriaHabitacionResponse" message="tns:ICategoria_HabitacionService_ListarTodosLas_CategoriaHabitacion_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IComprobanteService">
+    <wsdl:operation name="InsertarComprobante">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComprobanteService/InsertarComprobante" message="tns:IComprobanteService_InsertarComprobante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComprobanteService/InsertarComprobanteResponse" message="tns:IComprobanteService_InsertarComprobante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarComprobante">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComprobanteService/ActualizarComprobante" message="tns:IComprobanteService_ActualizarComprobante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComprobanteService/ActualizarComprobanteResponse" message="tns:IComprobanteService_ActualizarComprobante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarComprobante">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComprobanteService/EliminarComprobante" message="tns:IComprobanteService_EliminarComprobante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComprobanteService/EliminarComprobanteResponse" message="tns:IComprobanteService_EliminarComprobante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarComprobantePorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComprobanteService/BuscarComprobantePorID" message="tns:IComprobanteService_BuscarComprobantePorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComprobanteService/BuscarComprobantePorIDResponse" message="tns:IComprobanteService_BuscarComprobantePorID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarComprobantesPorIDCLIENTE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComprobanteService/ListarComprobantesPorIDCLIENTE" message="tns:IComprobanteService_ListarComprobantesPorIDCLIENTE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComprobanteService/ListarComprobantesPorIDCLIENTEResponse" message="tns:IComprobanteService_ListarComprobantesPorIDCLIENTE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarComprobantePorIDRESERVA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComprobanteService/BuscarComprobantePorIDRESERVA" message="tns:IComprobanteService_BuscarComprobantePorIDRESERVA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComprobanteService/BuscarComprobantePorIDRESERVAResponse" message="tns:IComprobanteService_BuscarComprobantePorIDRESERVA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarTodosLosComprobantes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComprobanteService/ListarTodosLosComprobantes" message="tns:IComprobanteService_ListarTodosLosComprobantes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComprobanteService/ListarTodosLosComprobantesResponse" message="tns:IComprobanteService_ListarTodosLosComprobantes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarComprobantesPorTIPOCOMPROBANTE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IComprobanteService/ListarComprobantesPorTIPOCOMPROBANTE" message="tns:IComprobanteService_ListarComprobantesPorTIPOCOMPROBANTE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IComprobanteService/ListarComprobantesPorTIPOCOMPROBANTEResponse" message="tns:IComprobanteService_ListarComprobantesPorTIPOCOMPROBANTE_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IEmpresaService">
+    <wsdl:operation name="InsertarEmpresa">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmpresaService/InsertarEmpresa" message="tns:IEmpresaService_InsertarEmpresa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmpresaService/InsertarEmpresaResponse" message="tns:IEmpresaService_InsertarEmpresa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarEmpresa">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmpresaService/ActualizarEmpresa" message="tns:IEmpresaService_ActualizarEmpresa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmpresaService/ActualizarEmpresaResponse" message="tns:IEmpresaService_ActualizarEmpresa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEmpresa">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmpresaService/EliminarEmpresa" message="tns:IEmpresaService_EliminarEmpresa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmpresaService/EliminarEmpresaResponse" message="tns:IEmpresaService_EliminarEmpresa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEmpresasPorRazonSocial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmpresaService/BuscarEmpresasPorRazonSocial" message="tns:IEmpresaService_BuscarEmpresasPorRazonSocial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmpresaService/BuscarEmpresasPorRazonSocialResponse" message="tns:IEmpresaService_BuscarEmpresasPorRazonSocial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEmpresaPorRUC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmpresaService/BuscarEmpresaPorRUC" message="tns:IEmpresaService_BuscarEmpresaPorRUC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmpresaService/BuscarEmpresaPorRUCResponse" message="tns:IEmpresaService_BuscarEmpresaPorRUC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarTodasLasEmpresas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmpresaService/ListarTodasLasEmpresas" message="tns:IEmpresaService_ListarTodasLasEmpresas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmpresaService/ListarTodasLasEmpresasResponse" message="tns:IEmpresaService_ListarTodasLasEmpresas_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
   <wsdl:portType name="IHabitacionService">
     <wsdl:operation name="InsertarHabitacion">
       <wsdl:input wsaw:Action="http://tempuri.org/IHabitacionService/InsertarHabitacion" message="tns:IHabitacionService_InsertarHabitacion_InputMessage" />
@@ -129,6 +522,136 @@
       <wsdl:output wsaw:Action="http://tempuri.org/IHabitacionService/ListarHabitacionesPorTipoDehabitacionResponse" message="tns:IHabitacionService_ListarHabitacionesPorTipoDehabitacion_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
+  <wsdl:portType name="IHotelService">
+    <wsdl:operation name="InsertarHotel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHotelService/InsertarHotel" message="tns:IHotelService_InsertarHotel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHotelService/InsertarHotelResponse" message="tns:IHotelService_InsertarHotel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarHotel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHotelService/ActualizarHotel" message="tns:IHotelService_ActualizarHotel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHotelService/ActualizarHotelResponse" message="tns:IHotelService_ActualizarHotel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarHotel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHotelService/EliminarHotel" message="tns:IHotelService_EliminarHotel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHotelService/EliminarHotelResponse" message="tns:IHotelService_EliminarHotel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarHotelPorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHotelService/BuscarHotelPorID" message="tns:IHotelService_BuscarHotelPorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHotelService/BuscarHotelPorIDResponse" message="tns:IHotelService_BuscarHotelPorID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarHotelPorNombre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHotelService/BuscarHotelPorNombre" message="tns:IHotelService_BuscarHotelPorNombre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHotelService/BuscarHotelPorNombreResponse" message="tns:IHotelService_BuscarHotelPorNombre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarTodosLosHoteles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHotelService/ListarTodosLosHoteles" message="tns:IHotelService_ListarTodosLosHoteles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHotelService/ListarTodosLosHotelesResponse" message="tns:IHotelService_ListarTodosLosHoteles_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IReservaService">
+    <wsdl:operation name="InsertarReserva">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReservaService/InsertarReserva" message="tns:IReservaService_InsertarReserva_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReservaService/InsertarReservaResponse" message="tns:IReservaService_InsertarReserva_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarReserva">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReservaService/ActualizarReserva" message="tns:IReservaService_ActualizarReserva_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReservaService/ActualizarReservaResponse" message="tns:IReservaService_ActualizarReserva_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarReserva">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReservaService/EliminarReserva" message="tns:IReservaService_EliminarReserva_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReservaService/EliminarReservaResponse" message="tns:IReservaService_EliminarReserva_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarReservaPorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReservaService/BuscarReservaPorID" message="tns:IReservaService_BuscarReservaPorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReservaService/BuscarReservaPorIDResponse" message="tns:IReservaService_BuscarReservaPorID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarTodasLasReservas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReservaService/ListarTodasLasReservas" message="tns:IReservaService_ListarTodasLasReservas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReservaService/ListarTodasLasReservasResponse" message="tns:IReservaService_ListarTodasLasReservas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarReservasPorCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReservaService/ListarReservasPorCliente" message="tns:IReservaService_ListarReservasPorCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReservaService/ListarReservasPorClienteResponse" message="tns:IReservaService_ListarReservasPorCliente_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IReservaHabitacionService">
+    <wsdl:operation name="InsertarReservaHabitacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReservaHabitacionService/InsertarReservaHabitacion" message="tns:IReservaHabitacionService_InsertarReservaHabitacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReservaHabitacionService/InsertarReservaHabitacionResponse" message="tns:IReservaHabitacionService_InsertarReservaHabitacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarReservaHabitacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReservaHabitacionService/ActualizarReservaHabitacion" message="tns:IReservaHabitacionService_ActualizarReservaHabitacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReservaHabitacionService/ActualizarReservaHabitacionResponse" message="tns:IReservaHabitacionService_ActualizarReservaHabitacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarReservaHabitacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReservaHabitacionService/EliminarReservaHabitacion" message="tns:IReservaHabitacionService_EliminarReservaHabitacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReservaHabitacionService/EliminarReservaHabitacionResponse" message="tns:IReservaHabitacionService_EliminarReservaHabitacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarReservaHabitacionPorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReservaHabitacionService/BuscarReservaHabitacionPorID" message="tns:IReservaHabitacionService_BuscarReservaHabitacionPorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReservaHabitacionService/BuscarReservaHabitacionPorIDResponse" message="tns:IReservaHabitacionService_BuscarReservaHabitacionPorID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarReservaHabitacionPorReservaID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReservaHabitacionService/ListarReservaHabitacionPorReservaID" message="tns:IReservaHabitacionService_ListarReservaHabitacionPorReservaID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReservaHabitacionService/ListarReservaHabitacionPorReservaIDResponse" message="tns:IReservaHabitacionService_ListarReservaHabitacionPorReservaID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarReservasHabitacionPorHabitacionID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReservaHabitacionService/ListarReservasHabitacionPorHabitacionID" message="tns:IReservaHabitacionService_ListarReservasHabitacionPorHabitacionID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReservaHabitacionService/ListarReservasHabitacionPorHabitacionIDResponse" message="tns:IReservaHabitacionService_ListarReservasHabitacionPorHabitacionID_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ITipoComprobanteService">
+    <wsdl:operation name="InsertarTipoComprobante">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITipoComprobanteService/InsertarTipoComprobante" message="tns:ITipoComprobanteService_InsertarTipoComprobante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITipoComprobanteService/InsertarTipoComprobanteResponse" message="tns:ITipoComprobanteService_InsertarTipoComprobante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTipoComprobante">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITipoComprobanteService/ActualizarTipoComprobante" message="tns:ITipoComprobanteService_ActualizarTipoComprobante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITipoComprobanteService/ActualizarTipoComprobanteResponse" message="tns:ITipoComprobanteService_ActualizarTipoComprobante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTipoComprobante">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITipoComprobanteService/EliminarTipoComprobante" message="tns:ITipoComprobanteService_EliminarTipoComprobante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITipoComprobanteService/EliminarTipoComprobanteResponse" message="tns:ITipoComprobanteService_EliminarTipoComprobante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarTipoComprobantePorNombre">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITipoComprobanteService/BuscarTipoComprobantePorNombre" message="tns:ITipoComprobanteService_BuscarTipoComprobantePorNombre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITipoComprobanteService/BuscarTipoComprobantePorNombreResponse" message="tns:ITipoComprobanteService_BuscarTipoComprobantePorNombre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarTipoComprobantePorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITipoComprobanteService/BuscarTipoComprobantePorID" message="tns:ITipoComprobanteService_BuscarTipoComprobantePorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITipoComprobanteService/BuscarTipoComprobantePorIDResponse" message="tns:ITipoComprobanteService_BuscarTipoComprobantePorID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarTodosLosTiposDeComprobante">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITipoComprobanteService/ListarTodosLosTiposDeComprobante" message="tns:ITipoComprobanteService_ListarTodosLosTiposDeComprobante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITipoComprobanteService/ListarTodosLosTiposDeComprobanteResponse" message="tns:ITipoComprobanteService_ListarTodosLosTiposDeComprobante_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ITipoHabitacionService">
+    <wsdl:operation name="InsertarTipoHabitacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITipoHabitacionService/InsertarTipoHabitacion" message="tns:ITipoHabitacionService_InsertarTipoHabitacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITipoHabitacionService/InsertarTipoHabitacionResponse" message="tns:ITipoHabitacionService_InsertarTipoHabitacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTipoHabitacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITipoHabitacionService/ActualizarTipoHabitacion" message="tns:ITipoHabitacionService_ActualizarTipoHabitacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITipoHabitacionService/ActualizarTipoHabitacionResponse" message="tns:ITipoHabitacionService_ActualizarTipoHabitacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTipoHabitacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITipoHabitacionService/EliminarTipoHabitacion" message="tns:ITipoHabitacionService_EliminarTipoHabitacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITipoHabitacionService/EliminarTipoHabitacionResponse" message="tns:ITipoHabitacionService_EliminarTipoHabitacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarTipoHabitacionPorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITipoHabitacionService/BuscarTipoHabitacionPorID" message="tns:ITipoHabitacionService_BuscarTipoHabitacionPorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITipoHabitacionService/BuscarTipoHabitacionPorIDResponse" message="tns:ITipoHabitacionService_BuscarTipoHabitacionPorID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarTipoHabitacionPorNombre">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITipoHabitacionService/BuscarTipoHabitacionPorNombre" message="tns:ITipoHabitacionService_BuscarTipoHabitacionPorNombre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITipoHabitacionService/BuscarTipoHabitacionPorNombreResponse" message="tns:ITipoHabitacionService_BuscarTipoHabitacionPorNombre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarTodosLos_TiposHabitacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITipoHabitacionService/ListarTodosLos_TiposHabitacion" message="tns:ITipoHabitacionService_ListarTodosLos_TiposHabitacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITipoHabitacionService/ListarTodosLos_TiposHabitacionResponse" message="tns:ITipoHabitacionService_ListarTodosLos_TiposHabitacion_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
   <wsdl:portType name="IUserService">
     <wsdl:operation name="InsertarUsuario">
       <wsdl:input wsaw:Action="http://tempuri.org/IUserService/InsertarUsuario" message="tns:IUserService_InsertarUsuario_InputMessage" />
@@ -150,7 +673,200 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IUserService/ListarUsuarios" message="tns:IUserService_ListarUsuarios_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IUserService/ListarUsuariosResponse" message="tns:IUserService_ListarUsuarios_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="BuscarUsuarioPorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/BuscarUsuarioPorID" message="tns:IUserService_BuscarUsuarioPorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/BuscarUsuarioPorIDResponse" message="tns:IUserService_BuscarUsuarioPorID_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICategoria_HabitacionService" type="tns:ICategoria_HabitacionService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertarCategoriaHabitacion">
+      <soap:operation soapAction="http://tempuri.org/ICategoria_HabitacionService/InsertarCategoriaHabitacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCategoriaHabitacion">
+      <soap:operation soapAction="http://tempuri.org/ICategoria_HabitacionService/ActualizarCategoriaHabitacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCategoriaHabitacion">
+      <soap:operation soapAction="http://tempuri.org/ICategoria_HabitacionService/EliminarCategoriaHabitacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarCategoriaHabitacionPorID">
+      <soap:operation soapAction="http://tempuri.org/ICategoria_HabitacionService/BuscarCategoriaHabitacionPorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarCategoriaHabitacionPorNombre">
+      <soap:operation soapAction="http://tempuri.org/ICategoria_HabitacionService/BuscarCategoriaHabitacionPorNombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarTodosLas_CategoriaHabitacion">
+      <soap:operation soapAction="http://tempuri.org/ICategoria_HabitacionService/ListarTodosLas_CategoriaHabitacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IComprobanteService" type="tns:IComprobanteService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertarComprobante">
+      <soap:operation soapAction="http://tempuri.org/IComprobanteService/InsertarComprobante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarComprobante">
+      <soap:operation soapAction="http://tempuri.org/IComprobanteService/ActualizarComprobante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarComprobante">
+      <soap:operation soapAction="http://tempuri.org/IComprobanteService/EliminarComprobante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarComprobantePorID">
+      <soap:operation soapAction="http://tempuri.org/IComprobanteService/BuscarComprobantePorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarComprobantesPorIDCLIENTE">
+      <soap:operation soapAction="http://tempuri.org/IComprobanteService/ListarComprobantesPorIDCLIENTE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarComprobantePorIDRESERVA">
+      <soap:operation soapAction="http://tempuri.org/IComprobanteService/BuscarComprobantePorIDRESERVA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarTodosLosComprobantes">
+      <soap:operation soapAction="http://tempuri.org/IComprobanteService/ListarTodosLosComprobantes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarComprobantesPorTIPOCOMPROBANTE">
+      <soap:operation soapAction="http://tempuri.org/IComprobanteService/ListarComprobantesPorTIPOCOMPROBANTE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IEmpresaService" type="tns:IEmpresaService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertarEmpresa">
+      <soap:operation soapAction="http://tempuri.org/IEmpresaService/InsertarEmpresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarEmpresa">
+      <soap:operation soapAction="http://tempuri.org/IEmpresaService/ActualizarEmpresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEmpresa">
+      <soap:operation soapAction="http://tempuri.org/IEmpresaService/EliminarEmpresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEmpresasPorRazonSocial">
+      <soap:operation soapAction="http://tempuri.org/IEmpresaService/BuscarEmpresasPorRazonSocial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEmpresaPorRUC">
+      <soap:operation soapAction="http://tempuri.org/IEmpresaService/BuscarEmpresaPorRUC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarTodasLasEmpresas">
+      <soap:operation soapAction="http://tempuri.org/IEmpresaService/ListarTodasLasEmpresas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
   <wsdl:binding name="BasicHttpBinding_IHabitacionService" type="tns:IHabitacionService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="InsertarHabitacion">
@@ -235,6 +951,291 @@
       </wsdl:output>
     </wsdl:operation>
   </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IHotelService" type="tns:IHotelService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertarHotel">
+      <soap:operation soapAction="http://tempuri.org/IHotelService/InsertarHotel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarHotel">
+      <soap:operation soapAction="http://tempuri.org/IHotelService/ActualizarHotel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarHotel">
+      <soap:operation soapAction="http://tempuri.org/IHotelService/EliminarHotel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarHotelPorID">
+      <soap:operation soapAction="http://tempuri.org/IHotelService/BuscarHotelPorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarHotelPorNombre">
+      <soap:operation soapAction="http://tempuri.org/IHotelService/BuscarHotelPorNombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarTodosLosHoteles">
+      <soap:operation soapAction="http://tempuri.org/IHotelService/ListarTodosLosHoteles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IReservaService" type="tns:IReservaService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertarReserva">
+      <soap:operation soapAction="http://tempuri.org/IReservaService/InsertarReserva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarReserva">
+      <soap:operation soapAction="http://tempuri.org/IReservaService/ActualizarReserva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarReserva">
+      <soap:operation soapAction="http://tempuri.org/IReservaService/EliminarReserva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarReservaPorID">
+      <soap:operation soapAction="http://tempuri.org/IReservaService/BuscarReservaPorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarTodasLasReservas">
+      <soap:operation soapAction="http://tempuri.org/IReservaService/ListarTodasLasReservas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarReservasPorCliente">
+      <soap:operation soapAction="http://tempuri.org/IReservaService/ListarReservasPorCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IReservaHabitacionService" type="tns:IReservaHabitacionService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertarReservaHabitacion">
+      <soap:operation soapAction="http://tempuri.org/IReservaHabitacionService/InsertarReservaHabitacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarReservaHabitacion">
+      <soap:operation soapAction="http://tempuri.org/IReservaHabitacionService/ActualizarReservaHabitacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarReservaHabitacion">
+      <soap:operation soapAction="http://tempuri.org/IReservaHabitacionService/EliminarReservaHabitacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarReservaHabitacionPorID">
+      <soap:operation soapAction="http://tempuri.org/IReservaHabitacionService/BuscarReservaHabitacionPorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarReservaHabitacionPorReservaID">
+      <soap:operation soapAction="http://tempuri.org/IReservaHabitacionService/ListarReservaHabitacionPorReservaID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarReservasHabitacionPorHabitacionID">
+      <soap:operation soapAction="http://tempuri.org/IReservaHabitacionService/ListarReservasHabitacionPorHabitacionID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_ITipoComprobanteService" type="tns:ITipoComprobanteService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertarTipoComprobante">
+      <soap:operation soapAction="http://tempuri.org/ITipoComprobanteService/InsertarTipoComprobante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTipoComprobante">
+      <soap:operation soapAction="http://tempuri.org/ITipoComprobanteService/ActualizarTipoComprobante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTipoComprobante">
+      <soap:operation soapAction="http://tempuri.org/ITipoComprobanteService/EliminarTipoComprobante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarTipoComprobantePorNombre">
+      <soap:operation soapAction="http://tempuri.org/ITipoComprobanteService/BuscarTipoComprobantePorNombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarTipoComprobantePorID">
+      <soap:operation soapAction="http://tempuri.org/ITipoComprobanteService/BuscarTipoComprobantePorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarTodosLosTiposDeComprobante">
+      <soap:operation soapAction="http://tempuri.org/ITipoComprobanteService/ListarTodosLosTiposDeComprobante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_ITipoHabitacionService" type="tns:ITipoHabitacionService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertarTipoHabitacion">
+      <soap:operation soapAction="http://tempuri.org/ITipoHabitacionService/InsertarTipoHabitacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTipoHabitacion">
+      <soap:operation soapAction="http://tempuri.org/ITipoHabitacionService/ActualizarTipoHabitacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTipoHabitacion">
+      <soap:operation soapAction="http://tempuri.org/ITipoHabitacionService/EliminarTipoHabitacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarTipoHabitacionPorID">
+      <soap:operation soapAction="http://tempuri.org/ITipoHabitacionService/BuscarTipoHabitacionPorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarTipoHabitacionPorNombre">
+      <soap:operation soapAction="http://tempuri.org/ITipoHabitacionService/BuscarTipoHabitacionPorNombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarTodosLos_TiposHabitacion">
+      <soap:operation soapAction="http://tempuri.org/ITipoHabitacionService/ListarTodosLos_TiposHabitacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
   <wsdl:binding name="BasicHttpBinding_IUserService" type="tns:IUserService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="InsertarUsuario">
@@ -282,9 +1283,42 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="BuscarUsuarioPorID">
+      <soap:operation soapAction="http://tempuri.org/IUserService/BuscarUsuarioPorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="HostalDB_ServiceWCF">
+    <wsdl:port name="BasicHttpBinding_ICategoria_HabitacionService" binding="tns:BasicHttpBinding_ICategoria_HabitacionService">
+      <soap:address location="http://localhost:4015/HostalDB_ServiceWCF.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IComprobanteService" binding="tns:BasicHttpBinding_IComprobanteService">
+      <soap:address location="http://localhost:4015/HostalDB_ServiceWCF.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IEmpresaService" binding="tns:BasicHttpBinding_IEmpresaService">
+      <soap:address location="http://localhost:4015/HostalDB_ServiceWCF.svc" />
+    </wsdl:port>
     <wsdl:port name="BasicHttpBinding_IHabitacionService" binding="tns:BasicHttpBinding_IHabitacionService">
+      <soap:address location="http://localhost:4015/HostalDB_ServiceWCF.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IHotelService" binding="tns:BasicHttpBinding_IHotelService">
+      <soap:address location="http://localhost:4015/HostalDB_ServiceWCF.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IReservaService" binding="tns:BasicHttpBinding_IReservaService">
+      <soap:address location="http://localhost:4015/HostalDB_ServiceWCF.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IReservaHabitacionService" binding="tns:BasicHttpBinding_IReservaHabitacionService">
+      <soap:address location="http://localhost:4015/HostalDB_ServiceWCF.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_ITipoComprobanteService" binding="tns:BasicHttpBinding_ITipoComprobanteService">
+      <soap:address location="http://localhost:4015/HostalDB_ServiceWCF.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_ITipoHabitacionService" binding="tns:BasicHttpBinding_ITipoHabitacionService">
       <soap:address location="http://localhost:4015/HostalDB_ServiceWCF.svc" />
     </wsdl:port>
     <wsdl:port name="BasicHttpBinding_IUserService" binding="tns:BasicHttpBinding_IUserService">

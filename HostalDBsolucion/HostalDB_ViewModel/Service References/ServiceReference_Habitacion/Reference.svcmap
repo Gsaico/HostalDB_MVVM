@@ -9,7 +9,7 @@
     <GenerateMessageContracts>false</GenerateMessageContracts>
     <NamespaceMappings />
     <CollectionMappings>
-      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
     </CollectionMappings>
     <GenerateSerializableTypes>false</GenerateSerializableTypes>
     <Serializer>Auto</Serializer>
@@ -23,11 +23,12 @@
     <MetadataSource Address="http://localhost:4015/HostalDB_ServiceWCF.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="HostalDB_ServiceWCF.xsd" MetadataType="Schema" ID="86d0d9e4-5f09-4e1b-bed1-9dffca4733ea" SourceId="1" SourceUrl="http://localhost:4015/HostalDB_ServiceWCF.svc?xsd=xsd0" />
     <MetadataFile FileName="HostalDB_ServiceWCF.disco" MetadataType="Disco" ID="cdd93a45-e6cf-4163-a8bb-c12785102b99" SourceId="1" SourceUrl="http://localhost:4015/HostalDB_ServiceWCF.svc?disco" />
-    <MetadataFile FileName="HostalDB_ServiceWCF1.xsd" MetadataType="Schema" ID="0c62f99a-dccc-4cf7-ac47-7febe8c64680" SourceId="1" SourceUrl="http://localhost:4015/HostalDB_ServiceWCF.svc?xsd=xsd1" />
     <MetadataFile FileName="HostalDB_ServiceWCF.wsdl" MetadataType="Wsdl" ID="ba0dccba-2d90-477a-8d6d-21ba602c5733" SourceId="1" SourceUrl="http://localhost:4015/HostalDB_ServiceWCF.svc?wsdl" />
+    <MetadataFile FileName="HostalDB_ServiceWCF.xsd" MetadataType="Schema" ID="86d0d9e4-5f09-4e1b-bed1-9dffca4733ea" SourceId="1" SourceUrl="http://localhost:4015/HostalDB_ServiceWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="HostalDB_ServiceWCF1.xsd" MetadataType="Schema" ID="0c62f99a-dccc-4cf7-ac47-7febe8c64680" SourceId="1" SourceUrl="http://localhost:4015/HostalDB_ServiceWCF.svc?xsd=xsd1" />
     <MetadataFile FileName="HostalDB_ServiceWCF2.xsd" MetadataType="Schema" ID="7b5b1992-254a-406f-8954-76832013a92f" SourceId="1" SourceUrl="http://localhost:4015/HostalDB_ServiceWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="HostalDB_ServiceWCF3.xsd" MetadataType="Schema" ID="e08558ed-8197-4305-93d8-ddbdaafdc1b4" SourceId="1" SourceUrl="http://localhost:4015/HostalDB_ServiceWCF.svc?xsd=xsd3" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

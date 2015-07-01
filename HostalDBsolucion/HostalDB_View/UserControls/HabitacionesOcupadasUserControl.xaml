@@ -1,12 +1,29 @@
-﻿<UserControl x:Class="HostalDB_View.UserControls.HabitacionesOcupadasUserControl"
+﻿<UserControl
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="HostalDB_View.UserControls.HabitacionesOcupadasUserControl"
+      xmlns:ViewModels="clr-namespace:HostalDB_ViewModel.ViewModels;assembly=HostalDB_ViewModel" 
+     xmlns:vm="clr-namespace:HostalDB_ViewModel.ViewModels;assembly=HostalDB_ViewModel" 
     mc:Ignorable="d"
     d:DesignHeight="750" d:DesignWidth="1000">
-    
-    <Grid x:Name="LayoutRoot" Background="White">
+    <UserControl.Resources>
+        <vm:HabitacionViewModel x:Key="HabitacionViewModel" />
+    </UserControl.Resources>
 
+    <Grid x:Name="LayoutRoot" Background="White"  DataContext="{Binding Source={StaticResource HabitacionViewModel}}">
+
+        <sdk:DataGrid HorizontalAlignment="Left" Height="688" Margin="10,52,0,0" VerticalAlignment="Top" Width="951" AutoGenerateColumns="False" 
+                       ItemsSource="{Binding ListarHabitaciones,Mode=TwoWay}"
+                      SelectedItem="{Binding ItemHabitacion,Mode=TwoWay}" >
+
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding habitacion_id}"  />
+
+
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button  x:Name ="btnhabitacionesocupadas" Command="{Binding ListarHabitacionesOcupadasCommand}" Content="habitaciones Ocupadas" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top" Width="161"/>
     </Grid>
 </UserControl>

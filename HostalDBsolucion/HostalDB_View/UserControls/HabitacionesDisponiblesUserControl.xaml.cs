@@ -18,5 +18,34 @@ namespace HostalDB_View.UserControls
         {
             InitializeComponent();
         }
+        HostalDB_ViewModel.ServiceReference_Habitacion.HabitacionServiceClient _Serviciohabitacion = new HostalDB_ViewModel.ServiceReference_Habitacion.HabitacionServiceClient();
+       
+       
+
+        void _Serviciohabitacion_ListarHabitacionesDisponiblesCompleted(object sender, HostalDB_ViewModel.ServiceReference_Habitacion.ListarHabitacionesDisponiblesCompletedEventArgs e)
+        {
+            dgvHabitacionesDisponibles.SelectedItems.Clear();
+            if (e.Error != null)
+            {
+                MessageBox.Show(e.Error.Message + e.Error);
+                return;
+            }
+            else
+            {
+                dgvHabitacionesDisponibles.ItemsSource = e.Result;
+
+            }
+            _Serviciohabitacion.ListarHabitacionesDisponiblesCompleted -= _Serviciohabitacion_ListarHabitacionesDisponiblesCompleted;
+        }
+
+        private void LayoutRoot_Loaded(object sender, RoutedEventArgs e)
+        {
+            _Serviciohabitacion.ListarHabitacionesDisponiblesAsync();
+            _Serviciohabitacion.ListarHabitacionesDisponiblesCompleted += _Serviciohabitacion_ListarHabitacionesDisponiblesCompleted;
+        }
+
+       
+
+       
     }
 }

@@ -3680,6 +3680,8 @@ namespace HostalDB_ViewModel.ServiceReference_User {
                 base(exception, cancelled, userState) {
             this.results = results;
         }
+
+      
         
         public System.Collections.ObjectModel.ObservableCollection<HostalDB_ViewModel.ServiceReference_User.userDTO> Result {
             get {

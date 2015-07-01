@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PersistenciaDatos;
+using System.Collections;
 
 namespace Dominio.Querys.Habitacion
 {
@@ -14,7 +15,7 @@ namespace Dominio.Querys.Habitacion
         bool EliminarHabitacion(int idHabitacion);
         Dtos.habitacionDTO BuscarHabitacionPorID(int idHabitacion);
         List<Dtos.habitacionDTO> ListarTodasLasHabitaciones();
-        List<Dtos.habitacionDTO> ListarHabitacionesDisponibles();
+        List<ListarHabitacionesDisponiblesClass> ListarHabitacionesDisponibles();
         List<Dtos.habitacionDTO> ListarHabitacionesOcupadas();
         List<Dtos.habitacionDTO> ListarHabitacionesPorCategoria(int idCategoria);
         List<Dtos.habitacionDTO> ListarHabitacionesPorTipoDehabitacion(int idTipohabitacion);

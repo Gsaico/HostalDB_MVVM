@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -71,7 +72,7 @@ namespace ServiciosWCF
             }
         }
 
-        public List<Dominio.Dtos.habitacionDTO> ListarHabitacionesDisponibles()
+        public List<Dominio.Querys.ListarHabitacionesDisponiblesClass> ListarHabitacionesDisponibles()
         {
             try
             {
@@ -118,5 +119,6 @@ namespace ServiciosWCF
                 throw new NotImplementedException();
             }
         }
+        
     }
 }

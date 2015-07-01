@@ -14,13 +14,14 @@ using System.Collections.ObjectModel;
 using HostalDB_ViewModel.Commands;
 using HostalDB_ViewModel.ServiceReference_Reserva;
 using HostalDB_ViewModel.ServiceReference_User;
-
+using HostalDB_ViewModel.ServiceReference_ReservaHabitacion;
 namespace HostalDB_ViewModel.ViewModels
 {
     public class MaestroDetalleReservasDelCliente_VM : ViewModelBase
     {
         private ServiceReference_User.UserServiceClient _ServicioUsuario;
         private ServiceReference_Reserva.ReservaServiceClient _ServicioReserva;
+        private ServiceReference_ReservaHabitacion.ReservaHabitacionServiceClient _ServicioReservaHabitaciones;
 
         #region propiedades Usuario
 
@@ -105,6 +106,47 @@ namespace HostalDB_ViewModel.ViewModels
 
         #endregion
 
+        #region Propiedades Reserva_Habitaciones
+
+        private ObservableCollection<ServiceReference_ReservaHabitacion.reserva_habitacionDTO > _ListaReservasHabitaciones;
+
+        public ObservableCollection<ServiceReference_ReservaHabitacion.reserva_habitacionDTO> ListaReservasHabitaciones
+        {
+            get { return _ListaReservasHabitaciones; }
+            set
+            {
+                _ListaReservasHabitaciones = value;
+                RaisePropertyChanged("ListaReservasHabitaciones");
+
+            }
+        }
+
+        private ServiceReference_ReservaHabitacion.reserva_habitacionDTO _ItemReservaHabitaciones;
+
+        public ServiceReference_ReservaHabitacion.reserva_habitacionDTO ItemReservaHabitaciones
+        {
+            get { return _ItemReservaHabitaciones; }
+            set
+            {
+                _ItemReservaHabitaciones = value;
+                RaisePropertyChanged("ItemReservaHabitaciones");
+            }
+        }
+
+        private int _parametroBusqueda_IDreservaHabitacion;
+        public int ParametroBusqueda_IDreservaHabitacion
+        {
+            get { return _parametroBusqueda_IDreservaHabitacion; }
+            set
+            {
+                if (_parametroBusqueda_IDreservaHabitacion == value) return;
+                _parametroBusqueda_IDreservaHabitacion = value;
+                RaisePropertyChanged("ParametroBusqueda_IDreservahabitacion");
+            }
+        }
+
+        #endregion
+
         #region Constructor
         public MaestroDetalleReservasDelCliente_VM()
         {
@@ -112,19 +154,29 @@ namespace HostalDB_ViewModel.ViewModels
 
             _ServicioReserva = new ServiceReference_Reserva.ReservaServiceClient();
             _ServicioUsuario = new ServiceReference_User.UserServiceClient();
+            _ServicioReservaHabitaciones = new ServiceReference_ReservaHabitacion.ReservaHabitacionServiceClient();
 
             ListarUsuarios = new ObservableCollection<ServiceReference_User.userDTO>();
             ItemUsuario = new ServiceReference_User.userDTO();
+
             ListaReservas = new ObservableCollection<ServiceReference_Reserva.reservaDTO>();
             ItemReserva = new ServiceReference_Reserva.reservaDTO();
 
-
+            ListaReservasHabitaciones = new ObservableCollection<ServiceReference_ReservaHabitacion.reserva_habitacionDTO>();
+            ItemReservaHabitaciones = new ServiceReference_ReservaHabitacion.reserva_habitacionDTO();
 
             BuscarUsuarioPorIDCommand = new CommandBase(p => true, p => BuscarUsuarioPorIDCommandAccion()) { IsEnable = true };
 
+            ItemSeleccionadoCommand = new CommandBase(p => true, p => ItemSeleccionadoCommandAccion()) { IsEnable = true };
         
 
 
+        }
+
+        private void ItemSeleccionadoCommandAccion()
+        {
+           
+          
         }
 
 
@@ -152,6 +204,20 @@ namespace HostalDB_ViewModel.ViewModels
             }
         }
 
+        private void _ServicioUsuario_BuscarUsuarioPorIDCompleted(object sender, ServiceReference_User.BuscarUsuarioPorIDCompletedEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                MessageBox.Show(e.Error.Message + e.Error);
+            }
+            else
+            {
+
+                ItemUsuario = e.Result;
+            }
+        }
+
+       
         void _ServicioReserva_ListarReservasPorClienteCompleted(object sender, ServiceReference_Reserva.ListarReservasPorClienteCompletedEventArgs e)
         {
             ListaReservas.Clear();
@@ -173,21 +239,7 @@ namespace HostalDB_ViewModel.ViewModels
             _ServicioReserva.ListarReservasPorClienteCompleted -= _ServicioReserva_ListarReservasPorClienteCompleted;
         }
 
-        private void _ServicioUsuario_BuscarUsuarioPorIDCompleted(object sender, BuscarUsuarioPorIDCompletedEventArgs e)
-        {
-            if (e.Error != null)
-            {
-                MessageBox.Show(e.Error.Message + e.Error);
-            }
-            else
-            {
-              
-                ItemUsuario = e.Result; 
-            }
-
-
-
-        }
+       
 
         #endregion
 
@@ -196,7 +248,7 @@ namespace HostalDB_ViewModel.ViewModels
 
         public ICommand BuscarUsuarioPorIDCommand { get; set; }
 
- 
+        public ICommand ItemSeleccionadoCommand { get; set; }
 
         #endregion
     }

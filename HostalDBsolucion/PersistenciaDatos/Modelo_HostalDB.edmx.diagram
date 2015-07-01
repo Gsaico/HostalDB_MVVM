@@ -9,12 +9,12 @@
         <EntityTypeShape EntityType="HostalDBModel.categoria_habitacion" Width="1.5" PointX="8.625" PointY="6" IsExpanded="true" />
         <EntityTypeShape EntityType="HostalDBModel.comprobante" Width="1.5" PointX="8.75" PointY="16.5" IsExpanded="true" />
         <EntityTypeShape EntityType="HostalDBModel.Empresa" Width="1.5" PointX="8.75" PointY="21.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="HostalDBModel.habitacion" Width="1.5" PointX="4.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="HostalDBModel.habitacion" Width="2.375" PointX="4.75" PointY="6" IsExpanded="true" />
         <EntityTypeShape EntityType="HostalDBModel.hotel" Width="1.5" PointX="10.25" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="HostalDBModel.llamada" Width="1.5" PointX="0.5" PointY="0.625" IsExpanded="true" />
         <EntityTypeShape EntityType="HostalDBModel.minibar" Width="1.5" PointX="4.75" PointY="2.875" IsExpanded="true" />
         <EntityTypeShape EntityType="HostalDBModel.reserva" Width="1.5" PointX="4.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="HostalDBModel.reserva_habitacion" Width="1.5" PointX="4.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HostalDBModel.reserva_habitacion" Width="1.5" PointX="4.75" PointY="10.25" IsExpanded="true" />
         <EntityTypeShape EntityType="HostalDBModel.role" Width="1.5" PointX="12" PointY="12.625" IsExpanded="true" />
         <EntityTypeShape EntityType="HostalDBModel.tipo_habitacion" Width="1.5" PointX="8.625" PointY="8.25" IsExpanded="true" />
         <EntityTypeShape EntityType="HostalDBModel.tipo_llamada" Width="1.5" PointX="0.5" PointY="6.125" IsExpanded="true" />
@@ -30,14 +30,7 @@
         <AssociationConnector Association="HostalDBModel.FK_minibar_habitacion" ManuallyRouted="false" />
         <AssociationConnector Association="HostalDBModel.habitacion_ibfk_1" ManuallyRouted="false" />
         <AssociationConnector Association="HostalDBModel.habitacion_ibfk_3" ManuallyRouted="false" />
-        <AssociationConnector Association="HostalDBModel.llamada_ibfk_2" ManuallyRouted="true" >
-          <ConnectorPoint PointX="4.75" PointY="6.1400313683712122" />
-          <ConnectorPoint PointX="4.75" PointY="5.8625" />
-          <ConnectorPoint PointX="3.572916666666667" PointY="5.8625" />
-          <ConnectorPoint PointX="3.21875" PointY="5.5833333333333339" />
-          <ConnectorPoint PointX="3.21875" PointY="3.3648893229166656" />
-          <ConnectorPoint PointX="2.3761548461538462" PointY="3.3648893229166656" />
-          <ConnectorPoint PointX="2" PointY="2.9887344767628194" />
+        <AssociationConnector Association="HostalDBModel.llamada_ibfk_2" ManuallyRouted="false" >
         </AssociationConnector>
         <AssociationConnector Association="HostalDBModel.reserva_habitacion_ibfk_1" ManuallyRouted="false" />
         <AssociationConnector Association="HostalDBModel.llamada_ibfk_1" ManuallyRouted="false" />

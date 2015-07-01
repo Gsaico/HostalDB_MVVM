@@ -264,7 +264,37 @@
     <None Include="Service References\ServiceReference_Habitacion\HostalDB_ServiceWCF2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\ServiceReference_Habitacion\HostalDB_ServiceWCF3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_Habitacion\HostalDB_ViewModel.ServiceReference_Habitacion.categoria_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Habitacion\HostalDB_ViewModel.ServiceReference_Habitacion.comprobanteDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Habitacion\HostalDB_ViewModel.ServiceReference_Habitacion.EmpresaDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\ServiceReference_Habitacion\HostalDB_ViewModel.ServiceReference_Habitacion.habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Habitacion\HostalDB_ViewModel.ServiceReference_Habitacion.hotelDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Habitacion\HostalDB_ViewModel.ServiceReference_Habitacion.ListarHabitacionesDisponiblesClass.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Habitacion\HostalDB_ViewModel.ServiceReference_Habitacion.reservaDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Habitacion\HostalDB_ViewModel.ServiceReference_Habitacion.reserva_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Habitacion\HostalDB_ViewModel.ServiceReference_Habitacion.TipoComprobanteDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_Habitacion\HostalDB_ViewModel.ServiceReference_Habitacion.tipo_habitacionDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ServiceReference_Habitacion\HostalDB_ViewModel.ServiceReference_Habitacion.userDTO.datasource">

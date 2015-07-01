@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dominio;
+using System.Collections;
 
 namespace LogicaDeNegocios.Habitacion
 {
@@ -15,7 +16,7 @@ namespace LogicaDeNegocios.Habitacion
         bool EliminarHabitacion(int idHabitacion);
         Dominio.Dtos.habitacionDTO BuscarHabitacionPorID(int idHabitacion);
         List<Dominio.Dtos.habitacionDTO> ListarTodasLasHabitaciones();
-        List<Dominio.Dtos.habitacionDTO> ListarHabitacionesDisponibles();
+        List<Dominio.Querys.ListarHabitacionesDisponiblesClass> ListarHabitacionesDisponibles();
         List<Dominio.Dtos.habitacionDTO> ListarHabitacionesOcupadas();
         List<Dominio.Dtos.habitacionDTO> ListarHabitacionesPorCategoria(int idCategoria);
         List<Dominio.Dtos.habitacionDTO> ListarHabitacionesPorTipoDehabitacion(int idTipohabitacion);
