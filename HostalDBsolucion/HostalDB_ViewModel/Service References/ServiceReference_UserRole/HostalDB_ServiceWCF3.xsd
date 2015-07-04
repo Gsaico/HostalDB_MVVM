@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Dominio.Querys" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Dominio.Querys" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfListarHabitacionesDisponiblesClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ListarHabitacionesDisponiblesClass" nillable="true" type="tns:ListarHabitacionesDisponiblesClass" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfListarHabitacionesDisponiblesClass" nillable="true" type="tns:ArrayOfListarHabitacionesDisponiblesClass" />
+  <xs:complexType name="ListarHabitacionesDisponiblesClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IDHabitacion" type="xs:int" />
+      <xs:element minOccurs="0" name="IDnombrecategoria" type="xs:int" />
+      <xs:element minOccurs="0" name="IDtipohabitacion" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombrecategoria" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoHabitacion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListarHabitacionesDisponiblesClass" nillable="true" type="tns:ListarHabitacionesDisponiblesClass" />
+  <xs:complexType name="ArrayOfQuerys.ListarRolesDelUsuarioClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Querys.ListarRolesDelUsuarioClass" nillable="true" type="tns:Querys.ListarRolesDelUsuarioClass" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQuerys.ListarRolesDelUsuarioClass" nillable="true" type="tns:ArrayOfQuerys.ListarRolesDelUsuarioClass" />
+  <xs:complexType name="Querys.ListarRolesDelUsuarioClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IDrol" type="xs:int" />
+      <xs:element minOccurs="0" name="IDuser" type="xs:int" />
+      <xs:element minOccurs="0" name="IDuserrol" type="xs:int" />
+      <xs:element minOccurs="0" name="strAuthority" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Querys.ListarRolesDelUsuarioClass" nillable="true" type="tns:Querys.ListarRolesDelUsuarioClass" />
+</xs:schema>

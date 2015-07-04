@@ -13,7 +13,9 @@ using GalaSoft.MvvmLight;
 using System.Collections.ObjectModel;
 using HostalDB_ViewModel.Commands;
 using HostalDB_ViewModel.ServiceReference_User;
-using HostalDB_ViewModel.ServiceReference_Role; 
+using HostalDB_ViewModel.ServiceReference_Role;
+
+using HostalDB_ViewModel.ServiceReference_UserRole; 
 
 namespace HostalDB_ViewModel.ViewModels
 {
@@ -21,6 +23,7 @@ namespace HostalDB_ViewModel.ViewModels
     {
         private  ServiceReference_User.UserServiceClient _ServicioUsuario;
         private ServiceReference_Role.RoleServiceClient  _ServicioRole;
+        private ServiceReference_UserRole.User_RoleServiceClient _ServicioUserRole;
 
 
         #region propiedades Cliente
@@ -47,7 +50,9 @@ namespace HostalDB_ViewModel.ViewModels
             set
             {
                 _ItemUsuario = value;
+                
                 RaisePropertyChanged("ItemUsuario");
+                ListarRolesDelUsuarioCommandAccion();
             }
         }
 
@@ -95,19 +100,52 @@ namespace HostalDB_ViewModel.ViewModels
 
        #endregion
 
-        
+        #region propiedades USER ROLE
+
+
+        private ObservableCollection<ServiceReference_UserRole.user_roleDTO > _ListaUsuarioRoles;
+
+        public ObservableCollection<ServiceReference_UserRole.user_roleDTO> ListaUsuarioRoles
+        {
+            get { return _ListaUsuarioRoles; }
+            set
+            {
+                _ListaUsuarioRoles = value;
+                RaisePropertyChanged("ListaUsuarioRoles");
+
+            }
+        }
+
+        private ServiceReference_UserRole.user_roleDTO _ItemUsuarioRol;
+
+        public ServiceReference_UserRole.user_roleDTO ItemUsuarioRol
+        {
+            get { return _ItemUsuarioRol; }
+            set
+            {
+                _ItemUsuarioRol = value;
+                RaisePropertyChanged("ItemUsuarioRol");
+            }
+        }
+
+      
+        #endregion
         public UserViewModel()
         {
            if (IsInDesignMode) return;//por sia acas0
 
             _ServicioUsuario = new ServiceReference_User.UserServiceClient();
             _ServicioRole = new ServiceReference_Role.RoleServiceClient();
+            _ServicioUserRole = new ServiceReference_UserRole.User_RoleServiceClient();
 
             ListarUsuarios = new ObservableCollection<ServiceReference_User.userDTO>();
             ItemUsuario = new ServiceReference_User.userDTO();
 
             ListaRoles = new ObservableCollection<ServiceReference_Role.roleDTO>();
             ItemRol = new ServiceReference_Role.roleDTO();
+
+            ListaUsuarioRoles = new ObservableCollection<ServiceReference_UserRole.user_roleDTO>();
+            ItemUsuarioRol = new ServiceReference_UserRole.user_roleDTO();
 
             //para guardar dartos del cliente
             _ServicioUsuario.InsertarUsuarioCompleted += _ServicioUsuario_InsertarUsuariosCompleted;
@@ -122,13 +160,52 @@ namespace HostalDB_ViewModel.ViewModels
             EliminarCommand = new CommandBase(p => true, p => EliminarCommandAccion()) { IsEnable = true };
             NuevoCommand = new CommandBase(p => true, p => NuevoCommandAccion()) { IsEnable = true };
 
-            //para listar roles
+            //para listar roles disponibles para agregar
             ListarRolesCommand = new CommandBase(p => true, p => ListarRolesCommandAccion()) { IsEnable = true };
 
 
-            
+            ListarRolesDelUsuarioCommand = new CommandBase(p => true, p => ListarRolesDelUsuarioCommandAccion()) { IsEnable = true };
             
         }
+
+        //Metodo asincrono para listar detalle de roles del usurior
+        private void ListarRolesDelUsuarioCommandAccion()
+        {
+            try
+            {
+                _ServicioUserRole.ListarUserRolePorIDUSERAsync(Convert.ToInt32( ItemUsuario.user_id)); //llamada asincrona
+                _ServicioUserRole.ListarUserRolePorIDUSERCompleted  +=_ServicioUserRole_ListarUserRolePorIDUSERCompleted;  //aqui recupero el resultado de mi llamada asincrona
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Error al devolver datos");
+            }
+        }
+
+        private void _ServicioUserRole_ListarUserRolePorIDUSERCompleted(object sender, ListarUserRolePorIDUSERCompletedEventArgs e)
+        {
+            ListaUsuarioRoles.Clear();
+
+            if (e.Error != null)
+            {
+                MessageBox.Show(e.Error.Message + e.Error);
+                return;
+            }
+            else
+            {
+                foreach (var userroleDTOx in e.Result)
+                {
+                      ListaUsuarioRoles.Add(userroleDTOx);
+                }
+
+
+
+            }
+            _ServicioUserRole.ListarUserRolePorIDUSERCompleted += _ServicioUserRole_ListarUserRolePorIDUSERCompleted;
+        }
+
+       
 
       
 
@@ -148,7 +225,7 @@ namespace HostalDB_ViewModel.ViewModels
         }
 
 
-        //Metodo asincrono para listar roles
+        //Metodo asincrono para listar roles disponibles para agregar
         private void ListarRolesCommandAccion()
         {
             try
@@ -392,10 +469,12 @@ namespace HostalDB_ViewModel.ViewModels
         public ICommand BuscarCommand { get; set; }
         public ICommand ListarCommand { get; set; }
         
-        //Para listar todos los roles
+        //Para listar todos los roles disponibles para agregar
         public ICommand ListarRolesCommand { get; set; }
+        
+         //Para listar detalle de roles del usuario
+        public ICommand ListarRolesDelUsuarioCommand { get; set; }
         #endregion
-
 
     }
 }

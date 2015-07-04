@@ -24,7 +24,7 @@
 			SelectedItem="{Binding ItemUsuario, Mode=TwoWay}" 
   
                       
-                      Height="394" VerticalAlignment="Top" Background="#FFF7F4F4" SelectionChanged="dgvUsuarios_SelectionChanged">
+                      Height="394" VerticalAlignment="Top" Background="#FFF7F4F4">
             <sdk:DataGrid.Columns>
                 <sdk:DataGridTextColumn Binding="{Binding user_id}"  Header="ID"/>
                 <sdk:DataGridTextColumn Binding="{Binding dni}"  Header="DNI"/>
@@ -73,16 +73,19 @@
         <Button x:Name="btnReservarhabitacion"  Content="Reservar Habitacion" HorizontalAlignment="Left" Margin="1034,519,0,0" VerticalAlignment="Top" Width="124" Click="btnReservarhabitacion_Click" Height="21"/>
 
         <sdk:Label Content="Clientes" Margin="6,10,27,519" Background="#FF00A1D1" Foreground="#FFF1EFEF" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center" Width="1152"/>
-        <sdk:DataGrid x:Name="dgvUsuarios_Copy" Margin="424,77,420,0" AutoGenerateColumns="False"
-        	ItemsSource="{Binding ListarUsuarios, Mode=TwoWay}"
-        	SelectedItem="{Binding ItemUsuario, Mode=TwoWay}" Height="420" VerticalAlignment="Top" Background="#FF00A1D1">
+        <sdk:DataGrid x:Name="dgvRolesDelUsuario" Margin="424,77,420,0" AutoGenerateColumns="False"
+        	
+            ItemsSource="{Binding ListaUsuarioRoles, Mode=OneWay}"
+			SelectedItem="{Binding ItemUsuarioRol, Mode=TwoWay}" 
+        	 Height="420" VerticalAlignment="Top" Background="#FF00A1D1">
             <sdk:DataGrid.Columns>
-                <sdk:DataGridTextColumn Binding="{Binding user_id}"  Header="ID" Width="65"></sdk:DataGridTextColumn>
-                <sdk:DataGridTextColumn Binding="{Binding dni}"  Header="ROLES" Width="170"></sdk:DataGridTextColumn>
+                <sdk:DataGridTextColumn Binding="{Binding id}"  Header="ID" Width="65"></sdk:DataGridTextColumn>
+                <sdk:DataGridTextColumn Binding="{Binding user_id}"  Header="User_ID" Width="85"></sdk:DataGridTextColumn>
+                <sdk:DataGridTextColumn Binding="{Binding role_id}"  Header="ROLE_id" Width="85"></sdk:DataGridTextColumn>
                 <sdk:DataGridTemplateColumn Header="Eliminar">
                     <sdk:DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Eliminar" Width="100"></Button>
+                            <Button Content="Eliminar" Width="100" ></Button>
                         </DataTemplate> 
                     </sdk:DataGridTemplateColumn.CellTemplate>  
                 </sdk:DataGridTemplateColumn>

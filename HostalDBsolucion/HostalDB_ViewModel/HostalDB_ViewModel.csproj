@@ -134,6 +134,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\ServiceReference_UserRole\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\ServiceReference_User\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -524,6 +529,61 @@
     <None Include="Service References\ServiceReference_TipoHabitacion\HostalDB_ViewModel.ServiceReference_TipoHabitacion.userDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\ServiceReference_UserRole\HostalDB_ServiceWCF.wsdl" />
+    <None Include="Service References\ServiceReference_UserRole\HostalDB_ServiceWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_UserRole\HostalDB_ServiceWCF1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_UserRole\HostalDB_ServiceWCF2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_UserRole\HostalDB_ServiceWCF3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_UserRole\HostalDB_ViewModel.ServiceReference_UserRole.categoria_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_UserRole\HostalDB_ViewModel.ServiceReference_UserRole.comprobanteDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_UserRole\HostalDB_ViewModel.ServiceReference_UserRole.EmpresaDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_UserRole\HostalDB_ViewModel.ServiceReference_UserRole.habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_UserRole\HostalDB_ViewModel.ServiceReference_UserRole.hotelDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_UserRole\HostalDB_ViewModel.ServiceReference_UserRole.ListarHabitacionesDisponiblesClass.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_UserRole\HostalDB_ViewModel.ServiceReference_UserRole.QuerysListarRolesDelUsuarioClass.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_UserRole\HostalDB_ViewModel.ServiceReference_UserRole.reservaDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_UserRole\HostalDB_ViewModel.ServiceReference_UserRole.reserva_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_UserRole\HostalDB_ViewModel.ServiceReference_UserRole.roleDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_UserRole\HostalDB_ViewModel.ServiceReference_UserRole.TipoComprobanteDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_UserRole\HostalDB_ViewModel.ServiceReference_UserRole.tipo_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_UserRole\HostalDB_ViewModel.ServiceReference_UserRole.userDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_UserRole\HostalDB_ViewModel.ServiceReference_UserRole.user_roleDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\ServiceReference_User\HostalDB_ServiceWCF.wsdl" />
     <None Include="Service References\ServiceReference_User\HostalDB_ServiceWCF.xsd">
       <SubType>Designer</SubType>
@@ -604,6 +664,13 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Service References\ServiceReference_UserRole\HostalDB_ServiceWCF.disco" />
+    <None Include="Service References\ServiceReference_UserRole\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference_UserRole\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference_UserRole\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="ServiceReferences.ClientConfig" />
   </ItemGroup>
   <ItemGroup>
@@ -617,6 +684,7 @@
     <WCFMetadataStorage Include="Service References\ServiceReference_Role\" />
     <WCFMetadataStorage Include="Service References\ServiceReference_TipoComprobante\" />
     <WCFMetadataStorage Include="Service References\ServiceReference_TipoHabitacion\" />
+    <WCFMetadataStorage Include="Service References\ServiceReference_UserRole\" />
     <WCFMetadataStorage Include="Service References\ServiceReference_User\" />
   </ItemGroup>
   <ItemGroup>

@@ -27,6 +27,7 @@ namespace HostalDB_View.UserControls
         }
         HostalDB_ViewModel.ServiceReference_User.UserServiceClient _ServicioUsuario = new HostalDB_ViewModel.ServiceReference_User.UserServiceClient();
         HostalDB_ViewModel.ServiceReference_Role.RoleServiceClient _ServicioRole = new HostalDB_ViewModel.ServiceReference_Role.RoleServiceClient();
+        HostalDB_ViewModel.ServiceReference_UserRole.User_RoleServiceClient _ServicioUserRole = new HostalDB_ViewModel.ServiceReference_UserRole.User_RoleServiceClient();
         private void acbBuscar_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -88,10 +89,7 @@ namespace HostalDB_View.UserControls
 
         }
 
-        private void dgvUsuarios_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
+        
 
         private void LayoutRoot_Loaded(object sender, RoutedEventArgs e)
         {   //cargar  todos los clientes
@@ -118,8 +116,31 @@ namespace HostalDB_View.UserControls
             _ServicioRole.ListarTodosLosRolesCompleted -= _ServicioRole_ListarTodosLosRolesCompleted;
         }
 
+       
+
         
         
       
+    }
+
+    
+
+    public class ListarRolesDelUsuarioClassx
+    {
+
+        public int IDuserrol { get; set; }
+        public int IDuser { get; set; }
+        public int IDrol { get; set; }
+        public String strAuthority { get; set; }
+
+
+        public ListarRolesDelUsuarioClassx(int IDuserrol, int IDuser, int IDrol, String strAuthority)
+        {
+
+            this.IDuserrol = IDuserrol;
+            this.IDuser = IDuser;
+            this.IDrol = IDrol;
+            this.strAuthority = strAuthority;
+    }
     }
 }
