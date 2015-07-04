@@ -7,20 +7,24 @@
      xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation" 
     xmlns:uriMapper="clr-namespace:System.Windows.Navigation;assembly=System.Windows.Controls.Navigation"
     xmlns:vm="clr-namespace:HostalDB_ViewModel.ViewModels;assembly=HostalDB_ViewModel" 
-     
+    
     xmlns:Controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input" x:Class="HostalDB_View.UserControls.UsuarioUserControl" 
      
     mc:Ignorable="d" Height="578" VerticalAlignment="Top" HorizontalAlignment="Center" Width="1200">
 
     <UserControl.Resources>
         <vm:UserViewModel x:Key="UserViewModel" />
+      
     </UserControl.Resources>
 
     <Grid x:Name="LayoutRoot" Background="White" DataContext="{Binding Source={StaticResource UserViewModel}}" Margin="10,10,5,10" Loaded="LayoutRoot_Loaded">
 
         <sdk:DataGrid x:Name="dgvUsuarios" Margin="817,116,27,0" AutoGenerateColumns="False"
 			ItemsSource="{Binding ListarUsuarios, Mode=TwoWay}"
-			SelectedItem="{Binding ItemUsuario, Mode=TwoWay}" Height="394" VerticalAlignment="Top" Background="#FFF7F4F4" SelectionChanged="dgvUsuarios_SelectionChanged">
+			SelectedItem="{Binding ItemUsuario, Mode=TwoWay}" 
+  
+                      
+                      Height="394" VerticalAlignment="Top" Background="#FFF7F4F4" SelectionChanged="dgvUsuarios_SelectionChanged">
             <sdk:DataGrid.Columns>
                 <sdk:DataGridTextColumn Binding="{Binding user_id}"  Header="ID"/>
                 <sdk:DataGridTextColumn Binding="{Binding dni}"  Header="DNI"/>
@@ -29,7 +33,6 @@
                 <sdk:DataGridTextColumn Binding="{Binding telefono}"   Header="Telefono" />
             </sdk:DataGrid.Columns>
         </sdk:DataGrid>
-        <Button x:Name ="btnListar" Content="Listar Todos Los Usuarios" Command="{Binding ListarCommand}" HorizontalAlignment="Left" Margin="817,519,0,0" VerticalAlignment="Top" Width="165" Height="21"/>
         <TextBox x:Name ="txtUserID" Text="{Binding ItemUsuario.user_id, Mode=TwoWay}" HorizontalAlignment="Left" Height="23" Margin="142,46,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="260" IsReadOnly="True"/>
         <sdk:Label Height="28" Margin="0,50,1059,0" VerticalAlignment="Top" Content="ID :" HorizontalAlignment="Right"/>
         <sdk:Label Height="28" Margin="6,81,1059,0" VerticalAlignment="Top" Content="user Name :" HorizontalAlignment="Right"/>
@@ -88,7 +91,14 @@
         </sdk:DataGrid>
         <Button x:Name ="btnAgregarRol" Content="Agregar Rol" Command="{Binding ListarCommand}" HorizontalAlignment="Left" Margin="675,47,0,0" VerticalAlignment="Top" Width="90" Height="21"/>
         <sdk:Label Content="Listado de Clientes" Margin="817,45,27,484" Background="#FF00A1D1" Foreground="#FFF1EFEF" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center" Width="341"/>
-        <ComboBox x:Name ="cboAgregarRol"  HorizontalAlignment="Left" Margin="424,48,0,0" VerticalAlignment="Top" Width="246"/>
+        <ComboBox x:Name ="cboRoles" ItemsSource="{Binding Path=ListaRoles, Mode=TwoWay}" 
+                                      
+           SelectedValue="{Binding Path=ItemRol, Mode=TwoWay}" 
+             DisplayMemberPath="authority" 
+            SelectedValuePath="role_id" 
+                  
+                  
+                  HorizontalAlignment="Left" Margin="424,48,0,0" VerticalAlignment="Top" Width="246"/>
 
     </Grid>
 </UserControl>

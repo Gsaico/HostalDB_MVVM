@@ -13,16 +13,17 @@ using GalaSoft.MvvmLight;
 using System.Collections.ObjectModel;
 using HostalDB_ViewModel.Commands;
 using HostalDB_ViewModel.ServiceReference_User;
+using HostalDB_ViewModel.ServiceReference_Role; 
 
 namespace HostalDB_ViewModel.ViewModels
 {
     public class UserViewModel : ViewModelBase
     {
         private  ServiceReference_User.UserServiceClient _ServicioUsuario;
-        //= new ServiceReference_User.UserServiceClient();
+        private ServiceReference_Role.RoleServiceClient  _ServicioRole;
 
 
-        #region propiedades Usuario
+        #region propiedades Cliente
 
 
         private ObservableCollection<ServiceReference_User.userDTO> _ListarUsuarios;
@@ -64,27 +65,122 @@ namespace HostalDB_ViewModel.ViewModels
 
         #endregion
 
+        #region propiedades de los Roles del Cliente
+
+
+        private ObservableCollection<ServiceReference_Role.roleDTO> _ListaRoles;
+
+        public ObservableCollection<ServiceReference_Role.roleDTO> ListaRoles
+        {
+            get { return _ListaRoles; }
+            set
+            {
+                _ListaRoles = value;
+                RaisePropertyChanged("ListaRoles");
+
+            }
+        }
+
+        private ServiceReference_Role.roleDTO _ItemRol;
+
+        public ServiceReference_Role.roleDTO ItemRol
+        {
+            get { return _ItemRol; }
+            set
+            {
+                _ItemRol = value;
+                RaisePropertyChanged("ItemRol");
+            }
+        }
+
+       #endregion
 
         
         public UserViewModel()
         {
-           if (IsInDesignMode) return;
+           if (IsInDesignMode) return;//por sia acas0
 
             _ServicioUsuario = new ServiceReference_User.UserServiceClient();
+            _ServicioRole = new ServiceReference_Role.RoleServiceClient();
+
             ListarUsuarios = new ObservableCollection<ServiceReference_User.userDTO>();
             ItemUsuario = new ServiceReference_User.userDTO();
 
+            ListaRoles = new ObservableCollection<ServiceReference_Role.roleDTO>();
+            ItemRol = new ServiceReference_Role.roleDTO();
+
+            //para guardar dartos del cliente
             _ServicioUsuario.InsertarUsuarioCompleted += _ServicioUsuario_InsertarUsuariosCompleted;
 
-            _ServicioUsuario.EliminarUsuarioCompleted += _ServicioUsuario_EliminarUsuariosCompleted;
+             _ServicioUsuario.EliminarUsuarioCompleted += _ServicioUsuario_EliminarUsuariosCompleted;
+
+         
  
             ListarCommand = new CommandBase(p => true, p => ListarCommandAccion()) { IsEnable = true };
             BuscarCommand = new CommandBase(p => true, p => BuscarCommandAccion()) { IsEnable = true };
             GuardarCommand = new CommandBase(p => true, p => GuardarCommandAccion()) { IsEnable = true };
             EliminarCommand = new CommandBase(p => true, p => EliminarCommandAccion()) { IsEnable = true };
-            NuevoCommand = new CommandBase(p => true, p => NuevoCommandAccion()) { IsEnable = true }; 
+            NuevoCommand = new CommandBase(p => true, p => NuevoCommandAccion()) { IsEnable = true };
+
+            //para listar roles
+            ListarRolesCommand = new CommandBase(p => true, p => ListarRolesCommandAccion()) { IsEnable = true };
+
 
             
+            
+        }
+
+      
+
+        private void _ServicioUsuario_InsertarUsuariosCompleted(object sender, ServiceReference_User.InsertarUsuarioCompletedEventArgs e)
+        {
+            //Este metodo se ejecuta cuando se ACABA DE GUARDAR un nuevo usuario a la BD
+            //metodo que me devuelve el Id del usuario con el que se guardo.
+            if (e.Error != null)
+            {
+                MessageBox.Show(e.Error.Message + e.Error);
+            }
+            else
+            {
+                MessageBox.Show("Usuario Agregado con ID: " + e.Result.ToString());
+                ListarCommandAccion();
+            }
+        }
+
+
+        //Metodo asincrono para listar roles
+        private void ListarRolesCommandAccion()
+        {
+            try
+            {
+                _ServicioRole.ListarTodosLosRolesAsync(); //llamada asincrona
+                _ServicioRole.ListarTodosLosRolesCompleted  +=_ServicioRole_ListarTodosLosRolesCompleted;  //aqui recupero el resultado de mi llamada asincrona
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Error al devolver datos");
+            }
+        }
+
+        private void _ServicioRole_ListarTodosLosRolesCompleted(object sender, ServiceReference_Role.ListarTodosLosRolesCompletedEventArgs e)
+        {
+            ListaRoles.Clear(); 
+       
+            if (e.Error != null)
+            {
+                MessageBox.Show(e.Error.Message + e.Error);
+                return;
+            }
+            else
+            {
+                foreach (var roleDTOx in e.Result)
+                {
+                    ListaRoles.Add(roleDTOx);
+                }
+
+            }
+            _ServicioRole.ListarTodosLosRolesCompleted -= _ServicioRole_ListarTodosLosRolesCompleted;
         }
 
         
@@ -98,7 +194,7 @@ namespace HostalDB_ViewModel.ViewModels
 
                 if (result == MessageBoxResult.OK)
                 {
-                    ItemUsuario = new userDTO();
+                    ItemUsuario = new HostalDB_ViewModel.ServiceReference_User.userDTO();
                     ItemUsuario.enabled = 1;
                     ItemUsuario.accountExpired = 0;
                     ItemUsuario.accountLocked = 0;
@@ -114,7 +210,7 @@ namespace HostalDB_ViewModel.ViewModels
             else
             {
 
-                ItemUsuario = new userDTO();
+                ItemUsuario = new HostalDB_ViewModel.ServiceReference_User.userDTO();
                 ItemUsuario.enabled = 1;
                 ItemUsuario.accountExpired = 0;
                 ItemUsuario.accountLocked = 0;
@@ -180,7 +276,7 @@ namespace HostalDB_ViewModel.ViewModels
             }
         }
 
-        void _ServicioUsuario_ActualizarUsuarioCompleted(object sender, ActualizarUsuarioCompletedEventArgs e)
+        void _ServicioUsuario_ActualizarUsuarioCompleted(object sender, HostalDB_ViewModel.ServiceReference_User.ActualizarUsuarioCompletedEventArgs e)
         {
             if (e.Result == true)
             {
@@ -192,20 +288,7 @@ namespace HostalDB_ViewModel.ViewModels
                 MessageBox.Show(e.Error.Message + e.Error);
             }
         }
-        private void _ServicioUsuario_InsertarUsuariosCompleted(object sender, InsertarUsuarioCompletedEventArgs e)
-        {
-            //Este metodo se ejecuta cuando se ACABA DE GUARDAR un nuevo usuario a la BD
-            //metodo que me devuelve el Id del usuario con el que se guardo.
-            if (e.Error != null)
-            {
-                MessageBox.Show(e.Error.Message + e.Error);
-            }
-            else
-            {
-                MessageBox.Show("Usuario Agregado con ID: " + e.Result.ToString());
-                ListarCommandAccion();
-            }
-        }
+       
 
        
         private void BuscarCommandAccion()
@@ -224,7 +307,7 @@ namespace HostalDB_ViewModel.ViewModels
             }
         }
 
-        void _ServicioUsuario_BuscarUsuarioCompleted(object sender, BuscarUsuarioCompletedEventArgs e)
+        void _ServicioUsuario_BuscarUsuarioCompleted(object sender, HostalDB_ViewModel.ServiceReference_User.BuscarUsuarioCompletedEventArgs e)
         {
             ListarUsuarios.Clear();
 
@@ -245,7 +328,7 @@ namespace HostalDB_ViewModel.ViewModels
             _ServicioUsuario.BuscarUsuarioCompleted -= _ServicioUsuario_BuscarUsuarioCompleted;
         }
 
-        private void _ServicioUsuario_EliminarUsuariosCompleted(object sender, EliminarUsuarioCompletedEventArgs e)
+        private void _ServicioUsuario_EliminarUsuariosCompleted(object sender, HostalDB_ViewModel.ServiceReference_User.EliminarUsuarioCompletedEventArgs e)
         {
             if (e.Error != null)
             {
@@ -308,6 +391,9 @@ namespace HostalDB_ViewModel.ViewModels
       //  public ICommand ActualizarCommand { get; set; }
         public ICommand BuscarCommand { get; set; }
         public ICommand ListarCommand { get; set; }
+        
+        //Para listar todos los roles
+        public ICommand ListarRolesCommand { get; set; }
         #endregion
 
 

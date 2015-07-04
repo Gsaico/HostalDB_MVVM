@@ -26,6 +26,7 @@ namespace HostalDB_View.UserControls
             InitializeComponent();
         }
         HostalDB_ViewModel.ServiceReference_User.UserServiceClient _ServicioUsuario = new HostalDB_ViewModel.ServiceReference_User.UserServiceClient();
+        HostalDB_ViewModel.ServiceReference_Role.RoleServiceClient _ServicioRole = new HostalDB_ViewModel.ServiceReference_Role.RoleServiceClient();
         private void acbBuscar_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -53,15 +54,7 @@ namespace HostalDB_View.UserControls
             _ServicioUsuario.ListarUsuariosCompleted -= _ServicioUsuario_ListarUsuariosCompleted;
         }
 
-        private void btnTest_Click(object sender, RoutedEventArgs e)
-        {
-          
-
-            _ServicioUsuario.ListarUsuariosAsync();
-            _ServicioUsuario.ListarUsuariosCompleted += _ServicioUsuario_ListarUsuariosCompleted;
-
-
-        }
+      
 
         private void _ServicioUsuario_ListarUsuariosCompleted(object sender, HostalDB_ViewModel.ServiceReference_User.ListarUsuariosCompletedEventArgs e)
         {
@@ -101,9 +94,28 @@ namespace HostalDB_View.UserControls
         }
 
         private void LayoutRoot_Loaded(object sender, RoutedEventArgs e)
-        {
+        {   //cargar  todos los clientes
             _ServicioUsuario.ListarUsuariosAsync();
             _ServicioUsuario.ListarUsuariosCompleted += _ServicioUsuario_ListarUsuariosCompleted;
+            //cargar los roles para la administracion
+            _ServicioRole.ListarTodosLosRolesAsync();
+            _ServicioRole.ListarTodosLosRolesCompleted +=_ServicioRole_ListarTodosLosRolesCompleted;
+        }
+
+        private void _ServicioRole_ListarTodosLosRolesCompleted(object sender, HostalDB_ViewModel.ServiceReference_Role.ListarTodosLosRolesCompletedEventArgs e)
+        {
+
+            if (e.Error != null)
+            {
+                MessageBox.Show(e.Error.Message + e.Error);
+                return;
+            }
+            else
+            {
+                cboRoles.ItemsSource = e.Result;
+
+            }
+            _ServicioRole.ListarTodosLosRolesCompleted -= _ServicioRole_ListarTodosLosRolesCompleted;
         }
 
         
