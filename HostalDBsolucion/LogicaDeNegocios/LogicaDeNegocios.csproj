@@ -55,6 +55,8 @@
     <Compile Include="Reserva\IReservaLogicaNegocio.cs" />
     <Compile Include="Reserva_Habitacion\IReserva_HabitacionLogicaNegocio.cs" />
     <Compile Include="Reserva_Habitacion\Reserva_HabitacionLogicaNegocio.cs" />
+    <Compile Include="Role\IRoleLogicaNegocio.cs" />
+    <Compile Include="Role\RoleLogicaNegocio.cs" />
     <Compile Include="Tipo_Comprobante\ITipoComprobanteLogicaNegocio.cs" />
     <Compile Include="Tipo_Comprobante\TipoComprobanteLogicaNegocio.cs" />
     <Compile Include="Tipo_Habitacion\ITipoHabitacionLogicaNegocio.cs" />

@@ -86,6 +86,8 @@
     <Compile Include="Reserva\IReservaService.cs" />
     <Compile Include="Reserva_Habitacion\IReservaHabitacionService.cs" />
     <Compile Include="Reserva_Habitacion\ReservaHabitacionService.cs" />
+    <Compile Include="Role\IRoleService.cs" />
+    <Compile Include="Role\RoleService.cs" />
     <Compile Include="Tipo_Comprobante\ITipoComprobanteService.cs" />
     <Compile Include="Tipo_Comprobante\TipoComprobanteService.cs" />
     <Compile Include="Tipo_Habitacion\ITipoHabitacionService.cs" />

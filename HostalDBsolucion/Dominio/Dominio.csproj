@@ -93,6 +93,8 @@
     <Compile Include="Querys\Reserva_Habitacion\Reserva_HabitacionQuery.cs" />
     <Compile Include="Querys\Reserva\IReservaQuery.cs" />
     <Compile Include="Querys\Reserva\ReservaQuery.cs" />
+    <Compile Include="Querys\Role\IRoleQuery.cs" />
+    <Compile Include="Querys\Role\RoleQuery.cs" />
     <Compile Include="Querys\Tipo_Comprobante\ITipoComprobanteQuery.cs" />
     <Compile Include="Querys\Tipo_Comprobante\TipoComprobanteQuery.cs" />
     <Compile Include="Querys\Tipo_Habitacion\ITipo_HabitacionQuery.cs" />

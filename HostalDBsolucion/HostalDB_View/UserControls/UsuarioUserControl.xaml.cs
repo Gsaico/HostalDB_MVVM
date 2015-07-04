@@ -85,55 +85,29 @@ namespace HostalDB_View.UserControls
 
         private void btnReservarhabitacion_Click(object sender, RoutedEventArgs e)
         {
-          //  this.ContentFrame.Navigate(new Uri("/Usuarios", UriKind.Relative));
-
-            
-         //   ListarFacturas cabecera = new ListarFacturas();
-        //    CanvasPrincipalv.Children.Clear();
-          //  CanvasPrincipalv.Children.Add(cabecera);
-
+          
             string idcliente = txtUserID.Text ;
             string Nombrecliente = txtNombres.Text ;
 
             this.Content = new ReservaDeHabitacionesUserControl(idcliente, Nombrecliente);//estoy abriendo otra pagina silver
 
-          //  ReservaDeHabitacionesUserControl ps = this.Parent as new  ReservaDeHabitacionesUserControl(strParametro1);
-           // ps.Navigate(new Page2()); 
-
-           // Views.ReservaDeHabitaciones lg = new Views.ReservaDeHabitaciones(_parametros);
-         //   this.ContentFrame.Content = lg;
-
+         
 
         }
 
+        private void dgvUsuarios_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void LayoutRoot_Loaded(object sender, RoutedEventArgs e)
+        {
+            _ServicioUsuario.ListarUsuariosAsync();
+            _ServicioUsuario.ListarUsuariosCompleted += _ServicioUsuario_ListarUsuariosCompleted;
+        }
+
         
-        // Views.ReservaDeHabitaciones xxx = new Views.ReservaDeHabitaciones();
-
-        //   NavigationService.c.Navigate(new Uri("/Usuarios", UriKind.Relative));
-
-        // ContentFrame.Navigate(new Uri("/Usuarios", UriKind.Relative));
-
-
-
-
-
-        // ContentFrame.Navigate(new Uri("/Home", UriKind.Relative));
-
-        //  ContentFrame.Navigate(new Uri("/Usuarios", UriKind.Relative));
-
-
-
-
-        //  ChildWindows.AlumnoChild child = new ChildWindows.AlumnoChild();
-        // child.Closed += child_Closed;
-        // child.Show();
-
-        //  HostalDB_View.Views.ReservaDeHabitaciones reservahabitacionesform = new HostalDB_View.Views.ReservaDeHabitaciones();
-
-
-
-        // CanvasPrincipalv.Children.Clear();
-        // CanvasPrincipalv.Children.Add(cabecera);
+        
       
     }
 }

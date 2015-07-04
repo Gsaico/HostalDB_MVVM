@@ -6,7 +6,7 @@
            xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
            xmlns:UserControls="clr-namespace:HostalDB_View.UserControls" x:Class="HostalDB_View.Views.Usuarios"
            mc:Ignorable="d"
-           Title="Usuarios Page" Height="799.2" Width="1125">
+           Title="Usuarios Page" Height="799.2" Width="1210">
     <Grid x:Name="LayoutRoot" Height="563" VerticalAlignment="Top">
         <UserControls:UsuarioUserControl HorizontalAlignment="Left" Margin="10,10,0,-8" VerticalAlignment="Top"/>
     </Grid>
