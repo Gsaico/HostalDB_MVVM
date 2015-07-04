@@ -94,6 +94,8 @@
     <Compile Include="Tipo_Habitacion\TipoHabitacionService.cs" />
     <Compile Include="User\IUserService.cs" />
     <Compile Include="User\UserService.cs" />
+    <Compile Include="User_Role\User_RoleService.cs" />
+    <Compile Include="User_Role\IUser_RoleService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

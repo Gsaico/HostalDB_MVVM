@@ -63,6 +63,8 @@
     <Compile Include="Tipo_Habitacion\TipoHabitacionLogicaNegocio.cs" />
     <Compile Include="User\IUserLogicaNegocio.cs" />
     <Compile Include="User\UserLogicaNegocio.cs" />
+    <Compile Include="User_Role\User_RoleLogicaNegocio.cs" />
+    <Compile Include="User_Role\IUser_RoleLogicaNegocio.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dominio\Dominio.csproj">

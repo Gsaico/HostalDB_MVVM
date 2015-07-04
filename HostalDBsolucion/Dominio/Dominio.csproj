@@ -101,6 +101,8 @@
     <Compile Include="Querys\Tipo_Habitacion\Tipo_HabitacionQuery.cs" />
     <Compile Include="Querys\User\IUserQuery.cs" />
     <Compile Include="Querys\User\UserQuery.cs" />
+    <Compile Include="Querys\User_Role\User_RoleQuery.cs" />
+    <Compile Include="Querys\User_Role\IUser_RoleQuery.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PersistenciaDatos\PersistenciaDatos.csproj">
