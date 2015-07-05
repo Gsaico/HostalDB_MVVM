@@ -11,6 +11,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using HostalDB_ViewModel;
 using System.Windows.Navigation;
+using HostalDB_ViewModel.ServiceReference_User;
 ///
 
 using HostalDB_ViewModel.ServiceReference_UserRole; 
@@ -124,12 +125,15 @@ namespace HostalDB_View.UserControls
         {
             int iduser;
 
-            iduser = ((userDTO)dgvUsuarios.SelectedItem).user_id;
+
+
+
+            iduser = ((HostalDB_ViewModel.ServiceReference_User.userDTO)dgvUsuarios.SelectedItem).user_id;
            // iduser = dgvUsuarios.GetValue(It);
 
-            userDTO ddd = new userDTO();
+          //  userDTO ddd = new userDTO();
 
-            ddd = dgvUsuarios.SelectedItem;
+          //  ddd = dgvUsuarios.SelectedItem;
 
             _ServicioUserRole.ListarUserRolePorIDUSERAsync(iduser);
             _ServicioUserRole.ListarUserRolePorIDUSERCompleted  +=_ServicioUserRole_ListarUserRolePorIDUSERCompleted;
@@ -180,72 +184,6 @@ namespace HostalDB_View.UserControls
             this.strAuthority = strAuthority;
     }
     }
-    public class userDTOXX
-    {
-       
-        public Int32 user_id { get; set; }
+   
+   }
 
-      
-        public String username { get; set; }
-
-        public String password { get; set; }
-
-      
-        public String email { get; set; }
-
-       
-        public String dni { get; set; }
-
-        
-        public String nombre { get; set; }
-
-       
-        public String apellidos { get; set; }
-
-       
-        public String direccion { get; set; }
-
-        
-        public String telefono { get; set; }
-
-       
-        public Nullable<Int16> enabled { get; set; }
-
-      
-        public Nullable<Int16> accountExpired { get; set; }
-
-       
-        public Nullable<Int16> accountLocked { get; set; }
-
-       
-        public Nullable<Int16> passwordExpired { get; set; }
-
-      
-        public String RUC { get; set; }
-
-       
-
-        public userDTOXX()
-        {
-        }
-
-        public userDTOXX(Int32 user_id, String username, String password, String email, String dni, String nombre, String apellidos, String direccion, String telefono, Nullable<Int16> enabled, Nullable<Int16> accountExpired, Nullable<Int16> accountLocked, Nullable<Int16> passwordExpired, String rUC)
-        {
-            this.user_id = user_id;
-            this.username = username;
-            this.password = password;
-            this.email = email;
-            this.dni = dni;
-            this.nombre = nombre;
-            this.apellidos = apellidos;
-            this.direccion = direccion;
-            this.telefono = telefono;
-            this.enabled = enabled;
-            this.accountExpired = accountExpired;
-            this.accountLocked = accountLocked;
-            this.passwordExpired = passwordExpired;
-            this.RUC = rUC;
-          
-        }
-    }
-}

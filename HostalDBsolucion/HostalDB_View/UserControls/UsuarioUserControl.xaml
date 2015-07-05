@@ -19,7 +19,7 @@
 
     <Grid x:Name="LayoutRoot" Background="White" DataContext="{Binding Source={StaticResource UserViewModel}}" Margin="10,10,5,10" Loaded="LayoutRoot_Loaded">
 
-        <sdk:DataGrid x:Name="dgvUsuarios" Margin="817,116,27,383" AutoGenerateColumns="False"  
+        <sdk:DataGrid x:Name="dgvUsuarios" Margin="817,116,27,53" AutoGenerateColumns="False"  
 			ItemsSource="{Binding ListarUsuarios, Mode=TwoWay}"
 			SelectedItem="{Binding ItemUsuario, Mode=TwoWay}" Background="#FFF7F4F4" SelectionChanged="dgvUsuarios_SelectionChanged" >
             <sdk:DataGrid.Columns>
@@ -101,9 +101,6 @@
 			HorizontalAlignment="Left" Margin="424,48,0,0" VerticalAlignment="Top" Width="246"/>
         <Button x:Name ="btnEliminar_Copy" Content="Eliminar Rol Seleccionado" Command="{Binding EliminarRolDelUsuarioCommand}" HorizontalAlignment="Left" Margin="616,518,0,0" VerticalAlignment="Top" Width="149"/>
         <TextBlock HorizontalAlignment="Left" Margin="424,77,0,0" TextWrapping="Wrap" Text="{Binding ItemRol.role_id}"  VerticalAlignment="Top" Width="341"/>
-
-
-        <telerik:RadGridView HorizontalAlignment="Left" Margin="817,180,0,0" VerticalAlignment="Top" Width="337" Height="125"/>
 
 
     </Grid>
