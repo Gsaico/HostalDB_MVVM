@@ -8,23 +8,20 @@
     xmlns:uriMapper="clr-namespace:System.Windows.Navigation;assembly=System.Windows.Controls.Navigation"
     xmlns:vm="clr-namespace:HostalDB_ViewModel.ViewModels;assembly=HostalDB_ViewModel" 
     
-    xmlns:Controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input" x:Class="HostalDB_View.UserControls.UsuarioUserControl" 
+    xmlns:Controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input" xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" x:Class="HostalDB_View.UserControls.UsuarioUserControl" 
      
     mc:Ignorable="d" Height="578" VerticalAlignment="Top" HorizontalAlignment="Center" Width="1200">
 
     <UserControl.Resources>
         <vm:UserViewModel x:Key="UserViewModel" />
-      
+
     </UserControl.Resources>
 
     <Grid x:Name="LayoutRoot" Background="White" DataContext="{Binding Source={StaticResource UserViewModel}}" Margin="10,10,5,10" Loaded="LayoutRoot_Loaded">
 
-        <sdk:DataGrid x:Name="dgvUsuarios" Margin="817,116,27,0" AutoGenerateColumns="False"
+        <sdk:DataGrid x:Name="dgvUsuarios" Margin="817,116,27,383" AutoGenerateColumns="False"  
 			ItemsSource="{Binding ListarUsuarios, Mode=TwoWay}"
-			SelectedItem="{Binding ItemUsuario, Mode=TwoWay}" 
-  
-                      
-                      Height="394" VerticalAlignment="Top" Background="#FFF7F4F4">
+			SelectedItem="{Binding ItemUsuario, Mode=TwoWay}" Background="#FFF7F4F4" SelectionChanged="dgvUsuarios_SelectionChanged" >
             <sdk:DataGrid.Columns>
                 <sdk:DataGridTextColumn Binding="{Binding user_id}"  Header="ID"/>
                 <sdk:DataGridTextColumn Binding="{Binding dni}"  Header="DNI"/>
@@ -32,8 +29,10 @@
                 <sdk:DataGridTextColumn Binding="{Binding apellidos}"   Header="Apellidos" />
                 <sdk:DataGridTextColumn Binding="{Binding telefono}"   Header="Telefono" />
             </sdk:DataGrid.Columns>
+
+
         </sdk:DataGrid>
-        <TextBox x:Name ="txtUserID" Text="{Binding ItemUsuario.user_id, Mode=TwoWay}" HorizontalAlignment="Left" Height="23" Margin="142,46,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="260" IsReadOnly="True"/>
+        <TextBox x:Name ="txtUserID"  Text="{Binding ItemUsuario.user_id, Mode=TwoWay}" HorizontalAlignment="Left" Height="23" Margin="142,46,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="260" IsReadOnly="True"/>
         <sdk:Label Height="28" Margin="0,50,1059,0" VerticalAlignment="Top" Content="ID :" HorizontalAlignment="Right"/>
         <sdk:Label Height="28" Margin="6,81,1059,0" VerticalAlignment="Top" Content="user Name :" HorizontalAlignment="Right"/>
         <sdk:Label Height="28" Margin="6,114,1059,0" VerticalAlignment="Top" Content="Password :" HorizontalAlignment="Right"/>
@@ -63,45 +62,49 @@
         <TextBox x:Name ="txtRUC" Text="{Binding ItemUsuario.RUC, Mode=TwoWay}" HorizontalAlignment="Left" Height="23" Margin="142,473,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="260" Background="White"/>
         <Button x:Name ="btnNuevo" Content="Nuevo" Command="{Binding NuevoCommand}" HorizontalAlignment="Left" Margin="22,518,0,0" VerticalAlignment="Top" Width="103"/>
         <Button x:Name ="btnGuardar" Content="Guardar" Command="{Binding GuardarCommand}" HorizontalAlignment="Left" Margin="130,518,0,0" VerticalAlignment="Top" Width="103"/>
-        <Button x:Name ="btnEliminar" Content="Eliminar" Command="{Binding EliminarCommand}" HorizontalAlignment="Left" Margin="238,518,0,0" VerticalAlignment="Top" Width="103"/>
+        <Button x:Name ="btnEliminar" Content="Eliminar Rol Seleccionado" Command="{Binding EliminarCommand}" HorizontalAlignment="Left" Margin="253,518,0,0" VerticalAlignment="Top" Width="149"/>
 
-        <Controls:AutoCompleteBox  x:Name="acbBuscar"  HorizontalAlignment="Left" Height="28" Margin="874,83,0,0" VerticalAlignment="Top" Width="284" SelectionChanged="acbBuscar_SelectionChanged" TextChanged="acbBuscar_TextChanged" Background="White" >
-
-        </Controls:AutoCompleteBox>
+        <Controls:AutoCompleteBox  x:Name="acbBuscar"  HorizontalAlignment="Left" Height="28" Margin="874,83,0,0" VerticalAlignment="Top" Width="284" SelectionChanged="acbBuscar_SelectionChanged" TextChanged="acbBuscar_TextChanged" Background="White" />
 
         <sdk:Label HorizontalAlignment="Right" Height="19" Margin="0,90,328,0" VerticalAlignment="Top" Width="40" Content="Buscar:"/>
         <Button x:Name="btnReservarhabitacion"  Content="Reservar Habitacion" HorizontalAlignment="Left" Margin="1034,519,0,0" VerticalAlignment="Top" Width="124" Click="btnReservarhabitacion_Click" Height="21"/>
 
         <sdk:Label Content="Clientes" Margin="6,10,27,519" Background="#FF00A1D1" Foreground="#FFF1EFEF" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center" Width="1152"/>
-        <sdk:DataGrid x:Name="dgvRolesDelUsuario" Margin="424,77,420,0" AutoGenerateColumns="False"
-        	
-            ItemsSource="{Binding ListaUsuarioRoles, Mode=OneWay}"
-			SelectedItem="{Binding ItemUsuarioRol, Mode=TwoWay}" 
-        	 Height="420" VerticalAlignment="Top" Background="#FF00A1D1">
+        <sdk:DataGrid x:Name="dgvRolesDelUsuario" Margin="424,116,420,0" AutoGenerateColumns="false"
+        	            
+			ItemsSource="{Binding ListaUsuarioRoles, Mode=TwoWay}"
+                      
+			SelectedItem="{Binding ItemUsuarioRol, Mode=TwoWay}"
+			
+			Height="389" VerticalAlignment="Top" Background="#FF00A1D1">
             <sdk:DataGrid.Columns>
-                <sdk:DataGridTextColumn Binding="{Binding id}"  Header="ID" Width="65"></sdk:DataGridTextColumn>
-                <sdk:DataGridTextColumn Binding="{Binding user_id}"  Header="User_ID" Width="85"></sdk:DataGridTextColumn>
-                <sdk:DataGridTextColumn Binding="{Binding role_id}"  Header="ROLE_id" Width="85"></sdk:DataGridTextColumn>
-                <sdk:DataGridTemplateColumn Header="Eliminar">
-                    <sdk:DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Content="Eliminar" Width="100" ></Button>
-                        </DataTemplate> 
-                    </sdk:DataGridTemplateColumn.CellTemplate>  
-                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn Binding="{Binding id}"  Header="ID"/>
+                <sdk:DataGridTextColumn Binding="{Binding user_id}"  Header="user_id"/>
+                <sdk:DataGridTextColumn Binding="{Binding role_id}"   Header="role_id" />
+
+
+
 
             </sdk:DataGrid.Columns>
+
         </sdk:DataGrid>
-        <Button x:Name ="btnAgregarRol" Content="Agregar Rol" Command="{Binding ListarCommand}" HorizontalAlignment="Left" Margin="675,47,0,0" VerticalAlignment="Top" Width="90" Height="21"/>
+        <Button x:Name ="btnAgregarRol" Content="Agregar Rol" Command="{Binding AgregarNuevoRolAlUsuarioCommand}" HorizontalAlignment="Left" Margin="675,47,0,0" VerticalAlignment="Top" Width="90" Height="21"/>
         <sdk:Label Content="Listado de Clientes" Margin="817,45,27,484" Background="#FF00A1D1" Foreground="#FFF1EFEF" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center" Width="341"/>
-        <ComboBox x:Name ="cboRoles" ItemsSource="{Binding Path=ListaRoles, Mode=TwoWay}" 
-                                      
-           SelectedValue="{Binding Path=ItemRol, Mode=TwoWay}" 
-             DisplayMemberPath="authority" 
-            SelectedValuePath="role_id" 
+        <ComboBox x:Name ="cboRoles" ItemsSource="{Binding ListaRoles, Mode=TwoWay}" 
+                                       
+			SelectedValue="{Binding ItemRol.role_id, Mode=TwoWay}" 
+			DisplayMemberPath="authority" 
+			SelectedValuePath="role_id" 
+			SelectedItem="{Binding ParametroSelectedItem, Mode=TwoWay}"
+                           
                   
-                  
-                  HorizontalAlignment="Left" Margin="424,48,0,0" VerticalAlignment="Top" Width="246"/>
+			HorizontalAlignment="Left" Margin="424,48,0,0" VerticalAlignment="Top" Width="246"/>
+        <Button x:Name ="btnEliminar_Copy" Content="Eliminar Rol Seleccionado" Command="{Binding EliminarRolDelUsuarioCommand}" HorizontalAlignment="Left" Margin="616,518,0,0" VerticalAlignment="Top" Width="149"/>
+        <TextBlock HorizontalAlignment="Left" Margin="424,77,0,0" TextWrapping="Wrap" Text="{Binding ItemRol.role_id}"  VerticalAlignment="Top" Width="341"/>
+
+
+        <telerik:RadGridView HorizontalAlignment="Left" Margin="817,180,0,0" VerticalAlignment="Top" Width="337" Height="125"/>
+
 
     </Grid>
 </UserControl>

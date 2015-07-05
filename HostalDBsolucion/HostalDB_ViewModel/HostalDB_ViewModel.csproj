@@ -697,13 +697,49 @@
     <None Include="Service References\ServiceReference_User\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\ServiceReference_User\HostalDB_ServiceWCF3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference_User\HostalDB_ViewModel.ServiceReference_User.categoria_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_User\HostalDB_ViewModel.ServiceReference_User.comprobanteDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_User\HostalDB_ViewModel.ServiceReference_User.EmpresaDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\ServiceReference_User\HostalDB_ViewModel.ServiceReference_User.habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_User\HostalDB_ViewModel.ServiceReference_User.hotelDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_User\HostalDB_ViewModel.ServiceReference_User.ListarHabitacionesDisponiblesClass.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_User\HostalDB_ViewModel.ServiceReference_User.QuerysListarRolesDelUsuarioClass.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ServiceReference_User\HostalDB_ViewModel.ServiceReference_User.reservaDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\ServiceReference_User\HostalDB_ViewModel.ServiceReference_User.reserva_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_User\HostalDB_ViewModel.ServiceReference_User.roleDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_User\HostalDB_ViewModel.ServiceReference_User.TipoComprobanteDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_User\HostalDB_ViewModel.ServiceReference_User.tipo_habitacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\ServiceReference_User\HostalDB_ViewModel.ServiceReference_User.userDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_User\HostalDB_ViewModel.ServiceReference_User.user_roleDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ServiceReference_User\Reference.svcmap">

@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Dominio.Dtos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Dominio.Dtos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="categoria_habitacionDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="categoria_id" type="xs:int" />
+      <xs:element minOccurs="0" name="habitacion" nillable="true" type="tns:ArrayOfhabitacionDTO" />
+      <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="porcentaje" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="categoria_habitacionDTO" nillable="true" type="tns:categoria_habitacionDTO" />
+  <xs:complexType name="ArrayOfhabitacionDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="habitacionDTO" nillable="true" type="tns:habitacionDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfhabitacionDTO" nillable="true" type="tns:ArrayOfhabitacionDTO" />
   <xs:complexType name="habitacionDTO">
     <xs:sequence>
       <xs:element minOccurs="0" name="categoria_habitacion" nillable="true" type="tns:categoria_habitacionDTO" />
@@ -16,21 +31,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="habitacionDTO" nillable="true" type="tns:habitacionDTO" />
-  <xs:complexType name="categoria_habitacionDTO">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="categoria_id" type="xs:int" />
-      <xs:element minOccurs="0" name="habitacion" nillable="true" type="tns:ArrayOfhabitacionDTO" />
-      <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="porcentaje" type="xs:double" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="categoria_habitacionDTO" nillable="true" type="tns:categoria_habitacionDTO" />
-  <xs:complexType name="ArrayOfhabitacionDTO">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="habitacionDTO" nillable="true" type="tns:habitacionDTO" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfhabitacionDTO" nillable="true" type="tns:ArrayOfhabitacionDTO" />
   <xs:complexType name="hotelDTO">
     <xs:sequence>
       <xs:element minOccurs="0" name="ciudad" nillable="true" type="xs:string" />
@@ -232,6 +232,42 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="tipo_habitacionDTO" nillable="true" type="tns:tipo_habitacionDTO" />
+  <xs:complexType name="ArrayOfcategoria_habitacionDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="categoria_habitacionDTO" nillable="true" type="tns:categoria_habitacionDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfcategoria_habitacionDTO" nillable="true" type="tns:ArrayOfcategoria_habitacionDTO" />
+  <xs:complexType name="ArrayOfEmpresaDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmpresaDTO" nillable="true" type="tns:EmpresaDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmpresaDTO" nillable="true" type="tns:ArrayOfEmpresaDTO" />
+  <xs:complexType name="ArrayOfhotelDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="hotelDTO" nillable="true" type="tns:hotelDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfhotelDTO" nillable="true" type="tns:ArrayOfhotelDTO" />
+  <xs:complexType name="ArrayOfroleDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="roleDTO" nillable="true" type="tns:roleDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfroleDTO" nillable="true" type="tns:ArrayOfroleDTO" />
+  <xs:complexType name="ArrayOfTipoComprobanteDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TipoComprobanteDTO" nillable="true" type="tns:TipoComprobanteDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTipoComprobanteDTO" nillable="true" type="tns:ArrayOfTipoComprobanteDTO" />
+  <xs:complexType name="ArrayOftipo_habitacionDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tipo_habitacionDTO" nillable="true" type="tns:tipo_habitacionDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftipo_habitacionDTO" nillable="true" type="tns:ArrayOftipo_habitacionDTO" />
   <xs:complexType name="ArrayOfuserDTO">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="userDTO" nillable="true" type="tns:userDTO" />
